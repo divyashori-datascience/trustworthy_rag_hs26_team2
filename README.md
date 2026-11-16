@@ -1,7 +1,6 @@
 # Evaluating and Improving Trustworthy Agentic RAG Systems
 
-**Advanced Generative AI · HSLU HS26 · Team 2** · Divya Shori, Farah, Hanieh
-
+**Advanced Generative AI · HSLU HS26 · Team 2** · Divya Shori, Hanieh Jebeli, Faranak Rahimi
 We start from Cyriel & Vincent's reliable agentic RAG reference system (FS26), audit it, extend the reliability benchmark, implement one focused improvement and evaluate the tradeoffs.
 
 ## Layout
