@@ -1,0 +1,220 @@
+{
+  "qid": "17",
+  "query": "how do birds learn new songs?",
+  "profile": {
+    "lang": "en",
+    "query_type": "definition",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "birds",
+      "songs",
+      "learning"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1248,
+      "lang": "en",
+      "query_type": "definition",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "birds",
+        "songs",
+        "learning"
+      ],
+      "initial_mode": "dense"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1441,
+      "mode": "dense",
+      "query": "how do birds learn new songs?",
+      "n_chunks": 8,
+      "top_ids": [
+        "afef12ad3f6321c43b65d045e2b1273cd1303ed9_fixed_1",
+        "afc38527715aff1eaca43b90f960ade1e6e97af7_fixed_3",
+        "be0be6dd86e21c2651c802ddcef675fa2e6fd016_fixed_1",
+        "4994285b5962eed7b155e2d826a19e07f7c7d574_fixed_2",
+        "eb58dd38003c08e04a1173d25652c9153832e0f7_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1578,
+      "signals": {
+        "sufficiency": 0.5471,
+        "chunk_agreement": 0.6166,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1578,
+      "action": "generate",
+      "reason": "sufficiency 0.55 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 5207,
+      "draft_answer": "The provided chunks do not contain information about how birds learn new songs.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 5207,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 6088,
+      "rewritten_query": "how do birds learn new songs vocal learning avian birdsong acquisition ontogeny imitation",
+      "old_mode": "dense",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 9659,
+      "mode": "voting",
+      "query": "how do birds learn new songs vocal learning avian birdsong acquisition ontogeny imitation",
+      "n_chunks": 8,
+      "top_ids": [
+        "1afe6e1de8c417b8ea5406f8d9b529ebf22966ef_fixed_1",
+        "4c479c0f0e58f92d3990dff49bf9ed49da537ff5_fixed_2",
+        "1afe6e1de8c417b8ea5406f8d9b529ebf22966ef_fixed_2",
+        "1f43786adf85d4bb2b32bd23772454a7038d2b72_fixed_2",
+        "75db583ba630008c9bfcf375129f92758f8702f1_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 9834,
+      "signals": {
+        "sufficiency": 0.6347,
+        "chunk_agreement": 0.6225,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 9834,
+      "action": "generate",
+      "reason": "sufficiency 0.63 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 14664,
+      "draft_answer": "The provided evidence chunks do not contain information about how birds learn new songs, vocal learning, or birdsong acquisition. The chunks cover unrelated topics such as bird flu outbreaks, biodiversity, ETH diversity, and automated animal behaviour analysis.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 14664,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 15889,
+      "rewritten_query": "bird song learning acquisition vocal development imitation memorization neural mechanisms",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 16029,
+      "mode": "graphrag",
+      "query": "bird song learning acquisition vocal development imitation memorization neural mechanisms",
+      "n_chunks": 8,
+      "top_ids": [
+        "75db583ba630008c9bfcf375129f92758f8702f1_fixed_1",
+        "3446a6c448603906cb0abcdef14329d7c12d1f3a_fixed_3",
+        "857b2394436283dac6089874755e237e7bb754e3_fixed_1",
+        "bfde64383608d6fb9eca174943bf037f878b50d7_fixed_2",
+        "80fba136f1e7f2efbf74f774983f0c28ce7f0fe9_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 16229,
+      "signals": {
+        "sufficiency": 0.5248,
+        "chunk_agreement": 0.5885,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 16229,
+      "action": "generate",
+      "reason": "sufficiency 0.52 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 20236,
+      "draft_answer": "The provided evidence chunks do not address bird song learning, vocal development, imitation, memorization, or the neural mechanisms involved. The chunks cover unrelated topics such as animal behavior analysis in primates and mice, time perception, brain network assembly, animation input devices, and brain signal complexity in zebrafish.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 20236,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 20236,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.5248,
+        "chunk_agreement": 0.5885,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.5248,
+      "chunk_agreement": 0.5885,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

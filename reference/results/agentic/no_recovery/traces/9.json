@@ -1,0 +1,146 @@
+{
+  "qid": "9",
+  "query": "how do alpine plants respond to climate change?",
+  "profile": {
+    "lang": "en",
+    "query_type": "definition",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "The query could ask for mechanisms of plant adaptation, specific species responses, or general impacts on alpine ecosystems, with no clear single answer expected.",
+    "entities": [
+      "alpine plants",
+      "climate change"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1740,
+      "lang": "en",
+      "query_type": "definition",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "The query could ask for mechanisms of plant adaptation, specific species responses, or general impacts on alpine ecosystems, with no clear single answer expected.",
+      "entities": [
+        "alpine plants",
+        "climate change"
+      ],
+      "initial_mode": "dense"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2079,
+      "mode": "dense",
+      "query": "how do alpine plants respond to climate change?",
+      "n_chunks": 8,
+      "top_ids": [
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_3",
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_0",
+        "73b3c47e0f280f88dd19d897f54fc90310ab4658_fixed_0",
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_1",
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_2"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2264,
+      "signals": {
+        "sufficiency": 0.8862,
+        "chunk_agreement": 0.8119,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2264,
+      "action": "generate",
+      "reason": "sufficiency 0.89 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 13751,
+      "draft_answer": "Alpine plants are responding to climate change in several ways according to the evidence:\n\n1. **Competitive displacement**: As the climate warms, plants from lower elevations (lowlands) are migrating upward into alpine and subalpine zones. These lowland plants are bigger and grow faster, giving them a competitive edge and threatening to displace smaller alpine species by literally overshadowing them.\n\n2. **Changes in species composition**: This upward migration is leading to new species interactions and could change the composition of alpine and subalpine plant communities over time.\n\n3. **Variable responses among species**: In transplant experiments where alpine plants from 2,000 m were moved down to 1,400 m (simulating future climate), some species like Alchemilla (lady's mantle) adapted well, while other alpine plants lost out to competitors better adapted to warm temperatures.\n\n4. **Slower-than-expected migration upward**: The conquest of higher habitats by lowland plants is slower than expected, partly due to resistance from existing vegetation and partly due to alpine plants' poor seed dispersal abilities — some rely on wind, others on animals (e.g., cows transporting germinable seeds in their gut).\n\n5. **Tree line dynamics**: At the tree line, conditions differ as vegetation is denser and competition higher (the chunk is cut off before fully explaining this).\n\nThe evidence does not cover physiological responses (e.g., phenology, flowering times) in detail beyond competitive and migratory dynamics.",
+      "citations": [
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_0",
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_1",
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_2"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 13751,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 18972,
+      "grounded": true,
+      "grounding_score": 0.95,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All major claims in the draft are supported by the evidence chunks, including competitive displacement, species composition changes, transplant experiments with Alchemilla, slower-than-expected migration due to dispersal limits, and tree line dynamics being different. The draft appropriately notes the tree line chunk is cut off and that physiological responses aren't covered.",
+      "signals": {
+        "sufficiency": 0.8862,
+        "chunk_agreement": 0.8119,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.9345
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 18972,
+      "action": "answer",
+      "reason": "grounded (score 0.95) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 18972,
+      "action": "answer",
+      "answer": "Alpine plants are responding to climate change in several ways according to the evidence:\n\n1. **Competitive displacement**: As the climate warms, plants from lower elevations (lowlands) are migrating upward into alpine and subalpine zones. These lowland plants are bigger and grow faster, giving them a competitive edge and threatening to displace smaller alpine species by literally overshadowing them.\n\n2. **Changes in species composition**: This upward migration is leading to new species interactions and could change the composition of alpine and subalpine plant communities over time.\n\n3. **Variable responses among species**: In transplant experiments where alpine plants from 2,000 m were moved down to 1,400 m (simulating future climate), some species like Alchemilla (lady's mantle) adapted well, while other alpine plants lost out to competitors better adapted to warm temperatures.\n\n4. **Slower-than-expected migration upward**: The conquest of higher habitats by lowland plants is slower than expected, partly due to resistance from existing vegetation and partly due to alpine plants' poor seed dispersal abilities — some rely on wind, others on animals (e.g., cows transporting germinable seeds in their gut).\n\n5. **Tree line dynamics**: At the tree line, conditions differ as vegetation is denser and competition higher (the chunk is cut off before fully explaining this).\n\nThe evidence does not cover physiological responses (e.g., phenology, flowering times) in detail beyond competitive and migratory dynamics.",
+      "citations": [
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_0",
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_1",
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_2"
+      ],
+      "confidence": 0.9345,
+      "conflict_flag": false,
+      "mode_used": "dense",
+      "signals": {
+        "sufficiency": 0.8862,
+        "chunk_agreement": 0.8119,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.9345
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Alpine plants are responding to climate change in several ways according to the evidence:\n\n1. **Competitive displacement**: As the climate warms, plants from lower elevations (lowlands) are migrating upward into alpine and subalpine zones. These lowland plants are bigger and grow faster, giving them a competitive edge and threatening to displace smaller alpine species by literally overshadowing them.\n\n2. **Changes in species composition**: This upward migration is leading to new species interactions and could change the composition of alpine and subalpine plant communities over time.\n\n3. **Variable responses among species**: In transplant experiments where alpine plants from 2,000 m were moved down to 1,400 m (simulating future climate), some species like Alchemilla (lady's mantle) adapted well, while other alpine plants lost out to competitors better adapted to warm temperatures.\n\n4. **Slower-than-expected migration upward**: The conquest of higher habitats by lowland plants is slower than expected, partly due to resistance from existing vegetation and partly due to alpine plants' poor seed dispersal abilities — some rely on wind, others on animals (e.g., cows transporting germinable seeds in their gut).\n\n5. **Tree line dynamics**: At the tree line, conditions differ as vegetation is denser and competition higher (the chunk is cut off before fully explaining this).\n\nThe evidence does not cover physiological responses (e.g., phenology, flowering times) in detail beyond competitive and migratory dynamics.",
+    "citations": [
+      "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_0",
+      "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_1",
+      "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_2"
+    ],
+    "confidence": 0.9345,
+    "conflict_flag": false,
+    "mode_used": "dense",
+    "signals": {
+      "sufficiency": 0.8862,
+      "chunk_agreement": 0.8119,
+      "grounding": 0.95,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.9345
+    }
+  }
+}

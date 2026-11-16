@@ -1,0 +1,146 @@
+{
+  "qid": "15",
+  "query": "how is eth research inveszgazng methods to avoid diarrhea?",
+  "profile": {
+    "lang": "en",
+    "query_type": "list",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth research",
+      "diarrhea prevention"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 2243,
+      "lang": "en",
+      "query_type": "list",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth research",
+        "diarrhea prevention"
+      ],
+      "initial_mode": "voting"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2724,
+      "mode": "voting",
+      "query": "how is eth research inveszgazng methods to avoid diarrhea?",
+      "n_chunks": 8,
+      "top_ids": [
+        "88e798abe613469d7ddb0da931b8d46bc6a08c8f_fixed_3",
+        "5e73b93718d1e9512d52864ed7e4e6e9f7dec087_fixed_1",
+        "0d525fb8639c9403d72defb11eb0785db3c93d14_fixed_1",
+        "88e798abe613469d7ddb0da931b8d46bc6a08c8f_fixed_4",
+        "6f791ee836bd482f939aed46e592e601e8605d01_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2873,
+      "signals": {
+        "sufficiency": 0.4861,
+        "chunk_agreement": 0.6508,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2873,
+      "action": "generate",
+      "reason": "sufficiency 0.49 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 11791,
+      "draft_answer": "ETH Zurich is investigating several methods to avoid diarrhoea:\n\n1. **Safer iron supplementation with probiotics**: Christophe Lacroix's group, together with Michael Zimmermann's human nutrition research group, is looking for ways to make iron sources safer for women and children in Africa, since iron supplementation can increase the risk of diarrhoea in regions where diarrhoeal pathogens are common. They are exploring selected probiotic bacterial strains to boost intestinal health during iron treatment.\n\n2. **Probiotics against C. difficile**: Lacroix's team is researching a bacterial strain with the potential to prevent or alleviate *Clostridium difficile* infections, a diarrhoeal pathogen especially dangerous to the elderly.\n\n3. **Preventing Salmonella in animals**: They are developing a method to prevent salmonella infections in livestock by feeding them special bacteria instead of antibiotics.\n\n4. **Oral vaccines to chain up pathogens**: Researchers used oral vaccines made from killed *Salmonella* and *E. coli* bacteria in livestock. The resulting IgA antibodies cause pathogen cells to clump together, which prevents them from exchanging plasmids (including antibiotic resistance genes) and reduces disease incidence.\n\nThe chunks do not describe other methods (e.g., sanitation or treatment approaches) in detail.",
+      "citations": [
+        "88e798abe613469d7ddb0da931b8d46bc6a08c8f_fixed_3",
+        "88e798abe613469d7ddb0da931b8d46bc6a08c8f_fixed_4",
+        "5e73b93718d1e9512d52864ed7e4e6e9f7dec087_fixed_1"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 11791,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 19375,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All four methods described in the draft are directly supported by the evidence chunks about iron supplementation with probiotics, C. difficile prevention, salmonella prevention in livestock, and oral vaccines causing IgA-driven clumping.",
+      "signals": {
+        "sufficiency": 0.4861,
+        "chunk_agreement": 0.6508,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.7944
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 19375,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 19375,
+      "action": "answer",
+      "answer": "ETH Zurich is investigating several methods to avoid diarrhoea:\n\n1. **Safer iron supplementation with probiotics**: Christophe Lacroix's group, together with Michael Zimmermann's human nutrition research group, is looking for ways to make iron sources safer for women and children in Africa, since iron supplementation can increase the risk of diarrhoea in regions where diarrhoeal pathogens are common. They are exploring selected probiotic bacterial strains to boost intestinal health during iron treatment.\n\n2. **Probiotics against C. difficile**: Lacroix's team is researching a bacterial strain with the potential to prevent or alleviate *Clostridium difficile* infections, a diarrhoeal pathogen especially dangerous to the elderly.\n\n3. **Preventing Salmonella in animals**: They are developing a method to prevent salmonella infections in livestock by feeding them special bacteria instead of antibiotics.\n\n4. **Oral vaccines to chain up pathogens**: Researchers used oral vaccines made from killed *Salmonella* and *E. coli* bacteria in livestock. The resulting IgA antibodies cause pathogen cells to clump together, which prevents them from exchanging plasmids (including antibiotic resistance genes) and reduces disease incidence.\n\nThe chunks do not describe other methods (e.g., sanitation or treatment approaches) in detail.",
+      "citations": [
+        "88e798abe613469d7ddb0da931b8d46bc6a08c8f_fixed_3",
+        "88e798abe613469d7ddb0da931b8d46bc6a08c8f_fixed_4",
+        "5e73b93718d1e9512d52864ed7e4e6e9f7dec087_fixed_1"
+      ],
+      "confidence": 0.7944,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.4861,
+        "chunk_agreement": 0.6508,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.7944
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "ETH Zurich is investigating several methods to avoid diarrhoea:\n\n1. **Safer iron supplementation with probiotics**: Christophe Lacroix's group, together with Michael Zimmermann's human nutrition research group, is looking for ways to make iron sources safer for women and children in Africa, since iron supplementation can increase the risk of diarrhoea in regions where diarrhoeal pathogens are common. They are exploring selected probiotic bacterial strains to boost intestinal health during iron treatment.\n\n2. **Probiotics against C. difficile**: Lacroix's team is researching a bacterial strain with the potential to prevent or alleviate *Clostridium difficile* infections, a diarrhoeal pathogen especially dangerous to the elderly.\n\n3. **Preventing Salmonella in animals**: They are developing a method to prevent salmonella infections in livestock by feeding them special bacteria instead of antibiotics.\n\n4. **Oral vaccines to chain up pathogens**: Researchers used oral vaccines made from killed *Salmonella* and *E. coli* bacteria in livestock. The resulting IgA antibodies cause pathogen cells to clump together, which prevents them from exchanging plasmids (including antibiotic resistance genes) and reduces disease incidence.\n\nThe chunks do not describe other methods (e.g., sanitation or treatment approaches) in detail.",
+    "citations": [
+      "88e798abe613469d7ddb0da931b8d46bc6a08c8f_fixed_3",
+      "88e798abe613469d7ddb0da931b8d46bc6a08c8f_fixed_4",
+      "5e73b93718d1e9512d52864ed7e4e6e9f7dec087_fixed_1"
+    ],
+    "confidence": 0.7944,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.4861,
+      "chunk_agreement": 0.6508,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.7944
+    }
+  }
+}

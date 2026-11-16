@@ -1,0 +1,110 @@
+{
+  "qid": "12",
+  "query": "how much of eth’s electricity consumpzon is due to compuzng? how did that develop over the years?",
+  "profile": {
+    "lang": "en",
+    "query_type": "multihop",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "electricity consumption",
+      "computing"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1248,
+      "lang": "en",
+      "query_type": "multihop",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "electricity consumption",
+        "computing"
+      ],
+      "initial_mode": "graphrag"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1508,
+      "mode": "graphrag",
+      "query": "how much of eth’s electricity consumpzon is due to compuzng? how did that develop over the years?",
+      "n_chunks": 8,
+      "top_ids": [
+        "e0208a4e236e44a275bb2b1cc1a5a46334725725_fixed_3",
+        "7680bb1ba2bec947b8e8321ab4383831374e6df2_fixed_3",
+        "ef3609691af27edc223715419b5b4dd763a843ed_fixed_3",
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0",
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1715,
+      "signals": {
+        "sufficiency": 0.6222,
+        "chunk_agreement": 0.7885,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1715,
+      "action": "generate",
+      "reason": "sufficiency 0.62 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 4475,
+      "draft_answer": "The provided chunks do not contain information about what share of ETH Zurich's electricity consumption is due to computing, nor how that share has developed over the years.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 4475,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 4475,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.6222,
+        "chunk_agreement": 0.7885,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.6222,
+      "chunk_agreement": 0.7885,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

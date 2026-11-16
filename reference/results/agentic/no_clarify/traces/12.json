@@ -1,0 +1,260 @@
+{
+  "qid": "12",
+  "query": "how much of eth’s electricity consumpzon is due to compuzng? how did that develop over the years?",
+  "profile": {
+    "lang": "en",
+    "query_type": "multihop",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "electricity consumption",
+      "computing"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1211,
+      "lang": "en",
+      "query_type": "multihop",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "electricity consumption",
+        "computing"
+      ],
+      "initial_mode": "graphrag"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1233,
+      "mode": "graphrag",
+      "query": "how much of eth’s electricity consumpzon is due to compuzng? how did that develop over the years?",
+      "n_chunks": 8,
+      "top_ids": [
+        "e0208a4e236e44a275bb2b1cc1a5a46334725725_fixed_3",
+        "7680bb1ba2bec947b8e8321ab4383831374e6df2_fixed_3",
+        "ef3609691af27edc223715419b5b4dd763a843ed_fixed_3",
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0",
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1357,
+      "signals": {
+        "sufficiency": 0.6222,
+        "chunk_agreement": 0.7885,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1357,
+      "action": "generate",
+      "reason": "sufficiency 0.62 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 4632,
+      "draft_answer": "The provided chunks do not contain information about what share of ETH's electricity consumption is due to computing or how this has developed over the years.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 4632,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 6725,
+      "rewritten_query": "electricity consumption computing infrastructure ETH Zurich historical trends energy use data centers servers",
+      "old_mode": "graphrag",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 10065,
+      "mode": "voting",
+      "query": "electricity consumption computing infrastructure ETH Zurich historical trends energy use data centers servers",
+      "n_chunks": 8,
+      "top_ids": [
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0",
+        "849593c4a13a310f269cebdfd86ffb291ab1efef_fixed_1",
+        "fff61bd0ed1f7de5df824e5939fa4f0c286c1ecf_fixed_2",
+        "b61eb3e70349545c2c9ea8d6bdbab02ad0f7cef2_fixed_0",
+        "0972816db0a25725424c7708ecaa5a23df24971b_fixed_4"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 10220,
+      "signals": {
+        "sufficiency": 0.545,
+        "chunk_agreement": 0.6215,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 10220,
+      "action": "generate",
+      "reason": "sufficiency 0.55 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 14612,
+      "draft_answer": "The provided chunks do not contain information about electricity consumption, historical energy use trends, or data center/server energy data at ETH Zurich. The only marginally related chunk mentions that ETH Zurich was preparing measures for potential energy shortages under Vice President for Infrastructure Ulrich Weidmann, with a focus on risks to teaching and research operations, but it provides no consumption figures or trends for computing infrastructure.",
+      "citations": [
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 14612,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 15950,
+      "rewritten_query": "electricity consumption computing infrastructure ETH Zurich campus historical trends energy usage development over time",
+      "old_mode": "voting",
+      "new_mode": "confidence",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 19989,
+      "mode": "confidence",
+      "query": "electricity consumption computing infrastructure ETH Zurich campus historical trends energy usage development over time",
+      "n_chunks": 8,
+      "top_ids": [
+        "2e90226c334b9623aa8052462bdf0c2c9b1eb9d2_fixed_0",
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0",
+        "fae7eadac20adf0efb53371771daec16f9469088_fixed_0",
+        "849593c4a13a310f269cebdfd86ffb291ab1efef_fixed_1",
+        "7a3da600e21595bbe2fd174722329db43f5a33cf_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 20163,
+      "signals": {
+        "sufficiency": 0.6987,
+        "chunk_agreement": 0.6976,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 20163,
+      "action": "generate",
+      "reason": "sufficiency 0.70 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 27230,
+      "draft_answer": "The provided chunks do not contain specific data on electricity consumption or historical trends of energy usage by ETH Zurich's computing infrastructure over time. However, some partially relevant information is available: a new Hönggerberg computing centre (HRZ) is being built to meet steadily rising demand for computing capacity, consolidating server, storage, and communication systems currently distributed across various provisional locations on the Hönggerberg campus. Additionally, ETH Zurich has been preparing for potential energy shortages, with a team under the Vice President for Infrastructure drafting measures focused on risks to technical facilities and equipment for teaching and research. The Hönggerberg campus also uses a 1.7-km anergy grid (heating/cooling system with geothermal probes) that saves around 5,000 tons of CO2 per year, supporting a net-zero target. The chunks do not provide quantitative electricity consumption figures or historical trend data specific to computing infrastructure.",
+      "citations": [
+        "2e90226c334b9623aa8052462bdf0c2c9b1eb9d2_fixed_0",
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0",
+        "7a3da600e21595bbe2fd174722329db43f5a33cf_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 27230,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 0
+    },
+    {
+      "step": "verify",
+      "t_ms": 31546,
+      "grounded": true,
+      "grounding_score": 0.95,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are supported by the evidence chunks: the new HRZ computing centre and consolidation of distributed systems, energy shortage preparations under the VP Infrastructure, and the 1.7-km anergy grid saving 5,000 tons CO2/year. The draft also correctly notes that no quantitative electricity consumption or historical trend data is provided.",
+      "signals": {
+        "sufficiency": 0.6987,
+        "chunk_agreement": 0.6976,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8595
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 31546,
+      "action": "answer",
+      "reason": "grounded (score 0.95) → answer",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 31546,
+      "action": "answer",
+      "answer": "The provided chunks do not contain specific data on electricity consumption or historical trends of energy usage by ETH Zurich's computing infrastructure over time. However, some partially relevant information is available: a new Hönggerberg computing centre (HRZ) is being built to meet steadily rising demand for computing capacity, consolidating server, storage, and communication systems currently distributed across various provisional locations on the Hönggerberg campus. Additionally, ETH Zurich has been preparing for potential energy shortages, with a team under the Vice President for Infrastructure drafting measures focused on risks to technical facilities and equipment for teaching and research. The Hönggerberg campus also uses a 1.7-km anergy grid (heating/cooling system with geothermal probes) that saves around 5,000 tons of CO2 per year, supporting a net-zero target. The chunks do not provide quantitative electricity consumption figures or historical trend data specific to computing infrastructure.",
+      "citations": [
+        "2e90226c334b9623aa8052462bdf0c2c9b1eb9d2_fixed_0",
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0",
+        "7a3da600e21595bbe2fd174722329db43f5a33cf_fixed_0"
+      ],
+      "confidence": 0.8595,
+      "conflict_flag": false,
+      "mode_used": "confidence",
+      "signals": {
+        "sufficiency": 0.6987,
+        "chunk_agreement": 0.6976,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8595
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The provided chunks do not contain specific data on electricity consumption or historical trends of energy usage by ETH Zurich's computing infrastructure over time. However, some partially relevant information is available: a new Hönggerberg computing centre (HRZ) is being built to meet steadily rising demand for computing capacity, consolidating server, storage, and communication systems currently distributed across various provisional locations on the Hönggerberg campus. Additionally, ETH Zurich has been preparing for potential energy shortages, with a team under the Vice President for Infrastructure drafting measures focused on risks to technical facilities and equipment for teaching and research. The Hönggerberg campus also uses a 1.7-km anergy grid (heating/cooling system with geothermal probes) that saves around 5,000 tons of CO2 per year, supporting a net-zero target. The chunks do not provide quantitative electricity consumption figures or historical trend data specific to computing infrastructure.",
+    "citations": [
+      "2e90226c334b9623aa8052462bdf0c2c9b1eb9d2_fixed_0",
+      "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0",
+      "7a3da600e21595bbe2fd174722329db43f5a33cf_fixed_0"
+    ],
+    "confidence": 0.8595,
+    "conflict_flag": false,
+    "mode_used": "confidence",
+    "signals": {
+      "sufficiency": 0.6987,
+      "chunk_agreement": 0.6976,
+      "grounding": 0.95,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.8595
+    }
+  }
+}

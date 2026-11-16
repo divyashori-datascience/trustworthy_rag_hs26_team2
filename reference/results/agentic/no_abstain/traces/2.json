@@ -1,0 +1,145 @@
+{
+  "qid": "2",
+  "query": "who were the rectors of eth between 2017 and 2022?",
+  "profile": {
+    "lang": "en",
+    "query_type": "list",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "rectors",
+      "2017-2022"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1779,
+      "lang": "en",
+      "query_type": "list",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "rectors",
+        "2017-2022"
+      ],
+      "initial_mode": "voting"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2123,
+      "mode": "voting",
+      "query": "who were the rectors of eth between 2017 and 2022?",
+      "n_chunks": 8,
+      "top_ids": [
+        "00859327fafc62821b53b9ad083e2a244c1b4470_fixed_3",
+        "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1",
+        "73afc89edd471ff98176f33babf28b62dccf4ac6_fixed_2",
+        "ede695ab03381bf8b9aa35f708143fc2376aa78d_fixed_6",
+        "00859327fafc62821b53b9ad083e2a244c1b4470_fixed_2"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2260,
+      "signals": {
+        "sufficiency": 0.7343,
+        "chunk_agreement": 0.7284,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2260,
+      "action": "generate",
+      "reason": "sufficiency 0.73 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 6661,
+      "draft_answer": "Based on the chunks: Sarah Springman was Rector of ETH Zurich until the end of January 2022. Günther Dissertori was nominated as the new ETH Zurich Rector (to be officially appointed by the ETH Board after being put forward by President Joël Mesot). The chunks do not explicitly confirm who served as rector during the earlier part of the 2017–2022 period beyond Springman, nor do they give exact start/end dates for Dissertori's term.",
+      "citations": [
+        "73afc89edd471ff98176f33babf28b62dccf4ac6_fixed_2",
+        "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 6661,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 10317,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft's claims about Springman being Rector until end of January 2022 and Dissertori being nominated as new Rector (to be appointed by ETH Board after Mesot puts his name forward) are directly supported by the chunks. The draft also appropriately acknowledges the chunks' limitations regarding the earlier period.",
+      "signals": {
+        "sufficiency": 0.7343,
+        "chunk_agreement": 0.7284,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8937
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 10317,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 10317,
+      "action": "answer",
+      "answer": "Based on the chunks: Sarah Springman was Rector of ETH Zurich until the end of January 2022. Günther Dissertori was nominated as the new ETH Zurich Rector (to be officially appointed by the ETH Board after being put forward by President Joël Mesot). The chunks do not explicitly confirm who served as rector during the earlier part of the 2017–2022 period beyond Springman, nor do they give exact start/end dates for Dissertori's term.",
+      "citations": [
+        "73afc89edd471ff98176f33babf28b62dccf4ac6_fixed_2",
+        "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1"
+      ],
+      "confidence": 0.8937,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.7343,
+        "chunk_agreement": 0.7284,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8937
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Based on the chunks: Sarah Springman was Rector of ETH Zurich until the end of January 2022. Günther Dissertori was nominated as the new ETH Zurich Rector (to be officially appointed by the ETH Board after being put forward by President Joël Mesot). The chunks do not explicitly confirm who served as rector during the earlier part of the 2017–2022 period beyond Springman, nor do they give exact start/end dates for Dissertori's term.",
+    "citations": [
+      "73afc89edd471ff98176f33babf28b62dccf4ac6_fixed_2",
+      "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1"
+    ],
+    "confidence": 0.8937,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.7343,
+      "chunk_agreement": 0.7284,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.8937
+    }
+  }
+}

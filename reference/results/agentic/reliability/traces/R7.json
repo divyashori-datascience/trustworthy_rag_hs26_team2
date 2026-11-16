@@ -1,0 +1,198 @@
+{
+  "qid": "R7",
+  "query": "Who is the president of ETH Zurich?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth zurich",
+      "president"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 927,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth zurich",
+        "president"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2538,
+      "mode": "bm25",
+      "query": "Who is the president of ETH Zurich?",
+      "n_chunks": 8,
+      "top_ids": [
+        "099bd581b0e669f4b52879a1d2f18d752b761cf0_fixed_0",
+        "d60c9d77aba832f44f7e2fef27568b9a674446cf_fixed_0",
+        "4e9a0577513819cabffcb93fb2620261a6ddd4b4_fixed_0",
+        "0c7b541455e9ac014d179d3dc86428e0f015660b_fixed_1",
+        "656c5996ce7302e2360b3850aba706cda1bcb9a6_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2759,
+      "signals": {
+        "sufficiency": 0.5132,
+        "chunk_agreement": 0.5465,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2759,
+      "action": "generate",
+      "reason": "sufficiency 0.51 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 9183,
+      "draft_answer": "The provided chunks do not contain information about the president of ETH Zurich.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 9183,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 10141,
+      "rewritten_query": "Who is the president or rector of ETH Zurich Swiss Federal Institute of Technology Zurich",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 14304,
+      "mode": "voting",
+      "query": "Who is the president or rector of ETH Zurich Swiss Federal Institute of Technology Zurich",
+      "n_chunks": 8,
+      "top_ids": [
+        "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1",
+        "00859327fafc62821b53b9ad083e2a244c1b4470_fixed_3",
+        "e38adeeda690093e8f33e7ae48608dacb8107ac8_fixed_0",
+        "212c7e570c295cdc83e98c6af76684e48d979746_fixed_2",
+        "be7a68bb6b23992ff2ae8b4ee7c941d8cc19ba9b_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 14451,
+      "signals": {
+        "sufficiency": 0.8409,
+        "chunk_agreement": 0.7496,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 14451,
+      "action": "generate",
+      "reason": "sufficiency 0.84 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 19549,
+      "draft_answer": "Based on the chunks: Günther Dissertori was nominated as the new rector of ETH Zurich (with 233 of 439 votes), with Joël Mesot (the ETH president) putting his name forward to the ETH Board for official appointment. Joël Mesot is referenced as ETH president (having previously led the Paul Scherrer Institute). The chunks do not explicitly state the current confirmed president/rector beyond these nominations.",
+      "citations": [
+        "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1",
+        "be7a68bb6b23992ff2ae8b4ee7c941d8cc19ba9b_fixed_1"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 19549,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 26374,
+      "grounded": true,
+      "grounding_score": 0.9,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft's claims about Dissertori's nomination as rector with 233/439 votes and Mesot putting his name forward are directly supported. Mesot is referenced as ETH president and former Paul Scherrer Institute leader in the chunks.",
+      "signals": {
+        "sufficiency": 0.8409,
+        "chunk_agreement": 0.7496,
+        "grounding": 0.9,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8964
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 26374,
+      "action": "answer",
+      "reason": "grounded (score 0.90) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 26374,
+      "action": "answer",
+      "answer": "Based on the chunks: Günther Dissertori was nominated as the new rector of ETH Zurich (with 233 of 439 votes), with Joël Mesot (the ETH president) putting his name forward to the ETH Board for official appointment. Joël Mesot is referenced as ETH president (having previously led the Paul Scherrer Institute). The chunks do not explicitly state the current confirmed president/rector beyond these nominations.",
+      "citations": [
+        "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1",
+        "be7a68bb6b23992ff2ae8b4ee7c941d8cc19ba9b_fixed_1"
+      ],
+      "confidence": 0.8964,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.8409,
+        "chunk_agreement": 0.7496,
+        "grounding": 0.9,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8964
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Based on the chunks: Günther Dissertori was nominated as the new rector of ETH Zurich (with 233 of 439 votes), with Joël Mesot (the ETH president) putting his name forward to the ETH Board for official appointment. Joël Mesot is referenced as ETH president (having previously led the Paul Scherrer Institute). The chunks do not explicitly state the current confirmed president/rector beyond these nominations.",
+    "citations": [
+      "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1",
+      "be7a68bb6b23992ff2ae8b4ee7c941d8cc19ba9b_fixed_1"
+    ],
+    "confidence": 0.8964,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.8409,
+      "chunk_agreement": 0.7496,
+      "grounding": 0.9,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.8964
+    }
+  }
+}

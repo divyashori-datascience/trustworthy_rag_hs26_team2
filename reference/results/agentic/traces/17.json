@@ -1,0 +1,218 @@
+{
+  "qid": "17",
+  "query": "how do birds learn new songs?",
+  "profile": {
+    "lang": "en",
+    "query_type": "definition",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "birds",
+      "song learning"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1135,
+      "lang": "en",
+      "query_type": "definition",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "birds",
+        "song learning"
+      ],
+      "initial_mode": "dense"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1370,
+      "mode": "dense",
+      "query": "how do birds learn new songs?",
+      "n_chunks": 8,
+      "top_ids": [
+        "afef12ad3f6321c43b65d045e2b1273cd1303ed9_fixed_1",
+        "afc38527715aff1eaca43b90f960ade1e6e97af7_fixed_3",
+        "be0be6dd86e21c2651c802ddcef675fa2e6fd016_fixed_1",
+        "4994285b5962eed7b155e2d826a19e07f7c7d574_fixed_2",
+        "eb58dd38003c08e04a1173d25652c9153832e0f7_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1499,
+      "signals": {
+        "sufficiency": 0.4471,
+        "chunk_agreement": 0.6166,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1499,
+      "action": "generate",
+      "reason": "sufficiency 0.45 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 4825,
+      "draft_answer": "The provided chunks do not contain information about how birds learn new songs. They cover topics like AI learning from machine sounds, animal swarm behavior, human/child cognitive learning, embryonic development, and microswarm robots, but nothing on bird song learning.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 4825,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 5690,
+      "rewritten_query": "how do birds learn acquire develop new songs vocalizations bird song learning acquisition mechanisms",
+      "old_mode": "dense",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 10320,
+      "mode": "voting",
+      "query": "how do birds learn acquire develop new songs vocalizations bird song learning acquisition mechanisms",
+      "n_chunks": 8,
+      "top_ids": [
+        "afef12ad3f6321c43b65d045e2b1273cd1303ed9_fixed_1",
+        "1afe6e1de8c417b8ea5406f8d9b529ebf22966ef_fixed_0",
+        "e0211cb4a080e1fc87339bfee186583467f3ffa2_fixed_0",
+        "1afe6e1de8c417b8ea5406f8d9b529ebf22966ef_fixed_2",
+        "75db583ba630008c9bfcf375129f92758f8702f1_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 10456,
+      "signals": {
+        "sufficiency": 0.431,
+        "chunk_agreement": 0.6082,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 10456,
+      "action": "generate",
+      "reason": "sufficiency 0.43 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 13652,
+      "draft_answer": "The provided chunks do not contain information about how birds learn or acquire new songs or vocalizations. The chunks cover unrelated topics such as machine sound analysis, bird flu outbreaks, selective logging, and automated animal behavior analysis.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 13652,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 14810,
+      "rewritten_query": "bird song learning vocal development imitation acquisition behavior",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 15009,
+      "mode": "graphrag",
+      "query": "bird song learning vocal development imitation acquisition behavior",
+      "n_chunks": 8,
+      "top_ids": [
+        "75db583ba630008c9bfcf375129f92758f8702f1_fixed_1",
+        "3446a6c448603906cb0abcdef14329d7c12d1f3a_fixed_3",
+        "4009f6118daa06544247a325a37e9d324423809f_fixed_2",
+        "75db583ba630008c9bfcf375129f92758f8702f1_fixed_0",
+        "3446a6c448603906cb0abcdef14329d7c12d1f3a_fixed_2"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 15145,
+      "signals": {
+        "sufficiency": 0.4389,
+        "chunk_agreement": 0.6376,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 15145,
+      "action": "generate",
+      "reason": "sufficiency 0.44 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 21239,
+      "draft_answer": "The provided chunks contain no information about bird song learning, vocal development, imitation, or acquisition behavior. The chunks discuss automated analysis of animal behaviour (mice and primates), perception of time through hearing, and an e-learning event on unconscious bias—none of which address bird song learning.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 21239,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 21239,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.4389,
+        "chunk_agreement": 0.6376,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.4389,
+      "chunk_agreement": 0.6376,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

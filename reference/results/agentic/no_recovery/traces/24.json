@@ -1,0 +1,151 @@
+{
+  "qid": "24",
+  "query": "anybody at eth doing anything for people with disabilizes?",
+  "profile": {
+    "lang": "en",
+    "query_type": "list",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "The query uses informal language ('disabilizes') and is too open-ended to determine what specific initiatives, research, or programs qualify as relevant answers.",
+    "entities": [
+      "eth",
+      "disability",
+      "people"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1746,
+      "lang": "en",
+      "query_type": "list",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "The query uses informal language ('disabilizes') and is too open-ended to determine what specific initiatives, research, or programs qualify as relevant answers.",
+      "entities": [
+        "eth",
+        "disability",
+        "people"
+      ],
+      "initial_mode": "voting"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 4351,
+      "mode": "voting",
+      "query": "anybody at eth doing anything for people with disabilizes?",
+      "n_chunks": 8,
+      "top_ids": [
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_0",
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_1",
+        "e4f85861f404ecd289acccd13196b4aa27be6459_fixed_1",
+        "b0be5755df8811203352f5b5135187d2942f90a0_fixed_0",
+        "ae5b830c9cab4ca4e9e224525d7202e8c45858d7_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 4484,
+      "signals": {
+        "sufficiency": 0.7679,
+        "chunk_agreement": 0.7316,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 4484,
+      "action": "generate",
+      "reason": "sufficiency 0.77 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 12386,
+      "draft_answer": "Yes. ETH Zurich runs a 'Barrier-Free ETH' / 'Design for All' programme aimed at improving access to buildings and services for people with disabilities or special needs — including students, teachers, researchers, staff and visitors. Measures are organised in 14 subprojects across three categories: construction/building usage/architecture, organisation and culture, and technology/communication/teaching. Concrete actions include: expanding accessible public guided tours in 2022 (with icons indicating wheelchair accessibility, suitability for visually impaired visitors, and availability of sign-language interpreters); a specially designed 'joining with wood' tour for visually impaired participants; regular documented inspection rounds since October 2021 by Facility Management to remove movable obstacles (blocked ramps, corridors, illegally locked fire doors); and integrating inclusion work into a new holistic ETH Diversity Strategy from 2022. ETH leadership frames this as a social-responsibility duty, while noting challenges with historical/heritage-protected buildings.",
+      "citations": [
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_0",
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_1",
+        "e4f85861f404ecd289acccd13196b4aa27be6459_fixed_1",
+        "b0be5755df8811203352f5b5135187d2942f90a0_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 12386,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 15795,
+      "grounded": true,
+      "grounding_score": 0.95,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are supported by the evidence chunks, including the Design for All programme, 14 subprojects in three categories, accessible tours expansion, the wood joining tour, inspection rounds since October 2021, the holistic Diversity Strategy from 2022, and the social responsibility framing with heritage building challenges.",
+      "signals": {
+        "sufficiency": 0.7679,
+        "chunk_agreement": 0.7316,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.8872
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 15795,
+      "action": "answer",
+      "reason": "grounded (score 0.95) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 15795,
+      "action": "answer",
+      "answer": "Yes. ETH Zurich runs a 'Barrier-Free ETH' / 'Design for All' programme aimed at improving access to buildings and services for people with disabilities or special needs — including students, teachers, researchers, staff and visitors. Measures are organised in 14 subprojects across three categories: construction/building usage/architecture, organisation and culture, and technology/communication/teaching. Concrete actions include: expanding accessible public guided tours in 2022 (with icons indicating wheelchair accessibility, suitability for visually impaired visitors, and availability of sign-language interpreters); a specially designed 'joining with wood' tour for visually impaired participants; regular documented inspection rounds since October 2021 by Facility Management to remove movable obstacles (blocked ramps, corridors, illegally locked fire doors); and integrating inclusion work into a new holistic ETH Diversity Strategy from 2022. ETH leadership frames this as a social-responsibility duty, while noting challenges with historical/heritage-protected buildings.",
+      "citations": [
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_0",
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_1",
+        "e4f85861f404ecd289acccd13196b4aa27be6459_fixed_1",
+        "b0be5755df8811203352f5b5135187d2942f90a0_fixed_0"
+      ],
+      "confidence": 0.8872,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.7679,
+        "chunk_agreement": 0.7316,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.8872
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Yes. ETH Zurich runs a 'Barrier-Free ETH' / 'Design for All' programme aimed at improving access to buildings and services for people with disabilities or special needs — including students, teachers, researchers, staff and visitors. Measures are organised in 14 subprojects across three categories: construction/building usage/architecture, organisation and culture, and technology/communication/teaching. Concrete actions include: expanding accessible public guided tours in 2022 (with icons indicating wheelchair accessibility, suitability for visually impaired visitors, and availability of sign-language interpreters); a specially designed 'joining with wood' tour for visually impaired participants; regular documented inspection rounds since October 2021 by Facility Management to remove movable obstacles (blocked ramps, corridors, illegally locked fire doors); and integrating inclusion work into a new holistic ETH Diversity Strategy from 2022. ETH leadership frames this as a social-responsibility duty, while noting challenges with historical/heritage-protected buildings.",
+    "citations": [
+      "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_0",
+      "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_1",
+      "e4f85861f404ecd289acccd13196b4aa27be6459_fixed_1",
+      "b0be5755df8811203352f5b5135187d2942f90a0_fixed_0"
+    ],
+    "confidence": 0.8872,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.7679,
+      "chunk_agreement": 0.7316,
+      "grounding": 0.95,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.8872
+    }
+  }
+}

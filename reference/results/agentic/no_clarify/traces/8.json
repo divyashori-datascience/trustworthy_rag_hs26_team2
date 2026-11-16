@@ -1,0 +1,148 @@
+{
+  "qid": "8",
+  "query": "who at eth currently works on research regarding climate change?",
+  "profile": {
+    "lang": "en",
+    "query_type": "list",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "'Currently' and 'works on' are imprecise temporal anchors; unclear if asking for active researchers, recent publications, or specific research groups.",
+    "entities": [
+      "eth",
+      "climate change",
+      "researchers"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1686,
+      "lang": "en",
+      "query_type": "list",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "'Currently' and 'works on' are imprecise temporal anchors; unclear if asking for active researchers, recent publications, or specific research groups.",
+      "entities": [
+        "eth",
+        "climate change",
+        "researchers"
+      ],
+      "initial_mode": "voting"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2075,
+      "mode": "voting",
+      "query": "who at eth currently works on research regarding climate change?",
+      "n_chunks": 8,
+      "top_ids": [
+        "ede695ab03381bf8b9aa35f708143fc2376aa78d_fixed_1",
+        "ede695ab03381bf8b9aa35f708143fc2376aa78d_fixed_5",
+        "6d04d0c4b509afcf192ca5a4d16609642e218352_fixed_0",
+        "fae7eadac20adf0efb53371771daec16f9469088_fixed_0",
+        "66121ee5cb9992cc24ce95008f8890ec294d9869_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2294,
+      "signals": {
+        "sufficiency": 0.8119,
+        "chunk_agreement": 0.6982,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2294,
+      "action": "generate",
+      "reason": "sufficiency 0.81 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 7356,
+      "draft_answer": "Based on the chunks, the following ETH researchers work on climate change-related topics: Anthony Patt, Professor of Human Environment Systems at the Institute for Environmental Decisions (D-USYS), whose research addresses climate change policy, adaptation to climate change, and energy systems; and Reto Knutti, climate physicist and sustainability delegate for ETH Zurich. Moritz Drupp, Associate Professor of Sustainability Economics, works on sustainability and sustainable management of natural resources, which is related though not explicitly framed as climate change research. The chunks do not provide a comprehensive list of all ETH climate change researchers.",
+      "citations": [
+        "6d04d0c4b509afcf192ca5a4d16609642e218352_fixed_0",
+        "fae7eadac20adf0efb53371771daec16f9469088_fixed_0",
+        "66121ee5cb9992cc24ce95008f8890ec294d9869_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 7356,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 10820,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are supported by the evidence chunks: Patt's role and research focus, Knutti's title, and Drupp's sustainability work are accurately reflected, including the appropriate hedge that Drupp's work is not explicitly climate change research.",
+      "signals": {
+        "sufficiency": 0.8119,
+        "chunk_agreement": 0.6982,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.9248
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 10820,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 10820,
+      "action": "answer",
+      "answer": "Based on the chunks, the following ETH researchers work on climate change-related topics: Anthony Patt, Professor of Human Environment Systems at the Institute for Environmental Decisions (D-USYS), whose research addresses climate change policy, adaptation to climate change, and energy systems; and Reto Knutti, climate physicist and sustainability delegate for ETH Zurich. Moritz Drupp, Associate Professor of Sustainability Economics, works on sustainability and sustainable management of natural resources, which is related though not explicitly framed as climate change research. The chunks do not provide a comprehensive list of all ETH climate change researchers.",
+      "citations": [
+        "6d04d0c4b509afcf192ca5a4d16609642e218352_fixed_0",
+        "fae7eadac20adf0efb53371771daec16f9469088_fixed_0",
+        "66121ee5cb9992cc24ce95008f8890ec294d9869_fixed_0"
+      ],
+      "confidence": 0.9248,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.8119,
+        "chunk_agreement": 0.6982,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.9248
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Based on the chunks, the following ETH researchers work on climate change-related topics: Anthony Patt, Professor of Human Environment Systems at the Institute for Environmental Decisions (D-USYS), whose research addresses climate change policy, adaptation to climate change, and energy systems; and Reto Knutti, climate physicist and sustainability delegate for ETH Zurich. Moritz Drupp, Associate Professor of Sustainability Economics, works on sustainability and sustainable management of natural resources, which is related though not explicitly framed as climate change research. The chunks do not provide a comprehensive list of all ETH climate change researchers.",
+    "citations": [
+      "6d04d0c4b509afcf192ca5a4d16609642e218352_fixed_0",
+      "fae7eadac20adf0efb53371771daec16f9469088_fixed_0",
+      "66121ee5cb9992cc24ce95008f8890ec294d9869_fixed_0"
+    ],
+    "confidence": 0.9248,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.8119,
+      "chunk_agreement": 0.6982,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.9248
+    }
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "qid": "4",
+  "query": "when did the insight get to mars?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "insight",
+      "mars"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 828,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "insight",
+        "mars"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 853,
+      "mode": "bm25",
+      "query": "when did the insight get to mars?",
+      "n_chunks": 8,
+      "top_ids": [
+        "befad6e62e34275b4075b3e11b2b3747b32f4a9d_fixed_0",
+        "2c62a770e2f73e52049dbd92cb8820ce7de14e3f_fixed_1",
+        "9de7001d1f6adeb787dfd16aa0832f004d6038c5_fixed_0",
+        "ad92c3d83762e70b384f73be520742d69e7c1eff_fixed_1",
+        "5adb2b71ed200e7ffa351b938378e7e3da7dc731_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1049,
+      "signals": {
+        "sufficiency": 0.5191,
+        "chunk_agreement": 0.5462,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1049,
+      "action": "generate",
+      "reason": "sufficiency 0.52 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 3382,
+      "draft_answer": "The provided chunks do not contain any information about the InSight mission or its arrival on Mars.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 3382,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 4336,
+      "rewritten_query": "when did the InSight lander spacecraft arrive at Mars",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 7483,
+      "mode": "voting",
+      "query": "when did the InSight lander spacecraft arrive at Mars",
+      "n_chunks": 8,
+      "top_ids": [
+        "126a5467948a2a9ac7e09cbd8b9c3395f4086f0d_fixed_1",
+        "b20694164fd05b873e66907f31bb9e4ce2f49f01_fixed_0",
+        "6fe4f2e348cd7f954dcc33bf985ef6f8c3250ce6_fixed_0",
+        "a2126cb3268c342f01f19ac9f978685ca0aa8dc2_fixed_2",
+        "b20694164fd05b873e66907f31bb9e4ce2f49f01_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 7650,
+      "signals": {
+        "sufficiency": 0.8347,
+        "chunk_agreement": 0.7795,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 7650,
+      "action": "generate",
+      "reason": "sufficiency 0.83 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 10704,
+      "draft_answer": "NASA's InSight lander successfully landed on Mars on 26 November 2018.",
+      "citations": [
+        "6fe4f2e348cd7f954dcc33bf985ef6f8c3250ce6_fixed_0",
+        "b20694164fd05b873e66907f31bb9e4ce2f49f01_fixed_1"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 10704,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 13533,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft's claim that NASA's InSight lander landed on Mars on 26 November 2018 is directly supported by chunk 6fe4f2e348cd7f954dcc33bf985ef6f8c3250ce6_fixed_0 and consistent with other chunks.",
+      "signals": {
+        "sufficiency": 0.8347,
+        "chunk_agreement": 0.7795,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9339
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 13533,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 13533,
+      "action": "answer",
+      "answer": "NASA's InSight lander successfully landed on Mars on 26 November 2018.",
+      "citations": [
+        "6fe4f2e348cd7f954dcc33bf985ef6f8c3250ce6_fixed_0",
+        "b20694164fd05b873e66907f31bb9e4ce2f49f01_fixed_1"
+      ],
+      "confidence": 0.9339,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.8347,
+        "chunk_agreement": 0.7795,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9339
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "NASA's InSight lander successfully landed on Mars on 26 November 2018.",
+    "citations": [
+      "6fe4f2e348cd7f954dcc33bf985ef6f8c3250ce6_fixed_0",
+      "b20694164fd05b873e66907f31bb9e4ce2f49f01_fixed_1"
+    ],
+    "confidence": 0.9339,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.8347,
+      "chunk_agreement": 0.7795,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.9339
+    }
+  }
+}

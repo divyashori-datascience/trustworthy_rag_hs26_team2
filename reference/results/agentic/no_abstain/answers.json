@@ -1,0 +1,227 @@
+{
+  "1": {
+    "question": "who was president of eth in 2003?",
+    "action": "answer",
+    "answer": "The provided chunks do not explicitly name the president of ETH Zurich in 2003. They mention former president Heinrich Ursprung (without specifying his presidency years matching 2003) and Ralph Eichler in another context, but no chunk directly identifies who held the presidency in 2003.",
+    "clarifying_question": null,
+    "confidence": 0.896,
+    "mode_used": "graphrag",
+    "latency_s": 27.15
+  },
+  "2": {
+    "question": "who were the rectors of eth between 2017 and 2022?",
+    "action": "answer",
+    "answer": "Based on the chunks: Sarah Springman was Rector of ETH Zurich until the end of January 2022. Günther Dissertori was nominated as the new ETH Zurich Rector (to be officially appointed by the ETH Board after being put forward by President Joël Mesot). The chunks do not explicitly confirm who served as rector during the earlier part of the 2017–2022 period beyond Springman, nor do they give exact start/end dates for Dissertori's term.",
+    "clarifying_question": null,
+    "confidence": 0.8937,
+    "mode_used": "voting",
+    "latency_s": 10.32
+  },
+  "3": {
+    "question": "who at eth received erc grants?",
+    "action": "answer",
+    "answer": "Based on the chunks, the following ETH researchers are mentioned as ERC grant recipients:\n\n- Professor Niklas Beisert (Institute for Theoretical Physics) – for work on quantum field theories.\n- Professor Sonia Seneviratne (Institute for Atmospheric and Climate Science) – for an ERC project on soil moisture, vegetation, heat waves, and droughts.\n\nThe chunks also reference other ERC Advanced Grant recipients at ETH in fields such as physics, material sciences, earth sciences, biosystems, and European integration (a 'bordering theory' project), but do not name those individual researchers. So the evidence only partially identifies the recipients by name.",
+    "clarifying_question": null,
+    "confidence": 0.8596,
+    "mode_used": "voting",
+    "latency_s": 16.86
+  },
+  "4": {
+    "question": "when did the insight get to mars?",
+    "action": "answer",
+    "answer": "NASA's InSight lander successfully landed on Mars on 26 November 2018.",
+    "clarifying_question": null,
+    "confidence": 0.9339,
+    "mode_used": "voting",
+    "latency_s": 13.53
+  },
+  "5": {
+    "question": "what did prof. schubert say about flying?",
+    "action": "answer",
+    "answer": "The evidence contains statements from two different professors named in connection with aviation:\n\n1. **Professor Renate Schubert** commented on the costs of flying, arguing that aviation is heavily subsidized at the climate's expense. In Switzerland, international flights are exempt from fuel tax (unlike petrol for cars), exempt from CO2 tax, have no emissions limits, and air passengers don't pay VAT. As a result, air fares are very low compared to other transport — e.g., a Basel-to-Berlin flight costs only 31.20 francs, while a regular second-class train ticket costs 178 francs. She raised the question of whether surcharges on flying could make train travel more economically competitive.\n\n2. (Note: The question asks about \"Professor Schubert.\" The other aviation-related chunks refer to Professor Martin Raubal, not Schubert, so they are not attributed to Schubert.)",
+    "clarifying_question": null,
+    "confidence": 0.8403,
+    "mode_used": "voting",
+    "latency_s": 18.25
+  },
+  "6": {
+    "question": "what is e-sling?",
+    "action": "answer",
+    "answer": "The provided chunks do not contain information about an 'e-sling' electronic sling lifting device cable system. The chunks discuss other ETH Zurich projects such as the Myosuit, MyoShirt (wearable exomuscles using cables as artificial tendons), nanoleq cables, prosthetic legs, and smart sportswear, but none mention e-sling.",
+    "clarifying_question": null,
+    "confidence": 0.7866,
+    "mode_used": "graphrag",
+    "latency_s": 26.49
+  },
+  "7": {
+    "question": "who are famous eth alumni?",
+    "action": "answer",
+    "answer": "Based on the chunks, famous ETH alumni mentioned include:\n\n- **Jeannine Pilloud**: graduated from ETH Zurich with a degree in architecture, became head of passenger transport at Swiss railway operator SBB, and was elected president of the ETH Alumni Association in May 2023.\n- **Albert Einstein**: a student and professor at ETH Zurich, Nobel Prize winner in physics (100th anniversary marked in 2021).\n- **Julie Derron** (triathlon) and **Annina Fahr** (athletics, ex-doctoral student): alumnae who competed for Switzerland at the 2024 Paris Olympics.\n\nThe chunks do not provide a broader list of famous ETH alumni beyond these.",
+    "clarifying_question": null,
+    "confidence": 0.9216,
+    "mode_used": "voting",
+    "latency_s": 12.38
+  },
+  "8": {
+    "question": "who at eth currently works on research regarding climate change?",
+    "action": "answer",
+    "answer": "Based on the chunks, the following ETH Zurich researchers work on climate change-related topics:\n\n- **Anthony Patt**, Professor of Human Environment Systems at the Institute for Environmental Decisions (D-USYS) since August 2013. His research addresses climate change policy, adaptation to climate change and its societal costs, and the benefits of different energy systems.\n- **Reto Knutti**, climate physicist and sustainability delegate for ETH Zurich, involved in the ETH climate programme.\n- **Moritz Drupp**, Associate Professor of Sustainability Economics (D-MTEC), whose research focuses on sustainable management of natural resources and ecosystems.\n\nThe evidence does not provide a comprehensive list of all current climate-change researchers at ETH.",
+    "clarifying_question": null,
+    "confidence": 0.9048,
+    "mode_used": "voting",
+    "latency_s": 10.33
+  },
+  "9": {
+    "question": "how do alpine plants respond to climate change?",
+    "action": "answer",
+    "answer": "According to the evidence, alpine plants respond to climate change in several ways. As temperatures rise, plants from lower elevations (lowlands) migrate upward into alpine and subalpine zones. These lowland plants tend to be bigger and grow faster, giving them a competitive edge and literally leaving smaller alpine species in the shadows, threatening to displace them. This could lead to changes in the species composition of alpine and subalpine plant communities, with new species creating new interactions. In experiments where alpine plants from 2,000 metres were transplanted to 1,400 metres (simulating a future warmer climate), some species like Alchemilla (lady's mantle) coped well, while other alpine plants lost the battle for resources against competitors better adapted to warm temperatures. However, the upward conquest by lowland plants is slower than expected, partly due to resistance from existing vegetation and the plants' poor dispersal abilities — some rely on wind, while others depend on animals (such as cows, which transport germinable seeds in their gut) to disperse their seeds. At the tree line, migrating species face more competition, whereas at higher summits competition is sparser.",
+    "clarifying_question": null,
+    "confidence": 0.9545,
+    "mode_used": "dense",
+    "latency_s": 13.82
+  },
+  "10": {
+    "question": "how would you make ferzlizer without carbon emissions?",
+    "action": "clarify",
+    "answer": null,
+    "clarifying_question": "Are you asking about making fertilizer specifically for use at ETH Zurich's facilities, or is this a general chemistry/sustainability question unrelated to ETH Zurich?",
+    "confidence": 0.0,
+    "mode_used": "confidence",
+    "latency_s": 7.63
+  },
+  "11": {
+    "question": "what research is eth famous for?",
+    "action": "answer",
+    "answer": "The chunks only give scattered examples rather than a definitive list of what ETH is famous for. Mentioned research areas include: participation in the InSight Mars mission measuring the planet's interior using seismic data; glaciology (recalculating glacier volumes in High Mountain Asia); measuring the oceanic sink for man-made CO2; the EU-funded 'Graphene' flagship project; personalised treatment methods for diseases such as pancreatic cancer (with the Roche Institute of Human Biology); and digital construction. ETH is also noted for its strong record in ERC Advanced Grants (ranked first alongside Oxford) and its famous alumnus Albert Einstein. The evidence does not provide a comprehensive overview of all fields ETH is renowned for.",
+    "clarifying_question": null,
+    "confidence": 0.919,
+    "mode_used": "confidence",
+    "latency_s": 12.94
+  },
+  "12": {
+    "question": "how much of eth’s electricity consumpzon is due to compuzng? how did that develop over the years?",
+    "action": "answer",
+    "answer": "The provided chunks do not contain data on historical trends or year-by-year development of electricity consumption for ETH Zurich's computing infrastructure. The only related information is that ETH Zurich is building a new Hönggerberg computing centre (HRZ) to meet 'steadily rising demand' for computing capacity, consolidating server, storage, and communication systems currently spread across provisional locations on the Hönggerberg campus. Additionally, ETH Zurich has been preparing measures for potential energy shortages, focusing on risks to technical facilities for teaching and research, led by VP for Infrastructure Ulrich Weidmann and Dario D'Ercole (Building Technology and Energy). No specific electricity consumption figures or historical usage trends are provided in the chunks.",
+    "clarifying_question": null,
+    "confidence": 0.8795,
+    "mode_used": "confidence",
+    "latency_s": 31.19
+  },
+  "13": {
+    "question": "what are pseudocereals and who does research on them?",
+    "action": "answer",
+    "answer": "The three most important pseudocereals are buckwheat, quinoa, and amaranth, all of which can be grown easily in Switzerland. Quinoa and amaranth originated in South America, while buckwheat comes from Asia and was historically widespread in Europe until 20th-century cereal breeding advances pushed it aside. Buckwheat still has potential to supplement major calorie crops, though its seed yield is around half that of the big cereals. At ETH Zurich, researchers at the World Food System Center (WFSC), with support from Coop, have examined buckwheat diversity, conducted taste tests, begun describing its genomic diversity, and identified the most suitable buckwheat varieties for Switzerland. The chunks focus on buckwheat research specifically and do not detail dedicated ETH research on quinoa or amaranth.",
+    "clarifying_question": null,
+    "confidence": 0.9114,
+    "mode_used": "confidence",
+    "latency_s": 32.16
+  },
+  "14": {
+    "question": "who is working on methods for targeted cancer treatment, and what do they use?",
+    "action": "answer",
+    "answer": "Based on the chunks, several researchers are working on methods relevant to targeted cancer treatment:\n\n- **Professor Bernd Wollscheid's group** at the ETH Institute of Molecular Systems Biology and the Department of Health Sciences and Technology (D-HEST) is investigating the distribution and organisation of proteins on cell surfaces, aiming to move beyond the current 'one drug–one target' approach, which causes side effects because target surface proteins occur on many cell types.\n- **ETH Zurich researchers** (chunk on metastasis) have discovered proteins on the surfaces of colorectal cancer cells and liver cells that bind together and drive metastasis formation in the liver. These findings are intended to help develop future treatments that hinder metastasis.\n- An unnamed researcher used a **hanging-drop microfluidic platform**, organising liver and cancer cells into spheroids/microtissues and feeding in a cytostatic agent that must be activated by liver cells, to study targeted dosing where the toxin kills cancer cells without harming the liver.\n- **Roger Stupp** (Director of Oncology, University Hospital Zurich) is cited as already applying personalised medicine in cancer treatment, though the chunk does not detail the specific methods.\n\nThe chunks do not provide further technical detail on the exact targeting tools used (e.g., specific drug classes or delivery systems) beyond what is stated above.",
+    "clarifying_question": null,
+    "confidence": 0.7751,
+    "mode_used": "graphrag",
+    "latency_s": 16.31
+  },
+  "15": {
+    "question": "how is eth research inveszgazng methods to avoid diarrhea?",
+    "action": "answer",
+    "answer": "ETH Zurich is investigating several methods to avoid diarrhoea:\n\n1. **Safer iron supplementation with probiotics**: Christophe Lacroix's group, together with Michael Zimmermann's human nutrition research group, is looking for ways to make iron sources safer for women and children in Africa, since iron supplementation can increase the risk of diarrhoea in regions where diarrhoeal pathogens are common. They are exploring selected probiotic bacterial strains to boost intestinal health during iron treatment.\n\n2. **Probiotics against C. difficile**: Lacroix's team is researching a bacterial strain with the potential to prevent or alleviate *Clostridium difficile* infections, a diarrhoeal pathogen especially dangerous to the elderly.\n\n3. **Preventing Salmonella in animals**: They are developing a method to prevent salmonella infections in livestock by feeding them special bacteria instead of antibiotics.\n\n4. **Oral vaccines to chain up pathogens**: Researchers used oral vaccines made from killed *Salmonella* and *E. coli* bacteria in livestock. The resulting IgA antibodies cause pathogen cells to clump together, which prevents them from exchanging plasmids (including antibiotic resistance genes) and reduces disease incidence.\n\nThe chunks do not describe other methods (e.g., sanitation or treatment approaches) in detail.",
+    "clarifying_question": null,
+    "confidence": 0.7944,
+    "mode_used": "voting",
+    "latency_s": 19.38
+  },
+  "16": {
+    "question": "what is eth plus?",
+    "action": "answer",
+    "answer": "ETH+ is an ETH Zurich initiative launched as an ETH-wide tender by the Executive Board, based on the conviction that the ETH community itself best knows where the greatest potential lies. It follows a bottom-up dynamic: by May 2018, 68 idea sketches had been submitted, involving all 16 academic departments as well as administrative units, the student association (VSETH) and the academic staff association (AVETH). Funding comes from ETH reserves accrued over the years, with contributions from the involved professorships/departments and the Executive Board, plus third-party resources. Nine initiatives are being implemented (e.g., an ETH Centre for the Fundamentals of Data Science led by Peter Bühlmann), and a second call for idea sketches was planned for October.",
+    "clarifying_question": null,
+    "confidence": 0.922,
+    "mode_used": "dense",
+    "latency_s": 15.88
+  },
+  "17": {
+    "question": "how do birds learn new songs?",
+    "action": "answer",
+    "answer": "The provided chunks do not contain information about how birds learn to sing or about birdsong acoustic learning. The chunks cover automated analysis of animal behaviour (mice and primates), bird flu outbreaks, and sound-powered sensors, none of which address avian vocal learning.",
+    "clarifying_question": null,
+    "confidence": 0.8442,
+    "mode_used": "graphrag",
+    "latency_s": 22.5
+  },
+  "18": {
+    "question": "what conneczons does eth have to hong kong?",
+    "action": "answer",
+    "answer": "The provided chunks do not specifically mention Hong Kong. They describe ETH Zurich's scientific cooperation with Asia more broadly through its Leading House Asia mandate, which manages grants and facilitates exchanges with Asian partners. Specific partnerships mentioned include the Republic of Korea (Seoul National University as main cooperation partner, KAIST, and the Korean Energy Agency) and Japan (e.g., Kyoto University via the Young Researcher's Exchange Programme). No information is provided about Hong Kong institutions or partnerships specifically.",
+    "clarifying_question": null,
+    "confidence": 0.8718,
+    "mode_used": "confidence",
+    "latency_s": 32.27
+  },
+  "19": {
+    "question": "for how many years has eth done research on quantum compuzng?",
+    "action": "answer",
+    "answer": "The provided chunks do not give a full timeline or duration in years of quantum computing research at ETH Zurich. They offer only scattered points: ETH Zurich hosts a Quantum Center (with Andreas Wallraff as founding director) comprising over 700 scientists from 34 research groups across six departments and the Paul Scherrer Institute; ETH Zurich was the first university to launch a Master's programme in Quantum Engineering, in 2019; and there is mention of the NCCR QSIT initiative in Switzerland. No founding dates for quantum research itself, nor an explicit historical timeline, are provided in the chunks.",
+    "clarifying_question": null,
+    "confidence": 0.9232,
+    "mode_used": "voting",
+    "latency_s": 20.27
+  },
+  "20": {
+    "question": "what are the current projections for the student numbers at eth?",
+    "action": "answer",
+    "answer": "The provided chunks do not contain specific student enrollment projections or forecast numbers for ETH Zurich's future demand. However, the evidence indicates: (1) student numbers have been rising, reaching a record 19,815 in 2016 with women at 31.1%; (2) rising student numbers contributed to financial pressures in 2023; and (3) due to financial uncertainty, ETH Zurich is considering measures to restrict student numbers, such as imposing a limit on student places, as a capacity-planning response. No explicit forecast figures, admissions capacity targets, or quantitative enrollment projections are provided in the chunks.",
+    "clarifying_question": null,
+    "confidence": 0.896,
+    "mode_used": "voting",
+    "latency_s": 18.89
+  },
+  "21": {
+    "question": "why should i study at eth?",
+    "action": "answer",
+    "answer": "Based on the chunks, reasons to study at ETH include: ETH graduates are highly in-demand, challenging the stereotype that they need time to adjust to professional practice; ETH covers a broad range of subjects and provides a solid theoretical foundation, being unique in Switzerland in this respect; it offers popular programmes such as mechanical engineering, computer science, architecture, physics, mathematics, health sciences and technology, and environmental sciences; it has an international network; it provides advice centres for any situation that may arise during studies, supporting personal development and time management; and it also offers vocational training in 15 different trades. The chunks do not cover other common considerations such as tuition, rankings, campus life, or research opportunities in detail.",
+    "clarifying_question": null,
+    "confidence": 0.9113,
+    "mode_used": "confidence",
+    "latency_s": 13.03
+  },
+  "22": {
+    "question": "who inveszgated the catastrophic events in tibet in 2016, and what was found?",
+    "action": "answer",
+    "answer": "The catastrophic double glacier collapse in Tibet in 2016 was investigated by an international team of researchers including ETH Zurich (the Earth Observation and Remote Sensing Group and the Laboratory of Hydraulics, Hydrology and Glaciology – VAW), the WSL Institute for Snow and Avalanche Research (SLF), and the GAPHAZ commission (Glacier and Permafrost Hazards in Mountains). Key contacts included Dr. Silvan Leinss, Dr. Yves Bühler, and Prof. Daniel Farinotti.\n\nThe team analyzed numerous satellite images and used the SLF-developed RAMMS simulation software to reproduce the avalanche. After the first ice avalanche on 17 July 2016, they detected a fracture line on a neighboring glacier nearly identical to that of the first collapse, indicating that a second collapse was imminent. They modeled the risk, produced a hazard map, and—coordinated through GAPHAZ—warned Chinese scientists and local Tibetan authorities. Only a few hours later, on 22 September 2016, the second collapse occurred as predicted. The investigators concluded that the twin collapse was likely due to a combination of geological and topographical factors, meteorological conditions, and most probably recent climate changes. The rapid satellite-based analysis was hailed as a milestone for early warning systems.",
+    "clarifying_question": null,
+    "confidence": 0.865,
+    "mode_used": "graphrag",
+    "latency_s": 20.33
+  },
+  "23": {
+    "question": "why should eth receive any additional funding?",
+    "action": "answer",
+    "answer": "The provided chunks do not directly argue why ETH should receive additional funding. They mention that ETH is using its own accrued reserves, contributions from professorships/departments and the executive board to finance ETH+ initiatives, and that substantial third-party contributions will be sought for interdisciplinary projects (ETH+ grants up to 3 million CHF covering three quarters of project costs, for projects involving researchers from at least three different ETH departments). The chunks also note uncertainty about future federal funding due to the coronavirus crisis and possible government cuts, which has led ETH to slow its growth rather than make a case for more funding. So the evidence shows where funding would go (interdisciplinary, bottom-up research initiatives leveraging ETH's broad expertise) but does not explicitly state reasons ETH should receive additional funding.",
+    "clarifying_question": null,
+    "confidence": 0.8937,
+    "mode_used": "confidence",
+    "latency_s": 15.58
+  },
+  "24": {
+    "question": "anybody at eth doing anything for people with disabilizes?",
+    "action": "answer",
+    "answer": "Yes. ETH Zurich runs a \"Barrier-free ETH\" / accessibility programme aimed at improving access to its buildings and services for people with disabilities or special needs, including students, teachers, researchers, staff and visitors. The programme is structured into 14 subprojects across three categories: \"construction, building usage and architecture\", \"organisation and culture\", and \"technology, communication and teaching\". Concrete measures include expanded accessible public tours (with icons indicating whether tours are wheelchair-accessible, suited for people with visual impairments, or available with a sign-language interpreter) — for example a \"joining with wood\" tour designed for visually impaired visitors. Facility Management also carries out regular inspection rounds to remove movable obstacles (blocked ramps, corridors, fire doors). Leadership (the Vice President of HR and Resources) frames this as a social duty, and work on an inclusive-university mission statement is being folded into a new holistic ETH Diversity Strategy from 2022. The chunks don't detail every specific service (e.g., individual student support offerings).",
+    "clarifying_question": null,
+    "confidence": 0.8872,
+    "mode_used": "voting",
+    "latency_s": 14.61
+  },
+  "25": {
+    "question": "does eth organize any competitions?",
+    "action": "answer",
+    "answer": "Yes, ETH organizes competitions. For example, ETH ran a European Football Championship betting game on its Point platform, open to all members of the ETH community (individuals or teams) with prizes such as restaurant gift certificates for winning teams.",
+    "clarifying_question": null,
+    "confidence": 0.8571,
+    "mode_used": "voting",
+    "latency_s": 9.06
+  }
+}

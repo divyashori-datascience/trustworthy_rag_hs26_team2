@@ -1,0 +1,198 @@
+{
+  "qid": "10",
+  "query": "how would you make ferzlizer without carbon emissions?",
+  "profile": {
+    "lang": "en",
+    "query_type": "definition",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "fertilizer",
+      "carbon emissions"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1313,
+      "lang": "en",
+      "query_type": "definition",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "fertilizer",
+        "carbon emissions"
+      ],
+      "initial_mode": "dense"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1591,
+      "mode": "dense",
+      "query": "how would you make ferzlizer without carbon emissions?",
+      "n_chunks": 8,
+      "top_ids": [
+        "b4b121286ee9103482da7586511c101cd7f3bca9_fixed_1",
+        "f7c1cdb98e12082bc830f6cf3caab58efea2d7ad_fixed_1",
+        "f7c1cdb98e12082bc830f6cf3caab58efea2d7ad_fixed_0",
+        "c2861e6977a45a899676b4ddb5aef51865c80a75_fixed_1",
+        "c9b70590a59773186e37d27e28a151b8ba26dcb5_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1734,
+      "signals": {
+        "sufficiency": 0.4782,
+        "chunk_agreement": 0.6454,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1734,
+      "action": "generate",
+      "reason": "sufficiency 0.48 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 6359,
+      "draft_answer": "The provided chunks do not specifically address how to make fertilizer without carbon emissions. They discuss related topics like synthesizing liquid hydrocarbons from water and CO2 using renewable energy (power-to-fuel), producing green methanol from CO2 and water, and using bacteria to convert CO2 into climate-neutral chemicals for the chemical industry — but none of these excerpts specifically mention fertilizer production.",
+      "citations": [
+        "b4b121286ee9103482da7586511c101cd7f3bca9_fixed_1",
+        "c9b70590a59773186e37d27e28a151b8ba26dcb5_fixed_0"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 6359,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 7699,
+      "rewritten_query": "sustainable fertilizer production low carbon emissions manufacturing methods renewable energy alternatives",
+      "old_mode": "dense",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 18918,
+      "mode": "voting",
+      "query": "sustainable fertilizer production low carbon emissions manufacturing methods renewable energy alternatives",
+      "n_chunks": 8,
+      "top_ids": [
+        "7ec014e731c0d33cec3589aa96bb1cb0c0847c64_fixed_2",
+        "7ec014e731c0d33cec3589aa96bb1cb0c0847c64_fixed_1",
+        "c9b70590a59773186e37d27e28a151b8ba26dcb5_fixed_2",
+        "1e8538e7de6942bee78536851d878b218d5e8110_fixed_0",
+        "60b19342865741e9a68ca07537a1a255ae0d91ac_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 19140,
+      "signals": {
+        "sufficiency": 0.6101,
+        "chunk_agreement": 0.6642,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 19140,
+      "action": "generate",
+      "reason": "sufficiency 0.61 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 25046,
+      "draft_answer": "The evidence does not directly address sustainable fertilizer production with low-carbon manufacturing methods or renewable energy alternatives for fertilizers. The only fertilizer-related chunk describes a project in South Africa where compost is produced from human excreta (sewage sludge) and urban green waste to be used as fertilizer, led by ETH postdoc Benjamin Wilde with local partners in the Msunduzi municipality. This represents a waste-recycling approach to fertilizer production but the chunks do not discuss its carbon emissions or renewable energy use. Other chunks cover unrelated topics (low-carbon construction materials, synthetic methylotrophic bacteria for chemicals from methanol, and a catalyst for CO2-based methanol production), not fertilizer manufacturing.",
+      "citations": [
+        "1e8538e7de6942bee78536851d878b218d5e8110_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 25046,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 29029,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft accurately describes the evidence: it correctly identifies the South Africa compost project led by Benjamin Wilde and notes that other chunks address unrelated topics (low-carbon construction, methylotrophic bacteria, CO2-based methanol catalyst). It makes no claims beyond what the chunks support.",
+      "signals": {
+        "sufficiency": 0.6101,
+        "chunk_agreement": 0.6642,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.844
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 29029,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 29029,
+      "action": "answer",
+      "answer": "The evidence does not directly address sustainable fertilizer production with low-carbon manufacturing methods or renewable energy alternatives for fertilizers. The only fertilizer-related chunk describes a project in South Africa where compost is produced from human excreta (sewage sludge) and urban green waste to be used as fertilizer, led by ETH postdoc Benjamin Wilde with local partners in the Msunduzi municipality. This represents a waste-recycling approach to fertilizer production but the chunks do not discuss its carbon emissions or renewable energy use. Other chunks cover unrelated topics (low-carbon construction materials, synthetic methylotrophic bacteria for chemicals from methanol, and a catalyst for CO2-based methanol production), not fertilizer manufacturing.",
+      "citations": [
+        "1e8538e7de6942bee78536851d878b218d5e8110_fixed_0"
+      ],
+      "confidence": 0.844,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.6101,
+        "chunk_agreement": 0.6642,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.844
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The evidence does not directly address sustainable fertilizer production with low-carbon manufacturing methods or renewable energy alternatives for fertilizers. The only fertilizer-related chunk describes a project in South Africa where compost is produced from human excreta (sewage sludge) and urban green waste to be used as fertilizer, led by ETH postdoc Benjamin Wilde with local partners in the Msunduzi municipality. This represents a waste-recycling approach to fertilizer production but the chunks do not discuss its carbon emissions or renewable energy use. Other chunks cover unrelated topics (low-carbon construction materials, synthetic methylotrophic bacteria for chemicals from methanol, and a catalyst for CO2-based methanol production), not fertilizer manufacturing.",
+    "citations": [
+      "1e8538e7de6942bee78536851d878b218d5e8110_fixed_0"
+    ],
+    "confidence": 0.844,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.6101,
+      "chunk_agreement": 0.6642,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.844
+    }
+  }
+}

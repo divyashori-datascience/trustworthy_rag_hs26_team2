@@ -1,0 +1,149 @@
+{
+  "qid": "24",
+  "query": "anybody at eth doing anything for people with disabilizes?",
+  "profile": {
+    "lang": "en",
+    "query_type": "list",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "The query uses vague terms ('anybody', 'doing anything', 'for people with disabilizes') without specifying what kind of work, research, or initiatives are being sought, making it open-ended.",
+    "entities": [
+      "eth",
+      "disabilities"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1785,
+      "lang": "en",
+      "query_type": "list",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "The query uses vague terms ('anybody', 'doing anything', 'for people with disabilizes') without specifying what kind of work, research, or initiatives are being sought, making it open-ended.",
+      "entities": [
+        "eth",
+        "disabilities"
+      ],
+      "initial_mode": "voting"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2190,
+      "mode": "voting",
+      "query": "anybody at eth doing anything for people with disabilizes?",
+      "n_chunks": 8,
+      "top_ids": [
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_0",
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_1",
+        "e4f85861f404ecd289acccd13196b4aa27be6459_fixed_1",
+        "b0be5755df8811203352f5b5135187d2942f90a0_fixed_0",
+        "ae5b830c9cab4ca4e9e224525d7202e8c45858d7_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2344,
+      "signals": {
+        "sufficiency": 0.7679,
+        "chunk_agreement": 0.7316,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2345,
+      "action": "generate",
+      "reason": "sufficiency 0.77 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 11005,
+      "draft_answer": "Yes. ETH Zurich runs a \"Barrier-free ETH\" / accessibility programme aimed at improving access to its buildings and services for people with disabilities or special needs, including students, teachers, researchers, staff and visitors. The programme is structured into 14 subprojects across three categories: \"construction, building usage and architecture\", \"organisation and culture\", and \"technology, communication and teaching\". Concrete measures include expanded accessible public tours (with icons indicating whether tours are wheelchair-accessible, suited for people with visual impairments, or available with a sign-language interpreter) — for example a \"joining with wood\" tour designed for visually impaired visitors. Facility Management also carries out regular inspection rounds to remove movable obstacles (blocked ramps, corridors, fire doors). Leadership (the Vice President of HR and Resources) frames this as a social duty, and work on an inclusive-university mission statement is being folded into a new holistic ETH Diversity Strategy from 2022. The chunks don't detail every specific service (e.g., individual student support offerings).",
+      "citations": [
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_0",
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_1",
+        "e4f85861f404ecd289acccd13196b4aa27be6459_fixed_1",
+        "b0be5755df8811203352f5b5135187d2942f90a0_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 11005,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 14612,
+      "grounded": true,
+      "grounding_score": 0.95,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All factual claims in the draft are supported by the evidence chunks: the Barrier-free ETH programme, 14 subprojects in three categories, accessible tours with icons, the wood-joining tour for visually impaired visitors, Facility Management inspection rounds, the VP of HR/Resources framing it as a social duty, and the diversity strategy from 2022.",
+      "signals": {
+        "sufficiency": 0.7679,
+        "chunk_agreement": 0.7316,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.8872
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 14613,
+      "action": "answer",
+      "reason": "grounded (score 0.95) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 14613,
+      "action": "answer",
+      "answer": "Yes. ETH Zurich runs a \"Barrier-free ETH\" / accessibility programme aimed at improving access to its buildings and services for people with disabilities or special needs, including students, teachers, researchers, staff and visitors. The programme is structured into 14 subprojects across three categories: \"construction, building usage and architecture\", \"organisation and culture\", and \"technology, communication and teaching\". Concrete measures include expanded accessible public tours (with icons indicating whether tours are wheelchair-accessible, suited for people with visual impairments, or available with a sign-language interpreter) — for example a \"joining with wood\" tour designed for visually impaired visitors. Facility Management also carries out regular inspection rounds to remove movable obstacles (blocked ramps, corridors, fire doors). Leadership (the Vice President of HR and Resources) frames this as a social duty, and work on an inclusive-university mission statement is being folded into a new holistic ETH Diversity Strategy from 2022. The chunks don't detail every specific service (e.g., individual student support offerings).",
+      "citations": [
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_0",
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_1",
+        "e4f85861f404ecd289acccd13196b4aa27be6459_fixed_1",
+        "b0be5755df8811203352f5b5135187d2942f90a0_fixed_0"
+      ],
+      "confidence": 0.8872,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.7679,
+        "chunk_agreement": 0.7316,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.8872
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Yes. ETH Zurich runs a \"Barrier-free ETH\" / accessibility programme aimed at improving access to its buildings and services for people with disabilities or special needs, including students, teachers, researchers, staff and visitors. The programme is structured into 14 subprojects across three categories: \"construction, building usage and architecture\", \"organisation and culture\", and \"technology, communication and teaching\". Concrete measures include expanded accessible public tours (with icons indicating whether tours are wheelchair-accessible, suited for people with visual impairments, or available with a sign-language interpreter) — for example a \"joining with wood\" tour designed for visually impaired visitors. Facility Management also carries out regular inspection rounds to remove movable obstacles (blocked ramps, corridors, fire doors). Leadership (the Vice President of HR and Resources) frames this as a social duty, and work on an inclusive-university mission statement is being folded into a new holistic ETH Diversity Strategy from 2022. The chunks don't detail every specific service (e.g., individual student support offerings).",
+    "citations": [
+      "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_0",
+      "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_1",
+      "e4f85861f404ecd289acccd13196b4aa27be6459_fixed_1",
+      "b0be5755df8811203352f5b5135187d2942f90a0_fixed_0"
+    ],
+    "confidence": 0.8872,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.7679,
+      "chunk_agreement": 0.7316,
+      "grounding": 0.95,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.8872
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "qid": "18",
+  "query": "what conneczons does eth have to hong kong?",
+  "profile": {
+    "lang": "en",
+    "query_type": "list",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "hong kong"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1284,
+      "lang": "en",
+      "query_type": "list",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "hong kong"
+      ],
+      "initial_mode": "voting"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 3260,
+      "mode": "voting",
+      "query": "what conneczons does eth have to hong kong?",
+      "n_chunks": 8,
+      "top_ids": [
+        "050c5e55e2b9852bf0aacaf31f1d2c5388330cce_fixed_2",
+        "59d58e17c96fa033a70cf88e3be6de41f9ff6696_fixed_2",
+        "3ea87b4ba49860bfd122a78dc1a176fdd88b931e_fixed_2",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_1",
+        "3ea87b4ba49860bfd122a78dc1a176fdd88b931e_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 3403,
+      "signals": {
+        "sufficiency": 0.6318,
+        "chunk_agreement": 0.7166,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 3403,
+      "action": "generate",
+      "reason": "sufficiency 0.63 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 10573,
+      "draft_answer": "The provided evidence chunks do not mention any connections between ETH Zurich and Hong Kong. The chunks discuss ETH's connections to Singapore (via the Singapore-ETH Centre), South Korea, and a planned branch in Heilbronn, but Hong Kong is not referenced.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 10573,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 10573,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.6318,
+        "chunk_agreement": 0.7166,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.6318,
+      "chunk_agreement": 0.7166,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

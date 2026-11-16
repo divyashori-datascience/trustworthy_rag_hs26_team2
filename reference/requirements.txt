@@ -1,0 +1,65 @@
+# Core RAG / LangChain stack
+langchain>=0.3
+langchain-community>=0.3
+langchain-core>=0.3
+langchain-huggingface>=0.1
+langchain-chroma>=0.1
+chromadb>=0.5
+
+# Retrieval
+rank_bm25>=0.2.2
+sentence-transformers>=3.0
+# pytrec_eval-terrier is a drop-in replacement that ships Windows wheels
+# (the original pytrec_eval requires MSVC C++ build tools to compile).
+pytrec_eval-terrier>=0.5.7
+
+# NLP / language tooling
+nltk>=3.9
+langdetect>=1.0.9
+spacy>=3.7
+yake>=0.4.8
+lingua-language-detector>=2.0
+transformers>=4.44
+accelerate>=0.34
+torch>=2.2
+# Required tokenizer backends for M2M100 (translator) and FLAN-T5 (classifier).
+sentencepiece>=0.2
+protobuf>=3.20
+
+# Document processing
+beautifulsoup4>=4.12
+lxml>=5.0
+docling>=2.0
+pdfplumber>=0.11
+
+# GraphRAG
+igraph>=0.11
+leidenalg>=0.10
+
+# OpenAI / LLM (previous team's Step 1 artifacts)
+openai>=1.50
+pydantic>=2.7
+
+# Anthropic / Claude — Step 3 agentic system (answer generation, verification,
+# query rewriting, profiling).
+anthropic>=0.40
+
+# Data / scoring / plotting
+numpy>=1.26
+pandas>=2.2
+scipy>=1.13
+scikit-learn>=1.5
+matplotlib>=3.8
+seaborn>=0.13
+plotly>=5.22
+
+# Notebook + utilities
+jupyter
+ipykernel
+tqdm>=4.66
+python-dotenv>=1.0
+
+# Report -> PDF rendering (src/scripts/report_to_pdf.py). Pure-Python, no system
+# libraries required (unlike weasyprint, which needs GTK/Pango on Windows).
+markdown>=3.5
+xhtml2pdf>=0.2.16

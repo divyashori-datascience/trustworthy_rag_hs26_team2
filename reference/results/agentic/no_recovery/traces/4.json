@@ -1,0 +1,108 @@
+{
+  "qid": "4",
+  "query": "when did the insight get to mars?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "insight",
+      "mars"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1026,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "insight",
+        "mars"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2658,
+      "mode": "bm25",
+      "query": "when did the insight get to mars?",
+      "n_chunks": 8,
+      "top_ids": [
+        "befad6e62e34275b4075b3e11b2b3747b32f4a9d_fixed_0",
+        "2c62a770e2f73e52049dbd92cb8820ce7de14e3f_fixed_1",
+        "9de7001d1f6adeb787dfd16aa0832f004d6038c5_fixed_0",
+        "ad92c3d83762e70b384f73be520742d69e7c1eff_fixed_1",
+        "5adb2b71ed200e7ffa351b938378e7e3da7dc731_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2924,
+      "signals": {
+        "sufficiency": 0.5191,
+        "chunk_agreement": 0.5462,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2924,
+      "action": "generate",
+      "reason": "sufficiency 0.52 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 6163,
+      "draft_answer": "The provided chunks do not contain any information about the InSight mission or its arrival at Mars.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 6163,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 6163,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "bm25",
+      "signals": {
+        "sufficiency": 0.5191,
+        "chunk_agreement": 0.5462,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "bm25",
+    "signals": {
+      "sufficiency": 0.5191,
+      "chunk_agreement": 0.5462,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

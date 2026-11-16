@@ -1,0 +1,94 @@
+{
+  "qid": "R3",
+  "query": "Was hat der Professor über die Zukunft gesagt?",
+  "profile": {
+    "lang": "de",
+    "query_type": "entity",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "The query does not specify which professor is being asked about, making it impossible to identify the correct answer without clarification.",
+    "entities": [
+      "professor",
+      "zukunft"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1321,
+      "lang": "de",
+      "query_type": "entity",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "The query does not specify which professor is being asked about, making it impossible to identify the correct answer without clarification.",
+      "entities": [
+        "professor",
+        "zukunft"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2786,
+      "mode": "bm25",
+      "query": "Was hat der Professor über die Zukunft gesagt?",
+      "n_chunks": 8,
+      "top_ids": [
+        "7259cb61cd0acb5e2bdad53d5c72c6ddcfb145eb_fixed_0",
+        "063834deff4e2d2c8a06d14095ceb2d9ea4ffd81_fixed_0",
+        "751b434a934817d1e8651e29ad620f791eafc730_fixed_1",
+        "9b32a3ebd2fa1ab62b9ef3ded79b81d7eef68fc9_fixed_2",
+        "0b523a1c7fc162fc3966c6e54f3ac80272691321_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 3014,
+      "signals": {
+        "sufficiency": 0.5476,
+        "chunk_agreement": 0.5548,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 3014,
+      "action": "clarify",
+      "reason": "ambiguity flag set (The query does not specify which professor is being asked about, making it impossible to identify the correct answer without clarification.); evidence not strong (sufficiency 0.55 < 0.65) → clarify instead of answering",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 4236,
+      "action": "clarify",
+      "answer": null,
+      "clarifying_question": "Welcher Professor und aus welchem Kontext oder welcher Veranstaltung beziehen Sie sich auf diese Aussage?",
+      "confidence": 0.0,
+      "mode_used": "bm25",
+      "signals": {
+        "sufficiency": 0.5476,
+        "chunk_agreement": 0.5548,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "clarify",
+    "answer": null,
+    "clarifying_question": "Welcher Professor und aus welchem Kontext oder welcher Veranstaltung beziehen Sie sich auf diese Aussage?",
+    "confidence": 0.0,
+    "mode_used": "bm25",
+    "signals": {
+      "sufficiency": 0.5476,
+      "chunk_agreement": 0.5548,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.0
+    }
+  }
+}

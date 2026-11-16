@@ -1,0 +1,206 @@
+{
+  "qid": "20",
+  "query": "what are the current projections for the student numbers at eth?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "student numbers",
+      "projections"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1282,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "student numbers",
+        "projections"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 3633,
+      "mode": "bm25",
+      "query": "what are the current projections for the student numbers at eth?",
+      "n_chunks": 8,
+      "top_ids": [
+        "d801d66a7b1ef666e5d09a1191d77884a7061176_fixed_0",
+        "bae611da7c3964d7af4cdc5db58c2e84e4bbaea7_fixed_1",
+        "b4500b1c67b96085d77d87a12ff38a81c8586fa5_fixed_0",
+        "47f707c9a3a07d8e977e7737f2ff4ac3d0d4c824_fixed_0",
+        "88079056286b958cbeb17251761aed07fd0b3f76_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 3835,
+      "signals": {
+        "sufficiency": 0.5464,
+        "chunk_agreement": 0.6356,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 3835,
+      "action": "generate",
+      "reason": "sufficiency 0.55 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 6609,
+      "draft_answer": "The provided chunks do not contain any information about current projections for student numbers at ETH Zurich.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 6609,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 7722,
+      "rewritten_query": "what are the current projections for student enrollment numbers at ETH Zurich Swiss Federal Institute of Technology",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 11826,
+      "mode": "voting",
+      "query": "what are the current projections for student enrollment numbers at ETH Zurich Swiss Federal Institute of Technology",
+      "n_chunks": 8,
+      "top_ids": [
+        "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0",
+        "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0",
+        "6df21a1874bb1595e8a7fd89e814e68611c05125_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 11963,
+      "signals": {
+        "sufficiency": 0.7763,
+        "chunk_agreement": 0.8062,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 11963,
+      "action": "generate",
+      "reason": "sufficiency 0.78 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 18219,
+      "draft_answer": "The provided chunks do not give specific numerical projections for future student enrollment at ETH Zurich. They mention that student numbers have been rising (reaching a record 19,815 in 2016) and note rising student numbers in 2023, but no forward-looking enrollment projections are given. The chunks do indicate that, due to financial pressures, ETH Zurich is considering measures to restrict student numbers, for example by imposing a limit on student places. Matriculation figures for autumn 2023 were not yet finalized at the time, with final figures determined in November. Beyond this, the evidence does not cover specific projected enrollment numbers.",
+      "citations": [
+        "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0",
+        "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 18219,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 21651,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are supported by the evidence chunks: the record of 19,815 students in 2016, rising student numbers in 2023, considering restricting student numbers, and matriculation figures for autumn 2023 being finalized in November are all explicitly stated.",
+      "signals": {
+        "sufficiency": 0.7763,
+        "chunk_agreement": 0.8062,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9105
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 21651,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 21651,
+      "action": "answer",
+      "answer": "The provided chunks do not give specific numerical projections for future student enrollment at ETH Zurich. They mention that student numbers have been rising (reaching a record 19,815 in 2016) and note rising student numbers in 2023, but no forward-looking enrollment projections are given. The chunks do indicate that, due to financial pressures, ETH Zurich is considering measures to restrict student numbers, for example by imposing a limit on student places. Matriculation figures for autumn 2023 were not yet finalized at the time, with final figures determined in November. Beyond this, the evidence does not cover specific projected enrollment numbers.",
+      "citations": [
+        "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0",
+        "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1"
+      ],
+      "confidence": 0.9105,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.7763,
+        "chunk_agreement": 0.8062,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9105
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The provided chunks do not give specific numerical projections for future student enrollment at ETH Zurich. They mention that student numbers have been rising (reaching a record 19,815 in 2016) and note rising student numbers in 2023, but no forward-looking enrollment projections are given. The chunks do indicate that, due to financial pressures, ETH Zurich is considering measures to restrict student numbers, for example by imposing a limit on student places. Matriculation figures for autumn 2023 were not yet finalized at the time, with final figures determined in November. Beyond this, the evidence does not cover specific projected enrollment numbers.",
+    "citations": [
+      "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0",
+      "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+      "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0",
+      "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1"
+    ],
+    "confidence": 0.9105,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.7763,
+      "chunk_agreement": 0.8062,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.9105
+    }
+  }
+}

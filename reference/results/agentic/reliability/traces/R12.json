@@ -1,0 +1,224 @@
+{
+  "qid": "R12",
+  "query": "Which ETH Zurich professor won the Nobel Prize in Literature, and for which novel?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth zurich",
+      "nobel prize in literature",
+      "professor"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1252,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth zurich",
+        "nobel prize in literature",
+        "professor"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 3995,
+      "mode": "bm25",
+      "query": "Which ETH Zurich professor won the Nobel Prize in Literature, and for which novel?",
+      "n_chunks": 8,
+      "top_ids": [
+        "0a276447fe04147c612eb7f7349406207d04a6d0_fixed_2",
+        "2ada75b3398f41e90bb7357a817317542c7a6fe7_fixed_0",
+        "212c7e570c295cdc83e98c6af76684e48d979746_fixed_1",
+        "afa4aab843998220812efb99bce762d7d52fc643_fixed_0",
+        "747e3339e4b715411ddd16fddff19e304add730d_fixed_3"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 4207,
+      "signals": {
+        "sufficiency": 0.6344,
+        "chunk_agreement": 0.6214,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 4207,
+      "action": "generate",
+      "reason": "sufficiency 0.63 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 6926,
+      "draft_answer": "The provided chunks do not contain any information about an ETH Zurich professor winning the Nobel Prize in Literature.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 6926,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 7768,
+      "rewritten_query": "ETH Zurich professor Nobel Prize Literature author novel winner",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 10794,
+      "mode": "voting",
+      "query": "ETH Zurich professor Nobel Prize Literature author novel winner",
+      "n_chunks": 8,
+      "top_ids": [
+        "be17604ca9d481e4b467695e1fbc2cb6a07d9ccb_fixed_0",
+        "f7f24fc4b9c131b32ea73051b0a7b1e8cdd9be36_fixed_2",
+        "f33fc5bae9a02e94cf9a72e8caf1a3c79af6ab26_fixed_0",
+        "225d9618e624e91e5cacfd1961d7e7305c71b5e6_fixed_2",
+        "96f211c12227d0916dd65ba1a6f1c23d3df2cb55_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 10938,
+      "signals": {
+        "sufficiency": 0.716,
+        "chunk_agreement": 0.7134,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 10938,
+      "action": "generate",
+      "reason": "sufficiency 0.72 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 14900,
+      "draft_answer": "The provided chunks do not mention any ETH Zurich professor who won the Nobel Prize in Literature, nor any novel. The Nobel laureates referenced are in chemistry (Leopold Ruzicka) and for magnetic resonance (Richard Ernst, 1991). No literature/novel-related Nobel winner appears in the evidence.",
+      "citations": [
+        "be17604ca9d481e4b467695e1fbc2cb6a07d9ccb_fixed_0"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 14900,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 15780,
+      "rewritten_query": "ETH Zurich professor Nobel Prize Literature author novel work",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 15851,
+      "mode": "graphrag",
+      "query": "ETH Zurich professor Nobel Prize Literature author novel work",
+      "n_chunks": 8,
+      "top_ids": [
+        "f7f24fc4b9c131b32ea73051b0a7b1e8cdd9be36_fixed_2",
+        "f76c12a829cc91dfbbd814cdf2afbc9415c6fabc_fixed_2",
+        "be17604ca9d481e4b467695e1fbc2cb6a07d9ccb_fixed_0",
+        "fd151eaf1ee625f124570345e58f354775ec0d37_fixed_2",
+        "fa3e3284b7591caf58351b0e60d20dcae1631034_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 15975,
+      "signals": {
+        "sufficiency": 0.7271,
+        "chunk_agreement": 0.7298,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 15975,
+      "action": "generate",
+      "reason": "sufficiency 0.73 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 20173,
+      "draft_answer": "The provided chunks do not mention any ETH Zurich professor who won the Nobel Prize in Literature, nor any novel or literary work. The Nobel laureates mentioned are in chemistry (Leopold Ruzicka) and related sciences (Richard Ernst for magnetic resonance). No evidence is available to answer the question about a Literature Nobel Prize.",
+      "citations": [
+        "be17604ca9d481e4b467695e1fbc2cb6a07d9ccb_fixed_0"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 20173,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 20173,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.7271,
+        "chunk_agreement": 0.7298,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.7271,
+      "chunk_agreement": 0.7298,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

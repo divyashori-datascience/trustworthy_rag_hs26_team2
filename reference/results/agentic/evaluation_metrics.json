@@ -1,0 +1,216 @@
+{
+  "n_questions": 25,
+  "action_counts": {
+    "abstain": 4,
+    "answer": 20,
+    "clarify": 1
+  },
+  "behaviour": {
+    "confusion_expected_vs_actual": {
+      "abstain": {
+        "abstain": 1
+      },
+      "answer": {
+        "answer": 17,
+        "clarify": 1,
+        "abstain": 3
+      },
+      "clarify": {
+        "answer": 3
+      }
+    },
+    "abstention": {
+      "total": 4,
+      "correct": 1,
+      "false": 3,
+      "correct_rate": 0.25,
+      "false_rate": 0.75
+    },
+    "clarification": {
+      "total": 1,
+      "correct": 0,
+      "false": 1,
+      "correct_rate": 0.0
+    },
+    "answer_coverage_on_answerable": {
+      "answerable": 21,
+      "answered": 17,
+      "rate": 0.81
+    }
+  },
+  "groundedness": {
+    "n_answers": 20,
+    "grounded_answer_rate": 1.0,
+    "mean_grounding_score": 0.985,
+    "mean_unsupported_claims": 0.0
+  },
+  "recovery": {
+    "n_recovered": 11,
+    "recovery_success": 7,
+    "recovery_success_rate": 0.636,
+    "recovered_qids": [
+      "1",
+      "10",
+      "12",
+      "13",
+      "17",
+      "18",
+      "19",
+      "20",
+      "23",
+      "4",
+      "6"
+    ]
+  },
+  "confidence_by_action": {
+    "abstain": {
+      "n": 4,
+      "mean_confidence": 0.0
+    },
+    "answer": {
+      "n": 20,
+      "mean_confidence": 0.89
+    },
+    "clarify": {
+      "n": 1,
+      "mean_confidence": 0.0
+    }
+  },
+  "retrieval": {
+    "n_with_gold": 24,
+    "P@5": 0.1417,
+    "Recall@5": 0.0273,
+    "MRR@5": 0.2181,
+    "note": "computed on the agentic system's FINAL retrieved top-5 (post-recovery)"
+  },
+  "baseline_reference": {
+    "strategy": "Confidence",
+    "P@5": 0.1167,
+    "Recall@5": 0.0046,
+    "MRR": 0.2045,
+    "latency_avg_s": 0.96
+  },
+  "efficiency": {
+    "latency_avg_s": 28.74,
+    "latency_max_s": 251.89,
+    "est_cost_usd": 0.9467
+  },
+  "correctness": {
+    "n_judged": 20,
+    "verdict_counts": {
+      "partially_correct": 11,
+      "correct": 3,
+      "incorrect": 6
+    },
+    "mean_confidence_by_verdict": {
+      "partially_correct": 0.9,
+      "correct": 0.896,
+      "incorrect": 0.869
+    },
+    "per_query": {
+      "2": {
+        "verdict": "partially_correct",
+        "confidence": 0.8937,
+        "reason": "The candidate correctly identifies both rectors mentioned in the gold answer (Sarah Springman and Günther Dissertori) and provides accurate details about their tenures. However, the candidate hedges by stating that the chunks 'do not explicitly cover who was rector in 2017' and that they don't 'name all rectors throughout the 2017–2022 period,' when in fact the gold answer directly confirms these two individuals were the rectors during this period. The candidate's answer is essentially correct but presented with unnecessary qualification and uncertainty about information that matches the gold answer."
+      },
+      "3": {
+        "verdict": "partially_correct",
+        "confidence": 0.8596,
+        "reason": "The candidate answer correctly identifies that ETH researchers received ERC grants and provides two specific named recipients (Niklas Beisert and Sonia Seneviratne) with their research areas. However, the gold answer lists many more ERC grant recipients at ETH (including Tobias Donner, Eliot Ash, Ursula Keller, Klaus Ensslin, and others). The candidate's answer is incomplete and only covers a small fraction of the recipients mentioned in the gold answer. While the information provided is accurate and on the right track, it fails to capture the comprehensive list of ERC grant recipients that the gold answer contains."
+      },
+      "4": {
+        "verdict": "correct",
+        "confidence": 0.937,
+        "reason": "The candidate answer provides the exact date that matches the gold answer (26 November 2018) when InSight reached/landed on Mars. The candidate answer is more detailed but contains all the essential information from the gold answer."
+      },
+      "7": {
+        "verdict": "partially_correct",
+        "confidence": 0.9216,
+        "reason": "The candidate correctly identifies Albert Einstein as a famous ETH alumni, which is in the gold answer. However, the candidate provides only 3 examples (Einstein, Jeannine Pilloud, and two Olympic athletes) when the gold answer contains 28 notable alumni. While the candidate's answer is accurate for what it does mention, it is significantly incomplete and represents only a small fraction of the famous ETH alumni listed in the gold answer. The candidate also appropriately notes the limitation of available information in the provided chunks, but this incompleteness means the answer does not adequately address the question about famous ETH alumni."
+      },
+      "8": {
+        "verdict": "partially_correct",
+        "confidence": 0.9048,
+        "reason": "The candidate answer correctly identifies Anthony Patt and his work on climate policy and climate change adaptation, which matches the gold answer. It also appropriately notes that the information is not comprehensive. However, the candidate is missing several key entities mentioned in the gold answer: (1) the Department of Environmental Systems Science (D-USYS) itself as an organization working on climate research, (2) the Institute for Atmospheric and Climate Science, (3) the Chair of Hydrology and Water Resources Development, (4) specific researchers like Nadel and mentions of sustainable development work, and (5) ETH Net Zero on the institutional side. While the candidate provides relevant information about climate researchers at ETH, it does not cover the full scope of departments, institutes, and individuals listed in the gold answer."
+      },
+      "9": {
+        "verdict": "partially_correct",
+        "confidence": 0.9545,
+        "reason": "The candidate answer captures several key points from the gold answer, including competition from lower-elevation species, upward migration driven by warming, the competitive disadvantage of alpine plants, and factors slowing this process (vegetation resistance and seed dispersal). However, it misses or downplays some important elements from the gold answer: (1) the explicit mention that while many alpine plants can tolerate warming itself, the primary threat is competition, (2) the reference to ETH research/experimental studies specifically validating these findings, and (3) the clear statement about long-term ecosystem changes and the risk of alpine species being outcompeted. The candidate's mention of specific transplant experiments and species like Alchemilla adds helpful detail, but the answer also hedges by saying 'the chunks do not cover physiological or phenological responses,' which somewhat undercuts the completeness of the response. Overall, the answer is directionally correct and covers the main mechanisms, but lacks the emphasis on ETH research validation and the definitive framing of the threat that the gold answer provides."
+      },
+      "10": {
+        "verdict": "incorrect",
+        "confidence": 0.844,
+        "reason": "The candidate answer claims that the evidence does not address sustainable fertilizer production methods, stating that only a South African compost project is mentioned and that chunks do not discuss carbon emissions or renewable energy use for fertilizers. However, the gold answer provides a comprehensive discussion of multiple methods for low-carbon fertilizer production, including electrification using renewable energy for hydrogen production via water electrolysis, hydrogen production from biomass, improving fertilizer efficiency, and decentralized production. The candidate answer appears to be denying the existence of information that the gold answer clearly contains, making this response fundamentally incorrect rather than on the right track."
+      },
+      "11": {
+        "verdict": "incorrect",
+        "confidence": 0.919,
+        "reason": "The candidate answer provides a detailed list of specific research areas and achievements, but this directly contradicts the gold answer's core instruction. The gold answer explicitly states that ETH should NOT favor one department over another and should DEFLECT when questions about being famous or successful arise. The candidate instead does exactly what should be avoided - it provides a comprehensive enumeration of specific famous research areas (Mars missions, glaciology, cancer research, etc.) and rankings. The candidate also acknowledges the instruction not to provide a comprehensive ranking, but the entire response violates the spirit of the deflection instruction by listing specific accomplishments. A correct response would acknowledge the breadth of research without highlighting specific famous areas."
+      },
+      "12": {
+        "verdict": "incorrect",
+        "confidence": 0.8768,
+        "reason": "The candidate answer states that no specific data is provided in the chunks, when the gold answer clearly contains specific figures (13,500 tons of CO2 in 2017 representing about 10% of total emissions, and 40 GWh annual electricity consumption) along with information about the trend (increasing over the years) and ETH's net-zero goal by 2030. The candidate fails to provide or acknowledge these key data points that constitute the core of the gold answer."
+      },
+      "13": {
+        "verdict": "partially_correct",
+        "confidence": 0.9086,
+        "reason": "The candidate answer correctly identifies the three most important pseudocereals (buckwheat, quinoa, amaranth) and confirms that ETH Zurich conducts research on them. However, it falls short of fully answering the question in several ways: (1) It does not explicitly define what pseudocereals are (plants not botanically related to true cereals but used similarly, producing storable seeds with grain-like characteristics), (2) It does not explain the key benefits of pseudocereals mentioned in the gold answer (pest resistance, high nutritional value, gluten-free properties), (3) While it mentions ETH's World Food System Center conducting buckwheat research, the gold answer specifically identifies the Molecular Plant Breeding Group as the key research unit, and (4) The candidate provides extensive details about buckwheat specifically but does not clearly establish that the Molecular Plant Breeding Group at ETH is the primary research entity working on pseudocereals broadly. The answer is on the right track and demonstrates knowledge of ETH's pseudocereal research, but lacks the definitional clarity and comprehensiveness of the gold answer."
+      },
+      "14": {
+        "verdict": "incorrect",
+        "confidence": 0.7751,
+        "reason": "The candidate answer discusses Professor Bernd Wollscheid's work on cell surface proteins and a microfluidic platform study, but these are not mentioned in the gold answer. The gold answer specifically identifies four key research efforts: (1) tumor-targeted radioligands using folate-based radioconjugates via solid-phase chemistry, (2) Daniel Richter's work on stable antibody-drug conjugates using enzyme modification, (3) Professor Bernd Bodenmiller's precision medicine approach using spatial imaging and big data, and (4) Engimmune Therapeutics' soluble TCR engineering using machine learning. The candidate answer fails to identify any of these specific researchers or methods mentioned in the gold answer, making it fundamentally misaligned with the correct response."
+      },
+      "15": {
+        "verdict": "partially_correct",
+        "confidence": 0.8544,
+        "reason": "The candidate answer includes some relevant ETH research on diarrhea prevention methods, particularly point 3 about oral vaccines for livestock using IgA-driven clump formation, which aligns with the gold answer. However, the candidate answer significantly diverges from the gold answer's core focus. The gold answer specifically emphasizes Emma Slack's research on vaccine-induced IgA antibodies preventing bacterial infections through clumping mechanisms, blocking genetic exchange, and reducing antibiotic resistance spread. While the candidate mentions this vaccine approach, it dedicates most of the answer to iron supplementation and probiotic research by Lacroix and Zimmermann, which are not mentioned in the gold answer and appear to address diarrhea prevention through different mechanisms. The candidate answer is on the right track but incomplete in covering the specific research highlighted in the gold answer and includes additional information not present in the source material."
+      },
+      "16": {
+        "verdict": "partially_correct",
+        "confidence": 0.902,
+        "reason": "The candidate answer correctly identifies ETH+ as an ETH-wide initiative launched by the Executive Board, which aligns with the gold answer's description of it being a program launched in 2017. However, the candidate answer provides specific implementation details (bottom-up tender process, number of submissions, academic departments involved, specific examples like the Data Science Centre) that go beyond the gold answer's scope. More importantly, the candidate answer does not address the other meaning of 'ETH plus' mentioned in the gold answer - 'Planning Landscape and Urban Settings' (PLUS) from the Department of Civil, Environmental and Geomatic Engineering. The gold answer explicitly states the question involves multiple meanings of the same term, which the candidate answer completely omits. Additionally, the candidate answer does not mention that the ETH+ program was renamed to 'Open ETH' in 2019, which is included in the gold answer. The candidate answer is accurate regarding ETH+ itself but incomplete as it addresses only one of the two meanings and misses the program's renaming."
+      },
+      "19": {
+        "verdict": "incorrect",
+        "confidence": 0.8899,
+        "reason": "The candidate answer fails to provide the key facts from the gold answer. The gold answer states that ETH's research on quantum electronics goes back to 1988 and that in 2021 ETH and Paul Scherrer Institute founded the quantum computing hub. The candidate instead focuses on the 2019 Master's programme and acknowledges that specific dates are not provided in their source material, but does not mention the 1988 starting point or the 2021 hub founding. The candidate essentially states that the information is not available rather than providing the correct answer about the 1988-2021 timeframe (approximately 33 years of research history)."
+      },
+      "20": {
+        "verdict": "incorrect",
+        "confidence": 0.9105,
+        "reason": "The candidate answer states that the provided chunks do not give specific numerical projections for future student enrollment, when in fact the gold answer clearly indicates that ETH Zurich was projecting an increase in student and doctoral student numbers of approximately 3.5% per year for both 2021-2024 and 2025-2028. The candidate failed to identify or report these specific forward-looking projections that were apparently present in the source material."
+      },
+      "21": {
+        "verdict": "partially_correct",
+        "confidence": 0.9313,
+        "reason": "The candidate answer provides some valid reasons to study at ETH (graduate employability, broad subject coverage, international network, support services), which align with the spirit of the gold answer. However, it misses several key points from the gold answer: ETH's world-class ranking and reputation as a top university, its pioneering research and 20+ Nobel laureates (including Einstein), strong industry connections and 540+ spin-offs, diverse and inspiring academic environment with 25,000+ students from 120+ countries, location in Switzerland's thriving economy, and career opportunities. The candidate also acknowledges the limitations of its source material, suggesting incompleteness rather than comprehensiveness. While the answer is partially correct in content, it falls significantly short of addressing the major reasons highlighted in the gold answer, particularly ETH's global standing, research excellence, and historical legacy."
+      },
+      "22": {
+        "verdict": "correct",
+        "confidence": 0.865,
+        "reason": "The candidate answer correctly identifies the key investigators (ETH Zurich, SLF/WSL, and GAPHAZ), the main findings (two glacier collapses in July and September 2016, with the second being predicted through satellite analysis), the key personnel involved (Yves Bühler), the use of satellite imagery for analysis, the creation of hazard maps, the warning communication to Chinese authorities, and the role of climate change and geological factors. While the candidate uses slightly different terminology and organization than the gold answer, it contains all the essential information about who investigated the events and what was found, including the use of satellite-based early warning systems and the connection to climate change."
+      },
+      "23": {
+        "verdict": "partially_correct",
+        "confidence": 0.9134,
+        "reason": "The candidate answer correctly identifies several concrete reasons why ETH should receive additional funding (competitiveness, talent retention, research excellence, innovation) and provides specific supporting evidence. However, it lacks the broader framing present in the gold answer—the connection to transformative societal and economic progress, innovation ecosystem benefits, and the lasting local, national, and international impacts. The candidate's answer is more evidence-based and detailed but narrower in scope, focusing on institutional competitiveness rather than the wider societal value proposition that the gold answer emphasizes. The candidate also hedges by noting the evidence doesn't explicitly frame these as arguments for 'additional' funding, which somewhat weakens the directness of the response."
+      },
+      "24": {
+        "verdict": "correct",
+        "confidence": 0.8872,
+        "reason": "The candidate answer comprehensively covers the gold answer's key points: it mentions ETH's 'Barrier-free ETH' programme (matching the gold's 'central initiative barrier-free eth'), describes the goal of eliminating obstacles and ensuring access for all people (aligning with the gold's 'design for all' principle), and references assistive technology research projects. The candidate provides additional specific details and examples (subprojects, guided tours, accessibility features, inspection rounds) that expand upon and support the core claims in the gold answer. All essential information from the gold answer is present and accurately represented in the candidate's response."
+      },
+      "25": {
+        "verdict": "partially_correct",
+        "confidence": 0.8571,
+        "reason": "The candidate answer correctly confirms that ETH does organize competitions, which aligns with the gold answer's affirmation. However, the candidate provides only a very specific example (a football betting game on the Point platform) rather than acknowledging the broader range of competitions mentioned in the gold answer (competitions addressing youth, aspiring researchers, sports, innovators, and entrepreneurs). The candidate answer is accurate but incomplete and narrow in scope compared to the comprehensive overview provided in the gold answer. It does not capture the diversity of competitions that ETH organizes for different audiences and purposes."
+      }
+    }
+  },
+  "plots": [
+    "confidence_by_action.png"
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "qid": "11",
+  "query": "what research is eth famous for?",
+  "profile": {
+    "lang": "en",
+    "query_type": "opinion",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "The criterion for 'famous' is subjective and undefined; no single answer could comprehensively address what ETH is famous for without clarification.",
+    "entities": [
+      "eth",
+      "research"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1779,
+      "lang": "en",
+      "query_type": "opinion",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "The criterion for 'famous' is subjective and undefined; no single answer could comprehensively address what ETH is famous for without clarification.",
+      "entities": [
+        "eth",
+        "research"
+      ],
+      "initial_mode": "confidence"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2582,
+      "mode": "confidence",
+      "query": "what research is eth famous for?",
+      "n_chunks": 8,
+      "top_ids": [
+        "8a46d4438c5cf6f50d06b031ffc1dfc6da72ce8f_fixed_3",
+        "a54e3c793854faafd91670b8105b1db5f0a1bfee_fixed_1",
+        "59e6dd0ac9d038f29e77c1c9db1f01c16b9d42f8_fixed_1",
+        "add82cd39c8a8ca675ce03297b1d5b88035062a0_fixed_0",
+        "57c98201cb905574873d775085e17962cb74d903_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2800,
+      "signals": {
+        "sufficiency": 0.7975,
+        "chunk_agreement": 0.6872,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2800,
+      "action": "generate",
+      "reason": "sufficiency 0.80 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 9267,
+      "draft_answer": "The chunks only give scattered examples rather than a definitive list of what ETH is famous for. Mentioned research areas include: participation in the InSight Mars mission measuring the planet's interior using seismic data; glaciology (recalculating glacier volumes in High Mountain Asia); measuring the oceanic sink for man-made CO2; the EU-funded 'Graphene' flagship project; personalised treatment methods for diseases such as pancreatic cancer (with the Roche Institute of Human Biology); and digital construction. ETH is also noted for its strong record in ERC Advanced Grants (ranked first alongside Oxford) and its famous alumnus Albert Einstein. The evidence does not provide a comprehensive overview of all fields ETH is renowned for.",
+      "citations": [
+        "8a46d4438c5cf6f50d06b031ffc1dfc6da72ce8f_fixed_3",
+        "a54e3c793854faafd91670b8105b1db5f0a1bfee_fixed_1",
+        "59e6dd0ac9d038f29e77c1c9db1f01c16b9d42f8_fixed_0",
+        "add82cd39c8a8ca675ce03297b1d5b88035062a0_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 9267,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 12935,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft (InSight Mars mission, glaciology in High Mountain Asia, oceanic CO2 sink, Graphene flagship, Roche/pancreatic cancer, digital construction, ERC Advanced Grants tied with Oxford, Einstein alumnus) are directly supported by the evidence chunks.",
+      "signals": {
+        "sufficiency": 0.7975,
+        "chunk_agreement": 0.6872,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.919
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 12935,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 12935,
+      "action": "answer",
+      "answer": "The chunks only give scattered examples rather than a definitive list of what ETH is famous for. Mentioned research areas include: participation in the InSight Mars mission measuring the planet's interior using seismic data; glaciology (recalculating glacier volumes in High Mountain Asia); measuring the oceanic sink for man-made CO2; the EU-funded 'Graphene' flagship project; personalised treatment methods for diseases such as pancreatic cancer (with the Roche Institute of Human Biology); and digital construction. ETH is also noted for its strong record in ERC Advanced Grants (ranked first alongside Oxford) and its famous alumnus Albert Einstein. The evidence does not provide a comprehensive overview of all fields ETH is renowned for.",
+      "citations": [
+        "8a46d4438c5cf6f50d06b031ffc1dfc6da72ce8f_fixed_3",
+        "a54e3c793854faafd91670b8105b1db5f0a1bfee_fixed_1",
+        "59e6dd0ac9d038f29e77c1c9db1f01c16b9d42f8_fixed_0",
+        "add82cd39c8a8ca675ce03297b1d5b88035062a0_fixed_0"
+      ],
+      "confidence": 0.919,
+      "conflict_flag": false,
+      "mode_used": "confidence",
+      "signals": {
+        "sufficiency": 0.7975,
+        "chunk_agreement": 0.6872,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.919
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The chunks only give scattered examples rather than a definitive list of what ETH is famous for. Mentioned research areas include: participation in the InSight Mars mission measuring the planet's interior using seismic data; glaciology (recalculating glacier volumes in High Mountain Asia); measuring the oceanic sink for man-made CO2; the EU-funded 'Graphene' flagship project; personalised treatment methods for diseases such as pancreatic cancer (with the Roche Institute of Human Biology); and digital construction. ETH is also noted for its strong record in ERC Advanced Grants (ranked first alongside Oxford) and its famous alumnus Albert Einstein. The evidence does not provide a comprehensive overview of all fields ETH is renowned for.",
+    "citations": [
+      "8a46d4438c5cf6f50d06b031ffc1dfc6da72ce8f_fixed_3",
+      "a54e3c793854faafd91670b8105b1db5f0a1bfee_fixed_1",
+      "59e6dd0ac9d038f29e77c1c9db1f01c16b9d42f8_fixed_0",
+      "add82cd39c8a8ca675ce03297b1d5b88035062a0_fixed_0"
+    ],
+    "confidence": 0.919,
+    "conflict_flag": false,
+    "mode_used": "confidence",
+    "signals": {
+      "sufficiency": 0.7975,
+      "chunk_agreement": 0.6872,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.919
+    }
+  }
+}

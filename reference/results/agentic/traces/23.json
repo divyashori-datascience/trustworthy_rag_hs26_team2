@@ -1,0 +1,208 @@
+{
+  "qid": "23",
+  "query": "why should eth receive any additional funding?",
+  "profile": {
+    "lang": "en",
+    "query_type": "opinion",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "The query asks for normative justification of funding allocation without specifying criteria, stakeholder perspective, or comparison baseline, making it fundamentally subjective.",
+    "entities": [
+      "eth",
+      "funding"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 2149,
+      "lang": "en",
+      "query_type": "opinion",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "The query asks for normative justification of funding allocation without specifying criteria, stakeholder perspective, or comparison baseline, making it fundamentally subjective.",
+      "entities": [
+        "eth",
+        "funding"
+      ],
+      "initial_mode": "confidence"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 4331,
+      "mode": "confidence",
+      "query": "why should eth receive any additional funding?",
+      "n_chunks": 8,
+      "top_ids": [
+        "36fec229a515a2a353dd740b38d7d1daa5248c47_fixed_1",
+        "8cfe466a5fd2a16093c7710e8bfa3c5fa7fa2bab_fixed_2",
+        "cff3f1e6e849e197c69ce1c30db51c6f9cd8e36d_fixed_4",
+        "cff3f1e6e849e197c69ce1c30db51c6f9cd8e36d_fixed_3",
+        "36fec229a515a2a353dd740b38d7d1daa5248c47_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 4493,
+      "signals": {
+        "sufficiency": 0.8342,
+        "chunk_agreement": 0.7613,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 4493,
+      "action": "generate",
+      "reason": "sufficiency 0.83 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 10449,
+      "draft_answer": "The provided chunks do not directly argue why ETH should receive additional funding. They discuss internal funding mechanisms (ETH using its own reserves, contributions from professorships, departments, and the executive board to fund ETH+ initiatives), the pursuit of third-party resources, and note that a new full professorship requires decades of commitment and tens of millions of francs. They also mention uncertainty about federal funding due to the corona crisis and the need to slow ETH's pace of growth. However, no explicit justification for receiving additional funding is given in these chunks.",
+      "citations": [
+        "36fec229a515a2a353dd740b38d7d1daa5248c47_fixed_1",
+        "cff3f1e6e849e197c69ce1c30db51c6f9cd8e36d_fixed_4",
+        "cff3f1e6e849e197c69ce1c30db51c6f9cd8e36d_fixed_3"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 10449,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 11432,
+      "rewritten_query": "why should ETH Zurich receive additional funding arguments benefits",
+      "old_mode": "confidence",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 13618,
+      "mode": "voting",
+      "query": "why should ETH Zurich receive additional funding arguments benefits",
+      "n_chunks": 8,
+      "top_ids": [
+        "8cfe466a5fd2a16093c7710e8bfa3c5fa7fa2bab_fixed_2",
+        "ed0534de840e4c5ae5d00dd32841df0f3aea131f_fixed_0",
+        "455c5e6fa03aaf70b745bcec98f92048a0fdd3d1_fixed_0",
+        "3142def7abef8a9d8d2176c45056d8fc980361c1_fixed_0",
+        "b62aff32c44023e4d7d5d305ed680069e8093bb4_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 13753,
+      "signals": {
+        "sufficiency": 0.8335,
+        "chunk_agreement": 0.8014,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 13753,
+      "action": "generate",
+      "reason": "sufficiency 0.83 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 24547,
+      "draft_answer": "The chunks do not contain a direct, consolidated argument for why ETH Zurich should receive additional funding, but they provide several supporting points:\n\n1. Staying competitive in top-tier science requires substantial financial means. ETH has demonstrated strong performance, attracting about CHF 43 million in ERC funding in one allocation (5 Advanced, 9 Starting, 4 Consolidator Grants) and raising 40% of all competitive EU research funds awarded to Switzerland, while Swiss researchers overall recovered 150% of Switzerland's EU contribution — showing high return on investment.\n\n2. ETH must remain attractive to retain and recruit outstanding professors and stay ahead of European competition, according to Vice President Detlef Günther.\n\n3. Funding supports leading research fields where ETH excels (physics, materials science, earth sciences) and enables breaking new ground in emerging areas like biosystems and medical research.\n\n4. Internal funding instruments like ETH+ grants (up to CHF 3 million) foster interdisciplinary innovation across departments.\n\n5. Participation in alliances such as ENHANCE and involvement in 10 National Centres of Competence in Research strengthens European educational cooperation and global competitiveness.\n\nThe evidence does not explicitly frame these as arguments for *additional* funding beyond current levels, nor cover broader societal/economic benefits — so the answer is partial.",
+      "citations": [
+        "8cfe466a5fd2a16093c7710e8bfa3c5fa7fa2bab_fixed_2",
+        "ed0534de840e4c5ae5d00dd32841df0f3aea131f_fixed_0",
+        "455c5e6fa03aaf70b745bcec98f92048a0fdd3d1_fixed_0",
+        "b62aff32c44023e4d7d5d305ed680069e8093bb4_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 24547,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 28105,
+      "grounded": true,
+      "grounding_score": 0.95,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are supported by the evidence chunks: ERC funding amounts, Günther's quote about staying attractive, ETH+ grant details, research fields, NCCR involvement, and ENHANCE alliance participation are all directly mentioned. The draft also appropriately notes the limitations of the evidence.",
+      "signals": {
+        "sufficiency": 0.8335,
+        "chunk_agreement": 0.8014,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.9134
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 28105,
+      "action": "answer",
+      "reason": "grounded (score 0.95) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 28105,
+      "action": "answer",
+      "answer": "The chunks do not contain a direct, consolidated argument for why ETH Zurich should receive additional funding, but they provide several supporting points:\n\n1. Staying competitive in top-tier science requires substantial financial means. ETH has demonstrated strong performance, attracting about CHF 43 million in ERC funding in one allocation (5 Advanced, 9 Starting, 4 Consolidator Grants) and raising 40% of all competitive EU research funds awarded to Switzerland, while Swiss researchers overall recovered 150% of Switzerland's EU contribution — showing high return on investment.\n\n2. ETH must remain attractive to retain and recruit outstanding professors and stay ahead of European competition, according to Vice President Detlef Günther.\n\n3. Funding supports leading research fields where ETH excels (physics, materials science, earth sciences) and enables breaking new ground in emerging areas like biosystems and medical research.\n\n4. Internal funding instruments like ETH+ grants (up to CHF 3 million) foster interdisciplinary innovation across departments.\n\n5. Participation in alliances such as ENHANCE and involvement in 10 National Centres of Competence in Research strengthens European educational cooperation and global competitiveness.\n\nThe evidence does not explicitly frame these as arguments for *additional* funding beyond current levels, nor cover broader societal/economic benefits — so the answer is partial.",
+      "citations": [
+        "8cfe466a5fd2a16093c7710e8bfa3c5fa7fa2bab_fixed_2",
+        "ed0534de840e4c5ae5d00dd32841df0f3aea131f_fixed_0",
+        "455c5e6fa03aaf70b745bcec98f92048a0fdd3d1_fixed_0",
+        "b62aff32c44023e4d7d5d305ed680069e8093bb4_fixed_0"
+      ],
+      "confidence": 0.9134,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.8335,
+        "chunk_agreement": 0.8014,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.9134
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The chunks do not contain a direct, consolidated argument for why ETH Zurich should receive additional funding, but they provide several supporting points:\n\n1. Staying competitive in top-tier science requires substantial financial means. ETH has demonstrated strong performance, attracting about CHF 43 million in ERC funding in one allocation (5 Advanced, 9 Starting, 4 Consolidator Grants) and raising 40% of all competitive EU research funds awarded to Switzerland, while Swiss researchers overall recovered 150% of Switzerland's EU contribution — showing high return on investment.\n\n2. ETH must remain attractive to retain and recruit outstanding professors and stay ahead of European competition, according to Vice President Detlef Günther.\n\n3. Funding supports leading research fields where ETH excels (physics, materials science, earth sciences) and enables breaking new ground in emerging areas like biosystems and medical research.\n\n4. Internal funding instruments like ETH+ grants (up to CHF 3 million) foster interdisciplinary innovation across departments.\n\n5. Participation in alliances such as ENHANCE and involvement in 10 National Centres of Competence in Research strengthens European educational cooperation and global competitiveness.\n\nThe evidence does not explicitly frame these as arguments for *additional* funding beyond current levels, nor cover broader societal/economic benefits — so the answer is partial.",
+    "citations": [
+      "8cfe466a5fd2a16093c7710e8bfa3c5fa7fa2bab_fixed_2",
+      "ed0534de840e4c5ae5d00dd32841df0f3aea131f_fixed_0",
+      "455c5e6fa03aaf70b745bcec98f92048a0fdd3d1_fixed_0",
+      "b62aff32c44023e4d7d5d305ed680069e8093bb4_fixed_0"
+    ],
+    "confidence": 0.9134,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.8335,
+      "chunk_agreement": 0.8014,
+      "grounding": 0.95,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.9134
+    }
+  }
+}

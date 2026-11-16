@@ -1,0 +1,204 @@
+{
+  "qid": "13",
+  "query": "what are pseudocereals and who does research on them?",
+  "profile": {
+    "lang": "en",
+    "query_type": "multihop",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "pseudocereals",
+      "research"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1351,
+      "lang": "en",
+      "query_type": "multihop",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "pseudocereals",
+        "research"
+      ],
+      "initial_mode": "graphrag"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2877,
+      "mode": "graphrag",
+      "query": "what are pseudocereals and who does research on them?",
+      "n_chunks": 8,
+      "top_ids": [
+        "d60c9d77aba832f44f7e2fef27568b9a674446cf_fixed_1",
+        "fe4535bd4aa0a064eeea92c65361d5f084cbc627_fixed_1",
+        "bded914d85595563321874b37793c1b28fcbb018_fixed_1",
+        "7f9dfcdad9934d0dd7a07f3651d490b7dc13071b_fixed_6",
+        "bfdc452979b70db71f980eba7abef31c72afde3f_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 3086,
+      "signals": {
+        "sufficiency": 0.608,
+        "chunk_agreement": 0.6369,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 3086,
+      "action": "generate",
+      "reason": "sufficiency 0.61 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 5936,
+      "draft_answer": "The provided chunks do not define what pseudocereals are or identify researchers working on them at ETH Zurich.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 5936,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 8976,
+      "rewritten_query": "pseudocereals alternative grains amaranth quinoa buckwheat research ETH Zurich",
+      "old_mode": "graphrag",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 13047,
+      "mode": "voting",
+      "query": "pseudocereals alternative grains amaranth quinoa buckwheat research ETH Zurich",
+      "n_chunks": 8,
+      "top_ids": [
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_1",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_2",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_0",
+        "404ddf5a025166647069160ce6fd2f1776d6f73b_fixed_0",
+        "041d8414b93d0a301731ca4feb1242dcad984818_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 13199,
+      "signals": {
+        "sufficiency": 0.7714,
+        "chunk_agreement": 0.6614,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 13199,
+      "action": "generate",
+      "reason": "sufficiency 0.77 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 19877,
+      "draft_answer": "ETH Zurich, through its World Food System Center (WFSC), has conducted research on pseudocereals, particularly buckwheat. The three most important pseudocereals identified are buckwheat, quinoa, and amaranth — all of which can be grown in Switzerland. Quinoa and amaranth originated in South America, while buckwheat came from Asia and was historically widespread in Europe before being displaced in the 20th century by advances in cereal breeding. A research project supported by Coop at ETH Zurich's WFSC specifically examined buckwheat cultivation and identified the most suitable buckwheat varieties for Switzerland. Researchers examined existing diversity, carried out taste tests, and began describing the genomic diversity of buckwheat, with breeding efforts producing high-yielding, synchronous varieties. The evidence provided focuses mainly on buckwheat; it does not give details on specific ETH research into quinoa or amaranth beyond mentioning them as pseudocereals.",
+      "citations": [
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_1",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_2",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_0",
+        "404ddf5a025166647069160ce6fd2f1776d6f73b_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 19877,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 23160,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are directly supported by the evidence chunks, including the identification of the three pseudocereals, their origins, the historical context, and the Coop-supported WFSC research on buckwheat varieties. The draft also accurately notes the limitation of the evidence regarding quinoa and amaranth.",
+      "signals": {
+        "sufficiency": 0.7714,
+        "chunk_agreement": 0.6614,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9086
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 23160,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 23160,
+      "action": "answer",
+      "answer": "ETH Zurich, through its World Food System Center (WFSC), has conducted research on pseudocereals, particularly buckwheat. The three most important pseudocereals identified are buckwheat, quinoa, and amaranth — all of which can be grown in Switzerland. Quinoa and amaranth originated in South America, while buckwheat came from Asia and was historically widespread in Europe before being displaced in the 20th century by advances in cereal breeding. A research project supported by Coop at ETH Zurich's WFSC specifically examined buckwheat cultivation and identified the most suitable buckwheat varieties for Switzerland. Researchers examined existing diversity, carried out taste tests, and began describing the genomic diversity of buckwheat, with breeding efforts producing high-yielding, synchronous varieties. The evidence provided focuses mainly on buckwheat; it does not give details on specific ETH research into quinoa or amaranth beyond mentioning them as pseudocereals.",
+      "citations": [
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_1",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_2",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_0",
+        "404ddf5a025166647069160ce6fd2f1776d6f73b_fixed_0"
+      ],
+      "confidence": 0.9086,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.7714,
+        "chunk_agreement": 0.6614,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9086
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "ETH Zurich, through its World Food System Center (WFSC), has conducted research on pseudocereals, particularly buckwheat. The three most important pseudocereals identified are buckwheat, quinoa, and amaranth — all of which can be grown in Switzerland. Quinoa and amaranth originated in South America, while buckwheat came from Asia and was historically widespread in Europe before being displaced in the 20th century by advances in cereal breeding. A research project supported by Coop at ETH Zurich's WFSC specifically examined buckwheat cultivation and identified the most suitable buckwheat varieties for Switzerland. Researchers examined existing diversity, carried out taste tests, and began describing the genomic diversity of buckwheat, with breeding efforts producing high-yielding, synchronous varieties. The evidence provided focuses mainly on buckwheat; it does not give details on specific ETH research into quinoa or amaranth beyond mentioning them as pseudocereals.",
+    "citations": [
+      "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_1",
+      "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_2",
+      "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_0",
+      "404ddf5a025166647069160ce6fd2f1776d6f73b_fixed_0"
+    ],
+    "confidence": 0.9086,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.7714,
+      "chunk_agreement": 0.6614,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.9086
+    }
+  }
+}

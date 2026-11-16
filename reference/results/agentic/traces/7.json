@@ -1,0 +1,146 @@
+{
+  "qid": "7",
+  "query": "who are famous eth alumni?",
+  "profile": {
+    "lang": "en",
+    "query_type": "list",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "No clear criterion for 'famous' makes it impossible to determine a definitive set of alumni to return.",
+    "entities": [
+      "eth",
+      "alumni"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 2013,
+      "lang": "en",
+      "query_type": "list",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "No clear criterion for 'famous' makes it impossible to determine a definitive set of alumni to return.",
+      "entities": [
+        "eth",
+        "alumni"
+      ],
+      "initial_mode": "voting"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 4376,
+      "mode": "voting",
+      "query": "who are famous eth alumni?",
+      "n_chunks": 8,
+      "top_ids": [
+        "a6f9b95f14f0e15c55b8c4993e3e656a115502f2_fixed_0",
+        "8a46d4438c5cf6f50d06b031ffc1dfc6da72ce8f_fixed_3",
+        "8b87dce10c8035baa9cdba37e1cc9c354fcaa1b6_fixed_0",
+        "69a075d75db9baebe46acbf47673d598a2892a7d_fixed_0",
+        "ede695ab03381bf8b9aa35f708143fc2376aa78d_fixed_6"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 4552,
+      "signals": {
+        "sufficiency": 0.8039,
+        "chunk_agreement": 0.7009,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 4552,
+      "action": "generate",
+      "reason": "sufficiency 0.80 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 11047,
+      "draft_answer": "Based on the chunks, notable ETH alumni mentioned include:\n- Albert Einstein, who was a student and professor at ETH Zurich and won the Nobel Prize in Physics.\n- Jeannine Pilloud, who graduated in architecture, became head of passenger transport at SBB, and was elected president of the ETH Alumni Association in 2023.\n- Olympic athletes Julie Derron (triathlon) and Annina Fahr (athletics), alumnae on the Swiss Olympic team for the 2024 Paris Games.\n\nThe chunks do not provide a broader list of famous ETH alumni beyond these.",
+      "citations": [
+        "8a46d4438c5cf6f50d06b031ffc1dfc6da72ce8f_fixed_3",
+        "a6f9b95f14f0e15c55b8c4993e3e656a115502f2_fixed_0",
+        "8b87dce10c8035baa9cdba37e1cc9c354fcaa1b6_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 11047,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 13893,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are directly supported by the evidence chunks: Einstein as student/professor and Nobel laureate, Pilloud's biography and election, and the Olympic alumnae Derron and Fahr.",
+      "signals": {
+        "sufficiency": 0.8039,
+        "chunk_agreement": 0.7009,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.9216
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 13893,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 13893,
+      "action": "answer",
+      "answer": "Based on the chunks, notable ETH alumni mentioned include:\n- Albert Einstein, who was a student and professor at ETH Zurich and won the Nobel Prize in Physics.\n- Jeannine Pilloud, who graduated in architecture, became head of passenger transport at SBB, and was elected president of the ETH Alumni Association in 2023.\n- Olympic athletes Julie Derron (triathlon) and Annina Fahr (athletics), alumnae on the Swiss Olympic team for the 2024 Paris Games.\n\nThe chunks do not provide a broader list of famous ETH alumni beyond these.",
+      "citations": [
+        "8a46d4438c5cf6f50d06b031ffc1dfc6da72ce8f_fixed_3",
+        "a6f9b95f14f0e15c55b8c4993e3e656a115502f2_fixed_0",
+        "8b87dce10c8035baa9cdba37e1cc9c354fcaa1b6_fixed_0"
+      ],
+      "confidence": 0.9216,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.8039,
+        "chunk_agreement": 0.7009,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.9216
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Based on the chunks, notable ETH alumni mentioned include:\n- Albert Einstein, who was a student and professor at ETH Zurich and won the Nobel Prize in Physics.\n- Jeannine Pilloud, who graduated in architecture, became head of passenger transport at SBB, and was elected president of the ETH Alumni Association in 2023.\n- Olympic athletes Julie Derron (triathlon) and Annina Fahr (athletics), alumnae on the Swiss Olympic team for the 2024 Paris Games.\n\nThe chunks do not provide a broader list of famous ETH alumni beyond these.",
+    "citations": [
+      "8a46d4438c5cf6f50d06b031ffc1dfc6da72ce8f_fixed_3",
+      "a6f9b95f14f0e15c55b8c4993e3e656a115502f2_fixed_0",
+      "8b87dce10c8035baa9cdba37e1cc9c354fcaa1b6_fixed_0"
+    ],
+    "confidence": 0.9216,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.8039,
+      "chunk_agreement": 0.7009,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.9216
+    }
+  }
+}

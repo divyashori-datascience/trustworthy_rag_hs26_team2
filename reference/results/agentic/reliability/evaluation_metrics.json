@@ -1,0 +1,94 @@
+{
+  "n_questions": 15,
+  "action_counts": {
+    "answer": 9,
+    "abstain": 4,
+    "clarify": 2
+  },
+  "behaviour": {
+    "confusion_expected_vs_actual": {
+      "clarify": {
+        "answer": 1,
+        "clarify": 2
+      },
+      "abstain": {
+        "abstain": 4,
+        "answer": 2
+      },
+      "answer": {
+        "answer": 6
+      }
+    },
+    "abstention": {
+      "total": 4,
+      "correct": 4,
+      "false": 0,
+      "correct_rate": 1.0,
+      "false_rate": 0.0
+    },
+    "clarification": {
+      "total": 2,
+      "correct": 2,
+      "false": 0,
+      "correct_rate": 1.0
+    },
+    "answer_coverage_on_answerable": {
+      "answerable": 6,
+      "answered": 6,
+      "rate": 1.0
+    }
+  },
+  "groundedness": {
+    "n_answers": 9,
+    "grounded_answer_rate": 1.0,
+    "mean_grounding_score": 0.983,
+    "mean_unsupported_claims": 0.0
+  },
+  "recovery": {
+    "n_recovered": 10,
+    "recovery_success": 6,
+    "recovery_success_rate": 0.6,
+    "recovered_qids": [
+      "R10",
+      "R11",
+      "R12",
+      "R13",
+      "R4",
+      "R5",
+      "R6",
+      "R7",
+      "R8",
+      "R9"
+    ]
+  },
+  "confidence_by_action": {
+    "answer": {
+      "n": 9,
+      "mean_confidence": 0.89
+    },
+    "abstain": {
+      "n": 4,
+      "mean_confidence": 0.0
+    },
+    "clarify": {
+      "n": 2,
+      "mean_confidence": 0.0
+    }
+  },
+  "retrieval": {},
+  "baseline_reference": {
+    "strategy": "Confidence",
+    "P@5": 0.1167,
+    "Recall@5": 0.0046,
+    "MRR": 0.2045,
+    "latency_avg_s": 0.96
+  },
+  "efficiency": {
+    "latency_avg_s": 36.55,
+    "latency_max_s": 172.32,
+    "est_cost_usd": 0.5508
+  },
+  "plots": [
+    "confidence_by_action.png"
+  ]
+}

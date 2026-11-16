@@ -1,0 +1,150 @@
+{
+  "qid": "21",
+  "query": "why should i study at eth?",
+  "profile": {
+    "lang": "en",
+    "query_type": "opinion",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "The query is open-ended and subjective; 'should' is a matter of personal values and circumstances, with no single correct answer.",
+    "entities": [
+      "eth"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1584,
+      "lang": "en",
+      "query_type": "opinion",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "The query is open-ended and subjective; 'should' is a matter of personal values and circumstances, with no single correct answer.",
+      "entities": [
+        "eth"
+      ],
+      "initial_mode": "confidence"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2301,
+      "mode": "confidence",
+      "query": "why should i study at eth?",
+      "n_chunks": 8,
+      "top_ids": [
+        "1300e79d48d9340df44fb81799b26ffd76df9af2_fixed_1",
+        "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0",
+        "d888a10378dc39aed2be4e61180f334afeeba8d2_fixed_0",
+        "3eb0d3655b05551d44f1f8ecade49a11f317681b_fixed_0",
+        "3db2fa2dfec039c0446d8b7d2cac2b309c54c23e_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2429,
+      "signals": {
+        "sufficiency": 0.8283,
+        "chunk_agreement": 0.7407,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2429,
+      "action": "generate",
+      "reason": "sufficiency 0.83 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 9713,
+      "draft_answer": "Based on the chunks, reasons to study at ETH include: ETH graduates are highly in-demand, challenging the stereotype of theory-heavy education, and the institution covers a broad range of subjects while providing a solid theoretical foundation — being the only institution in Switzerland to do so in this way. ETH offers popular programmes in mechanical engineering, computer science, architecture, physics, mathematics, health sciences and technology, and environmental sciences, and has an international network. It also provides advice centres for virtually any situation that may arise during studies, and offers vocational training in 15 different trades. The chunks do not comprehensively cover all reasons (e.g., rankings, research opportunities, campus life) to study at ETH.",
+      "citations": [
+        "1300e79d48d9340df44fb81799b26ffd76df9af2_fixed_1",
+        "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0",
+        "d888a10378dc39aed2be4e61180f334afeeba8d2_fixed_0",
+        "3eb0d3655b05551d44f1f8ecade49a11f317681b_fixed_0",
+        "3db2fa2dfec039c0446d8b7d2cac2b309c54c23e_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 9713,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 13482,
+      "grounded": true,
+      "grounding_score": 0.95,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are supported by the evidence chunks, including the in-demand graduates, broad subjects, theoretical foundation, popular programmes, international network, advice centres, and 15 trades. The draft's acknowledgment of gaps is also accurate.",
+      "signals": {
+        "sufficiency": 0.8283,
+        "chunk_agreement": 0.7407,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.9113
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 13482,
+      "action": "answer",
+      "reason": "grounded (score 0.95) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 13482,
+      "action": "answer",
+      "answer": "Based on the chunks, reasons to study at ETH include: ETH graduates are highly in-demand, challenging the stereotype of theory-heavy education, and the institution covers a broad range of subjects while providing a solid theoretical foundation — being the only institution in Switzerland to do so in this way. ETH offers popular programmes in mechanical engineering, computer science, architecture, physics, mathematics, health sciences and technology, and environmental sciences, and has an international network. It also provides advice centres for virtually any situation that may arise during studies, and offers vocational training in 15 different trades. The chunks do not comprehensively cover all reasons (e.g., rankings, research opportunities, campus life) to study at ETH.",
+      "citations": [
+        "1300e79d48d9340df44fb81799b26ffd76df9af2_fixed_1",
+        "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0",
+        "d888a10378dc39aed2be4e61180f334afeeba8d2_fixed_0",
+        "3eb0d3655b05551d44f1f8ecade49a11f317681b_fixed_0",
+        "3db2fa2dfec039c0446d8b7d2cac2b309c54c23e_fixed_0"
+      ],
+      "confidence": 0.9113,
+      "conflict_flag": false,
+      "mode_used": "confidence",
+      "signals": {
+        "sufficiency": 0.8283,
+        "chunk_agreement": 0.7407,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.9113
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Based on the chunks, reasons to study at ETH include: ETH graduates are highly in-demand, challenging the stereotype of theory-heavy education, and the institution covers a broad range of subjects while providing a solid theoretical foundation — being the only institution in Switzerland to do so in this way. ETH offers popular programmes in mechanical engineering, computer science, architecture, physics, mathematics, health sciences and technology, and environmental sciences, and has an international network. It also provides advice centres for virtually any situation that may arise during studies, and offers vocational training in 15 different trades. The chunks do not comprehensively cover all reasons (e.g., rankings, research opportunities, campus life) to study at ETH.",
+    "citations": [
+      "1300e79d48d9340df44fb81799b26ffd76df9af2_fixed_1",
+      "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0",
+      "d888a10378dc39aed2be4e61180f334afeeba8d2_fixed_0",
+      "3eb0d3655b05551d44f1f8ecade49a11f317681b_fixed_0",
+      "3db2fa2dfec039c0446d8b7d2cac2b309c54c23e_fixed_0"
+    ],
+    "confidence": 0.9113,
+    "conflict_flag": false,
+    "mode_used": "confidence",
+    "signals": {
+      "sufficiency": 0.8283,
+      "chunk_agreement": 0.7407,
+      "grounding": 0.95,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.9113
+    }
+  }
+}

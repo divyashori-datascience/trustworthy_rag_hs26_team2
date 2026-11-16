@@ -1,0 +1,260 @@
+{
+  "qid": "R10",
+  "query": "Why did ETH Zurich lose its university status in 2018?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth zurich",
+      "university status",
+      "2018"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1406,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth zurich",
+        "university status",
+        "2018"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 3457,
+      "mode": "bm25",
+      "query": "Why did ETH Zurich lose its university status in 2018?",
+      "n_chunks": 8,
+      "top_ids": [
+        "1a5d2a21ec9382d53c6056651dc7674c60309fc8_fixed_1",
+        "e1b5049ab53945e9fd905aefaf7d2f65b41e2cc0_fixed_8",
+        "5512b5ba10bb39a992bbf2d28cdbca6aebddf997_fixed_0",
+        "8a71b2cf6c4aa6886484c87824267a78b771db40_fixed_2",
+        "1a5d2a21ec9382d53c6056651dc7674c60309fc8_fixed_2"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 3663,
+      "signals": {
+        "sufficiency": 0.6403,
+        "chunk_agreement": 0.5749,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 3663,
+      "action": "generate",
+      "reason": "sufficiency 0.64 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 8546,
+      "draft_answer": "The evidence provided does not state that ETH Zurich lost its university status in 2018. The chunks discuss ETH losing its role as project leader on an EU research project to a Spanish university due to an EU Commission decision related to Switzerland's non-association with the Horizon Europe funding programme, and the resulting loss of influence and prestige — but this is not the same as losing university status. No supporting evidence is available for the premise of the question.",
+      "citations": [
+        "1a5d2a21ec9382d53c6056651dc7674c60309fc8_fixed_2"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 8546,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 9435,
+      "rewritten_query": "ETH Zurich university status 2018 loss downgrade institutional change Switzerland",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 12601,
+      "mode": "voting",
+      "query": "ETH Zurich university status 2018 loss downgrade institutional change Switzerland",
+      "n_chunks": 8,
+      "top_ids": [
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0",
+        "1a5d2a21ec9382d53c6056651dc7674c60309fc8_fixed_2",
+        "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_0",
+        "a42d90a2b0c2c04d037f3110b333579f3a6ba299_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 12725,
+      "signals": {
+        "sufficiency": 0.6291,
+        "chunk_agreement": 0.7531,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 12725,
+      "action": "generate",
+      "reason": "sufficiency 0.63 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 17868,
+      "draft_answer": "The provided chunks do not describe a 2018 loss, downgrade, or change in ETH Zurich's university status. The only institutional status change mentioned is that under the Swiss Higher Education Act (in force since 2015), institutions wishing to use the designation 'university' must be accredited every seven years, and ETH Zurich received this official accreditation in October (as one of the first universities to do so). Regarding financial losses, the chunks mention a 73 million Swiss franc loss in 2022 (the year prior to a 50 million surplus in 2023), but no 2018 loss is documented.",
+      "citations": [
+        "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 17868,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 18809,
+      "rewritten_query": "ETH Zurich university status 2018 changes reorganization accreditation",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 18841,
+      "mode": "graphrag",
+      "query": "ETH Zurich university status 2018 changes reorganization accreditation",
+      "n_chunks": 8,
+      "top_ids": [
+        "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_2",
+        "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_0",
+        "2685b4529c67f1c76dbf2939d14ea461c6854e1c_fixed_0",
+        "a54e3c793854faafd91670b8105b1db5f0a1bfee_fixed_0",
+        "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 19028,
+      "signals": {
+        "sufficiency": 0.7623,
+        "chunk_agreement": 0.7834,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 19028,
+      "action": "generate",
+      "reason": "sufficiency 0.76 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 25580,
+      "draft_answer": "In October 2018, ETH Zurich was one of the first universities to receive official accreditation under the Swiss Higher Education Act, which had entered into force in 2015. The act requires all public and private institutions wishing to use the designation \"university,\" \"university of applied sciences,\" or \"university of teacher education\" to be accredited every seven years. The accreditation is awarded by the Swiss Accreditation Council, made up of twenty independent members including representatives from the world of work, higher education institutions, students, non-professional teaching staff, and academic staff. As part of this process, ETH updated its \"Guidelines for the internal quality assurance system\" and supplemented them with a list of functions responsible for various aspects. Rector Sarah Springman also highlighted teaching initiatives such as ETH Talent, aimed at strengthening interdisciplinary skills across all levels, and noted that more departments were introducing a split in first-year examinations. The evidence does not describe a broader institutional \"reorganization\" beyond these accreditation-related quality assurance updates.",
+      "citations": [
+        "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_0",
+        "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_2"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 25580,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 0
+    },
+    {
+      "step": "verify",
+      "t_ms": 29107,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft (October 2018 accreditation, Swiss Higher Education Act 2015, seven-year accreditation cycle, Swiss Accreditation Council composition, updated quality assurance guidelines, Springman's comments on ETH Talent and first-year exam splits) are directly supported by the evidence chunks. The draft also appropriately notes the absence of broader reorganization details.",
+      "signals": {
+        "sufficiency": 0.7623,
+        "chunk_agreement": 0.7834,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9049
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 29107,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 29107,
+      "action": "answer",
+      "answer": "In October 2018, ETH Zurich was one of the first universities to receive official accreditation under the Swiss Higher Education Act, which had entered into force in 2015. The act requires all public and private institutions wishing to use the designation \"university,\" \"university of applied sciences,\" or \"university of teacher education\" to be accredited every seven years. The accreditation is awarded by the Swiss Accreditation Council, made up of twenty independent members including representatives from the world of work, higher education institutions, students, non-professional teaching staff, and academic staff. As part of this process, ETH updated its \"Guidelines for the internal quality assurance system\" and supplemented them with a list of functions responsible for various aspects. Rector Sarah Springman also highlighted teaching initiatives such as ETH Talent, aimed at strengthening interdisciplinary skills across all levels, and noted that more departments were introducing a split in first-year examinations. The evidence does not describe a broader institutional \"reorganization\" beyond these accreditation-related quality assurance updates.",
+      "citations": [
+        "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_0",
+        "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_2"
+      ],
+      "confidence": 0.9049,
+      "conflict_flag": false,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.7623,
+        "chunk_agreement": 0.7834,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9049
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "In October 2018, ETH Zurich was one of the first universities to receive official accreditation under the Swiss Higher Education Act, which had entered into force in 2015. The act requires all public and private institutions wishing to use the designation \"university,\" \"university of applied sciences,\" or \"university of teacher education\" to be accredited every seven years. The accreditation is awarded by the Swiss Accreditation Council, made up of twenty independent members including representatives from the world of work, higher education institutions, students, non-professional teaching staff, and academic staff. As part of this process, ETH updated its \"Guidelines for the internal quality assurance system\" and supplemented them with a list of functions responsible for various aspects. Rector Sarah Springman also highlighted teaching initiatives such as ETH Talent, aimed at strengthening interdisciplinary skills across all levels, and noted that more departments were introducing a split in first-year examinations. The evidence does not describe a broader institutional \"reorganization\" beyond these accreditation-related quality assurance updates.",
+    "citations": [
+      "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_0",
+      "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_2"
+    ],
+    "confidence": 0.9049,
+    "conflict_flag": false,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.7623,
+      "chunk_agreement": 0.7834,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.9049
+    }
+  }
+}

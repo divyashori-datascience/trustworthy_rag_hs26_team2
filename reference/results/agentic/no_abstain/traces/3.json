@@ -1,0 +1,149 @@
+{
+  "qid": "3",
+  "query": "who at eth received erc grants?",
+  "profile": {
+    "lang": "en",
+    "query_type": "list",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "erc grants"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1598,
+      "lang": "en",
+      "query_type": "list",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "erc grants"
+      ],
+      "initial_mode": "voting"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1887,
+      "mode": "voting",
+      "query": "who at eth received erc grants?",
+      "n_chunks": 8,
+      "top_ids": [
+        "79a60fae262aedeb274d9f7b7ff3667fb7408123_fixed_1",
+        "ed0534de840e4c5ae5d00dd32841df0f3aea131f_fixed_0",
+        "e60a80e1e9d52567c185028e26c1f6f41f99a7ae_fixed_0",
+        "e9d5daa8b1b8dd46b2e1d67aeff5f19d732bfcac_fixed_0",
+        "327dfd590409db9eb6c600a5e3b71792d37d8075_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2013,
+      "signals": {
+        "sufficiency": 0.6489,
+        "chunk_agreement": 0.7123,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2013,
+      "action": "generate",
+      "reason": "sufficiency 0.65 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 8470,
+      "draft_answer": "Based on the chunks, the following ETH researchers are mentioned as ERC grant recipients:\n\n- Professor Niklas Beisert (Institute for Theoretical Physics) – for work on quantum field theories.\n- Professor Sonia Seneviratne (Institute for Atmospheric and Climate Science) – for an ERC project on soil moisture, vegetation, heat waves, and droughts.\n\nThe chunks also reference other ERC Advanced Grant recipients at ETH in fields such as physics, material sciences, earth sciences, biosystems, and European integration (a 'bordering theory' project), but do not name those individual researchers. So the evidence only partially identifies the recipients by name.",
+      "citations": [
+        "79a60fae262aedeb274d9f7b7ff3667fb7408123_fixed_1",
+        "ed0534de840e4c5ae5d00dd32841df0f3aea131f_fixed_0",
+        "e9d5daa8b1b8dd46b2e1d67aeff5f19d732bfcac_fixed_0",
+        "327dfd590409db9eb6c600a5e3b71792d37d8075_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 8470,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 16864,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft accurately names Beisert and Seneviratne as ERC recipients per chunk e9d5daa8, and correctly notes other unnamed recipients in fields mentioned in chunk ed0534de and the bordering theory project in chunk 79a60fae.",
+      "signals": {
+        "sufficiency": 0.6489,
+        "chunk_agreement": 0.7123,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8596
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 16864,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 16864,
+      "action": "answer",
+      "answer": "Based on the chunks, the following ETH researchers are mentioned as ERC grant recipients:\n\n- Professor Niklas Beisert (Institute for Theoretical Physics) – for work on quantum field theories.\n- Professor Sonia Seneviratne (Institute for Atmospheric and Climate Science) – for an ERC project on soil moisture, vegetation, heat waves, and droughts.\n\nThe chunks also reference other ERC Advanced Grant recipients at ETH in fields such as physics, material sciences, earth sciences, biosystems, and European integration (a 'bordering theory' project), but do not name those individual researchers. So the evidence only partially identifies the recipients by name.",
+      "citations": [
+        "79a60fae262aedeb274d9f7b7ff3667fb7408123_fixed_1",
+        "ed0534de840e4c5ae5d00dd32841df0f3aea131f_fixed_0",
+        "e9d5daa8b1b8dd46b2e1d67aeff5f19d732bfcac_fixed_0",
+        "327dfd590409db9eb6c600a5e3b71792d37d8075_fixed_0"
+      ],
+      "confidence": 0.8596,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.6489,
+        "chunk_agreement": 0.7123,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8596
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Based on the chunks, the following ETH researchers are mentioned as ERC grant recipients:\n\n- Professor Niklas Beisert (Institute for Theoretical Physics) – for work on quantum field theories.\n- Professor Sonia Seneviratne (Institute for Atmospheric and Climate Science) – for an ERC project on soil moisture, vegetation, heat waves, and droughts.\n\nThe chunks also reference other ERC Advanced Grant recipients at ETH in fields such as physics, material sciences, earth sciences, biosystems, and European integration (a 'bordering theory' project), but do not name those individual researchers. So the evidence only partially identifies the recipients by name.",
+    "citations": [
+      "79a60fae262aedeb274d9f7b7ff3667fb7408123_fixed_1",
+      "ed0534de840e4c5ae5d00dd32841df0f3aea131f_fixed_0",
+      "e9d5daa8b1b8dd46b2e1d67aeff5f19d732bfcac_fixed_0",
+      "327dfd590409db9eb6c600a5e3b71792d37d8075_fixed_0"
+    ],
+    "confidence": 0.8596,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.6489,
+      "chunk_agreement": 0.7123,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.8596
+    }
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "qid": "10",
+  "query": "how would you make ferzlizer without carbon emissions?",
+  "profile": {
+    "lang": "en",
+    "query_type": "opinion",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "The query uses 'you' and 'would' in a way that could be interpreted as either asking for a technical definition/explanation of carbon-neutral fertilizer production methods, or asking for a subjective recommendation or argument ('how should one approach this'), making the intent unclear.",
+    "entities": [
+      "fertilizer",
+      "carbon emissions"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 2135,
+      "lang": "en",
+      "query_type": "opinion",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "The query uses 'you' and 'would' in a way that could be interpreted as either asking for a technical definition/explanation of carbon-neutral fertilizer production methods, or asking for a subjective recommendation or argument ('how should one approach this'), making the intent unclear.",
+      "entities": [
+        "fertilizer",
+        "carbon emissions"
+      ],
+      "initial_mode": "confidence"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2919,
+      "mode": "confidence",
+      "query": "how would you make ferzlizer without carbon emissions?",
+      "n_chunks": 8,
+      "top_ids": [
+        "c9b70590a59773186e37d27e28a151b8ba26dcb5_fixed_0",
+        "c9b70590a59773186e37d27e28a151b8ba26dcb5_fixed_2",
+        "1cc5177cf34349503896b4afc992a9a75cb2a13b_fixed_0",
+        "b4b121286ee9103482da7586511c101cd7f3bca9_fixed_1",
+        "f7c1cdb98e12082bc830f6cf3caab58efea2d7ad_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 3090,
+      "signals": {
+        "sufficiency": 0.4926,
+        "chunk_agreement": 0.6759,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 3090,
+      "action": "generate",
+      "reason": "sufficiency 0.49 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 7363,
+      "draft_answer": "The provided evidence does not specifically address how to make fertilizer without carbon emissions. The chunks discuss related topics such as producing climate-neutral chemicals using bacteria that metabolise green methanol (synthesised from CO2 and water with renewable energy), CO2-neutral buildings, and power-to-fuel technology, but none specifically cover fertilizer production.",
+      "citations": [
+        "c9b70590a59773186e37d27e28a151b8ba26dcb5_fixed_0",
+        "c9b70590a59773186e37d27e28a151b8ba26dcb5_fixed_2"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 7363,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 8643,
+      "rewritten_query": "how to produce fertilizer with low carbon emissions zero emissions sustainable manufacturing",
+      "old_mode": "confidence",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 12900,
+      "mode": "voting",
+      "query": "how to produce fertilizer with low carbon emissions zero emissions sustainable manufacturing",
+      "n_chunks": 8,
+      "top_ids": [
+        "c9b70590a59773186e37d27e28a151b8ba26dcb5_fixed_2",
+        "1e8538e7de6942bee78536851d878b218d5e8110_fixed_0",
+        "c9b70590a59773186e37d27e28a151b8ba26dcb5_fixed_0",
+        "1e8538e7de6942bee78536851d878b218d5e8110_fixed_1",
+        "7dc2a4febe05a472262240dccdd4c3e9fd4b7268_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 13058,
+      "signals": {
+        "sufficiency": 0.6144,
+        "chunk_agreement": 0.6626,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 13058,
+      "action": "generate",
+      "reason": "sufficiency 0.61 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 18809,
+      "draft_answer": "The evidence describes one sustainable fertilizer production approach: producing compost from human excreta (sewage sludge) and urban green waste. In rural South Africa, ETH postdoc Benjamin Wilde is working with the Msunduzi municipality and the local public utility Duzi Turf to convert sewage sludge from pit latrines together with urban green waste into compost, which is then used as fertilizer. The chunks do not specifically discuss low-carbon or zero-emission industrial fertilizer manufacturing (e.g., ammonia/nitrogen fertilizer) beyond this composting/waste-recycling approach.",
+      "citations": [
+        "1e8538e7de6942bee78536851d878b218d5e8110_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 18809,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 22730,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft accurately summarizes the composting approach from the Wilde/Msunduzi chunk and correctly notes the absence of evidence about industrial low-carbon fertilizer manufacturing.",
+      "signals": {
+        "sufficiency": 0.6144,
+        "chunk_agreement": 0.6626,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.8458
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 22730,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 22730,
+      "action": "answer",
+      "answer": "The evidence describes one sustainable fertilizer production approach: producing compost from human excreta (sewage sludge) and urban green waste. In rural South Africa, ETH postdoc Benjamin Wilde is working with the Msunduzi municipality and the local public utility Duzi Turf to convert sewage sludge from pit latrines together with urban green waste into compost, which is then used as fertilizer. The chunks do not specifically discuss low-carbon or zero-emission industrial fertilizer manufacturing (e.g., ammonia/nitrogen fertilizer) beyond this composting/waste-recycling approach.",
+      "citations": [
+        "1e8538e7de6942bee78536851d878b218d5e8110_fixed_0"
+      ],
+      "confidence": 0.8458,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.6144,
+        "chunk_agreement": 0.6626,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.8458
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The evidence describes one sustainable fertilizer production approach: producing compost from human excreta (sewage sludge) and urban green waste. In rural South Africa, ETH postdoc Benjamin Wilde is working with the Msunduzi municipality and the local public utility Duzi Turf to convert sewage sludge from pit latrines together with urban green waste into compost, which is then used as fertilizer. The chunks do not specifically discuss low-carbon or zero-emission industrial fertilizer manufacturing (e.g., ammonia/nitrogen fertilizer) beyond this composting/waste-recycling approach.",
+    "citations": [
+      "1e8538e7de6942bee78536851d878b218d5e8110_fixed_0"
+    ],
+    "confidence": 0.8458,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.6144,
+      "chunk_agreement": 0.6626,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.8458
+    }
+  }
+}

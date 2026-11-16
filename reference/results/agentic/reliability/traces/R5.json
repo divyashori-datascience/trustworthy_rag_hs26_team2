@@ -1,0 +1,226 @@
+{
+  "qid": "R5",
+  "query": "What is the personal email address of the rector of ETH Zurich?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth zurich",
+      "rector",
+      "email address"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1307,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth zurich",
+        "rector",
+        "email address"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 3873,
+      "mode": "bm25",
+      "query": "What is the personal email address of the rector of ETH Zurich?",
+      "n_chunks": 8,
+      "top_ids": [
+        "6acd19ffbb370e5150580f63dcc1e30c3c9bca8f_fixed_0",
+        "f3011c04494209f218d6913611ab65bcc50738f8_fixed_0",
+        "88c84afa0d03aa5ca7e467b71032d83da655e72f_fixed_0",
+        "5e46a0288364ae85d7814cd834d84c3a12afa769_fixed_2",
+        "6acd19ffbb370e5150580f63dcc1e30c3c9bca8f_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 4076,
+      "signals": {
+        "sufficiency": 0.5044,
+        "chunk_agreement": 0.5798,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 4076,
+      "action": "generate",
+      "reason": "sufficiency 0.50 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 7384,
+      "draft_answer": "The provided chunks do not contain the personal email address of the rector of ETH Zurich. They mention Günther Dissertori in connection with the rector role but do not provide any email address.",
+      "citations": [
+        "5e46a0288364ae85d7814cd834d84c3a12afa769_fixed_2"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 7384,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 9469,
+      "rewritten_query": "personal contact email address rector ETH Zurich president",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 104790,
+      "mode": "voting",
+      "query": "personal contact email address rector ETH Zurich president",
+      "n_chunks": 8,
+      "top_ids": [
+        "23b7e9608002efc314545488da73a8d8b3142ae9_fixed_0",
+        "29bcc28aca13b6cfae2c22da53d6e4865c1ffc8d_fixed_0",
+        "ede695ab03381bf8b9aa35f708143fc2376aa78d_fixed_6",
+        "e38adeeda690093e8f33e7ae48608dacb8107ac8_fixed_0",
+        "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 104927,
+      "signals": {
+        "sufficiency": 0.7261,
+        "chunk_agreement": 0.7378,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 104927,
+      "action": "generate",
+      "reason": "sufficiency 0.73 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 107903,
+      "draft_answer": "The provided chunks do not contain a personal contact email address for the ETH Zurich rector or president. The only contact information given is for ETH Zurich Media Relations (phone: +41 44 632 41 41).",
+      "citations": [
+        "23b7e9608002efc314545488da73a8d8b3142ae9_fixed_0"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 107903,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 108844,
+      "rewritten_query": "Who is the current rector of ETH Zurich and what is their official contact email address?",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 108879,
+      "mode": "graphrag",
+      "query": "Who is the current rector of ETH Zurich and what is their official contact email address?",
+      "n_chunks": 8,
+      "top_ids": [
+        "23b7e9608002efc314545488da73a8d8b3142ae9_fixed_0",
+        "ede695ab03381bf8b9aa35f708143fc2376aa78d_fixed_6",
+        "29bcc28aca13b6cfae2c22da53d6e4865c1ffc8d_fixed_0",
+        "00859327fafc62821b53b9ad083e2a244c1b4470_fixed_3",
+        "f76c12a829cc91dfbbd814cdf2afbc9415c6fabc_fixed_2"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 109009,
+      "signals": {
+        "sufficiency": 0.758,
+        "chunk_agreement": 0.7305,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 109009,
+      "action": "generate",
+      "reason": "sufficiency 0.76 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 112314,
+      "draft_answer": "The provided chunks do not identify the current rector of ETH Zurich by name, nor do they give an official contact email address for the rector. They only mention the role of the rector in relation to a vice rector for continuing education, without naming the rector.",
+      "citations": [
+        "00859327fafc62821b53b9ad083e2a244c1b4470_fixed_3"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 112314,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 112314,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.758,
+        "chunk_agreement": 0.7305,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.758,
+      "chunk_agreement": 0.7305,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

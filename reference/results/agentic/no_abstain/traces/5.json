@@ -1,0 +1,181 @@
+{
+  "qid": "5",
+  "query": "what did prof. schubert say about flying?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "prof. schubert",
+      "flying"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1531,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "prof. schubert",
+        "flying"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1553,
+      "mode": "bm25",
+      "query": "what did prof. schubert say about flying?",
+      "n_chunks": 8,
+      "top_ids": [
+        "cf663468e4362f30c85f68fdbbc6c61c9d201433_fixed_1",
+        "370683e341c507a8904c2967d86d5c59d99f400c_fixed_2",
+        "cf663468e4362f30c85f68fdbbc6c61c9d201433_fixed_0",
+        "5dafd5c54138b4bff6826d9e803a236d0817e861_fixed_4",
+        "5a99e9ea2d724f052e9147b55b75ea1b8f6f1d6d_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1734,
+      "signals": {
+        "sufficiency": 0.3724,
+        "chunk_agreement": 0.5648,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1734,
+      "action": "switch_mode_and_retrieve",
+      "reason": "sufficiency 0.37 < 0.40; mode 'bm25' tried; recovering with a new mode + rewrite",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 3123,
+      "rewritten_query": "what did professor schubert say about flight OR aviation OR flying OR aircraft",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 6101,
+      "mode": "voting",
+      "query": "what did professor schubert say about flight OR aviation OR flying OR aircraft",
+      "n_chunks": 8,
+      "top_ids": [
+        "f2a77e0c802cfeef2a77a35db85f18b4147fc905_fixed_0",
+        "9ebdcee79af879804fccd0bdf2ed757f6f91451c_fixed_0",
+        "9ebdcee79af879804fccd0bdf2ed757f6f91451c_fixed_2",
+        "8eb3738c437f42344fec035ec9c95a3c7871591b_fixed_0",
+        "9ebdcee79af879804fccd0bdf2ed757f6f91451c_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 6300,
+      "signals": {
+        "sufficiency": 0.6008,
+        "chunk_agreement": 0.687,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 6300,
+      "action": "generate",
+      "reason": "sufficiency 0.60 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 13396,
+      "draft_answer": "The evidence contains statements from two different professors named in connection with aviation:\n\n1. **Professor Renate Schubert** commented on the costs of flying, arguing that aviation is heavily subsidized at the climate's expense. In Switzerland, international flights are exempt from fuel tax (unlike petrol for cars), exempt from CO2 tax, have no emissions limits, and air passengers don't pay VAT. As a result, air fares are very low compared to other transport — e.g., a Basel-to-Berlin flight costs only 31.20 francs, while a regular second-class train ticket costs 178 francs. She raised the question of whether surcharges on flying could make train travel more economically competitive.\n\n2. (Note: The question asks about \"Professor Schubert.\" The other aviation-related chunks refer to Professor Martin Raubal, not Schubert, so they are not attributed to Schubert.)",
+      "citations": [
+        "f2a77e0c802cfeef2a77a35db85f18b4147fc905_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 13396,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 18254,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims attributed to Professor Renate Schubert (fuel tax exemption, CO2 tax exemption, no emissions limits, VAT exemption, Basel-Berlin flight 31.20 francs vs train 178 francs, surcharge question) are directly supported by chunk f2a77e0c. The note correctly distinguishes Raubal from Schubert.",
+      "signals": {
+        "sufficiency": 0.6008,
+        "chunk_agreement": 0.687,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8403
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 18254,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 18254,
+      "action": "answer",
+      "answer": "The evidence contains statements from two different professors named in connection with aviation:\n\n1. **Professor Renate Schubert** commented on the costs of flying, arguing that aviation is heavily subsidized at the climate's expense. In Switzerland, international flights are exempt from fuel tax (unlike petrol for cars), exempt from CO2 tax, have no emissions limits, and air passengers don't pay VAT. As a result, air fares are very low compared to other transport — e.g., a Basel-to-Berlin flight costs only 31.20 francs, while a regular second-class train ticket costs 178 francs. She raised the question of whether surcharges on flying could make train travel more economically competitive.\n\n2. (Note: The question asks about \"Professor Schubert.\" The other aviation-related chunks refer to Professor Martin Raubal, not Schubert, so they are not attributed to Schubert.)",
+      "citations": [
+        "f2a77e0c802cfeef2a77a35db85f18b4147fc905_fixed_0"
+      ],
+      "confidence": 0.8403,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.6008,
+        "chunk_agreement": 0.687,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8403
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The evidence contains statements from two different professors named in connection with aviation:\n\n1. **Professor Renate Schubert** commented on the costs of flying, arguing that aviation is heavily subsidized at the climate's expense. In Switzerland, international flights are exempt from fuel tax (unlike petrol for cars), exempt from CO2 tax, have no emissions limits, and air passengers don't pay VAT. As a result, air fares are very low compared to other transport — e.g., a Basel-to-Berlin flight costs only 31.20 francs, while a regular second-class train ticket costs 178 francs. She raised the question of whether surcharges on flying could make train travel more economically competitive.\n\n2. (Note: The question asks about \"Professor Schubert.\" The other aviation-related chunks refer to Professor Martin Raubal, not Schubert, so they are not attributed to Schubert.)",
+    "citations": [
+      "f2a77e0c802cfeef2a77a35db85f18b4147fc905_fixed_0"
+    ],
+    "confidence": 0.8403,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.6008,
+      "chunk_agreement": 0.687,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.8403
+    }
+  }
+}

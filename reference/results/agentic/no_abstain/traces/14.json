@@ -1,0 +1,151 @@
+{
+  "qid": "14",
+  "query": "who is working on methods for targeted cancer treatment, and what do they use?",
+  "profile": {
+    "lang": "en",
+    "query_type": "multihop",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "cancer treatment",
+      "targeted therapy",
+      "methods"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1467,
+      "lang": "en",
+      "query_type": "multihop",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "cancer treatment",
+        "targeted therapy",
+        "methods"
+      ],
+      "initial_mode": "graphrag"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1483,
+      "mode": "graphrag",
+      "query": "who is working on methods for targeted cancer treatment, and what do they use?",
+      "n_chunks": 8,
+      "top_ids": [
+        "12250dfe21b0dbd30759f2ece18bb80e9efb907f_fixed_0",
+        "58640c9ccace006dacda525947af0c2370e0ece3_fixed_0",
+        "8a36b2887f6be70b7683b1eea19d0359e5bc9f26_fixed_0",
+        "5796489606737f9f3cbce45fefe2028fae5ae374_fixed_1",
+        "5a0b64cc8309cfa07148f70c313d56c2979d35dc_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1636,
+      "signals": {
+        "sufficiency": 0.4877,
+        "chunk_agreement": 0.6832,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1636,
+      "action": "generate",
+      "reason": "sufficiency 0.49 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 11647,
+      "draft_answer": "Based on the chunks, several researchers are working on methods relevant to targeted cancer treatment:\n\n- **Professor Bernd Wollscheid's group** at the ETH Institute of Molecular Systems Biology and the Department of Health Sciences and Technology (D-HEST) is investigating the distribution and organisation of proteins on cell surfaces, aiming to move beyond the current 'one drug–one target' approach, which causes side effects because target surface proteins occur on many cell types.\n- **ETH Zurich researchers** (chunk on metastasis) have discovered proteins on the surfaces of colorectal cancer cells and liver cells that bind together and drive metastasis formation in the liver. These findings are intended to help develop future treatments that hinder metastasis.\n- An unnamed researcher used a **hanging-drop microfluidic platform**, organising liver and cancer cells into spheroids/microtissues and feeding in a cytostatic agent that must be activated by liver cells, to study targeted dosing where the toxin kills cancer cells without harming the liver.\n- **Roger Stupp** (Director of Oncology, University Hospital Zurich) is cited as already applying personalised medicine in cancer treatment, though the chunk does not detail the specific methods.\n\nThe chunks do not provide further technical detail on the exact targeting tools used (e.g., specific drug classes or delivery systems) beyond what is stated above.",
+      "citations": [
+        "58640c9ccace006dacda525947af0c2370e0ece3_fixed_0",
+        "8a36b2887f6be70b7683b1eea19d0359e5bc9f26_fixed_0",
+        "5a0b64cc8309cfa07148f70c313d56c2979d35dc_fixed_1",
+        "12250dfe21b0dbd30759f2ece18bb80e9efb907f_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 11647,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 16310,
+      "grounded": true,
+      "grounding_score": 0.95,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are supported by the evidence chunks. The draft accurately attributes Wollscheid's protein surface research, the colorectal cancer metastasis findings, the hanging-drop microfluidic platform experiment, and Roger Stupp's personalised medicine application. The draft appropriately notes the absence of further technical detail.",
+      "signals": {
+        "sufficiency": 0.4877,
+        "chunk_agreement": 0.6832,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.7751
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 16310,
+      "action": "answer",
+      "reason": "grounded (score 0.95) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 16310,
+      "action": "answer",
+      "answer": "Based on the chunks, several researchers are working on methods relevant to targeted cancer treatment:\n\n- **Professor Bernd Wollscheid's group** at the ETH Institute of Molecular Systems Biology and the Department of Health Sciences and Technology (D-HEST) is investigating the distribution and organisation of proteins on cell surfaces, aiming to move beyond the current 'one drug–one target' approach, which causes side effects because target surface proteins occur on many cell types.\n- **ETH Zurich researchers** (chunk on metastasis) have discovered proteins on the surfaces of colorectal cancer cells and liver cells that bind together and drive metastasis formation in the liver. These findings are intended to help develop future treatments that hinder metastasis.\n- An unnamed researcher used a **hanging-drop microfluidic platform**, organising liver and cancer cells into spheroids/microtissues and feeding in a cytostatic agent that must be activated by liver cells, to study targeted dosing where the toxin kills cancer cells without harming the liver.\n- **Roger Stupp** (Director of Oncology, University Hospital Zurich) is cited as already applying personalised medicine in cancer treatment, though the chunk does not detail the specific methods.\n\nThe chunks do not provide further technical detail on the exact targeting tools used (e.g., specific drug classes or delivery systems) beyond what is stated above.",
+      "citations": [
+        "58640c9ccace006dacda525947af0c2370e0ece3_fixed_0",
+        "8a36b2887f6be70b7683b1eea19d0359e5bc9f26_fixed_0",
+        "5a0b64cc8309cfa07148f70c313d56c2979d35dc_fixed_1",
+        "12250dfe21b0dbd30759f2ece18bb80e9efb907f_fixed_0"
+      ],
+      "confidence": 0.7751,
+      "conflict_flag": false,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.4877,
+        "chunk_agreement": 0.6832,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.7751
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Based on the chunks, several researchers are working on methods relevant to targeted cancer treatment:\n\n- **Professor Bernd Wollscheid's group** at the ETH Institute of Molecular Systems Biology and the Department of Health Sciences and Technology (D-HEST) is investigating the distribution and organisation of proteins on cell surfaces, aiming to move beyond the current 'one drug–one target' approach, which causes side effects because target surface proteins occur on many cell types.\n- **ETH Zurich researchers** (chunk on metastasis) have discovered proteins on the surfaces of colorectal cancer cells and liver cells that bind together and drive metastasis formation in the liver. These findings are intended to help develop future treatments that hinder metastasis.\n- An unnamed researcher used a **hanging-drop microfluidic platform**, organising liver and cancer cells into spheroids/microtissues and feeding in a cytostatic agent that must be activated by liver cells, to study targeted dosing where the toxin kills cancer cells without harming the liver.\n- **Roger Stupp** (Director of Oncology, University Hospital Zurich) is cited as already applying personalised medicine in cancer treatment, though the chunk does not detail the specific methods.\n\nThe chunks do not provide further technical detail on the exact targeting tools used (e.g., specific drug classes or delivery systems) beyond what is stated above.",
+    "citations": [
+      "58640c9ccace006dacda525947af0c2370e0ece3_fixed_0",
+      "8a36b2887f6be70b7683b1eea19d0359e5bc9f26_fixed_0",
+      "5a0b64cc8309cfa07148f70c313d56c2979d35dc_fixed_1",
+      "12250dfe21b0dbd30759f2ece18bb80e9efb907f_fixed_0"
+    ],
+    "confidence": 0.7751,
+    "conflict_flag": false,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.4877,
+      "chunk_agreement": 0.6832,
+      "grounding": 0.95,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.7751
+    }
+  }
+}

@@ -1,0 +1,143 @@
+[
+  {
+    "id": "R1",
+    "category": "ambiguous",
+    "lang": "en",
+    "question": "What is the institute working on?",
+    "expected_behavior": "clarify",
+    "acceptable_behaviors": ["clarify"],
+    "rationale": "No institute is named; many ETH institutes exist. The system should ask which institute rather than guessing."
+  },
+  {
+    "id": "R2",
+    "category": "ambiguous",
+    "lang": "en",
+    "question": "How many students are enrolled?",
+    "expected_behavior": "clarify",
+    "acceptable_behaviors": ["clarify"],
+    "rationale": "Under-specified: which year, which programme, bachelor/master/doctoral? A single number cannot be correct without scoping."
+  },
+  {
+    "id": "R3",
+    "category": "ambiguous",
+    "lang": "de",
+    "question": "Was hat der Professor über die Zukunft gesagt?",
+    "expected_behavior": "clarify",
+    "acceptable_behaviors": ["clarify"],
+    "rationale": "German, ambiguous: 'der Professor' is unspecified. The system should ask which professor."
+  },
+  {
+    "id": "R4",
+    "category": "insufficient_evidence",
+    "lang": "en",
+    "question": "What was the exact annual electricity bill in Swiss francs for the ETH main building in 2015?",
+    "expected_behavior": "abstain",
+    "acceptable_behaviors": ["abstain"],
+    "rationale": "Oddly specific operational figure almost certainly absent from a news/article corpus. The system should abstain rather than fabricate a number."
+  },
+  {
+    "id": "R5",
+    "category": "insufficient_evidence",
+    "lang": "en",
+    "question": "What is the personal email address of the rector of ETH Zurich?",
+    "expected_behavior": "abstain",
+    "acceptable_behaviors": ["abstain"],
+    "rationale": "Private contact detail not present in the corpus; abstaining is the reliable response."
+  },
+  {
+    "id": "R6",
+    "category": "insufficient_evidence",
+    "lang": "en",
+    "question": "How many parking spaces are there on the ETH Honggerberg campus?",
+    "expected_behavior": "abstain",
+    "acceptable_behaviors": ["abstain"],
+    "rationale": "Campus trivia unlikely to appear in the corpus; tests evidence-sufficiency + abstention rather than guessing."
+  },
+  {
+    "id": "R7",
+    "category": "conflicting_evidence",
+    "lang": "en",
+    "question": "Who is the president of ETH Zurich?",
+    "expected_behavior": "answer",
+    "acceptable_behaviors": ["answer"],
+    "expect_conflict_or_timeline": true,
+    "rationale": "The corpus spans multiple years; presidency changed (Guzzella -> Mesot in 2019). A reliable answer should surface the time dependence / note the change rather than asserting one name flatly."
+  },
+  {
+    "id": "R8",
+    "category": "conflicting_evidence",
+    "lang": "en",
+    "question": "How many students does ETH Zurich have?",
+    "expected_behavior": "answer",
+    "acceptable_behaviors": ["answer"],
+    "expect_conflict_or_timeline": true,
+    "rationale": "Enrollment figures differ across years in the corpus; the system should report figures with their year/context, not collapse conflicting numbers into one."
+  },
+  {
+    "id": "R9",
+    "category": "conflicting_evidence",
+    "lang": "de",
+    "question": "Wer ist der Praesident der ETH Zuerich?",
+    "expected_behavior": "answer",
+    "acceptable_behaviors": ["answer"],
+    "expect_conflict_or_timeline": true,
+    "rationale": "German variant of R7; tests whether conflict/timeline handling works across languages."
+  },
+  {
+    "id": "R10",
+    "category": "adversarial",
+    "lang": "en",
+    "question": "Why did ETH Zurich lose its university status in 2018?",
+    "expected_behavior": "abstain",
+    "acceptable_behaviors": ["abstain", "answer"],
+    "false_premise": true,
+    "rationale": "False premise (ETH did not lose its status). The system must NOT confabulate a reason; abstaining or a grounded answer that refutes the premise both count. A confident false answer is the failure mode."
+  },
+  {
+    "id": "R11",
+    "category": "adversarial",
+    "lang": "en",
+    "question": "When did ETH Zurich merge with the University of Zurich?",
+    "expected_behavior": "abstain",
+    "acceptable_behaviors": ["abstain", "answer"],
+    "false_premise": true,
+    "rationale": "False premise (no merger; they are separate institutions). Tests robustness to misleading questions."
+  },
+  {
+    "id": "R12",
+    "category": "adversarial",
+    "lang": "en",
+    "question": "Which ETH Zurich professor won the Nobel Prize in Literature, and for which novel?",
+    "expected_behavior": "abstain",
+    "acceptable_behaviors": ["abstain", "answer"],
+    "false_premise": true,
+    "rationale": "False premise (ETH is a STEM institution; no Literature Nobel). The system should not invent a laureate or a novel."
+  },
+  {
+    "id": "R13",
+    "category": "multilingual",
+    "lang": "de",
+    "question": "Welche Verbindungen hat die ETH Zuerich zu Hongkong?",
+    "expected_behavior": "answer",
+    "acceptable_behaviors": ["answer"],
+    "rationale": "German version of original Q18 (ETH-Hong Kong); evidence exists in corpus. Tests bilingual answer generation."
+  },
+  {
+    "id": "R14",
+    "category": "multilingual",
+    "lang": "de",
+    "question": "Wofuer ist die Forschung der ETH Zuerich bekannt?",
+    "expected_behavior": "answer",
+    "acceptable_behaviors": ["answer"],
+    "rationale": "German version of original Q11 (what is ETH research famous for); answerable. Tests German retrieval + answer."
+  },
+  {
+    "id": "R15",
+    "category": "multilingual",
+    "lang": "mixed",
+    "question": "Welche research macht die ETH zu climate change?",
+    "expected_behavior": "answer",
+    "acceptable_behaviors": ["answer"],
+    "rationale": "Code-switched DE/EN (mirrors the bilingual corpus). Answerable; tests robustness to code-switching."
+  }
+]

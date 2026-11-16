@@ -1,0 +1,181 @@
+{
+  "qid": "5",
+  "query": "what did prof. schubert say about flying?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "prof. schubert",
+      "flying"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1310,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "prof. schubert",
+        "flying"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1338,
+      "mode": "bm25",
+      "query": "what did prof. schubert say about flying?",
+      "n_chunks": 8,
+      "top_ids": [
+        "cf663468e4362f30c85f68fdbbc6c61c9d201433_fixed_1",
+        "370683e341c507a8904c2967d86d5c59d99f400c_fixed_2",
+        "cf663468e4362f30c85f68fdbbc6c61c9d201433_fixed_0",
+        "5dafd5c54138b4bff6826d9e803a236d0817e861_fixed_4",
+        "5a99e9ea2d724f052e9147b55b75ea1b8f6f1d6d_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1555,
+      "signals": {
+        "sufficiency": 0.3724,
+        "chunk_agreement": 0.5648,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1555,
+      "action": "switch_mode_and_retrieve",
+      "reason": "sufficiency 0.37 < 0.40; mode 'bm25' tried; recovering with a new mode + rewrite",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 2572,
+      "rewritten_query": "what did professor Schubert say about aircraft aviation flying flight",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 5092,
+      "mode": "voting",
+      "query": "what did professor Schubert say about aircraft aviation flying flight",
+      "n_chunks": 8,
+      "top_ids": [
+        "f2a77e0c802cfeef2a77a35db85f18b4147fc905_fixed_0",
+        "9ebdcee79af879804fccd0bdf2ed757f6f91451c_fixed_0",
+        "cef8a60ebb00591a70f8743385464f51c36ca7ef_fixed_1",
+        "93422c30d851bcf00ae6110232a629d43956c96c_fixed_1",
+        "9ebdcee79af879804fccd0bdf2ed757f6f91451c_fixed_2"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 5294,
+      "signals": {
+        "sufficiency": 0.5825,
+        "chunk_agreement": 0.6054,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 5294,
+      "action": "generate",
+      "reason": "sufficiency 0.58 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 10496,
+      "draft_answer": "Professor Renate Schubert pointed out that air travel in Switzerland is heavily under-taxed compared with other transport. International flights are exempt from fuel tax (unlike petrol for cars), exempt from CO2 tax, have no emissions limits, and air passengers don't pay VAT. As a result, air fares are very low compared with other means of transport — e.g., a flight from Basel to Berlin costs only 31.20 francs, while a regular second-class train ticket costs 178 francs. She raised the question of whether surcharges on flying would make train travel more economically competitive, framing the current situation as flying being 'at the climate's expense.'",
+      "citations": [
+        "f2a77e0c802cfeef2a77a35db85f18b4147fc905_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 10496,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 14648,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft (fuel tax exemption, CO2 tax exemption, no emissions limits, VAT exemption, Basel-Berlin fare comparison, surcharge question, 'at the climate's expense' framing) are directly supported by chunk f2a77e0c.",
+      "signals": {
+        "sufficiency": 0.5825,
+        "chunk_agreement": 0.6054,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.833
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 14648,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 14648,
+      "action": "answer",
+      "answer": "Professor Renate Schubert pointed out that air travel in Switzerland is heavily under-taxed compared with other transport. International flights are exempt from fuel tax (unlike petrol for cars), exempt from CO2 tax, have no emissions limits, and air passengers don't pay VAT. As a result, air fares are very low compared with other means of transport — e.g., a flight from Basel to Berlin costs only 31.20 francs, while a regular second-class train ticket costs 178 francs. She raised the question of whether surcharges on flying would make train travel more economically competitive, framing the current situation as flying being 'at the climate's expense.'",
+      "citations": [
+        "f2a77e0c802cfeef2a77a35db85f18b4147fc905_fixed_0"
+      ],
+      "confidence": 0.833,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.5825,
+        "chunk_agreement": 0.6054,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.833
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Professor Renate Schubert pointed out that air travel in Switzerland is heavily under-taxed compared with other transport. International flights are exempt from fuel tax (unlike petrol for cars), exempt from CO2 tax, have no emissions limits, and air passengers don't pay VAT. As a result, air fares are very low compared with other means of transport — e.g., a flight from Basel to Berlin costs only 31.20 francs, while a regular second-class train ticket costs 178 francs. She raised the question of whether surcharges on flying would make train travel more economically competitive, framing the current situation as flying being 'at the climate's expense.'",
+    "citations": [
+      "f2a77e0c802cfeef2a77a35db85f18b4147fc905_fixed_0"
+    ],
+    "confidence": 0.833,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.5825,
+      "chunk_agreement": 0.6054,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.833
+    }
+  }
+}

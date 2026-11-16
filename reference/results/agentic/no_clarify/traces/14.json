@@ -1,0 +1,146 @@
+{
+  "qid": "14",
+  "query": "who is working on methods for targeted cancer treatment, and what do they use?",
+  "profile": {
+    "lang": "en",
+    "query_type": "multihop",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "cancer treatment",
+      "targeted therapy"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1133,
+      "lang": "en",
+      "query_type": "multihop",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "cancer treatment",
+        "targeted therapy"
+      ],
+      "initial_mode": "graphrag"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1149,
+      "mode": "graphrag",
+      "query": "who is working on methods for targeted cancer treatment, and what do they use?",
+      "n_chunks": 8,
+      "top_ids": [
+        "12250dfe21b0dbd30759f2ece18bb80e9efb907f_fixed_0",
+        "58640c9ccace006dacda525947af0c2370e0ece3_fixed_0",
+        "8a36b2887f6be70b7683b1eea19d0359e5bc9f26_fixed_0",
+        "5796489606737f9f3cbce45fefe2028fae5ae374_fixed_1",
+        "5a0b64cc8309cfa07148f70c313d56c2979d35dc_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1286,
+      "signals": {
+        "sufficiency": 0.4877,
+        "chunk_agreement": 0.6832,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1286,
+      "action": "generate",
+      "reason": "sufficiency 0.49 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 9079,
+      "draft_answer": "Based on the chunks, several researchers are working on methods for targeted cancer treatment:\n\n1. **Professor Bernd Wollscheid's group** at the ETH Institute of Molecular Systems Biology and the Department of Health Sciences and Technology (D-HEST) is investigating the distribution and organisation of proteins on cell surfaces, aiming to move beyond the current 'one drug-one target' approach that causes side effects by hitting multiple cell types.\n\n2. **ETH Zurich researchers** (chunk does not name them specifically) have discovered proteins on the surface of colorectal cancer cells and liver cells that bind together and play a major role in metastasis formation in the liver. These findings will help develop future treatments that may hinder metastasis formation.\n\n3. Researchers using a **hanging drop microfluidic platform** combined cancer cell spheroids with liver cells to test cytostatic agents that only become active (kill cancer cells) after liver cells metabolize them, allowing observation of effective concentrations versus liver toxicity.\n\nThe chunks do not provide further detail on all named individuals beyond Wollscheid.",
+      "citations": [
+        "58640c9ccace006dacda525947af0c2370e0ece3_fixed_0",
+        "8a36b2887f6be70b7683b1eea19d0359e5bc9f26_fixed_0",
+        "5a0b64cc8309cfa07148f70c313d56c2979d35dc_fixed_1"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 9079,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 12526,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All three claims in the draft are directly supported by the evidence chunks: Wollscheid's group's work, the ETH researchers' discovery of binding proteins on colorectal cancer and liver cells, and the hanging drop microfluidic platform experiment with cytostatic agents.",
+      "signals": {
+        "sufficiency": 0.4877,
+        "chunk_agreement": 0.6832,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.7951
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 12526,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 12526,
+      "action": "answer",
+      "answer": "Based on the chunks, several researchers are working on methods for targeted cancer treatment:\n\n1. **Professor Bernd Wollscheid's group** at the ETH Institute of Molecular Systems Biology and the Department of Health Sciences and Technology (D-HEST) is investigating the distribution and organisation of proteins on cell surfaces, aiming to move beyond the current 'one drug-one target' approach that causes side effects by hitting multiple cell types.\n\n2. **ETH Zurich researchers** (chunk does not name them specifically) have discovered proteins on the surface of colorectal cancer cells and liver cells that bind together and play a major role in metastasis formation in the liver. These findings will help develop future treatments that may hinder metastasis formation.\n\n3. Researchers using a **hanging drop microfluidic platform** combined cancer cell spheroids with liver cells to test cytostatic agents that only become active (kill cancer cells) after liver cells metabolize them, allowing observation of effective concentrations versus liver toxicity.\n\nThe chunks do not provide further detail on all named individuals beyond Wollscheid.",
+      "citations": [
+        "58640c9ccace006dacda525947af0c2370e0ece3_fixed_0",
+        "8a36b2887f6be70b7683b1eea19d0359e5bc9f26_fixed_0",
+        "5a0b64cc8309cfa07148f70c313d56c2979d35dc_fixed_1"
+      ],
+      "confidence": 0.7951,
+      "conflict_flag": false,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.4877,
+        "chunk_agreement": 0.6832,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.7951
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Based on the chunks, several researchers are working on methods for targeted cancer treatment:\n\n1. **Professor Bernd Wollscheid's group** at the ETH Institute of Molecular Systems Biology and the Department of Health Sciences and Technology (D-HEST) is investigating the distribution and organisation of proteins on cell surfaces, aiming to move beyond the current 'one drug-one target' approach that causes side effects by hitting multiple cell types.\n\n2. **ETH Zurich researchers** (chunk does not name them specifically) have discovered proteins on the surface of colorectal cancer cells and liver cells that bind together and play a major role in metastasis formation in the liver. These findings will help develop future treatments that may hinder metastasis formation.\n\n3. Researchers using a **hanging drop microfluidic platform** combined cancer cell spheroids with liver cells to test cytostatic agents that only become active (kill cancer cells) after liver cells metabolize them, allowing observation of effective concentrations versus liver toxicity.\n\nThe chunks do not provide further detail on all named individuals beyond Wollscheid.",
+    "citations": [
+      "58640c9ccace006dacda525947af0c2370e0ece3_fixed_0",
+      "8a36b2887f6be70b7683b1eea19d0359e5bc9f26_fixed_0",
+      "5a0b64cc8309cfa07148f70c313d56c2979d35dc_fixed_1"
+    ],
+    "confidence": 0.7951,
+    "conflict_flag": false,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.4877,
+      "chunk_agreement": 0.6832,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.7951
+    }
+  }
+}

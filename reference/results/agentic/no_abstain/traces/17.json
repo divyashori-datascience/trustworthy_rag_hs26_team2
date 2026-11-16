@@ -1,0 +1,244 @@
+{
+  "qid": "17",
+  "query": "how do birds learn new songs?",
+  "profile": {
+    "lang": "en",
+    "query_type": "definition",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "birds",
+      "song learning"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1065,
+      "lang": "en",
+      "query_type": "definition",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "birds",
+        "song learning"
+      ],
+      "initial_mode": "dense"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1307,
+      "mode": "dense",
+      "query": "how do birds learn new songs?",
+      "n_chunks": 8,
+      "top_ids": [
+        "afef12ad3f6321c43b65d045e2b1273cd1303ed9_fixed_1",
+        "afc38527715aff1eaca43b90f960ade1e6e97af7_fixed_3",
+        "be0be6dd86e21c2651c802ddcef675fa2e6fd016_fixed_1",
+        "4994285b5962eed7b155e2d826a19e07f7c7d574_fixed_2",
+        "eb58dd38003c08e04a1173d25652c9153832e0f7_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1440,
+      "signals": {
+        "sufficiency": 0.4471,
+        "chunk_agreement": 0.6166,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1441,
+      "action": "generate",
+      "reason": "sufficiency 0.45 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 3917,
+      "draft_answer": "The provided chunks do not contain information about how birds learn new songs.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 3917,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 4820,
+      "rewritten_query": "how do birds learn acquire new songs singing behavior vocal learning avian birdsong",
+      "old_mode": "dense",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 9740,
+      "mode": "voting",
+      "query": "how do birds learn acquire new songs singing behavior vocal learning avian birdsong",
+      "n_chunks": 8,
+      "top_ids": [
+        "4c479c0f0e58f92d3990dff49bf9ed49da537ff5_fixed_2",
+        "1afe6e1de8c417b8ea5406f8d9b529ebf22966ef_fixed_2",
+        "75db583ba630008c9bfcf375129f92758f8702f1_fixed_0",
+        "1f43786adf85d4bb2b32bd23772454a7038d2b72_fixed_2",
+        "d4aef9d4d117e69ba75b6b744e8f8f2ec3c2a2e0_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 9942,
+      "signals": {
+        "sufficiency": 0.5819,
+        "chunk_agreement": 0.5985,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 9942,
+      "action": "generate",
+      "reason": "sufficiency 0.58 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 14581,
+      "draft_answer": "The provided chunks do not contain information about how birds learn or acquire new songs, vocal learning, or birdsong behavior. The only mention of birdsong is a reference to Rachel Carson's book 'Silent Spring,' which predicted a decline in birdsong due to environmental issues, but this does not address vocal learning.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 14581,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 15406,
+      "rewritten_query": "how do birds learn to sing new vocalizations songs birdsong acoustic learning avian behavior",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 15489,
+      "mode": "graphrag",
+      "query": "how do birds learn to sing new vocalizations songs birdsong acoustic learning avian behavior",
+      "n_chunks": 8,
+      "top_ids": [
+        "75db583ba630008c9bfcf375129f92758f8702f1_fixed_1",
+        "75db583ba630008c9bfcf375129f92758f8702f1_fixed_0",
+        "1afe6e1de8c417b8ea5406f8d9b529ebf22966ef_fixed_2",
+        "e3e809192e862371bcface08acfae378170cc028_fixed_2",
+        "1afe6e1de8c417b8ea5406f8d9b529ebf22966ef_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 15767,
+      "signals": {
+        "sufficiency": 0.6104,
+        "chunk_agreement": 0.6392,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 15767,
+      "action": "generate",
+      "reason": "sufficiency 0.61 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 19423,
+      "draft_answer": "The provided chunks do not contain information about how birds learn to sing or about birdsong acoustic learning. The chunks cover automated analysis of animal behaviour (mice and primates), bird flu outbreaks, and sound-powered sensors, none of which address avian vocal learning.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 19423,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 0
+    },
+    {
+      "step": "verify",
+      "t_ms": 22496,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft correctly states that the evidence chunks do not address birdsong vocal learning; the chunks cover animal behavior analysis (mice/primates), bird flu, and sound-powered sensors.",
+      "signals": {
+        "sufficiency": 0.6104,
+        "chunk_agreement": 0.6392,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8442
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 22496,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 22496,
+      "action": "answer",
+      "answer": "The provided chunks do not contain information about how birds learn to sing or about birdsong acoustic learning. The chunks cover automated analysis of animal behaviour (mice and primates), bird flu outbreaks, and sound-powered sensors, none of which address avian vocal learning.",
+      "citations": [],
+      "confidence": 0.8442,
+      "conflict_flag": false,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.6104,
+        "chunk_agreement": 0.6392,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8442
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The provided chunks do not contain information about how birds learn to sing or about birdsong acoustic learning. The chunks cover automated analysis of animal behaviour (mice and primates), bird flu outbreaks, and sound-powered sensors, none of which address avian vocal learning.",
+    "citations": [],
+    "confidence": 0.8442,
+    "conflict_flag": false,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.6104,
+      "chunk_agreement": 0.6392,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.8442
+    }
+  }
+}

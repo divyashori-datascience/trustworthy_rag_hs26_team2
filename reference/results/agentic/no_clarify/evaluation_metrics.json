@@ -1,0 +1,95 @@
+{
+  "n_questions": 25,
+  "action_counts": {
+    "abstain": 4,
+    "answer": 21
+  },
+  "behaviour": {
+    "confusion_expected_vs_actual": {
+      "abstain": {
+        "abstain": 1
+      },
+      "answer": {
+        "answer": 18,
+        "abstain": 3
+      },
+      "clarify": {
+        "answer": 3
+      }
+    },
+    "abstention": {
+      "total": 4,
+      "correct": 1,
+      "false": 3,
+      "correct_rate": 0.25,
+      "false_rate": 0.75
+    },
+    "clarification": {
+      "total": 0,
+      "correct": 0,
+      "false": 0,
+      "correct_rate": null
+    },
+    "answer_coverage_on_answerable": {
+      "answerable": 21,
+      "answered": 18,
+      "rate": 0.857
+    }
+  },
+  "groundedness": {
+    "n_answers": 21,
+    "grounded_answer_rate": 1.0,
+    "mean_grounding_score": 0.981,
+    "mean_unsupported_claims": 0.0
+  },
+  "recovery": {
+    "n_recovered": 11,
+    "recovery_success": 7,
+    "recovery_success_rate": 0.636,
+    "recovered_qids": [
+      "1",
+      "10",
+      "12",
+      "13",
+      "17",
+      "18",
+      "19",
+      "20",
+      "4",
+      "5",
+      "6"
+    ]
+  },
+  "confidence_by_action": {
+    "abstain": {
+      "n": 4,
+      "mean_confidence": 0.0
+    },
+    "answer": {
+      "n": 21,
+      "mean_confidence": 0.888
+    }
+  },
+  "retrieval": {
+    "n_with_gold": 24,
+    "P@5": 0.0917,
+    "Recall@5": 0.0053,
+    "MRR@5": 0.1333,
+    "note": "computed on the agentic system's FINAL retrieved top-5 (post-recovery)"
+  },
+  "baseline_reference": {
+    "strategy": "Confidence",
+    "P@5": 0.1167,
+    "Recall@5": 0.0046,
+    "MRR": 0.2045,
+    "latency_avg_s": 0.96
+  },
+  "efficiency": {
+    "latency_avg_s": 16.69,
+    "latency_max_s": 31.55,
+    "est_cost_usd": 0.963
+  },
+  "plots": [
+    "confidence_by_action.png"
+  ]
+}

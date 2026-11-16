@@ -1,0 +1,137 @@
+{
+  "R1": {
+    "question": "What is the institute working on?",
+    "action": "answer",
+    "answer": "The question is ambiguous as multiple institutes are mentioned in the chunks. Based on the available evidence: The Institute of Molecular Plant Biology (IMPB), part of ETH's Department of Biology, is primarily involved in basic research, aiming to use certain methods to produce [text cut off]. Other work mentioned includes molecular spectroscopy research, a joint project with the Roche Institute of Human Biology developing personalised treatment methods for pancreatic cancer, and research on quantum materials coupled with light fields with potential applications in materials science, quantum information technology, and high-energy physics. The chunks do not specify which single institute the question refers to.",
+    "clarifying_question": null,
+    "confidence": 0.8786,
+    "mode_used": "dense",
+    "latency_s": 17.62
+  },
+  "R2": {
+    "question": "How many students are enrolled?",
+    "action": "clarify",
+    "answer": null,
+    "clarifying_question": "What type of students are you asking about: undergraduate, graduate, or total enrollment across all levels?",
+    "confidence": 0.0,
+    "mode_used": "bm25",
+    "latency_s": 6.87
+  },
+  "R3": {
+    "question": "Was hat der Professor über die Zukunft gesagt?",
+    "action": "clarify",
+    "answer": null,
+    "clarifying_question": "Welcher Professor und aus welchem Kontext oder welcher Veranstaltung beziehen Sie sich auf diese Aussage?",
+    "confidence": 0.0,
+    "mode_used": "bm25",
+    "latency_s": 4.24
+  },
+  "R4": {
+    "question": "What was the exact annual electricity bill in Swiss francs for the ETH main building in 2015?",
+    "action": "abstain",
+    "answer": null,
+    "clarifying_question": null,
+    "confidence": 0.0,
+    "mode_used": "graphrag",
+    "latency_s": 172.32
+  },
+  "R5": {
+    "question": "What is the personal email address of the rector of ETH Zurich?",
+    "action": "abstain",
+    "answer": null,
+    "clarifying_question": null,
+    "confidence": 0.0,
+    "mode_used": "graphrag",
+    "latency_s": 112.31
+  },
+  "R6": {
+    "question": "How many parking spaces are there on the ETH Honggerberg campus?",
+    "action": "answer",
+    "answer": "The evidence does not specify the number or locations of parking spaces on the Hönggerberg campus. It only mentions parking fees: under the parking regulation in force since 1 January 2017, the Executive Board decided to incrementally raise parking fees to market levels. Hönggerberg fees (then 60 CHF/month) were to be brought in line with the Zentrum rate (120 CHF/month), with a 33% discount for students, and fees were set to rise from 1 January 2020. Details on the actual parking facilities/infrastructure (number of spaces, garages, locations) are not covered in the chunks.",
+    "clarifying_question": null,
+    "confidence": 0.8944,
+    "mode_used": "voting",
+    "latency_s": 19.29
+  },
+  "R7": {
+    "question": "Who is the president of ETH Zurich?",
+    "action": "answer",
+    "answer": "Based on the chunks: Günther Dissertori was nominated as the new rector of ETH Zurich (with 233 of 439 votes), with Joël Mesot (the ETH president) putting his name forward to the ETH Board for official appointment. Joël Mesot is referenced as ETH president (having previously led the Paul Scherrer Institute). The chunks do not explicitly state the current confirmed president/rector beyond these nominations.",
+    "clarifying_question": null,
+    "confidence": 0.8964,
+    "mode_used": "voting",
+    "latency_s": 26.37
+  },
+  "R8": {
+    "question": "How many students does ETH Zurich have?",
+    "action": "answer",
+    "answer": "According to ETH Zurich's 2016 annual report, the total number of students reached a record high of 19,815, with women making up 31.1 percent. The evidence does not provide a more recent total enrollment figure, though it notes that women account for about 33 percent of students in a later (2023) context.",
+    "clarifying_question": null,
+    "confidence": 0.9378,
+    "mode_used": "voting",
+    "latency_s": 20.03
+  },
+  "R9": {
+    "question": "Wer ist der Praesident der ETH Zuerich?",
+    "action": "answer",
+    "answer": "Based on the chunks: Joël Mesot is the president of ETH Zurich (he puts forward the rector nomination to the ETH Board). Günther Dissertori was nominated as the new rector. A previous rector mentioned is Sarah Springman. The chunks do not give a single definitive current statement, but Dissertori was nominated as rector with Mesot forwarding his name to the ETH Board for appointment.",
+    "clarifying_question": null,
+    "confidence": 0.9165,
+    "mode_used": "voting",
+    "latency_s": 18.53
+  },
+  "R10": {
+    "question": "Why did ETH Zurich lose its university status in 2018?",
+    "action": "answer",
+    "answer": "In October 2018, ETH Zurich was one of the first universities to receive official accreditation under the Swiss Higher Education Act, which had entered into force in 2015. The act requires all public and private institutions wishing to use the designation \"university,\" \"university of applied sciences,\" or \"university of teacher education\" to be accredited every seven years. The accreditation is awarded by the Swiss Accreditation Council, made up of twenty independent members including representatives from the world of work, higher education institutions, students, non-professional teaching staff, and academic staff. As part of this process, ETH updated its \"Guidelines for the internal quality assurance system\" and supplemented them with a list of functions responsible for various aspects. Rector Sarah Springman also highlighted teaching initiatives such as ETH Talent, aimed at strengthening interdisciplinary skills across all levels, and noted that more departments were introducing a split in first-year examinations. The evidence does not describe a broader institutional \"reorganization\" beyond these accreditation-related quality assurance updates.",
+    "clarifying_question": null,
+    "confidence": 0.9049,
+    "mode_used": "graphrag",
+    "latency_s": 29.11
+  },
+  "R11": {
+    "question": "When did ETH Zurich merge with the University of Zurich?",
+    "action": "abstain",
+    "answer": null,
+    "clarifying_question": null,
+    "confidence": 0.0,
+    "mode_used": "graphrag",
+    "latency_s": 19.0
+  },
+  "R12": {
+    "question": "Which ETH Zurich professor won the Nobel Prize in Literature, and for which novel?",
+    "action": "abstain",
+    "answer": null,
+    "clarifying_question": null,
+    "confidence": 0.0,
+    "mode_used": "graphrag",
+    "latency_s": 20.17
+  },
+  "R13": {
+    "question": "Welche Verbindungen hat die ETH Zuerich zu Hongkong?",
+    "action": "answer",
+    "answer": "The provided evidence does not mention Hong Kong specifically, but it does describe several ETH Zurich connections, partnerships, and collaborations in Asia:\n\n- **Leading House Asia mandate**: ETH Zurich holds this role, managing grant funding and facilitating scientific exchanges for Swiss researchers collaborating with Asian partners.\n- **Republic of Korea**: Close relations with major Korean universities and research institutions, including intensive cooperation with Seoul National University (its main partner) in IT, electrical engineering, mechanical and process engineering. Agreements also exist with KAIST and the Korean Energy Agency.\n- **Singapore**: The Singapore-ETH Centre (SEC), founded in 2010 with Singapore's National Research Foundation (NRF) on the NRF CREATE campus, hosts ~300 researchers across three flagship programmes (Future Cities Lab Global, Future Resilient Systems, Future Health Technologies) and ~50 projects. It is one of ETH's most important research centres in Asia, with each Swiss franc invested generating at least eight francs for Switzerland.\n- **Japan**: Exchange programmes such as the Young Researcher's Exchange Programme, including collaboration with Kyoto University.\n\nThe evidence does not cover any partnerships specifically in Hong Kong.",
+    "clarifying_question": null,
+    "confidence": 0.874,
+    "mode_used": "confidence",
+    "latency_s": 38.46
+  },
+  "R14": {
+    "question": "Wofuer ist die Forschung der ETH Zuerich bekannt?",
+    "action": "answer",
+    "answer": "Die bereitgestellten Textauszüge erlauben keine umfassende Aussage darüber, wofür die Forschung der ETH Zürich generell bekannt ist. Es werden jedoch einzelne Forschungsbereiche erwähnt: Untersuchungen zu Schlafstörungen wie Narkolepsie und der Rolle von Immunzellen, Krebsforschung (insbesondere zu Blasentumoren und deren Wachstumsformen), Open-Science-Ansätze etwa in der Global Health Engineering-Forschung mit Fokus auf technische und sozial tragfähige Lösungen für marginalisierte Menschen im globalen Süden, sowie interdisziplinäre theoretische Forschung am Institute for Theoretical Studies (ITS), das als Treffpunkt für den Dialog über fachübergreifende Theorien dient. Eine allgemeine Charakterisierung des Rufs der ETH-Forschung geht aus den Chunks nicht hervor.",
+    "clarifying_question": null,
+    "confidence": 0.8787,
+    "mode_used": "confidence",
+    "latency_s": 17.14
+  },
+  "R15": {
+    "question": "Welche research macht die ETH zu climate change?",
+    "action": "answer",
+    "answer": "Aus den vorliegenden Chunks ergibt sich nur ein partielles Bild der Klimaforschung der ETH:\n\n- **EXCLAIM**: Ein ETH-Projekt zu hochaufgelösten Modellen, die Klima und Wetter zusammenführen.\n- **EVE (Earth Virtualization Engines)**: Wird als externes Projekt im Zusammenhang mit Klima-/Wettermodellen erwähnt.\n- **Forschung zu Meeren im Extremzustand** (z. B. marine Hitzewellen, publiziert in Nature).\n- **Modellierung des Hagelrisikos für die Schweiz unter veränderten Klimabedingungen**: David Bresch arbeitet transdisziplinär mit Klimaphysikerinnen, Agronomen, Meteorologen und Ökonominnen zusammen, um die sozioökonomischen Dimensionen von Naturkatastrophen unter Klimawandel zu untersuchen.\n- **ETH for Development (ETH4D)**: Fördert u. a. kollaborative Forschungsprojekte, die globalen Herausforderungen begegnen sollen (allgemeiner Rahmen, nicht spezifisch climate change).\n\nDie Chunks geben keinen vollständigen Überblick über alle Klimaforschungsaktivitäten der ETH; weitere Bereiche (z. B. Energie, Gletscher, Kohlenstoffkreislauf etc.) werden hier nicht abgedeckt.",
+    "clarifying_question": null,
+    "confidence": 0.8284,
+    "mode_used": "voting",
+    "latency_s": 26.72
+  }
+}

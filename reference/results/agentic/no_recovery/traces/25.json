@@ -1,0 +1,140 @@
+{
+  "qid": "25",
+  "query": "does eth organize any competitions?",
+  "profile": {
+    "lang": "en",
+    "query_type": "list",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "competitions"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1373,
+      "lang": "en",
+      "query_type": "list",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "competitions"
+      ],
+      "initial_mode": "voting"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 3182,
+      "mode": "voting",
+      "query": "does eth organize any competitions?",
+      "n_chunks": 8,
+      "top_ids": [
+        "672573e71b0c5bf52a8af0af66ab465f4e4cb364_fixed_0",
+        "3f71f7f4c3365816f94f58118e1132893d611b39_fixed_0",
+        "29bcc28aca13b6cfae2c22da53d6e4865c1ffc8d_fixed_0",
+        "17b0035e990c2e166af9b0fe14c78e45259f1033_fixed_0",
+        "8b87dce10c8035baa9cdba37e1cc9c354fcaa1b6_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 3353,
+      "signals": {
+        "sufficiency": 0.6428,
+        "chunk_agreement": 0.6666,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 3353,
+      "action": "generate",
+      "reason": "sufficiency 0.64 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 6668,
+      "draft_answer": "Yes. ETH organizes competitions such as a betting challenge tied to the European Football Championship, run on ETH's Point platform and open to all members of the ETH community (individuals or teams), with prizes for winners.",
+      "citations": [
+        "17b0035e990c2e166af9b0fe14c78e45259f1033_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 6668,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 10756,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft's claims about ETH organizing a betting challenge tied to the European Football Championship on the Point platform, open to all ETH community members as individuals or teams, with prizes, are all supported by chunk 17b0035e.",
+      "signals": {
+        "sufficiency": 0.6428,
+        "chunk_agreement": 0.6666,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8571
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 10756,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 10756,
+      "action": "answer",
+      "answer": "Yes. ETH organizes competitions such as a betting challenge tied to the European Football Championship, run on ETH's Point platform and open to all members of the ETH community (individuals or teams), with prizes for winners.",
+      "citations": [
+        "17b0035e990c2e166af9b0fe14c78e45259f1033_fixed_0"
+      ],
+      "confidence": 0.8571,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.6428,
+        "chunk_agreement": 0.6666,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8571
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Yes. ETH organizes competitions such as a betting challenge tied to the European Football Championship, run on ETH's Point platform and open to all members of the ETH community (individuals or teams), with prizes for winners.",
+    "citations": [
+      "17b0035e990c2e166af9b0fe14c78e45259f1033_fixed_0"
+    ],
+    "confidence": 0.8571,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.6428,
+      "chunk_agreement": 0.6666,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.8571
+    }
+  }
+}

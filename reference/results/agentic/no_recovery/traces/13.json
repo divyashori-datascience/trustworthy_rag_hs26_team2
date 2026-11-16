@@ -1,0 +1,108 @@
+{
+  "qid": "13",
+  "query": "what are pseudocereals and who does research on them?",
+  "profile": {
+    "lang": "en",
+    "query_type": "multihop",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "pseudocereals",
+      "research"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1169,
+      "lang": "en",
+      "query_type": "multihop",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "pseudocereals",
+        "research"
+      ],
+      "initial_mode": "graphrag"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 4697,
+      "mode": "graphrag",
+      "query": "what are pseudocereals and who does research on them?",
+      "n_chunks": 8,
+      "top_ids": [
+        "d60c9d77aba832f44f7e2fef27568b9a674446cf_fixed_1",
+        "fe4535bd4aa0a064eeea92c65361d5f084cbc627_fixed_1",
+        "bded914d85595563321874b37793c1b28fcbb018_fixed_1",
+        "7f9dfcdad9934d0dd7a07f3651d490b7dc13071b_fixed_6",
+        "bfdc452979b70db71f980eba7abef31c72afde3f_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 4989,
+      "signals": {
+        "sufficiency": 0.608,
+        "chunk_agreement": 0.6369,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 4989,
+      "action": "generate",
+      "reason": "sufficiency 0.61 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 7528,
+      "draft_answer": "The provided chunks do not define what pseudocereals are or identify researchers working on them at ETH Zurich.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 7528,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 7528,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.608,
+        "chunk_agreement": 0.6369,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.608,
+      "chunk_agreement": 0.6369,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

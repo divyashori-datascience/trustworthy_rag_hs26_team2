@@ -1,0 +1,94 @@
+{
+  "qid": "10",
+  "query": "how would you make ferzlizer without carbon emissions?",
+  "profile": {
+    "lang": "en",
+    "query_type": "opinion",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "The query asks for a prescriptive method ('how would you make') which is subjective and seeks persuasive reasoning rather than factual information.",
+    "entities": [
+      "fertilizer",
+      "carbon emissions"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1825,
+      "lang": "en",
+      "query_type": "opinion",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "The query asks for a prescriptive method ('how would you make') which is subjective and seeks persuasive reasoning rather than factual information.",
+      "entities": [
+        "fertilizer",
+        "carbon emissions"
+      ],
+      "initial_mode": "confidence"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 6267,
+      "mode": "confidence",
+      "query": "how would you make ferzlizer without carbon emissions?",
+      "n_chunks": 8,
+      "top_ids": [
+        "c9b70590a59773186e37d27e28a151b8ba26dcb5_fixed_0",
+        "c9b70590a59773186e37d27e28a151b8ba26dcb5_fixed_2",
+        "1cc5177cf34349503896b4afc992a9a75cb2a13b_fixed_0",
+        "b4b121286ee9103482da7586511c101cd7f3bca9_fixed_1",
+        "f7c1cdb98e12082bc830f6cf3caab58efea2d7ad_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 6430,
+      "signals": {
+        "sufficiency": 0.4926,
+        "chunk_agreement": 0.6759,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 6430,
+      "action": "clarify",
+      "reason": "ambiguity flag set (The query asks for a prescriptive method ('how would you make') which is subjective and seeks persuasive reasoning rather than factual information.); evidence not strong (sufficiency 0.49 < 0.65) → clarify instead of answering",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 7630,
+      "action": "clarify",
+      "answer": null,
+      "clarifying_question": "Are you asking about making fertilizer specifically for use at ETH Zurich's facilities, or is this a general chemistry/sustainability question unrelated to ETH Zurich?",
+      "confidence": 0.0,
+      "mode_used": "confidence",
+      "signals": {
+        "sufficiency": 0.4926,
+        "chunk_agreement": 0.6759,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "clarify",
+    "answer": null,
+    "clarifying_question": "Are you asking about making fertilizer specifically for use at ETH Zurich's facilities, or is this a general chemistry/sustainability question unrelated to ETH Zurich?",
+    "confidence": 0.0,
+    "mode_used": "confidence",
+    "signals": {
+      "sufficiency": 0.4926,
+      "chunk_agreement": 0.6759,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.0
+    }
+  }
+}

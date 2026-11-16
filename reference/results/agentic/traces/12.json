@@ -1,0 +1,257 @@
+{
+  "qid": "12",
+  "query": "how much of eth’s electricity consumpzon is due to compuzng? how did that develop over the years?",
+  "profile": {
+    "lang": "en",
+    "query_type": "multihop",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "electricity consumption",
+      "computing"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1325,
+      "lang": "en",
+      "query_type": "multihop",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "electricity consumption",
+        "computing"
+      ],
+      "initial_mode": "graphrag"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2380,
+      "mode": "graphrag",
+      "query": "how much of eth’s electricity consumpzon is due to compuzng? how did that develop over the years?",
+      "n_chunks": 8,
+      "top_ids": [
+        "e0208a4e236e44a275bb2b1cc1a5a46334725725_fixed_3",
+        "7680bb1ba2bec947b8e8321ab4383831374e6df2_fixed_3",
+        "ef3609691af27edc223715419b5b4dd763a843ed_fixed_3",
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0",
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2531,
+      "signals": {
+        "sufficiency": 0.6222,
+        "chunk_agreement": 0.7885,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2531,
+      "action": "generate",
+      "reason": "sufficiency 0.62 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 6493,
+      "draft_answer": "The provided chunks do not contain information about what share of ETH Zurich's electricity consumption is due to computing or how this has developed over the years.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 6493,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 7457,
+      "rewritten_query": "electricity consumption computing infrastructure data centers energy usage trend historical development ETH Zurich",
+      "old_mode": "graphrag",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 15619,
+      "mode": "voting",
+      "query": "electricity consumption computing infrastructure data centers energy usage trend historical development ETH Zurich",
+      "n_chunks": 8,
+      "top_ids": [
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0",
+        "849593c4a13a310f269cebdfd86ffb291ab1efef_fixed_1",
+        "fff61bd0ed1f7de5df824e5939fa4f0c286c1ecf_fixed_2",
+        "2803c3bf47001db7c3f9af3aabc26ca6d619843e_fixed_1",
+        "7666fb3bac7365cb76fc3bc40f35019a3c2f2a2e_fixed_2"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 15795,
+      "signals": {
+        "sufficiency": 0.5471,
+        "chunk_agreement": 0.6484,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 15795,
+      "action": "generate",
+      "reason": "sufficiency 0.55 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 24651,
+      "draft_answer": "The provided chunks do not contain information about electricity consumption, computing infrastructure, data center energy usage, or historical trends at ETH Zurich. The only loosely related chunk mentions that ETH Zurich began drafting measures in early summer (under Vice President Ulrich Weidmann and Dario D'Ercole, head of Building Technology and Energy) in response to potential energy shortages, focusing on risks to teaching and research operations — but it gives no figures or historical development of electricity/data center consumption.",
+      "citations": [
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 24651,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 25715,
+      "rewritten_query": "electricity consumption computing infrastructure historical trend development ETH Zurich energy usage data centers servers over time",
+      "old_mode": "voting",
+      "new_mode": "confidence",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 30666,
+      "mode": "confidence",
+      "query": "electricity consumption computing infrastructure historical trend development ETH Zurich energy usage data centers servers over time",
+      "n_chunks": 8,
+      "top_ids": [
+        "849593c4a13a310f269cebdfd86ffb291ab1efef_fixed_1",
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0",
+        "fff61bd0ed1f7de5df824e5939fa4f0c286c1ecf_fixed_2",
+        "2803c3bf47001db7c3f9af3aabc26ca6d619843e_fixed_1",
+        "2e90226c334b9623aa8052462bdf0c2c9b1eb9d2_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 30845,
+      "signals": {
+        "sufficiency": 0.6921,
+        "chunk_agreement": 0.7091,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 30845,
+      "action": "generate",
+      "reason": "sufficiency 0.69 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 36261,
+      "draft_answer": "The provided chunks do not contain historical trend data or figures on ETH Zurich's electricity consumption for its computing infrastructure, data centers, or servers over time. The chunks only mention related context: (1) ETH Zurich is preparing for potential energy shortages, with a technical team under the Vice President for Infrastructure drafting measures focused on risks to teaching and research operations; and (2) a new Hönggerberg computing centre (HRZ) is planned to meet steadily rising computing demand, consolidating server, storage, and communication systems currently distributed across provisional locations. However, no specific electricity consumption figures or historical trends are provided.",
+      "citations": [
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0",
+        "2e90226c334b9623aa8052462bdf0c2c9b1eb9d2_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 36261,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 0
+    },
+    {
+      "step": "verify",
+      "t_ms": 41031,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft correctly states that the chunks lack historical electricity consumption data and accurately summarizes the two related contextual mentions (energy shortage preparation under VP Weidmann and the new Hönggerberg computing centre consolidating server/storage/communication systems).",
+      "signals": {
+        "sufficiency": 0.6921,
+        "chunk_agreement": 0.7091,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8768
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 41031,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 41031,
+      "action": "answer",
+      "answer": "The provided chunks do not contain historical trend data or figures on ETH Zurich's electricity consumption for its computing infrastructure, data centers, or servers over time. The chunks only mention related context: (1) ETH Zurich is preparing for potential energy shortages, with a technical team under the Vice President for Infrastructure drafting measures focused on risks to teaching and research operations; and (2) a new Hönggerberg computing centre (HRZ) is planned to meet steadily rising computing demand, consolidating server, storage, and communication systems currently distributed across provisional locations. However, no specific electricity consumption figures or historical trends are provided.",
+      "citations": [
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0",
+        "2e90226c334b9623aa8052462bdf0c2c9b1eb9d2_fixed_0"
+      ],
+      "confidence": 0.8768,
+      "conflict_flag": false,
+      "mode_used": "confidence",
+      "signals": {
+        "sufficiency": 0.6921,
+        "chunk_agreement": 0.7091,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8768
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The provided chunks do not contain historical trend data or figures on ETH Zurich's electricity consumption for its computing infrastructure, data centers, or servers over time. The chunks only mention related context: (1) ETH Zurich is preparing for potential energy shortages, with a technical team under the Vice President for Infrastructure drafting measures focused on risks to teaching and research operations; and (2) a new Hönggerberg computing centre (HRZ) is planned to meet steadily rising computing demand, consolidating server, storage, and communication systems currently distributed across provisional locations. However, no specific electricity consumption figures or historical trends are provided.",
+    "citations": [
+      "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_0",
+      "2e90226c334b9623aa8052462bdf0c2c9b1eb9d2_fixed_0"
+    ],
+    "confidence": 0.8768,
+    "conflict_flag": false,
+    "mode_used": "confidence",
+    "signals": {
+      "sufficiency": 0.6921,
+      "chunk_agreement": 0.7091,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.8768
+    }
+  }
+}

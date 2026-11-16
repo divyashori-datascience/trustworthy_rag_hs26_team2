@@ -1,0 +1,23 @@
+# Data / indexes (on shared Drive, never in git)
+storage/
+full_corpus/
+*.pkl
+*.sqlite3
+*.zip
+HKNews/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/

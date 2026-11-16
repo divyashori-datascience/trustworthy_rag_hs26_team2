@@ -1,0 +1,206 @@
+{
+  "qid": "R4",
+  "query": "What was the exact annual electricity bill in Swiss francs for the ETH main building in 2015?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth main building",
+      "electricity bill",
+      "2015"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1892,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth main building",
+        "electricity bill",
+        "2015"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 5773,
+      "mode": "bm25",
+      "query": "What was the exact annual electricity bill in Swiss francs for the ETH main building in 2015?",
+      "n_chunks": 8,
+      "top_ids": [
+        "8d43394b9c5e144c0144336d6385d5846cdb44ff_fixed_0",
+        "be669bd304a2ab742277b015a70b9b58f7305342_fixed_1",
+        "0ac58996e00560d81389d40ce6c47727888fda72_fixed_0",
+        "ff6e9d042bbbe4cc032b42d55e335ef6cf7a25d7_fixed_0",
+        "f05d12f459153bf127729e32d1fb03b574d249c5_fixed_2"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 5972,
+      "signals": {
+        "sufficiency": 0.3877,
+        "chunk_agreement": 0.5443,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 5972,
+      "action": "switch_mode_and_retrieve",
+      "reason": "sufficiency 0.39 < 0.40; mode 'bm25' tried; recovering with a new mode + rewrite",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 6795,
+      "rewritten_query": "electricity consumption costs ETH Hauptgebäude main building 2015 annual bill Swiss francs CHF energy expenses",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 164024,
+      "mode": "voting",
+      "query": "electricity consumption costs ETH Hauptgebäude main building 2015 annual bill Swiss francs CHF energy expenses",
+      "n_chunks": 8,
+      "top_ids": [
+        "288879e5ad994227d9f59560e9b41464a102535d_fixed_0",
+        "fb7a8c9512b2105e77c522a1179a01051ae93983_fixed_0",
+        "d11f01149aae548806860e33ac86dd9d3cef89c0_fixed_1",
+        "7680bb1ba2bec947b8e8321ab4383831374e6df2_fixed_3",
+        "735117701d04a1b096686084c643b680365cd254_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 164181,
+      "signals": {
+        "sufficiency": 0.5884,
+        "chunk_agreement": 0.657,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 164181,
+      "action": "generate",
+      "reason": "sufficiency 0.59 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 167477,
+      "draft_answer": "The provided chunks do not contain information about the electricity consumption costs or annual energy bill in Swiss francs for the ETH Hauptgebäude (main building) in 2015. The chunks mention general energy efficiency improvements in the ETH domain and rising student numbers, but no specific CHF figures for electricity costs of the main building.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 167477,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 168362,
+      "rewritten_query": "electricity consumption costs ETH Hauptgebäude main building 2015 annual bill Swiss francs CHF energy expenses",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 168385,
+      "mode": "graphrag",
+      "query": "electricity consumption costs ETH Hauptgebäude main building 2015 annual bill Swiss francs CHF energy expenses",
+      "n_chunks": 8,
+      "top_ids": [
+        "7680bb1ba2bec947b8e8321ab4383831374e6df2_fixed_3",
+        "e0208a4e236e44a275bb2b1cc1a5a46334725725_fixed_3",
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_1",
+        "18650fa4c5b3ca92121134a05e0229df778b6ef9_fixed_3",
+        "fb7a8c9512b2105e77c522a1179a01051ae93983_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 168591,
+      "signals": {
+        "sufficiency": 0.541,
+        "chunk_agreement": 0.7918,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 168591,
+      "action": "generate",
+      "reason": "sufficiency 0.54 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 172321,
+      "draft_answer": "The provided chunks do not contain any information about the electricity consumption costs or annual energy bill in Swiss francs for the ETH Hauptgebäude (main building) in 2015. The chunks discuss general topics such as consumer behavior with electricity price changes, ETH's preparation for energy shortages, demand side management for Swiss electricity providers, and energy efficiency in the ETH domain, but none provide specific cost figures for the main building's electricity in 2015.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 172321,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 172321,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.541,
+        "chunk_agreement": 0.7918,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.541,
+      "chunk_agreement": 0.7918,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

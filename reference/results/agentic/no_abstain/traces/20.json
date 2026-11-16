@@ -1,0 +1,203 @@
+{
+  "qid": "20",
+  "query": "what are the current projections for the student numbers at eth?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "student numbers",
+      "projections"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1238,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "student numbers",
+        "projections"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1285,
+      "mode": "bm25",
+      "query": "what are the current projections for the student numbers at eth?",
+      "n_chunks": 8,
+      "top_ids": [
+        "d801d66a7b1ef666e5d09a1191d77884a7061176_fixed_0",
+        "bae611da7c3964d7af4cdc5db58c2e84e4bbaea7_fixed_1",
+        "b4500b1c67b96085d77d87a12ff38a81c8586fa5_fixed_0",
+        "47f707c9a3a07d8e977e7737f2ff4ac3d0d4c824_fixed_0",
+        "88079056286b958cbeb17251761aed07fd0b3f76_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1516,
+      "signals": {
+        "sufficiency": 0.5464,
+        "chunk_agreement": 0.6356,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1516,
+      "action": "generate",
+      "reason": "sufficiency 0.55 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 3943,
+      "draft_answer": "The provided chunks do not contain any information about current projections for student numbers at ETH Zurich.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 3943,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 5079,
+      "rewritten_query": "student enrollment projections ETH Zurich future demand numbers forecast admissions capacity planning",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 9385,
+      "mode": "voting",
+      "query": "student enrollment projections ETH Zurich future demand numbers forecast admissions capacity planning",
+      "n_chunks": 8,
+      "top_ids": [
+        "c0d16a470fdd3c376ecaa6eff0cbb7a726562b79_fixed_1",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0",
+        "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1",
+        "241c910e9692645fcbfc295610ef9e92b88a4b99_fixed_2"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 9541,
+      "signals": {
+        "sufficiency": 0.7401,
+        "chunk_agreement": 0.7896,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 9541,
+      "action": "generate",
+      "reason": "sufficiency 0.74 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 15072,
+      "draft_answer": "The provided chunks do not contain specific student enrollment projections or forecast numbers for ETH Zurich's future demand. However, the evidence indicates: (1) student numbers have been rising, reaching a record 19,815 in 2016 with women at 31.1%; (2) rising student numbers contributed to financial pressures in 2023; and (3) due to financial uncertainty, ETH Zurich is considering measures to restrict student numbers, such as imposing a limit on student places, as a capacity-planning response. No explicit forecast figures, admissions capacity targets, or quantitative enrollment projections are provided in the chunks.",
+      "citations": [
+        "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 15072,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 18888,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are supported by the evidence chunks: the 2016 enrollment figure and women percentage, the rising student numbers contributing to 2023 financial pressures, and the consideration of restricting student numbers as a measure. The draft also correctly notes the absence of explicit forecast figures.",
+      "signals": {
+        "sufficiency": 0.7401,
+        "chunk_agreement": 0.7896,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.896
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 18888,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 18888,
+      "action": "answer",
+      "answer": "The provided chunks do not contain specific student enrollment projections or forecast numbers for ETH Zurich's future demand. However, the evidence indicates: (1) student numbers have been rising, reaching a record 19,815 in 2016 with women at 31.1%; (2) rising student numbers contributed to financial pressures in 2023; and (3) due to financial uncertainty, ETH Zurich is considering measures to restrict student numbers, such as imposing a limit on student places, as a capacity-planning response. No explicit forecast figures, admissions capacity targets, or quantitative enrollment projections are provided in the chunks.",
+      "citations": [
+        "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1"
+      ],
+      "confidence": 0.896,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.7401,
+        "chunk_agreement": 0.7896,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.896
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The provided chunks do not contain specific student enrollment projections or forecast numbers for ETH Zurich's future demand. However, the evidence indicates: (1) student numbers have been rising, reaching a record 19,815 in 2016 with women at 31.1%; (2) rising student numbers contributed to financial pressures in 2023; and (3) due to financial uncertainty, ETH Zurich is considering measures to restrict student numbers, such as imposing a limit on student places, as a capacity-planning response. No explicit forecast figures, admissions capacity targets, or quantitative enrollment projections are provided in the chunks.",
+    "citations": [
+      "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+      "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0",
+      "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1"
+    ],
+    "confidence": 0.896,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.7401,
+      "chunk_agreement": 0.7896,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.896
+    }
+  }
+}

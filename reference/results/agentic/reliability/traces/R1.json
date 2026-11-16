@@ -1,0 +1,147 @@
+{
+  "qid": "R1",
+  "query": "What is the institute working on?",
+  "profile": {
+    "lang": "en",
+    "query_type": "definition",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "The query uses 'the institute' without specifying which institute is meant; multiple institutes exist at ETH Zurich.",
+    "entities": [
+      "institute"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 3324,
+      "lang": "en",
+      "query_type": "definition",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "The query uses 'the institute' without specifying which institute is meant; multiple institutes exist at ETH Zurich.",
+      "entities": [
+        "institute"
+      ],
+      "initial_mode": "dense"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 4331,
+      "mode": "dense",
+      "query": "What is the institute working on?",
+      "n_chunks": 8,
+      "top_ids": [
+        "2d661f2158cf1669e1dbb4d641e2148838bd4e08_fixed_2",
+        "2e90226c334b9623aa8052462bdf0c2c9b1eb9d2_fixed_1",
+        "cd82358f0c421afcb449a31e7ee5dd8fdb1f011c_fixed_0",
+        "59e6dd0ac9d038f29e77c1c9db1f01c16b9d42f8_fixed_1",
+        "d21ca14e372cae8360c7a00d21368581f284b712_fixed_2"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 7206,
+      "signals": {
+        "sufficiency": 0.7466,
+        "chunk_agreement": 0.603,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 7206,
+      "action": "generate",
+      "reason": "sufficiency 0.75 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 12816,
+      "draft_answer": "The question is ambiguous as multiple institutes are mentioned in the chunks. Based on the available evidence: The Institute of Molecular Plant Biology (IMPB), part of ETH's Department of Biology, is primarily involved in basic research, aiming to use certain methods to produce [text cut off]. Other work mentioned includes molecular spectroscopy research, a joint project with the Roche Institute of Human Biology developing personalised treatment methods for pancreatic cancer, and research on quantum materials coupled with light fields with potential applications in materials science, quantum information technology, and high-energy physics. The chunks do not specify which single institute the question refers to.",
+      "citations": [
+        "cd82358f0c421afcb449a31e7ee5dd8fdb1f011c_fixed_0",
+        "2d661f2158cf1669e1dbb4d641e2148838bd4e08_fixed_2",
+        "59e6dd0ac9d038f29e77c1c9db1f01c16b9d42f8_fixed_1",
+        "d21ca14e372cae8360c7a00d21368581f284b712_fixed_2"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 12816,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 17615,
+      "grounded": true,
+      "grounding_score": 0.95,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft's claims are all supported by the evidence chunks: IMPB being part of Department of Biology doing basic research, molecular spectroscopy work, the Roche Institute joint project on pancreatic cancer, and quantum materials research with the listed applications. The draft appropriately notes ambiguity about which institute is referenced.",
+      "signals": {
+        "sufficiency": 0.7466,
+        "chunk_agreement": 0.603,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.8786
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 17615,
+      "action": "answer",
+      "reason": "grounded (score 0.95) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 17615,
+      "action": "answer",
+      "answer": "The question is ambiguous as multiple institutes are mentioned in the chunks. Based on the available evidence: The Institute of Molecular Plant Biology (IMPB), part of ETH's Department of Biology, is primarily involved in basic research, aiming to use certain methods to produce [text cut off]. Other work mentioned includes molecular spectroscopy research, a joint project with the Roche Institute of Human Biology developing personalised treatment methods for pancreatic cancer, and research on quantum materials coupled with light fields with potential applications in materials science, quantum information technology, and high-energy physics. The chunks do not specify which single institute the question refers to.",
+      "citations": [
+        "cd82358f0c421afcb449a31e7ee5dd8fdb1f011c_fixed_0",
+        "2d661f2158cf1669e1dbb4d641e2148838bd4e08_fixed_2",
+        "59e6dd0ac9d038f29e77c1c9db1f01c16b9d42f8_fixed_1",
+        "d21ca14e372cae8360c7a00d21368581f284b712_fixed_2"
+      ],
+      "confidence": 0.8786,
+      "conflict_flag": false,
+      "mode_used": "dense",
+      "signals": {
+        "sufficiency": 0.7466,
+        "chunk_agreement": 0.603,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.8786
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The question is ambiguous as multiple institutes are mentioned in the chunks. Based on the available evidence: The Institute of Molecular Plant Biology (IMPB), part of ETH's Department of Biology, is primarily involved in basic research, aiming to use certain methods to produce [text cut off]. Other work mentioned includes molecular spectroscopy research, a joint project with the Roche Institute of Human Biology developing personalised treatment methods for pancreatic cancer, and research on quantum materials coupled with light fields with potential applications in materials science, quantum information technology, and high-energy physics. The chunks do not specify which single institute the question refers to.",
+    "citations": [
+      "cd82358f0c421afcb449a31e7ee5dd8fdb1f011c_fixed_0",
+      "2d661f2158cf1669e1dbb4d641e2148838bd4e08_fixed_2",
+      "59e6dd0ac9d038f29e77c1c9db1f01c16b9d42f8_fixed_1",
+      "d21ca14e372cae8360c7a00d21368581f284b712_fixed_2"
+    ],
+    "confidence": 0.8786,
+    "conflict_flag": false,
+    "mode_used": "dense",
+    "signals": {
+      "sufficiency": 0.7466,
+      "chunk_agreement": 0.603,
+      "grounding": 0.95,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.8786
+    }
+  }
+}

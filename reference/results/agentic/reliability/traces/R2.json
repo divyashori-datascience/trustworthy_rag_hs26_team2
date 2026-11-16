@@ -1,0 +1,94 @@
+{
+  "qid": "R2",
+  "query": "How many students are enrolled?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "Unclear which institution or program is meant; could refer to ETH as a whole, a specific department, or a specific program.",
+    "entities": [
+      "students",
+      "enrollment"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1684,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "Unclear which institution or program is meant; could refer to ETH as a whole, a specific department, or a specific program.",
+      "entities": [
+        "students",
+        "enrollment"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 5360,
+      "mode": "bm25",
+      "query": "How many students are enrolled?",
+      "n_chunks": 8,
+      "top_ids": [
+        "4f96f542fbf531822b80751202c2a2b5cde91d2b_fixed_1",
+        "ffaa50e13c9d0c16f54ba897c73e9603b001e40a_fixed_1",
+        "7e2dfb636e2226ffa83a529c904b9936359419f7_fixed_1",
+        "66e1c6e0f5bb676907eabd8972919379045bb646_fixed_0",
+        "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 5601,
+      "signals": {
+        "sufficiency": 0.5449,
+        "chunk_agreement": 0.5288,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 5601,
+      "action": "clarify",
+      "reason": "ambiguity flag set (Unclear which institution or program is meant; could refer to ETH as a whole, a specific department, or a specific program.); evidence not strong (sufficiency 0.54 < 0.65) → clarify instead of answering",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 6871,
+      "action": "clarify",
+      "answer": null,
+      "clarifying_question": "What type of students are you asking about: undergraduate, graduate, or total enrollment across all levels?",
+      "confidence": 0.0,
+      "mode_used": "bm25",
+      "signals": {
+        "sufficiency": 0.5449,
+        "chunk_agreement": 0.5288,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "clarify",
+    "answer": null,
+    "clarifying_question": "What type of students are you asking about: undergraduate, graduate, or total enrollment across all levels?",
+    "confidence": 0.0,
+    "mode_used": "bm25",
+    "signals": {
+      "sufficiency": 0.5449,
+      "chunk_agreement": 0.5288,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.0
+    }
+  }
+}

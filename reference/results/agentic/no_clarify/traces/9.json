@@ -1,0 +1,146 @@
+{
+  "qid": "9",
+  "query": "how do alpine plants respond to climate change?",
+  "profile": {
+    "lang": "en",
+    "query_type": "definition",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "alpine plants",
+      "climate change"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1177,
+      "lang": "en",
+      "query_type": "definition",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "alpine plants",
+        "climate change"
+      ],
+      "initial_mode": "dense"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1472,
+      "mode": "dense",
+      "query": "how do alpine plants respond to climate change?",
+      "n_chunks": 8,
+      "top_ids": [
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_3",
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_0",
+        "73b3c47e0f280f88dd19d897f54fc90310ab4658_fixed_0",
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_1",
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_2"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1625,
+      "signals": {
+        "sufficiency": 0.8862,
+        "chunk_agreement": 0.8119,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1625,
+      "action": "generate",
+      "reason": "sufficiency 0.89 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 12051,
+      "draft_answer": "According to the evidence, alpine plants respond to climate change in several ways, though their responses are often disadvantageous compared to lowland species:\n\n1. **Competitive displacement**: As the climate warms, plants from lower elevations migrate upward. These lowland plants are bigger and grow faster, giving them a competitive edge and literally leaving smaller alpine species \"in the shadows,\" threatening to displace them.\n\n2. **Changes in community composition**: Over time, this upward migration could change the species composition of alpine and subalpine plant communities, introducing new species interactions.\n\n3. **Variable individual responses**: In transplant experiments (moving alpine plants from 2,000 m down to 1,400 m to simulate future climate), some species like Alchemilla (lady's mantle) cope well with warmer conditions, while other alpine plants lose the battle for resources against better-adapted competitors.\n\n4. **Migration toward summits**: Alpine species can migrate to higher summits, where they face less competition because vegetation is sparser, though dispersal is slow.\n\n5. **Slow dispersal**: The conquest of higher habitats is slower than expected due to resistance from existing vegetation and poor dispersal abilities — many alpine plants rely on animals (e.g., cows carrying germinable seeds in their gut) rather than wind for seed dispersal.\n\nThe evidence does not cover physiological responses (e.g., phenology, flowering timing) in detail.",
+      "citations": [
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_0",
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_1",
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_2"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 12051,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 15887,
+      "grounded": true,
+      "grounding_score": 0.95,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are supported by the evidence chunks, including competitive displacement, community composition changes, transplant experiment results with Alchemilla, migration to summits with less competition, and slow dispersal relying on animals like cows. The final disclaimer about physiological responses is appropriately framed as absent from the evidence.",
+      "signals": {
+        "sufficiency": 0.8862,
+        "chunk_agreement": 0.8119,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9345
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 15887,
+      "action": "answer",
+      "reason": "grounded (score 0.95) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 15887,
+      "action": "answer",
+      "answer": "According to the evidence, alpine plants respond to climate change in several ways, though their responses are often disadvantageous compared to lowland species:\n\n1. **Competitive displacement**: As the climate warms, plants from lower elevations migrate upward. These lowland plants are bigger and grow faster, giving them a competitive edge and literally leaving smaller alpine species \"in the shadows,\" threatening to displace them.\n\n2. **Changes in community composition**: Over time, this upward migration could change the species composition of alpine and subalpine plant communities, introducing new species interactions.\n\n3. **Variable individual responses**: In transplant experiments (moving alpine plants from 2,000 m down to 1,400 m to simulate future climate), some species like Alchemilla (lady's mantle) cope well with warmer conditions, while other alpine plants lose the battle for resources against better-adapted competitors.\n\n4. **Migration toward summits**: Alpine species can migrate to higher summits, where they face less competition because vegetation is sparser, though dispersal is slow.\n\n5. **Slow dispersal**: The conquest of higher habitats is slower than expected due to resistance from existing vegetation and poor dispersal abilities — many alpine plants rely on animals (e.g., cows carrying germinable seeds in their gut) rather than wind for seed dispersal.\n\nThe evidence does not cover physiological responses (e.g., phenology, flowering timing) in detail.",
+      "citations": [
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_0",
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_1",
+        "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_2"
+      ],
+      "confidence": 0.9345,
+      "conflict_flag": false,
+      "mode_used": "dense",
+      "signals": {
+        "sufficiency": 0.8862,
+        "chunk_agreement": 0.8119,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9345
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "According to the evidence, alpine plants respond to climate change in several ways, though their responses are often disadvantageous compared to lowland species:\n\n1. **Competitive displacement**: As the climate warms, plants from lower elevations migrate upward. These lowland plants are bigger and grow faster, giving them a competitive edge and literally leaving smaller alpine species \"in the shadows,\" threatening to displace them.\n\n2. **Changes in community composition**: Over time, this upward migration could change the species composition of alpine and subalpine plant communities, introducing new species interactions.\n\n3. **Variable individual responses**: In transplant experiments (moving alpine plants from 2,000 m down to 1,400 m to simulate future climate), some species like Alchemilla (lady's mantle) cope well with warmer conditions, while other alpine plants lose the battle for resources against better-adapted competitors.\n\n4. **Migration toward summits**: Alpine species can migrate to higher summits, where they face less competition because vegetation is sparser, though dispersal is slow.\n\n5. **Slow dispersal**: The conquest of higher habitats is slower than expected due to resistance from existing vegetation and poor dispersal abilities — many alpine plants rely on animals (e.g., cows carrying germinable seeds in their gut) rather than wind for seed dispersal.\n\nThe evidence does not cover physiological responses (e.g., phenology, flowering timing) in detail.",
+    "citations": [
+      "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_0",
+      "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_1",
+      "25f2e4c15dc8a630784eb1d377c4f27466542312_fixed_2"
+    ],
+    "confidence": 0.9345,
+    "conflict_flag": false,
+    "mode_used": "dense",
+    "signals": {
+      "sufficiency": 0.8862,
+      "chunk_agreement": 0.8119,
+      "grounding": 0.95,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.9345
+    }
+  }
+}

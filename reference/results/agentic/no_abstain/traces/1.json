@@ -1,0 +1,255 @@
+{
+  "qid": "1",
+  "query": "who was president of eth in 2003?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "president",
+      "2003"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1425,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "president",
+        "2003"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1446,
+      "mode": "bm25",
+      "query": "who was president of eth in 2003?",
+      "n_chunks": 8,
+      "top_ids": [
+        "cee43fc1dc12c4b8506d9d888d3c005da5b059bf_fixed_0",
+        "034797e33877c0ddcea8c29b910c632e4f297be6_fixed_0",
+        "d7a1a08fe1896fc1611adb95cb960ab0d7d44d7e_fixed_0",
+        "5dafd5c54138b4bff6826d9e803a236d0817e861_fixed_3",
+        "add82cd39c8a8ca675ce03297b1d5b88035062a0_fixed_7"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 4343,
+      "signals": {
+        "sufficiency": 0.605,
+        "chunk_agreement": 0.5756,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 4343,
+      "action": "generate",
+      "reason": "sufficiency 0.60 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 9531,
+      "draft_answer": "The provided chunks do not contain information about who was president of ETH Zurich in 2003.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 9531,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 10675,
+      "rewritten_query": "ETH Zurich president 2003 OR rector 2003 OR \"president of the Swiss Federal Institute of Technology\" 2003",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 14336,
+      "mode": "voting",
+      "query": "ETH Zurich president 2003 OR rector 2003 OR \"president of the Swiss Federal Institute of Technology\" 2003",
+      "n_chunks": 8,
+      "top_ids": [
+        "437cba79144cc72595780cde5087f93e6b093194_fixed_7",
+        "e38adeeda690093e8f33e7ae48608dacb8107ac8_fixed_0",
+        "15d2d7ff974c95ef6fc1f593709d4e0ef27ac6e1_fixed_0",
+        "2c22249b0e5841c8a303077929f3aeecac7695dd_fixed_0",
+        "ede695ab03381bf8b9aa35f708143fc2376aa78d_fixed_6"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 14466,
+      "signals": {
+        "sufficiency": 0.8251,
+        "chunk_agreement": 0.7372,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 14466,
+      "action": "generate",
+      "reason": "sufficiency 0.83 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 18153,
+      "draft_answer": "The provided chunks do not identify the ETH Zurich president or rector in 2003. They mention that Michael Hagner joined ETH Zurich as a full professor in 2003 and that Nina Buchmann has been professor of grassland sciences since 2003, but contain no information about who held the presidency or rectorship at that time.",
+      "citations": [
+        "437cba79144cc72595780cde5087f93e6b093194_fixed_7",
+        "2c22249b0e5841c8a303077929f3aeecac7695dd_fixed_0"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 18153,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 19080,
+      "rewritten_query": "president of ETH Zurich 2003 OR \"Swiss Federal Institute of Technology Zurich\" president 2003",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 19109,
+      "mode": "graphrag",
+      "query": "president of ETH Zurich 2003 OR \"Swiss Federal Institute of Technology Zurich\" president 2003",
+      "n_chunks": 8,
+      "top_ids": [
+        "e38adeeda690093e8f33e7ae48608dacb8107ac8_fixed_0",
+        "59da9dd630d2d35054c59cef7425c94424637f72_fixed_0",
+        "44b952fdee9be9bcd573f8131a26f3004bb7abb0_fixed_1",
+        "f7f24fc4b9c131b32ea73051b0a7b1e8cdd9be36_fixed_1",
+        "15d2d7ff974c95ef6fc1f593709d4e0ef27ac6e1_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 19229,
+      "signals": {
+        "sufficiency": 0.74,
+        "chunk_agreement": 0.7565,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 19229,
+      "action": "generate",
+      "reason": "sufficiency 0.74 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 24281,
+      "draft_answer": "The provided chunks do not explicitly name the president of ETH Zurich in 2003. They mention former president Heinrich Ursprung (without specifying his presidency years matching 2003) and Ralph Eichler in another context, but no chunk directly identifies who held the presidency in 2003.",
+      "citations": [
+        "44b952fdee9be9bcd573f8131a26f3004bb7abb0_fixed_1"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 24281,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 0
+    },
+    {
+      "step": "verify",
+      "t_ms": 27145,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft correctly states that the evidence does not explicitly identify the 2003 president of ETH Zurich, and accurately notes the mentions of Ursprung and Eichler without overclaiming.",
+      "signals": {
+        "sufficiency": 0.74,
+        "chunk_agreement": 0.7565,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.896
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 27145,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 27145,
+      "action": "answer",
+      "answer": "The provided chunks do not explicitly name the president of ETH Zurich in 2003. They mention former president Heinrich Ursprung (without specifying his presidency years matching 2003) and Ralph Eichler in another context, but no chunk directly identifies who held the presidency in 2003.",
+      "citations": [
+        "44b952fdee9be9bcd573f8131a26f3004bb7abb0_fixed_1"
+      ],
+      "confidence": 0.896,
+      "conflict_flag": false,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.74,
+        "chunk_agreement": 0.7565,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.896
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The provided chunks do not explicitly name the president of ETH Zurich in 2003. They mention former president Heinrich Ursprung (without specifying his presidency years matching 2003) and Ralph Eichler in another context, but no chunk directly identifies who held the presidency in 2003.",
+    "citations": [
+      "44b952fdee9be9bcd573f8131a26f3004bb7abb0_fixed_1"
+    ],
+    "confidence": 0.896,
+    "conflict_flag": false,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.74,
+      "chunk_agreement": 0.7565,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.896
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "n": 20,
+  "mean_confidence": 0.8903,
+  "mean_correctness_graded": 0.425,
+  "strict_accuracy": 0.15,
+  "ece": 0.4653,
+  "overconfidence_gap": 0.4653
+}

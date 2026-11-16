@@ -1,0 +1,106 @@
+{
+  "qid": "6",
+  "query": "what is e-sling?",
+  "profile": {
+    "lang": "en",
+    "query_type": "definition",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "e-sling"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1507,
+      "lang": "en",
+      "query_type": "definition",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "e-sling"
+      ],
+      "initial_mode": "dense"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1767,
+      "mode": "dense",
+      "query": "what is e-sling?",
+      "n_chunks": 8,
+      "top_ids": [
+        "38d7f75ae71c0dbbc3df13f370d03aca0e60c967_fixed_1",
+        "29f4d4ff016915bc6b73fd90fd1598afc7577545_fixed_2",
+        "fb0fd7784854091f072037b1352feb30034722d8_fixed_1",
+        "fb0fd7784854091f072037b1352feb30034722d8_fixed_0",
+        "ddc62119b68f50256edef1caa6237c2d4476a1a9_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1968,
+      "signals": {
+        "sufficiency": 0.4512,
+        "chunk_agreement": 0.7039,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1968,
+      "action": "generate",
+      "reason": "sufficiency 0.45 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 5403,
+      "draft_answer": "The provided chunks do not contain any information about \"e-sling.\" They discuss e-bikes at ETH Zurich, wearable muscles (myosuit), and other topics, but nothing about e-sling.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 5403,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 5403,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "dense",
+      "signals": {
+        "sufficiency": 0.4512,
+        "chunk_agreement": 0.7039,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "dense",
+    "signals": {
+      "sufficiency": 0.4512,
+      "chunk_agreement": 0.7039,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "ablation": "full",
+  "n_questions": 25,
+  "action_counts": {
+    "abstain": 4,
+    "answer": 20,
+    "clarify": 1
+  },
+  "latency_avg_s": 28.74,
+  "latency_max_s": 251.89,
+  "models": {
+    "generation": "claude-opus-4-7",
+    "verifier": "claude-opus-4-7",
+    "utility": "claude-haiku-4-5"
+  },
+  "llm_usage": {
+    "calls": 102,
+    "input_tokens": 136069,
+    "output_tokens": 15454,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "est_cost_usd": 0.9467,
+    "per_model": {
+      "claude-haiku-4-5": {
+        "calls": 42,
+        "input_tokens": 21886,
+        "output_tokens": 1623,
+        "est_cost_usd": 0.03
+      },
+      "claude-opus-4-7": {
+        "calls": 60,
+        "input_tokens": 114183,
+        "output_tokens": 13831,
+        "est_cost_usd": 0.9167
+      }
+    }
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "qid": "19",
+  "query": "for how many years has eth done research on quantum compuzng?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "quantum computing",
+      "research"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1364,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "quantum computing",
+        "research"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1397,
+      "mode": "bm25",
+      "query": "for how many years has eth done research on quantum compuzng?",
+      "n_chunks": 8,
+      "top_ids": [
+        "1330de058828affc7c9bfe922d16a1cd2384fada_fixed_3",
+        "a42f93c7e864bd9c8b75924c53b0abce6fe2fe4d_fixed_1",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0",
+        "4e25a3936325cf386f1cf628278d829f3f978894_fixed_3",
+        "8a46d4438c5cf6f50d06b031ffc1dfc6da72ce8f_fixed_5"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1618,
+      "signals": {
+        "sufficiency": 0.646,
+        "chunk_agreement": 0.5747,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1618,
+      "action": "generate",
+      "reason": "sufficiency 0.65 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 6474,
+      "draft_answer": "The provided chunks do not state the number of years ETH Zurich has been doing research on quantum computing. They mention the ETH Quantum Center and its scale (over 700 scientists across 34 research groups in six departments and PSI), but give no duration of research activity.",
+      "citations": [
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 6474,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 7286,
+      "rewritten_query": "How many years has ETH Zurich conducted research on quantum computing?",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 10814,
+      "mode": "voting",
+      "query": "How many years has ETH Zurich conducted research on quantum computing?",
+      "n_chunks": 8,
+      "top_ids": [
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0",
+        "1330de058828affc7c9bfe922d16a1cd2384fada_fixed_3",
+        "75fb3b7d5f85c9a1da3094a208e686aa528ac9dd_fixed_1",
+        "578ef2f0de2fa87a88edf9ed7a7c3428b830c0fc_fixed_0",
+        "672573e71b0c5bf52a8af0af66ab465f4e4cb364_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 11076,
+      "signals": {
+        "sufficiency": 0.7383,
+        "chunk_agreement": 0.7181,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 11076,
+      "action": "generate",
+      "reason": "sufficiency 0.74 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 15708,
+      "draft_answer": "The provided chunks do not state the exact number of years ETH Zurich has conducted research on quantum computing. They mention that the National Centre of Competence in Research 'Quantum Science and Technology' (NCCR QSIT), with ETH Zurich as leading house, was launched in 2011, but they do not specify when quantum computing research at ETH itself began.",
+      "citations": [
+        "578ef2f0de2fa87a88edf9ed7a7c3428b830c0fc_fixed_0"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 15708,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 17290,
+      "rewritten_query": "how long has ETH Zurich conducted research on quantum computing history years duration",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 17318,
+      "mode": "graphrag",
+      "query": "how long has ETH Zurich conducted research on quantum computing history years duration",
+      "n_chunks": 8,
+      "top_ids": [
+        "4f96f542fbf531822b80751202c2a2b5cde91d2b_fixed_0",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0",
+        "578ef2f0de2fa87a88edf9ed7a7c3428b830c0fc_fixed_0",
+        "1330de058828affc7c9bfe922d16a1cd2384fada_fixed_4",
+        "4f96f542fbf531822b80751202c2a2b5cde91d2b_fixed_3"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 17527,
+      "signals": {
+        "sufficiency": 0.8422,
+        "chunk_agreement": 0.7788,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 17527,
+      "action": "generate",
+      "reason": "sufficiency 0.84 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 22084,
+      "draft_answer": "The evidence does not give an explicit total duration of quantum computing research at ETH Zurich. However, it indicates that the National Centre of Competence in Research 'Quantum Science and Technology' (NCCR QSIT), with ETH Zurich as leading house, was launched in 2011 and has been extended twice. The ETH Quantum Center also exists with over 700 scientists across 34 research groups, but no founding date is provided in the chunks.",
+      "citations": [
+        "578ef2f0de2fa87a88edf9ed7a7c3428b830c0fc_fixed_0",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 22084,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 0
+    },
+    {
+      "step": "verify",
+      "t_ms": 25330,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft accurately reflects the evidence: NCCR QSIT launched in 2011 with ETH Zurich as leading house and extended twice, and the ETH Quantum Center has over 700 scientists across 34 research groups. The draft appropriately notes that no explicit total duration is given.",
+      "signals": {
+        "sufficiency": 0.8422,
+        "chunk_agreement": 0.7788,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9369
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 25330,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 25330,
+      "action": "answer",
+      "answer": "The evidence does not give an explicit total duration of quantum computing research at ETH Zurich. However, it indicates that the National Centre of Competence in Research 'Quantum Science and Technology' (NCCR QSIT), with ETH Zurich as leading house, was launched in 2011 and has been extended twice. The ETH Quantum Center also exists with over 700 scientists across 34 research groups, but no founding date is provided in the chunks.",
+      "citations": [
+        "578ef2f0de2fa87a88edf9ed7a7c3428b830c0fc_fixed_0",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0"
+      ],
+      "confidence": 0.9369,
+      "conflict_flag": false,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.8422,
+        "chunk_agreement": 0.7788,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9369
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The evidence does not give an explicit total duration of quantum computing research at ETH Zurich. However, it indicates that the National Centre of Competence in Research 'Quantum Science and Technology' (NCCR QSIT), with ETH Zurich as leading house, was launched in 2011 and has been extended twice. The ETH Quantum Center also exists with over 700 scientists across 34 research groups, but no founding date is provided in the chunks.",
+    "citations": [
+      "578ef2f0de2fa87a88edf9ed7a7c3428b830c0fc_fixed_0",
+      "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0"
+    ],
+    "confidence": 0.9369,
+    "conflict_flag": false,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.8422,
+      "chunk_agreement": 0.7788,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.9369
+    }
+  }
+}

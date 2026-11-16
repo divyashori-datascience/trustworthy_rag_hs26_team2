@@ -1,0 +1,222 @@
+{
+  "qid": "18",
+  "query": "what conneczons does eth have to hong kong?",
+  "profile": {
+    "lang": "en",
+    "query_type": "list",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth zurich",
+      "hong kong"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1526,
+      "lang": "en",
+      "query_type": "list",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth zurich",
+        "hong kong"
+      ],
+      "initial_mode": "voting"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1930,
+      "mode": "voting",
+      "query": "what conneczons does eth have to hong kong?",
+      "n_chunks": 8,
+      "top_ids": [
+        "050c5e55e2b9852bf0aacaf31f1d2c5388330cce_fixed_2",
+        "59d58e17c96fa033a70cf88e3be6de41f9ff6696_fixed_2",
+        "3ea87b4ba49860bfd122a78dc1a176fdd88b931e_fixed_2",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_1",
+        "3ea87b4ba49860bfd122a78dc1a176fdd88b931e_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2078,
+      "signals": {
+        "sufficiency": 0.6318,
+        "chunk_agreement": 0.7166,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2078,
+      "action": "generate",
+      "reason": "sufficiency 0.63 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 4888,
+      "draft_answer": "The provided chunks do not mention any connections between ETH Zurich and Hong Kong. They describe ETH's connections to Singapore (via the Singapore-ETH Centre), Heilbronn (Germany), and the Republic of Korea, but Hong Kong is not referenced.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 4888,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 5821,
+      "rewritten_query": "ETH Zurich connections relationships Hong Kong university partnerships collaborations research",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 5850,
+      "mode": "graphrag",
+      "query": "ETH Zurich connections relationships Hong Kong university partnerships collaborations research",
+      "n_chunks": 8,
+      "top_ids": [
+        "b62aff32c44023e4d7d5d305ed680069e8093bb4_fixed_0",
+        "a0ac91a09880d0c195b6e2081060dd29be1548e5_fixed_1",
+        "f9038e0c00a019293b178b6b81b828c5eed30fae_fixed_0",
+        "fe974c8e3962883630d1ef68fdf19f3c83bae1b4_fixed_0",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 6027,
+      "signals": {
+        "sufficiency": 0.695,
+        "chunk_agreement": 0.7612,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 6027,
+      "action": "generate",
+      "reason": "sufficiency 0.69 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 17574,
+      "draft_answer": "The provided chunks do not contain information about ETH Zurich's partnerships or collaborations with universities in Hong Kong. The evidence describes ETH Zurich's connections with European universities (ENHANCE alliance), African institutions (Stellenbosch University), and South Korean institutions (Seoul National University, KAIST), but nothing about Hong Kong.",
+      "citations": [
+        "b62aff32c44023e4d7d5d305ed680069e8093bb4_fixed_0",
+        "a0ac91a09880d0c195b6e2081060dd29be1548e5_fixed_1",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_1"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 17574,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 18558,
+      "rewritten_query": "ETH Zurich partnerships collaborations relationships Hong Kong institutions universities",
+      "old_mode": "graphrag",
+      "new_mode": "confidence",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 21688,
+      "mode": "confidence",
+      "query": "ETH Zurich partnerships collaborations relationships Hong Kong institutions universities",
+      "n_chunks": 8,
+      "top_ids": [
+        "10f7aa62419fff49a5d2f359d930b16bf5946b64_fixed_1",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_1",
+        "b62aff32c44023e4d7d5d305ed680069e8093bb4_fixed_0",
+        "5e99b6bc567f1bd0e20064c64abf1325a506ee31_fixed_10",
+        "a0ac91a09880d0c195b6e2081060dd29be1548e5_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 21904,
+      "signals": {
+        "sufficiency": 0.7042,
+        "chunk_agreement": 0.7786,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 21904,
+      "action": "generate",
+      "reason": "sufficiency 0.70 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 25587,
+      "draft_answer": "The provided chunks do not contain information about ETH Zurich's partnerships or collaborations with Hong Kong institutions or universities specifically. The chunks discuss ETH Zurich's cooperation with Asia generally (Leading House Asia mandate), the Republic of Korea (Seoul National University, KAIST), European universities (ENHANCE alliance), and African institutions (Stellenbosch), but none mention Hong Kong.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 25587,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 25587,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "confidence",
+      "signals": {
+        "sufficiency": 0.7042,
+        "chunk_agreement": 0.7786,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "confidence",
+    "signals": {
+      "sufficiency": 0.7042,
+      "chunk_agreement": 0.7786,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

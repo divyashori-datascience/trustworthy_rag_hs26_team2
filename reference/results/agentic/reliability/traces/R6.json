@@ -1,0 +1,197 @@
+{
+  "qid": "R6",
+  "query": "How many parking spaces are there on the ETH Honggerberg campus?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "honggerberg",
+      "parking"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1456,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "honggerberg",
+        "parking"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 3644,
+      "mode": "bm25",
+      "query": "How many parking spaces are there on the ETH Honggerberg campus?",
+      "n_chunks": 8,
+      "top_ids": [
+        "fa93d3d74db6e57defd5ac509d9bfbdd3a9432b6_fixed_0",
+        "31ef04130892594f0bb07833469822472b8ec6fe_fixed_2",
+        "15f22ef6386ef3308cd416b069655e5891b6eb44_fixed_0",
+        "9b99c17918e7094d49213d46c914b621f30006f4_fixed_0",
+        "3006c4ba6844ae5cd617c29c80ee611d19d2270d_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 3867,
+      "signals": {
+        "sufficiency": 0.5149,
+        "chunk_agreement": 0.5599,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 3867,
+      "action": "generate",
+      "reason": "sufficiency 0.51 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 6075,
+      "draft_answer": "The provided chunks do not contain information about the number of parking spaces on the ETH Hönggerberg campus.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 6075,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 7614,
+      "rewritten_query": "parking spaces Hönggerberg campus ETH Zurich facilities infrastructure",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 10501,
+      "mode": "voting",
+      "query": "parking spaces Hönggerberg campus ETH Zurich facilities infrastructure",
+      "n_chunks": 8,
+      "top_ids": [
+        "e52653cb2a8d8f5f67a5a6c5351b566e648af118_fixed_0",
+        "d1819b10fa596d4ae4d77d84df2447399b7366c5_fixed_0",
+        "5d6d1fdfbdbdeab5ca6f23ed05e53319449c3213_fixed_1",
+        "0f7148418e5ea89f8314d70b3f71fda2dd2fe932_fixed_2",
+        "0972816db0a25725424c7708ecaa5a23df24971b_fixed_3"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 10702,
+      "signals": {
+        "sufficiency": 0.736,
+        "chunk_agreement": 0.7211,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 10702,
+      "action": "generate",
+      "reason": "sufficiency 0.74 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 15668,
+      "draft_answer": "The evidence does not specify the number or locations of parking spaces on the Hönggerberg campus. It only mentions parking fees: under the parking regulation in force since 1 January 2017, the Executive Board decided to incrementally raise parking fees to market levels. Hönggerberg fees (then 60 CHF/month) were to be brought in line with the Zentrum rate (120 CHF/month), with a 33% discount for students, and fees were set to rise from 1 January 2020. Details on the actual parking facilities/infrastructure (number of spaces, garages, locations) are not covered in the chunks.",
+      "citations": [
+        "0f7148418e5ea89f8314d70b3f71fda2dd2fe932_fixed_2"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 15668,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 19292,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims about parking fees match chunk 0f7148, and the draft correctly notes the evidence lacks details on parking facilities/infrastructure.",
+      "signals": {
+        "sufficiency": 0.736,
+        "chunk_agreement": 0.7211,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8944
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 19292,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 19292,
+      "action": "answer",
+      "answer": "The evidence does not specify the number or locations of parking spaces on the Hönggerberg campus. It only mentions parking fees: under the parking regulation in force since 1 January 2017, the Executive Board decided to incrementally raise parking fees to market levels. Hönggerberg fees (then 60 CHF/month) were to be brought in line with the Zentrum rate (120 CHF/month), with a 33% discount for students, and fees were set to rise from 1 January 2020. Details on the actual parking facilities/infrastructure (number of spaces, garages, locations) are not covered in the chunks.",
+      "citations": [
+        "0f7148418e5ea89f8314d70b3f71fda2dd2fe932_fixed_2"
+      ],
+      "confidence": 0.8944,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.736,
+        "chunk_agreement": 0.7211,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8944
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The evidence does not specify the number or locations of parking spaces on the Hönggerberg campus. It only mentions parking fees: under the parking regulation in force since 1 January 2017, the Executive Board decided to incrementally raise parking fees to market levels. Hönggerberg fees (then 60 CHF/month) were to be brought in line with the Zentrum rate (120 CHF/month), with a 33% discount for students, and fees were set to rise from 1 January 2020. Details on the actual parking facilities/infrastructure (number of spaces, garages, locations) are not covered in the chunks.",
+    "citations": [
+      "0f7148418e5ea89f8314d70b3f71fda2dd2fe932_fixed_2"
+    ],
+    "confidence": 0.8944,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.736,
+      "chunk_agreement": 0.7211,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.8944
+    }
+  }
+}

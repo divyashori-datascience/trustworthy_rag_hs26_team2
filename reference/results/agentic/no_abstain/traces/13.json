@@ -1,0 +1,256 @@
+{
+  "qid": "13",
+  "query": "what are pseudocereals and who does research on them?",
+  "profile": {
+    "lang": "en",
+    "query_type": "multihop",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "pseudocereals",
+      "research"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1294,
+      "lang": "en",
+      "query_type": "multihop",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "pseudocereals",
+        "research"
+      ],
+      "initial_mode": "graphrag"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1312,
+      "mode": "graphrag",
+      "query": "what are pseudocereals and who does research on them?",
+      "n_chunks": 8,
+      "top_ids": [
+        "d60c9d77aba832f44f7e2fef27568b9a674446cf_fixed_1",
+        "fe4535bd4aa0a064eeea92c65361d5f084cbc627_fixed_1",
+        "bded914d85595563321874b37793c1b28fcbb018_fixed_1",
+        "7f9dfcdad9934d0dd7a07f3651d490b7dc13071b_fixed_6",
+        "bfdc452979b70db71f980eba7abef31c72afde3f_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1529,
+      "signals": {
+        "sufficiency": 0.608,
+        "chunk_agreement": 0.6369,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1529,
+      "action": "generate",
+      "reason": "sufficiency 0.61 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 4639,
+      "draft_answer": "The provided chunks do not define what pseudocereals are, nor do they identify researchers working on them. No relevant evidence was found in the supplied chunks.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 4639,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 5719,
+      "rewritten_query": "pseudocereals OR pseudo-cereals OR pseudocereal crops AND research OR scientists OR research groups OR institutes",
+      "old_mode": "graphrag",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 11015,
+      "mode": "voting",
+      "query": "pseudocereals OR pseudo-cereals OR pseudocereal crops AND research OR scientists OR research groups OR institutes",
+      "n_chunks": 8,
+      "top_ids": [
+        "794ea0ef3191b7990c70096c7d4a5e34e7b73d7d_fixed_0",
+        "b129697af2fe4b532cd5ca8d8b94a89e33578d25_fixed_0",
+        "6c446093220e43e35b50079ae39f3bcd2a085541_fixed_0",
+        "8cfe466a5fd2a16093c7710e8bfa3c5fa7fa2bab_fixed_2",
+        "3e104019035765be2f15d6408a319182666d3d63_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 11222,
+      "signals": {
+        "sufficiency": 0.5476,
+        "chunk_agreement": 0.5742,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 11222,
+      "action": "generate",
+      "reason": "sufficiency 0.55 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 15579,
+      "draft_answer": "The provided chunks do not contain information about pseudocereals, pseudo-cereals, or pseudocereal crops, nor about research groups or institutes studying them. The closest food/plant-related research mentioned is on duckweed as a superfood (studied by Hess at ETH Zurich), but this is not a pseudocereal.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 15579,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 16538,
+      "rewritten_query": "pseudocereals pseudo-cereals non-cereal crops grains quinoa amaranth buckwheat researchers scientists",
+      "old_mode": "voting",
+      "new_mode": "confidence",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 22272,
+      "mode": "confidence",
+      "query": "pseudocereals pseudo-cereals non-cereal crops grains quinoa amaranth buckwheat researchers scientists",
+      "n_chunks": 8,
+      "top_ids": [
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_1",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_2",
+        "404ddf5a025166647069160ce6fd2f1776d6f73b_fixed_0",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_0",
+        "ce1bec33736b980265070ba22ad2c464023b0d03_fixed_2"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 22428,
+      "signals": {
+        "sufficiency": 0.7784,
+        "chunk_agreement": 0.6897,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 22428,
+      "action": "generate",
+      "reason": "sufficiency 0.78 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 28979,
+      "draft_answer": "The three most important pseudocereals are buckwheat, quinoa, and amaranth, all of which can be grown easily in Switzerland. Quinoa and amaranth originated in South America, while buckwheat comes from Asia and was historically widespread in Europe until 20th-century cereal breeding advances pushed it aside. Buckwheat still has potential to supplement major calorie crops, though its seed yield is around half that of the big cereals. At ETH Zurich, researchers at the World Food System Center (WFSC), with support from Coop, have examined buckwheat diversity, conducted taste tests, begun describing its genomic diversity, and identified the most suitable buckwheat varieties for Switzerland. The chunks focus on buckwheat research specifically and do not detail dedicated ETH research on quinoa or amaranth.",
+      "citations": [
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_1",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_2",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 28979,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 0
+    },
+    {
+      "step": "verify",
+      "t_ms": 32161,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are directly supported by the evidence chunks, which describe the three pseudocereals, their origins, buckwheat's history and yield, and the ETH WFSC research supported by Coop.",
+      "signals": {
+        "sufficiency": 0.7784,
+        "chunk_agreement": 0.6897,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9114
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 32161,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 32161,
+      "action": "answer",
+      "answer": "The three most important pseudocereals are buckwheat, quinoa, and amaranth, all of which can be grown easily in Switzerland. Quinoa and amaranth originated in South America, while buckwheat comes from Asia and was historically widespread in Europe until 20th-century cereal breeding advances pushed it aside. Buckwheat still has potential to supplement major calorie crops, though its seed yield is around half that of the big cereals. At ETH Zurich, researchers at the World Food System Center (WFSC), with support from Coop, have examined buckwheat diversity, conducted taste tests, begun describing its genomic diversity, and identified the most suitable buckwheat varieties for Switzerland. The chunks focus on buckwheat research specifically and do not detail dedicated ETH research on quinoa or amaranth.",
+      "citations": [
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_1",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_2",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_0"
+      ],
+      "confidence": 0.9114,
+      "conflict_flag": false,
+      "mode_used": "confidence",
+      "signals": {
+        "sufficiency": 0.7784,
+        "chunk_agreement": 0.6897,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9114
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The three most important pseudocereals are buckwheat, quinoa, and amaranth, all of which can be grown easily in Switzerland. Quinoa and amaranth originated in South America, while buckwheat comes from Asia and was historically widespread in Europe until 20th-century cereal breeding advances pushed it aside. Buckwheat still has potential to supplement major calorie crops, though its seed yield is around half that of the big cereals. At ETH Zurich, researchers at the World Food System Center (WFSC), with support from Coop, have examined buckwheat diversity, conducted taste tests, begun describing its genomic diversity, and identified the most suitable buckwheat varieties for Switzerland. The chunks focus on buckwheat research specifically and do not detail dedicated ETH research on quinoa or amaranth.",
+    "citations": [
+      "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_1",
+      "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_2",
+      "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_0"
+    ],
+    "confidence": 0.9114,
+    "conflict_flag": false,
+    "mode_used": "confidence",
+    "signals": {
+      "sufficiency": 0.7784,
+      "chunk_agreement": 0.6897,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.9114
+    }
+  }
+}

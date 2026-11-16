@@ -1,0 +1,198 @@
+{
+  "qid": "R9",
+  "query": "Wer ist der Praesident der ETH Zuerich?",
+  "profile": {
+    "lang": "de",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth zurich",
+      "president"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1260,
+      "lang": "de",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth zurich",
+        "president"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2907,
+      "mode": "bm25",
+      "query": "Wer ist der Praesident der ETH Zuerich?",
+      "n_chunks": 8,
+      "top_ids": [
+        "099bd581b0e669f4b52879a1d2f18d752b761cf0_fixed_0",
+        "96ed94bf980bcb4c785addb1c4f5400726a7d37b_fixed_0",
+        "4e9a0577513819cabffcb93fb2620261a6ddd4b4_fixed_0",
+        "416641e12785c9d872a1c07d733315a6e7a4ee94_fixed_3",
+        "656c5996ce7302e2360b3850aba706cda1bcb9a6_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 3118,
+      "signals": {
+        "sufficiency": 0.5396,
+        "chunk_agreement": 0.5329,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 3118,
+      "action": "generate",
+      "reason": "sufficiency 0.54 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 6502,
+      "draft_answer": "Die bereitgestellten Evidenz-Chunks enthalten keine Informationen über den Präsidenten der ETH Zürich.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 6502,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 7477,
+      "rewritten_query": "Who is the president of ETH Zurich OR rector of Swiss Federal Institute of Technology Zurich",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 10911,
+      "mode": "voting",
+      "query": "Who is the president of ETH Zurich OR rector of Swiss Federal Institute of Technology Zurich",
+      "n_chunks": 8,
+      "top_ids": [
+        "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1",
+        "00859327fafc62821b53b9ad083e2a244c1b4470_fixed_3",
+        "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_2",
+        "e38adeeda690093e8f33e7ae48608dacb8107ac8_fixed_0",
+        "212c7e570c295cdc83e98c6af76684e48d979746_fixed_4"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 11060,
+      "signals": {
+        "sufficiency": 0.8412,
+        "chunk_agreement": 0.7446,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 11060,
+      "action": "generate",
+      "reason": "sufficiency 0.84 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 15963,
+      "draft_answer": "Based on the chunks: Joël Mesot is the president of ETH Zurich (he puts forward the rector nomination to the ETH Board). Günther Dissertori was nominated as the new rector. A previous rector mentioned is Sarah Springman. The chunks do not give a single definitive current statement, but Dissertori was nominated as rector with Mesot forwarding his name to the ETH Board for appointment.",
+      "citations": [
+        "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1",
+        "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_2"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 15963,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 18532,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.1,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft (Mesot as president forwarding the name, Dissertori nominated as new rector, Springman as previous rector) are supported by the evidence chunks.",
+      "signals": {
+        "sufficiency": 0.8412,
+        "chunk_agreement": 0.7446,
+        "grounding": 1.0,
+        "contradiction": 0.1,
+        "ambiguity": 0,
+        "confidence": 0.9165
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 18532,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 18532,
+      "action": "answer",
+      "answer": "Based on the chunks: Joël Mesot is the president of ETH Zurich (he puts forward the rector nomination to the ETH Board). Günther Dissertori was nominated as the new rector. A previous rector mentioned is Sarah Springman. The chunks do not give a single definitive current statement, but Dissertori was nominated as rector with Mesot forwarding his name to the ETH Board for appointment.",
+      "citations": [
+        "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1",
+        "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_2"
+      ],
+      "confidence": 0.9165,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.8412,
+        "chunk_agreement": 0.7446,
+        "grounding": 1.0,
+        "contradiction": 0.1,
+        "ambiguity": 0,
+        "confidence": 0.9165
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Based on the chunks: Joël Mesot is the president of ETH Zurich (he puts forward the rector nomination to the ETH Board). Günther Dissertori was nominated as the new rector. A previous rector mentioned is Sarah Springman. The chunks do not give a single definitive current statement, but Dissertori was nominated as rector with Mesot forwarding his name to the ETH Board for appointment.",
+    "citations": [
+      "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1",
+      "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_2"
+    ],
+    "confidence": 0.9165,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.8412,
+      "chunk_agreement": 0.7446,
+      "grounding": 1.0,
+      "contradiction": 0.1,
+      "ambiguity": 0,
+      "confidence": 0.9165
+    }
+  }
+}

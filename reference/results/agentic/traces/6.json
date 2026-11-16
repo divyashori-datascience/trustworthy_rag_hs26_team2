@@ -1,0 +1,216 @@
+{
+  "qid": "6",
+  "query": "what is e-sling?",
+  "profile": {
+    "lang": "en",
+    "query_type": "definition",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "e-sling"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1195,
+      "lang": "en",
+      "query_type": "definition",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "e-sling"
+      ],
+      "initial_mode": "dense"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1385,
+      "mode": "dense",
+      "query": "what is e-sling?",
+      "n_chunks": 8,
+      "top_ids": [
+        "38d7f75ae71c0dbbc3df13f370d03aca0e60c967_fixed_1",
+        "29f4d4ff016915bc6b73fd90fd1598afc7577545_fixed_2",
+        "fb0fd7784854091f072037b1352feb30034722d8_fixed_1",
+        "fb0fd7784854091f072037b1352feb30034722d8_fixed_0",
+        "ddc62119b68f50256edef1caa6237c2d4476a1a9_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1536,
+      "signals": {
+        "sufficiency": 0.4512,
+        "chunk_agreement": 0.7039,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1536,
+      "action": "generate",
+      "reason": "sufficiency 0.45 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 4493,
+      "draft_answer": "The provided chunks do not contain any information about \"e-sling.\" They discuss e-bikes, mobility offerings at ETH Zurich, and other innovations, but nothing about e-sling.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 4493,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 5367,
+      "rewritten_query": "what is e-sling electronic sling suspension training equipment system",
+      "old_mode": "dense",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 10613,
+      "mode": "voting",
+      "query": "what is e-sling electronic sling suspension training equipment system",
+      "n_chunks": 8,
+      "top_ids": [
+        "ddc62119b68f50256edef1caa6237c2d4476a1a9_fixed_0",
+        "33aa172b5df320a2a517b716354b16cf89158c44_fixed_1",
+        "9ebdcee79af879804fccd0bdf2ed757f6f91451c_fixed_0",
+        "33aa172b5df320a2a517b716354b16cf89158c44_fixed_0",
+        "2d4c3aa68648074c57034e6aa4501b21099020af_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 10761,
+      "signals": {
+        "sufficiency": 0.4726,
+        "chunk_agreement": 0.7305,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 10761,
+      "action": "generate",
+      "reason": "sufficiency 0.47 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 15570,
+      "draft_answer": "The provided chunks do not contain any information about an 'e-sling' electronic sling suspension training equipment system. The chunks discuss other ETH Zurich technologies such as the Myosuit/Myoshirt wearable muscles, eye-tracking for pilot training, and smart textile sensors for detecting exhaustion, but nothing about e-sling.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 15570,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 16929,
+      "rewritten_query": "what is electronic sling OR e-sling technology OR system",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 19263,
+      "mode": "graphrag",
+      "query": "what is electronic sling OR e-sling technology OR system",
+      "n_chunks": 8,
+      "top_ids": [
+        "ddc62119b68f50256edef1caa6237c2d4476a1a9_fixed_0",
+        "81d79e753f9a5a59100a858fdf352df415ed7122_fixed_1",
+        "5e925ff7a15ec944cb5fee307fddfbf20068ecc9_fixed_0",
+        "2d4c3aa68648074c57034e6aa4501b21099020af_fixed_0",
+        "306a9e6d3dad9f3314ce81b08ef66c080a70ecf7_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 19410,
+      "signals": {
+        "sufficiency": 0.4604,
+        "chunk_agreement": 0.6669,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 19410,
+      "action": "generate",
+      "reason": "sufficiency 0.46 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 22111,
+      "draft_answer": "The provided chunks do not contain any information about 'electronic sling' or 'e-sling' technology or system.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 22111,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 22112,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.4604,
+        "chunk_agreement": 0.6669,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.4604,
+      "chunk_agreement": 0.6669,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

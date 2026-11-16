@@ -1,0 +1,200 @@
+{
+  "qid": "19",
+  "query": "for how many years has eth done research on quantum compuzng?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "quantum computing"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1382,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "quantum computing"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1423,
+      "mode": "bm25",
+      "query": "for how many years has eth done research on quantum compuzng?",
+      "n_chunks": 8,
+      "top_ids": [
+        "1330de058828affc7c9bfe922d16a1cd2384fada_fixed_3",
+        "a42f93c7e864bd9c8b75924c53b0abce6fe2fe4d_fixed_1",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0",
+        "4e25a3936325cf386f1cf628278d829f3f978894_fixed_3",
+        "8a46d4438c5cf6f50d06b031ffc1dfc6da72ce8f_fixed_5"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1641,
+      "signals": {
+        "sufficiency": 0.596,
+        "chunk_agreement": 0.5747,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1641,
+      "action": "generate",
+      "reason": "sufficiency 0.60 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 5202,
+      "draft_answer": "The provided chunks do not state for how many years ETH Zurich has been doing research on quantum computing. They mention the ETH Quantum Center and its scope (700+ scientists, 34 research groups, six departments) but give no duration of research activity.",
+      "citations": [
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 5202,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 6575,
+      "rewritten_query": "history of quantum computing research at ETH Zurich timeline duration years",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 10820,
+      "mode": "voting",
+      "query": "history of quantum computing research at ETH Zurich timeline duration years",
+      "n_chunks": 8,
+      "top_ids": [
+        "be56bd2d0d93808aa887a0f7d02e695716b8327a_fixed_0",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0",
+        "ede695ab03381bf8b9aa35f708143fc2376aa78d_fixed_5",
+        "578ef2f0de2fa87a88edf9ed7a7c3428b830c0fc_fixed_1",
+        "4f96f542fbf531822b80751202c2a2b5cde91d2b_fixed_3"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 11035,
+      "signals": {
+        "sufficiency": 0.8079,
+        "chunk_agreement": 0.7067,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 11035,
+      "action": "generate",
+      "reason": "sufficiency 0.81 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 16915,
+      "draft_answer": "The provided chunks do not give a full timeline or duration in years of quantum computing research at ETH Zurich. They offer only scattered points: ETH Zurich hosts a Quantum Center (with Andreas Wallraff as founding director) comprising over 700 scientists from 34 research groups across six departments and the Paul Scherrer Institute; ETH Zurich was the first university to launch a Master's programme in Quantum Engineering, in 2019; and there is mention of the NCCR QSIT initiative in Switzerland. No founding dates for quantum research itself, nor an explicit historical timeline, are provided in the chunks.",
+      "citations": [
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0",
+        "578ef2f0de2fa87a88edf9ed7a7c3428b830c0fc_fixed_1"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 16915,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 20267,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft's claims about the Quantum Center, Wallraff as founding director, 700 scientists, 34 research groups, six departments, PSI, and the 2019 Master's in Quantum Engineering are all directly supported by the chunks. The draft correctly notes the absence of a full timeline.",
+      "signals": {
+        "sufficiency": 0.8079,
+        "chunk_agreement": 0.7067,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9232
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 20267,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 20267,
+      "action": "answer",
+      "answer": "The provided chunks do not give a full timeline or duration in years of quantum computing research at ETH Zurich. They offer only scattered points: ETH Zurich hosts a Quantum Center (with Andreas Wallraff as founding director) comprising over 700 scientists from 34 research groups across six departments and the Paul Scherrer Institute; ETH Zurich was the first university to launch a Master's programme in Quantum Engineering, in 2019; and there is mention of the NCCR QSIT initiative in Switzerland. No founding dates for quantum research itself, nor an explicit historical timeline, are provided in the chunks.",
+      "citations": [
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0",
+        "578ef2f0de2fa87a88edf9ed7a7c3428b830c0fc_fixed_1"
+      ],
+      "confidence": 0.9232,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.8079,
+        "chunk_agreement": 0.7067,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9232
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The provided chunks do not give a full timeline or duration in years of quantum computing research at ETH Zurich. They offer only scattered points: ETH Zurich hosts a Quantum Center (with Andreas Wallraff as founding director) comprising over 700 scientists from 34 research groups across six departments and the Paul Scherrer Institute; ETH Zurich was the first university to launch a Master's programme in Quantum Engineering, in 2019; and there is mention of the NCCR QSIT initiative in Switzerland. No founding dates for quantum research itself, nor an explicit historical timeline, are provided in the chunks.",
+    "citations": [
+      "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0",
+      "578ef2f0de2fa87a88edf9ed7a7c3428b830c0fc_fixed_1"
+    ],
+    "confidence": 0.9232,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.8079,
+      "chunk_agreement": 0.7067,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.9232
+    }
+  }
+}

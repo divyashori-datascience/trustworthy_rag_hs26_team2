@@ -1,0 +1,141 @@
+{
+  "qid": "16",
+  "query": "what is eth plus?",
+  "profile": {
+    "lang": "en",
+    "query_type": "definition",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth plus"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1377,
+      "lang": "en",
+      "query_type": "definition",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth plus"
+      ],
+      "initial_mode": "dense"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1545,
+      "mode": "dense",
+      "query": "what is eth plus?",
+      "n_chunks": 8,
+      "top_ids": [
+        "36fec229a515a2a353dd740b38d7d1daa5248c47_fixed_1",
+        "112dbea71ce83ea626c86847a2f075c44a6b32de_fixed_1",
+        "59d58e17c96fa033a70cf88e3be6de41f9ff6696_fixed_2",
+        "36fec229a515a2a353dd740b38d7d1daa5248c47_fixed_0",
+        "2f3e0e221f8949e55585fd3eaf0ca4282a1d1799_fixed_2"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1687,
+      "signals": {
+        "sufficiency": 0.805,
+        "chunk_agreement": 0.6871,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1687,
+      "action": "generate",
+      "reason": "sufficiency 0.81 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 7975,
+      "draft_answer": "ETH+ is an ETH-wide initiative launched by the Executive Board based on the conviction that the ETH community itself best knows where the greatest potential lies. Through a bottom-up tender, 68 idea sketches were submitted by May 2018, involving all 16 academic departments as well as administrative units, the student association (VSETH) and the academic staff association (AVETH). It has led to interdisciplinary collaborations and outstanding ideas, including initiatives such as the ETH Centre for the Fundamentals of Data Science (led by Peter Bühlmann). Funding comes from ETH reserves, contributions from the involved professorships and departments, the Executive Board, and third-party resources. A second call for idea sketches was planned to begin in October, alongside the launch of a new ETH+ website. The chunks do not provide a formal one-line definition beyond this.",
+      "citations": [
+        "36fec229a515a2a353dd740b38d7d1daa5248c47_fixed_0",
+        "36fec229a515a2a353dd740b38d7d1daa5248c47_fixed_1"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 7975,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 11158,
+      "grounded": true,
+      "grounding_score": 0.95,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are supported by the two relevant ETH+ chunks, including the bottom-up tender, 68 idea sketches, involvement of departments/VSETH/AVETH, the Data Science centre led by Peter Bühlmann, funding sources, and the October second call with new website.",
+      "signals": {
+        "sufficiency": 0.805,
+        "chunk_agreement": 0.6871,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.902
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 11158,
+      "action": "answer",
+      "reason": "grounded (score 0.95) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 11158,
+      "action": "answer",
+      "answer": "ETH+ is an ETH-wide initiative launched by the Executive Board based on the conviction that the ETH community itself best knows where the greatest potential lies. Through a bottom-up tender, 68 idea sketches were submitted by May 2018, involving all 16 academic departments as well as administrative units, the student association (VSETH) and the academic staff association (AVETH). It has led to interdisciplinary collaborations and outstanding ideas, including initiatives such as the ETH Centre for the Fundamentals of Data Science (led by Peter Bühlmann). Funding comes from ETH reserves, contributions from the involved professorships and departments, the Executive Board, and third-party resources. A second call for idea sketches was planned to begin in October, alongside the launch of a new ETH+ website. The chunks do not provide a formal one-line definition beyond this.",
+      "citations": [
+        "36fec229a515a2a353dd740b38d7d1daa5248c47_fixed_0",
+        "36fec229a515a2a353dd740b38d7d1daa5248c47_fixed_1"
+      ],
+      "confidence": 0.902,
+      "conflict_flag": false,
+      "mode_used": "dense",
+      "signals": {
+        "sufficiency": 0.805,
+        "chunk_agreement": 0.6871,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.902
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "ETH+ is an ETH-wide initiative launched by the Executive Board based on the conviction that the ETH community itself best knows where the greatest potential lies. Through a bottom-up tender, 68 idea sketches were submitted by May 2018, involving all 16 academic departments as well as administrative units, the student association (VSETH) and the academic staff association (AVETH). It has led to interdisciplinary collaborations and outstanding ideas, including initiatives such as the ETH Centre for the Fundamentals of Data Science (led by Peter Bühlmann). Funding comes from ETH reserves, contributions from the involved professorships and departments, the Executive Board, and third-party resources. A second call for idea sketches was planned to begin in October, alongside the launch of a new ETH+ website. The chunks do not provide a formal one-line definition beyond this.",
+    "citations": [
+      "36fec229a515a2a353dd740b38d7d1daa5248c47_fixed_0",
+      "36fec229a515a2a353dd740b38d7d1daa5248c47_fixed_1"
+    ],
+    "confidence": 0.902,
+    "conflict_flag": false,
+    "mode_used": "dense",
+    "signals": {
+      "sufficiency": 0.805,
+      "chunk_agreement": 0.6871,
+      "grounding": 0.95,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.902
+    }
+  }
+}

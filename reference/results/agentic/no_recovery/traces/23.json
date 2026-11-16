@@ -1,0 +1,113 @@
+{
+  "qid": "23",
+  "query": "why should eth receive any additional funding?",
+  "profile": {
+    "lang": "en",
+    "query_type": "opinion",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "The query asks for a subjective persuasive argument about ETH's funding worthiness, which has no single objectively correct answer.",
+    "entities": [
+      "eth",
+      "funding"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1867,
+      "lang": "en",
+      "query_type": "opinion",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "The query asks for a subjective persuasive argument about ETH's funding worthiness, which has no single objectively correct answer.",
+      "entities": [
+        "eth",
+        "funding"
+      ],
+      "initial_mode": "confidence"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 3932,
+      "mode": "confidence",
+      "query": "why should eth receive any additional funding?",
+      "n_chunks": 8,
+      "top_ids": [
+        "36fec229a515a2a353dd740b38d7d1daa5248c47_fixed_1",
+        "8cfe466a5fd2a16093c7710e8bfa3c5fa7fa2bab_fixed_2",
+        "cff3f1e6e849e197c69ce1c30db51c6f9cd8e36d_fixed_4",
+        "cff3f1e6e849e197c69ce1c30db51c6f9cd8e36d_fixed_3",
+        "36fec229a515a2a353dd740b38d7d1daa5248c47_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 4090,
+      "signals": {
+        "sufficiency": 0.8342,
+        "chunk_agreement": 0.7613,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 4090,
+      "action": "generate",
+      "reason": "sufficiency 0.83 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 10115,
+      "draft_answer": "The provided chunks do not directly argue why ETH should receive additional funding. They mention that ETH is using its own accrued reserves, contributions from professorships, departments, and the executive board to fund ETH+ initiatives, and that substantial third-party contributions will be sought for interdisciplinary projects (e.g., ETH+ grants of up to 3 million CHF supporting projects with researchers from multiple departments). The chunks also note uncertainty about future federal funding due to the corona crisis and the need to slow ETH's growth, but they do not explicitly make a case for additional funding.",
+      "citations": [
+        "36fec229a515a2a353dd740b38d7d1daa5248c47_fixed_1",
+        "8cfe466a5fd2a16093c7710e8bfa3c5fa7fa2bab_fixed_2",
+        "cff3f1e6e849e197c69ce1c30db51c6f9cd8e36d_fixed_4",
+        "cff3f1e6e849e197c69ce1c30db51c6f9cd8e36d_fixed_3"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 10115,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 10115,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "confidence",
+      "signals": {
+        "sufficiency": 0.8342,
+        "chunk_agreement": 0.7613,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "confidence",
+    "signals": {
+      "sufficiency": 0.8342,
+      "chunk_agreement": 0.7613,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.0
+    }
+  }
+}

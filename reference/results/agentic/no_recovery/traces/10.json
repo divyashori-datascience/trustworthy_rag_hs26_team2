@@ -1,0 +1,94 @@
+{
+  "qid": "10",
+  "query": "how would you make ferzlizer without carbon emissions?",
+  "profile": {
+    "lang": "en",
+    "query_type": "definition",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "The query conflates a factual/technical question about fertilizer production methods with an open-ended opinion question about what constitutes a good or preferable approach.",
+    "entities": [
+      "fertilizer",
+      "carbon emissions"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1524,
+      "lang": "en",
+      "query_type": "definition",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "The query conflates a factual/technical question about fertilizer production methods with an open-ended opinion question about what constitutes a good or preferable approach.",
+      "entities": [
+        "fertilizer",
+        "carbon emissions"
+      ],
+      "initial_mode": "dense"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1846,
+      "mode": "dense",
+      "query": "how would you make ferzlizer without carbon emissions?",
+      "n_chunks": 8,
+      "top_ids": [
+        "b4b121286ee9103482da7586511c101cd7f3bca9_fixed_1",
+        "f7c1cdb98e12082bc830f6cf3caab58efea2d7ad_fixed_1",
+        "f7c1cdb98e12082bc830f6cf3caab58efea2d7ad_fixed_0",
+        "c2861e6977a45a899676b4ddb5aef51865c80a75_fixed_1",
+        "c9b70590a59773186e37d27e28a151b8ba26dcb5_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2022,
+      "signals": {
+        "sufficiency": 0.4782,
+        "chunk_agreement": 0.6454,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2022,
+      "action": "clarify",
+      "reason": "ambiguity flag set (The query conflates a factual/technical question about fertilizer production methods with an open-ended opinion question about what constitutes a good or preferable approach.); evidence not strong (sufficiency 0.48 < 0.65) → clarify instead of answering",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 3084,
+      "action": "clarify",
+      "answer": null,
+      "clarifying_question": "Are you asking about fertilizer production methods at ETH Zurich, or are you asking a general chemistry/environmental question about low-carbon fertilizer manufacturing?",
+      "confidence": 0.0,
+      "mode_used": "dense",
+      "signals": {
+        "sufficiency": 0.4782,
+        "chunk_agreement": 0.6454,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "clarify",
+    "answer": null,
+    "clarifying_question": "Are you asking about fertilizer production methods at ETH Zurich, or are you asking a general chemistry/environmental question about low-carbon fertilizer manufacturing?",
+    "confidence": 0.0,
+    "mode_used": "dense",
+    "signals": {
+      "sufficiency": 0.4782,
+      "chunk_agreement": 0.6454,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.0
+    }
+  }
+}

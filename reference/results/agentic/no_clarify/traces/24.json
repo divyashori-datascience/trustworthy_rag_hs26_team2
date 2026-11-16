@@ -1,0 +1,149 @@
+{
+  "qid": "24",
+  "query": "anybody at eth doing anything for people with disabilizes?",
+  "profile": {
+    "lang": "en",
+    "query_type": "list",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "The query uses vague terms ('anybody', 'anything') without specifying what types of work, projects, or initiatives are being sought, and 'disabilizes' (likely 'disabilities') is imprecise.",
+    "entities": [
+      "eth",
+      "disabilities"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1696,
+      "lang": "en",
+      "query_type": "list",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "The query uses vague terms ('anybody', 'anything') without specifying what types of work, projects, or initiatives are being sought, and 'disabilizes' (likely 'disabilities') is imprecise.",
+      "entities": [
+        "eth",
+        "disabilities"
+      ],
+      "initial_mode": "voting"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2090,
+      "mode": "voting",
+      "query": "anybody at eth doing anything for people with disabilizes?",
+      "n_chunks": 8,
+      "top_ids": [
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_0",
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_1",
+        "e4f85861f404ecd289acccd13196b4aa27be6459_fixed_1",
+        "b0be5755df8811203352f5b5135187d2942f90a0_fixed_0",
+        "ae5b830c9cab4ca4e9e224525d7202e8c45858d7_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2231,
+      "signals": {
+        "sufficiency": 0.7679,
+        "chunk_agreement": 0.7316,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2231,
+      "action": "generate",
+      "reason": "sufficiency 0.77 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 9937,
+      "draft_answer": "Yes. ETH Zurich runs a \"Barrier-free ETH\" programme aimed at improving access for people with disabilities or special needs — including students, teachers, researchers, staff and visitors. The programme is structured into 14 subprojects across three categories: \"construction, building usage and architecture\", \"organisation and culture\", and \"technology, communication and teaching\". Concrete actions include: expanding accessible public guided tours in 2022 (with icons indicating wheelchair accessibility, suitability for visually impaired visitors, and availability of sign-language interpreters), a special \"Joining with Wood\" tour designed for visually impaired participants, and regular inspection rounds since October 2021 to remove movable obstacles (blocked ramps, corridors, illegally locked fire doors) in ETH buildings. An originally planned subproject on an open and inclusive university mission statement is being folded into a new holistic ETH diversity strategy managed by ETH Diversity. ETH leadership frames this as a duty to support diversity and break down barriers, while noting challenges with heritage-protected historical buildings.",
+      "citations": [
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_0",
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_1",
+        "e4f85861f404ecd289acccd13196b4aa27be6459_fixed_1",
+        "b0be5755df8811203352f5b5135187d2942f90a0_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 9937,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 13626,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft — the Barrier-free ETH programme, 14 subprojects in three categories, accessible tours with icons, the 'Joining with Wood' tour, inspection rounds since October 2021, the realignment of subproject 10 into the diversity strategy via ETH Diversity, and leadership's framing including heritage building challenges — are directly supported by the evidence chunks.",
+      "signals": {
+        "sufficiency": 0.7679,
+        "chunk_agreement": 0.7316,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.9072
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 13626,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 13626,
+      "action": "answer",
+      "answer": "Yes. ETH Zurich runs a \"Barrier-free ETH\" programme aimed at improving access for people with disabilities or special needs — including students, teachers, researchers, staff and visitors. The programme is structured into 14 subprojects across three categories: \"construction, building usage and architecture\", \"organisation and culture\", and \"technology, communication and teaching\". Concrete actions include: expanding accessible public guided tours in 2022 (with icons indicating wheelchair accessibility, suitability for visually impaired visitors, and availability of sign-language interpreters), a special \"Joining with Wood\" tour designed for visually impaired participants, and regular inspection rounds since October 2021 to remove movable obstacles (blocked ramps, corridors, illegally locked fire doors) in ETH buildings. An originally planned subproject on an open and inclusive university mission statement is being folded into a new holistic ETH diversity strategy managed by ETH Diversity. ETH leadership frames this as a duty to support diversity and break down barriers, while noting challenges with heritage-protected historical buildings.",
+      "citations": [
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_0",
+        "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_1",
+        "e4f85861f404ecd289acccd13196b4aa27be6459_fixed_1",
+        "b0be5755df8811203352f5b5135187d2942f90a0_fixed_0"
+      ],
+      "confidence": 0.9072,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.7679,
+        "chunk_agreement": 0.7316,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.9072
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Yes. ETH Zurich runs a \"Barrier-free ETH\" programme aimed at improving access for people with disabilities or special needs — including students, teachers, researchers, staff and visitors. The programme is structured into 14 subprojects across three categories: \"construction, building usage and architecture\", \"organisation and culture\", and \"technology, communication and teaching\". Concrete actions include: expanding accessible public guided tours in 2022 (with icons indicating wheelchair accessibility, suitability for visually impaired visitors, and availability of sign-language interpreters), a special \"Joining with Wood\" tour designed for visually impaired participants, and regular inspection rounds since October 2021 to remove movable obstacles (blocked ramps, corridors, illegally locked fire doors) in ETH buildings. An originally planned subproject on an open and inclusive university mission statement is being folded into a new holistic ETH diversity strategy managed by ETH Diversity. ETH leadership frames this as a duty to support diversity and break down barriers, while noting challenges with heritage-protected historical buildings.",
+    "citations": [
+      "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_0",
+      "a82e44a4413ffb83b00848cfc679e6abf0783f26_fixed_1",
+      "e4f85861f404ecd289acccd13196b4aa27be6459_fixed_1",
+      "b0be5755df8811203352f5b5135187d2942f90a0_fixed_0"
+    ],
+    "confidence": 0.9072,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.7679,
+      "chunk_agreement": 0.7316,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.9072
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "qid": "13",
+  "query": "what are pseudocereals and who does research on them?",
+  "profile": {
+    "lang": "en",
+    "query_type": "multihop",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "pseudocereals",
+      "research"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1159,
+      "lang": "en",
+      "query_type": "multihop",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "pseudocereals",
+        "research"
+      ],
+      "initial_mode": "graphrag"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1175,
+      "mode": "graphrag",
+      "query": "what are pseudocereals and who does research on them?",
+      "n_chunks": 8,
+      "top_ids": [
+        "d60c9d77aba832f44f7e2fef27568b9a674446cf_fixed_1",
+        "fe4535bd4aa0a064eeea92c65361d5f084cbc627_fixed_1",
+        "bded914d85595563321874b37793c1b28fcbb018_fixed_1",
+        "7f9dfcdad9934d0dd7a07f3651d490b7dc13071b_fixed_6",
+        "bfdc452979b70db71f980eba7abef31c72afde3f_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1364,
+      "signals": {
+        "sufficiency": 0.608,
+        "chunk_agreement": 0.6369,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1364,
+      "action": "generate",
+      "reason": "sufficiency 0.61 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 3529,
+      "draft_answer": "The provided chunks do not contain information about pseudocereals or researchers working on them.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 3529,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 5128,
+      "rewritten_query": "pseudocereals OR pseudo-cereals OR \"false cereals\" OR quinoa OR amaranth OR buckwheat research scientists researchers institutions",
+      "old_mode": "graphrag",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 10776,
+      "mode": "voting",
+      "query": "pseudocereals OR pseudo-cereals OR \"false cereals\" OR quinoa OR amaranth OR buckwheat research scientists researchers institutions",
+      "n_chunks": 8,
+      "top_ids": [
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_1",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_2",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_0",
+        "404ddf5a025166647069160ce6fd2f1776d6f73b_fixed_0",
+        "ce1bec33736b980265070ba22ad2c464023b0d03_fixed_2"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 10909,
+      "signals": {
+        "sufficiency": 0.7784,
+        "chunk_agreement": 0.6897,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 10909,
+      "action": "generate",
+      "reason": "sufficiency 0.78 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 15244,
+      "draft_answer": "Research on pseudocereals (buckwheat, quinoa, and amaranth) is being conducted at ETH Zurich's World Food System Center (WFSC). A research project supported by Coop at the WFSC examined buckwheat cultivation and identified the most suitable buckwheat varieties for Switzerland. Researchers there have examined existing diversity, carried out taste tests, and begun describing the genomic diversity of buckwheat. The chunks do not name the individual scientists involved.",
+      "citations": [
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_1",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_2",
+        "404ddf5a025166647069160ce6fd2f1776d6f73b_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 15244,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 19303,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft—research on pseudocereals at ETH Zurich's WFSC, Coop support, identification of suitable buckwheat varieties for Switzerland, examination of diversity, taste tests, and genomic diversity description—are directly supported by chunks 1 and 2. The draft also correctly notes that individual scientists are not named.",
+      "signals": {
+        "sufficiency": 0.7784,
+        "chunk_agreement": 0.6897,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9114
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 19303,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 19303,
+      "action": "answer",
+      "answer": "Research on pseudocereals (buckwheat, quinoa, and amaranth) is being conducted at ETH Zurich's World Food System Center (WFSC). A research project supported by Coop at the WFSC examined buckwheat cultivation and identified the most suitable buckwheat varieties for Switzerland. Researchers there have examined existing diversity, carried out taste tests, and begun describing the genomic diversity of buckwheat. The chunks do not name the individual scientists involved.",
+      "citations": [
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_1",
+        "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_2",
+        "404ddf5a025166647069160ce6fd2f1776d6f73b_fixed_0"
+      ],
+      "confidence": 0.9114,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.7784,
+        "chunk_agreement": 0.6897,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9114
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Research on pseudocereals (buckwheat, quinoa, and amaranth) is being conducted at ETH Zurich's World Food System Center (WFSC). A research project supported by Coop at the WFSC examined buckwheat cultivation and identified the most suitable buckwheat varieties for Switzerland. Researchers there have examined existing diversity, carried out taste tests, and begun describing the genomic diversity of buckwheat. The chunks do not name the individual scientists involved.",
+    "citations": [
+      "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_1",
+      "233856c75f67cd73167fb583a78741c5c3d887e2_fixed_2",
+      "404ddf5a025166647069160ce6fd2f1776d6f73b_fixed_0"
+    ],
+    "confidence": 0.9114,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.7784,
+      "chunk_agreement": 0.6897,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.9114
+    }
+  }
+}

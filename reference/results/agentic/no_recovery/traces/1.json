@@ -1,0 +1,110 @@
+{
+  "qid": "1",
+  "query": "who was president of eth in 2003?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "president",
+      "2003"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1639,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "president",
+        "2003"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 3054,
+      "mode": "bm25",
+      "query": "who was president of eth in 2003?",
+      "n_chunks": 8,
+      "top_ids": [
+        "cee43fc1dc12c4b8506d9d888d3c005da5b059bf_fixed_0",
+        "034797e33877c0ddcea8c29b910c632e4f297be6_fixed_0",
+        "d7a1a08fe1896fc1611adb95cb960ab0d7d44d7e_fixed_0",
+        "5dafd5c54138b4bff6826d9e803a236d0817e861_fixed_3",
+        "add82cd39c8a8ca675ce03297b1d5b88035062a0_fixed_7"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 6054,
+      "signals": {
+        "sufficiency": 0.605,
+        "chunk_agreement": 0.5756,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 6054,
+      "action": "generate",
+      "reason": "sufficiency 0.60 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 8646,
+      "draft_answer": "The provided chunks do not contain information about who was president of ETH Zurich in 2003.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 8646,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 8646,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "bm25",
+      "signals": {
+        "sufficiency": 0.605,
+        "chunk_agreement": 0.5756,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "bm25",
+    "signals": {
+      "sufficiency": 0.605,
+      "chunk_agreement": 0.5756,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

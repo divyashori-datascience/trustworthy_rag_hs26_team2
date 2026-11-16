@@ -1,0 +1,206 @@
+{
+  "qid": "20",
+  "query": "what are the current projections for the student numbers at eth?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "student numbers",
+      "projections"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1852,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "student numbers",
+        "projections"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1886,
+      "mode": "bm25",
+      "query": "what are the current projections for the student numbers at eth?",
+      "n_chunks": 8,
+      "top_ids": [
+        "d801d66a7b1ef666e5d09a1191d77884a7061176_fixed_0",
+        "bae611da7c3964d7af4cdc5db58c2e84e4bbaea7_fixed_1",
+        "b4500b1c67b96085d77d87a12ff38a81c8586fa5_fixed_0",
+        "47f707c9a3a07d8e977e7737f2ff4ac3d0d4c824_fixed_0",
+        "88079056286b958cbeb17251761aed07fd0b3f76_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 2089,
+      "signals": {
+        "sufficiency": 0.5464,
+        "chunk_agreement": 0.6356,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 2089,
+      "action": "generate",
+      "reason": "sufficiency 0.55 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 4521,
+      "draft_answer": "The provided chunks do not contain any information about current projections for student numbers at ETH Zurich.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 4521,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 5582,
+      "rewritten_query": "student enrollment projections ETH Zurich future numbers forecast",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 8856,
+      "mode": "voting",
+      "query": "student enrollment projections ETH Zurich future numbers forecast",
+      "n_chunks": 8,
+      "top_ids": [
+        "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+        "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0",
+        "6df21a1874bb1595e8a7fd89e814e68611c05125_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 9002,
+      "signals": {
+        "sufficiency": 0.7585,
+        "chunk_agreement": 0.8062,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 9002,
+      "action": "generate",
+      "reason": "sufficiency 0.76 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 17480,
+      "draft_answer": "The provided chunks do not contain specific numerical projections or forecasts of future ETH Zurich student enrollment. However, related information is available: ETH Zurich reached a record 19,815 students in 2016 with women at 31.1% [5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0]. More recently, women account for about 33% of new enrollments, with mechanical engineering, computer science, and architecture remaining the most popular bachelor's programs; final matriculation figures for autumn 2023 are determined in November [eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0]. Due to financial pressures, ETH Zurich is considering measures that could affect future enrollment, such as restricting student numbers by imposing a limit on student places [6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1]. Rising student numbers combined with insufficient federal funding have contributed to financial strain [6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0]. No explicit forecast figures for future enrollment are provided in the chunks.",
+      "citations": [
+        "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+        "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 17480,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 27312,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are directly supported by the cited chunks, and the draft correctly states that no explicit future enrollment forecasts are provided.",
+      "signals": {
+        "sufficiency": 0.7585,
+        "chunk_agreement": 0.8062,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9034
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 27312,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 27312,
+      "action": "answer",
+      "answer": "The provided chunks do not contain specific numerical projections or forecasts of future ETH Zurich student enrollment. However, related information is available: ETH Zurich reached a record 19,815 students in 2016 with women at 31.1% [5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0]. More recently, women account for about 33% of new enrollments, with mechanical engineering, computer science, and architecture remaining the most popular bachelor's programs; final matriculation figures for autumn 2023 are determined in November [eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0]. Due to financial pressures, ETH Zurich is considering measures that could affect future enrollment, such as restricting student numbers by imposing a limit on student places [6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1]. Rising student numbers combined with insufficient federal funding have contributed to financial strain [6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0]. No explicit forecast figures for future enrollment are provided in the chunks.",
+      "citations": [
+        "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+        "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0"
+      ],
+      "confidence": 0.9034,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.7585,
+        "chunk_agreement": 0.8062,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9034
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The provided chunks do not contain specific numerical projections or forecasts of future ETH Zurich student enrollment. However, related information is available: ETH Zurich reached a record 19,815 students in 2016 with women at 31.1% [5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0]. More recently, women account for about 33% of new enrollments, with mechanical engineering, computer science, and architecture remaining the most popular bachelor's programs; final matriculation figures for autumn 2023 are determined in November [eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0]. Due to financial pressures, ETH Zurich is considering measures that could affect future enrollment, such as restricting student numbers by imposing a limit on student places [6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1]. Rising student numbers combined with insufficient federal funding have contributed to financial strain [6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0]. No explicit forecast figures for future enrollment are provided in the chunks.",
+    "citations": [
+      "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+      "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0",
+      "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_1",
+      "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0"
+    ],
+    "confidence": 0.9034,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.7585,
+      "chunk_agreement": 0.8062,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.9034
+    }
+  }
+}

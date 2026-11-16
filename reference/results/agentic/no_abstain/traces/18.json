@@ -1,0 +1,256 @@
+{
+  "qid": "18",
+  "query": "what conneczons does eth have to hong kong?",
+  "profile": {
+    "lang": "en",
+    "query_type": "list",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth zurich",
+      "hong kong"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1169,
+      "lang": "en",
+      "query_type": "list",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth zurich",
+        "hong kong"
+      ],
+      "initial_mode": "voting"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1579,
+      "mode": "voting",
+      "query": "what conneczons does eth have to hong kong?",
+      "n_chunks": 8,
+      "top_ids": [
+        "050c5e55e2b9852bf0aacaf31f1d2c5388330cce_fixed_2",
+        "59d58e17c96fa033a70cf88e3be6de41f9ff6696_fixed_2",
+        "3ea87b4ba49860bfd122a78dc1a176fdd88b931e_fixed_2",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_1",
+        "3ea87b4ba49860bfd122a78dc1a176fdd88b931e_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1725,
+      "signals": {
+        "sufficiency": 0.6318,
+        "chunk_agreement": 0.7166,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1725,
+      "action": "generate",
+      "reason": "sufficiency 0.63 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 9030,
+      "draft_answer": "The provided evidence does not mention any connections between ETH Zurich and Hong Kong. The chunks discuss ETH's ties to Singapore (via the Singapore-ETH Centre), South Korea, and a planned branch in Heilbronn, but Hong Kong is not referenced.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 9030,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 10127,
+      "rewritten_query": "ETH Zurich connections partnerships collaborations Hong Kong",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 10152,
+      "mode": "graphrag",
+      "query": "ETH Zurich connections partnerships collaborations Hong Kong",
+      "n_chunks": 8,
+      "top_ids": [
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_1",
+        "fe974c8e3962883630d1ef68fdf19f3c83bae1b4_fixed_0",
+        "a0ac91a09880d0c195b6e2081060dd29be1548e5_fixed_1",
+        "3ea87b4ba49860bfd122a78dc1a176fdd88b931e_fixed_0",
+        "3a8b84ca5324d355c3811d27f029514a4d264200_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 10309,
+      "signals": {
+        "sufficiency": 0.6795,
+        "chunk_agreement": 0.754,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 10309,
+      "action": "generate",
+      "reason": "sufficiency 0.68 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 18273,
+      "draft_answer": "The provided evidence does not mention any ETH Zurich connections, partnerships, or collaborations with Hong Kong. The chunks describe ETH Zurich's collaborations with South Korea (Seoul National University, KAIST), Africa (Stellenbosch), Singapore (Singapore-ETH Centre), and Europe (Horizon Europe), but Hong Kong is not referenced.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 18273,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 19340,
+      "rewritten_query": "ETH Zurich connections Hong Kong collaborations partnerships research relationships institutes universities",
+      "old_mode": "graphrag",
+      "new_mode": "confidence",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 22879,
+      "mode": "confidence",
+      "query": "ETH Zurich connections Hong Kong collaborations partnerships research relationships institutes universities",
+      "n_chunks": 8,
+      "top_ids": [
+        "8cfe466a5fd2a16093c7710e8bfa3c5fa7fa2bab_fixed_2",
+        "10f7aa62419fff49a5d2f359d930b16bf5946b64_fixed_1",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_1",
+        "1fc569145f048c159aecb76b56c577b1e5a8a201_fixed_2",
+        "10f7aa62419fff49a5d2f359d930b16bf5946b64_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 23038,
+      "signals": {
+        "sufficiency": 0.6794,
+        "chunk_agreement": 0.7614,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 23038,
+      "action": "generate",
+      "reason": "sufficiency 0.68 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 28785,
+      "draft_answer": "The provided chunks do not specifically mention Hong Kong. They describe ETH Zurich's scientific cooperation with Asia more broadly through its Leading House Asia mandate, which manages grants and facilitates exchanges with Asian partners. Specific partnerships mentioned include the Republic of Korea (Seoul National University as main cooperation partner, KAIST, and the Korean Energy Agency) and Japan (e.g., Kyoto University via the Young Researcher's Exchange Programme). No information is provided about Hong Kong institutions or partnerships specifically.",
+      "citations": [
+        "10f7aa62419fff49a5d2f359d930b16bf5946b64_fixed_0",
+        "10f7aa62419fff49a5d2f359d930b16bf5946b64_fixed_1",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_1"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 28785,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 0
+    },
+    {
+      "step": "verify",
+      "t_ms": 32271,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft accurately reflects the evidence: it correctly notes the absence of Hong Kong mentions, describes the Leading House Asia mandate, and cites the Korea and Japan partnerships (Seoul National University, KAIST, Korean Energy Agency, Kyoto University) as supported by the chunks.",
+      "signals": {
+        "sufficiency": 0.6794,
+        "chunk_agreement": 0.7614,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8718
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 32271,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 32271,
+      "action": "answer",
+      "answer": "The provided chunks do not specifically mention Hong Kong. They describe ETH Zurich's scientific cooperation with Asia more broadly through its Leading House Asia mandate, which manages grants and facilitates exchanges with Asian partners. Specific partnerships mentioned include the Republic of Korea (Seoul National University as main cooperation partner, KAIST, and the Korean Energy Agency) and Japan (e.g., Kyoto University via the Young Researcher's Exchange Programme). No information is provided about Hong Kong institutions or partnerships specifically.",
+      "citations": [
+        "10f7aa62419fff49a5d2f359d930b16bf5946b64_fixed_0",
+        "10f7aa62419fff49a5d2f359d930b16bf5946b64_fixed_1",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_1"
+      ],
+      "confidence": 0.8718,
+      "conflict_flag": false,
+      "mode_used": "confidence",
+      "signals": {
+        "sufficiency": 0.6794,
+        "chunk_agreement": 0.7614,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8718
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The provided chunks do not specifically mention Hong Kong. They describe ETH Zurich's scientific cooperation with Asia more broadly through its Leading House Asia mandate, which manages grants and facilitates exchanges with Asian partners. Specific partnerships mentioned include the Republic of Korea (Seoul National University as main cooperation partner, KAIST, and the Korean Energy Agency) and Japan (e.g., Kyoto University via the Young Researcher's Exchange Programme). No information is provided about Hong Kong institutions or partnerships specifically.",
+    "citations": [
+      "10f7aa62419fff49a5d2f359d930b16bf5946b64_fixed_0",
+      "10f7aa62419fff49a5d2f359d930b16bf5946b64_fixed_1",
+      "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_1"
+    ],
+    "confidence": 0.8718,
+    "conflict_flag": false,
+    "mode_used": "confidence",
+    "signals": {
+      "sufficiency": 0.6794,
+      "chunk_agreement": 0.7614,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.8718
+    }
+  }
+}

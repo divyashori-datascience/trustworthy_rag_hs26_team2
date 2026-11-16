@@ -1,0 +1,110 @@
+{
+  "qid": "20",
+  "query": "what are the current projections for the student numbers at eth?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "student numbers",
+      "projections"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1144,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "student numbers",
+        "projections"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 3400,
+      "mode": "bm25",
+      "query": "what are the current projections for the student numbers at eth?",
+      "n_chunks": 8,
+      "top_ids": [
+        "d801d66a7b1ef666e5d09a1191d77884a7061176_fixed_0",
+        "bae611da7c3964d7af4cdc5db58c2e84e4bbaea7_fixed_1",
+        "b4500b1c67b96085d77d87a12ff38a81c8586fa5_fixed_0",
+        "47f707c9a3a07d8e977e7737f2ff4ac3d0d4c824_fixed_0",
+        "88079056286b958cbeb17251761aed07fd0b3f76_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 3578,
+      "signals": {
+        "sufficiency": 0.5464,
+        "chunk_agreement": 0.6356,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 3578,
+      "action": "generate",
+      "reason": "sufficiency 0.55 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 5738,
+      "draft_answer": "The provided chunks do not contain any information about current projections for student numbers at ETH Zurich.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 5738,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 5738,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "bm25",
+      "signals": {
+        "sufficiency": 0.5464,
+        "chunk_agreement": 0.6356,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "bm25",
+    "signals": {
+      "sufficiency": 0.5464,
+      "chunk_agreement": 0.6356,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

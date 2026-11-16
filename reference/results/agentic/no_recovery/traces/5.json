@@ -1,0 +1,94 @@
+{
+  "qid": "5",
+  "query": "what did prof. schubert say about flying?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": true,
+    "ambiguity_reason": "Multiple professors with surname Schubert may exist at ETH; without first name or context, it is unclear which person is being referred to.",
+    "entities": [
+      "prof. schubert",
+      "flying"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1962,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": true,
+      "ambiguity_reason": "Multiple professors with surname Schubert may exist at ETH; without first name or context, it is unclear which person is being referred to.",
+      "entities": [
+        "prof. schubert",
+        "flying"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 4263,
+      "mode": "bm25",
+      "query": "what did prof. schubert say about flying?",
+      "n_chunks": 8,
+      "top_ids": [
+        "cf663468e4362f30c85f68fdbbc6c61c9d201433_fixed_1",
+        "370683e341c507a8904c2967d86d5c59d99f400c_fixed_2",
+        "cf663468e4362f30c85f68fdbbc6c61c9d201433_fixed_0",
+        "5dafd5c54138b4bff6826d9e803a236d0817e861_fixed_4",
+        "5a99e9ea2d724f052e9147b55b75ea1b8f6f1d6d_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 4646,
+      "signals": {
+        "sufficiency": 0.3724,
+        "chunk_agreement": 0.5648,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 4646,
+      "action": "clarify",
+      "reason": "ambiguity flag set (Multiple professors with surname Schubert may exist at ETH; without first name or context, it is unclear which person is being referred to.); evidence not strong (sufficiency 0.37 < 0.65) → clarify instead of answering",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 5800,
+      "action": "clarify",
+      "answer": null,
+      "clarifying_question": "Which Prof. Schubert at ETH Zurich are you referring to, and in what context (lecture, publication, interview, etc.) are you asking about?",
+      "confidence": 0.0,
+      "mode_used": "bm25",
+      "signals": {
+        "sufficiency": 0.3724,
+        "chunk_agreement": 0.5648,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 1,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "clarify",
+    "answer": null,
+    "clarifying_question": "Which Prof. Schubert at ETH Zurich are you referring to, and in what context (lecture, publication, interview, etc.) are you asking about?",
+    "confidence": 0.0,
+    "mode_used": "bm25",
+    "signals": {
+      "sufficiency": 0.3724,
+      "chunk_agreement": 0.5648,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 1,
+      "confidence": 0.0
+    }
+  }
+}

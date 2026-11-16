@@ -1,0 +1,110 @@
+{
+  "qid": "19",
+  "query": "for how many years has eth done research on quantum compuzng?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "quantum computing"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 943,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "quantum computing"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 3274,
+      "mode": "bm25",
+      "query": "for how many years has eth done research on quantum compuzng?",
+      "n_chunks": 8,
+      "top_ids": [
+        "1330de058828affc7c9bfe922d16a1cd2384fada_fixed_3",
+        "a42f93c7e864bd9c8b75924c53b0abce6fe2fe4d_fixed_1",
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0",
+        "4e25a3936325cf386f1cf628278d829f3f978894_fixed_3",
+        "8a46d4438c5cf6f50d06b031ffc1dfc6da72ce8f_fixed_5"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 3469,
+      "signals": {
+        "sufficiency": 0.596,
+        "chunk_agreement": 0.5747,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 3469,
+      "action": "generate",
+      "reason": "sufficiency 0.60 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 7245,
+      "draft_answer": "The provided chunks do not state the number of years ETH Zurich has been doing research on quantum computing. They mention the ETH Quantum Center with over 700 scientists from 34 research groups across six departments and PSI, but give no duration.",
+      "citations": [
+        "e07ec359f3fad9f6f7eade8ff23bb4f7365dd446_fixed_0"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 7245,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 7245,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "bm25",
+      "signals": {
+        "sufficiency": 0.596,
+        "chunk_agreement": 0.5747,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "bm25",
+    "signals": {
+      "sufficiency": 0.596,
+      "chunk_agreement": 0.5747,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "qid": "17",
+  "query": "how do birds learn new songs?",
+  "profile": {
+    "lang": "en",
+    "query_type": "definition",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "birds",
+      "song learning"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1144,
+      "lang": "en",
+      "query_type": "definition",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "birds",
+        "song learning"
+      ],
+      "initial_mode": "dense"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1351,
+      "mode": "dense",
+      "query": "how do birds learn new songs?",
+      "n_chunks": 8,
+      "top_ids": [
+        "afef12ad3f6321c43b65d045e2b1273cd1303ed9_fixed_1",
+        "afc38527715aff1eaca43b90f960ade1e6e97af7_fixed_3",
+        "be0be6dd86e21c2651c802ddcef675fa2e6fd016_fixed_1",
+        "4994285b5962eed7b155e2d826a19e07f7c7d574_fixed_2",
+        "eb58dd38003c08e04a1173d25652c9153832e0f7_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1466,
+      "signals": {
+        "sufficiency": 0.4471,
+        "chunk_agreement": 0.6166,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1466,
+      "action": "generate",
+      "reason": "sufficiency 0.45 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 4743,
+      "draft_answer": "The provided chunks do not contain information about how birds learn new songs. They discuss unsupervised learning in AI for machine sounds, animal behavior in swarms, human cognitive development, embryonic development, and microswarm robots, but nothing on bird song learning.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 4743,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 4743,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "dense",
+      "signals": {
+        "sufficiency": 0.4471,
+        "chunk_agreement": 0.6166,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "dense",
+    "signals": {
+      "sufficiency": 0.4471,
+      "chunk_agreement": 0.6166,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

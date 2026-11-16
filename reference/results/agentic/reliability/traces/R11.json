@@ -1,0 +1,226 @@
+{
+  "qid": "R11",
+  "query": "When did ETH Zurich merge with the University of Zurich?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth zurich",
+      "university of zurich",
+      "merger"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1370,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth zurich",
+        "university of zurich",
+        "merger"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 3340,
+      "mode": "bm25",
+      "query": "When did ETH Zurich merge with the University of Zurich?",
+      "n_chunks": 8,
+      "top_ids": [
+        "211ca47aad6f575349d8aa5ddba292814a4bf8e2_fixed_1",
+        "6eb537d450e6129418dbc7c5b9368bd11d1486a8_fixed_1",
+        "85a2ef3ed2e1cb74809c700118c15e3cf61e6521_fixed_0",
+        "e1ab0549981c0ab08d5072bd00389214f4c44fd6_fixed_0",
+        "084aa327c323676bc356a6bb7be91132ec415d62_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 3559,
+      "signals": {
+        "sufficiency": 0.4649,
+        "chunk_agreement": 0.5357,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 3559,
+      "action": "generate",
+      "reason": "sufficiency 0.46 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 6007,
+      "draft_answer": "The provided evidence does not contain any information about ETH Zurich merging with the University of Zurich.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 6007,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 6763,
+      "rewritten_query": "ETH Zurich merger University of Zurich history integration combined",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 9153,
+      "mode": "voting",
+      "query": "ETH Zurich merger University of Zurich history integration combined",
+      "n_chunks": 8,
+      "top_ids": [
+        "d8c824c527ac848cad8ef5b3329db5fcaa869be4_fixed_0",
+        "b62aff32c44023e4d7d5d305ed680069e8093bb4_fixed_0",
+        "736fe2ed68fb419911df118aeba332927335e1b6_fixed_0",
+        "e38adeeda690093e8f33e7ae48608dacb8107ac8_fixed_0",
+        "59da9dd630d2d35054c59cef7425c94424637f72_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 9297,
+      "signals": {
+        "sufficiency": 0.6127,
+        "chunk_agreement": 0.7276,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 9297,
+      "action": "generate",
+      "reason": "sufficiency 0.61 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 13272,
+      "draft_answer": "The provided chunks contain no information about a merger or integration between ETH Zurich and the University of Zurich. The chunks mention ETH Zurich's founding as the federal polytechnic institute in 1855 (renamed in 1911), a 2007 organisational reform, the Rethink project, and an alliance of European universities, but nothing about combining with the University of Zurich.",
+      "citations": [
+        "59da9dd630d2d35054c59cef7425c94424637f72_fixed_0",
+        "e38adeeda690093e8f33e7ae48608dacb8107ac8_fixed_0"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 13272,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 14110,
+      "rewritten_query": "ETH Zurich University of Zurich merger integration history affiliation relationship",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 14183,
+      "mode": "graphrag",
+      "query": "ETH Zurich University of Zurich merger integration history affiliation relationship",
+      "n_chunks": 8,
+      "top_ids": [
+        "29bcc28aca13b6cfae2c22da53d6e4865c1ffc8d_fixed_0",
+        "23b7e9608002efc314545488da73a8d8b3142ae9_fixed_0",
+        "59da9dd630d2d35054c59cef7425c94424637f72_fixed_0",
+        "a6f1d62fbd8f1685856f6dc39cbe60b6eee3847b_fixed_0",
+        "b62aff32c44023e4d7d5d305ed680069e8093bb4_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 14298,
+      "signals": {
+        "sufficiency": 0.6197,
+        "chunk_agreement": 0.7359,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 14298,
+      "action": "generate",
+      "reason": "sufficiency 0.62 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 19001,
+      "draft_answer": "The provided chunks do not contain information about a merger or integration history between ETH Zurich and the University of Zurich, nor do they describe any affiliation relationship between the two institutions. The chunks only mention that ETH Zurich was founded as the Federal Polytechnic Institute in 1855 (renamed in 1911), and reference the ETH Board, a retired members' association, and ETH's participation in the ENHANCE European universities alliance.",
+      "citations": [
+        "59da9dd630d2d35054c59cef7425c94424637f72_fixed_0",
+        "b62aff32c44023e4d7d5d305ed680069e8093bb4_fixed_0"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 19001,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 19001,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.6197,
+        "chunk_agreement": 0.7359,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.6197,
+      "chunk_agreement": 0.7359,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

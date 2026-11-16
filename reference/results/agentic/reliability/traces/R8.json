@@ -1,0 +1,198 @@
+{
+  "qid": "R8",
+  "query": "How many students does ETH Zurich have?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth zurich",
+      "students"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1345,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth zurich",
+        "students"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 2872,
+      "mode": "bm25",
+      "query": "How many students does ETH Zurich have?",
+      "n_chunks": 8,
+      "top_ids": [
+        "8c5a7a478772cbde79c4a43cbe49766bba54a826_fixed_0",
+        "9b32a3ebd2fa1ab62b9ef3ded79b81d7eef68fc9_fixed_3",
+        "a56222c10997f27fea035758ae5cc381538fb4af_fixed_0",
+        "87399e9d60b72c06f3a46e5b4b92866e56d68570_fixed_1",
+        "3a543add562050b679f412ed768a1684a9269d02_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 3082,
+      "signals": {
+        "sufficiency": 0.5246,
+        "chunk_agreement": 0.5085,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 3082,
+      "action": "generate",
+      "reason": "sufficiency 0.52 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 5265,
+      "draft_answer": "The provided chunks do not contain information about the number of students at ETH Zurich.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 5265,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 6254,
+      "rewritten_query": "ETH Zurich student enrollment total number of students",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 12671,
+      "mode": "voting",
+      "query": "ETH Zurich student enrollment total number of students",
+      "n_chunks": 8,
+      "top_ids": [
+        "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+        "6df21a1874bb1595e8a7fd89e814e68611c05125_fixed_0",
+        "6af37a5d24c787016f746ab4797012fcaf97d605_fixed_0",
+        "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0",
+        "6327a4c5ea20d2e0e1f02e659a804288991a8fc7_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 12818,
+      "signals": {
+        "sufficiency": 0.8445,
+        "chunk_agreement": 0.7671,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 12818,
+      "action": "generate",
+      "reason": "sufficiency 0.84 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 17013,
+      "draft_answer": "According to ETH Zurich's 2016 annual report, the total number of students reached a record high of 19,815, with women making up 31.1 percent. The evidence does not provide a more recent total enrollment figure, though it notes that women account for about 33 percent of students in a later (2023) context.",
+      "citations": [
+        "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+        "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 17013,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 1
+    },
+    {
+      "step": "verify",
+      "t_ms": 20033,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft's claims about 19,815 students and 31.1% women are directly supported by the 2016 annual report chunk, and the ~33% women figure is supported by the chunk referencing 2023 matriculation.",
+      "signals": {
+        "sufficiency": 0.8445,
+        "chunk_agreement": 0.7671,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9378
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 20033,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 1
+    },
+    {
+      "step": "final",
+      "t_ms": 20033,
+      "action": "answer",
+      "answer": "According to ETH Zurich's 2016 annual report, the total number of students reached a record high of 19,815, with women making up 31.1 percent. The evidence does not provide a more recent total enrollment figure, though it notes that women account for about 33 percent of students in a later (2023) context.",
+      "citations": [
+        "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+        "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0"
+      ],
+      "confidence": 0.9378,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.8445,
+        "chunk_agreement": 0.7671,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.9378
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "According to ETH Zurich's 2016 annual report, the total number of students reached a record high of 19,815, with women making up 31.1 percent. The evidence does not provide a more recent total enrollment figure, though it notes that women account for about 33 percent of students in a later (2023) context.",
+    "citations": [
+      "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0",
+      "eda4721174a1ff5dc324b87b20686cd916e7997b_fixed_0"
+    ],
+    "confidence": 0.9378,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.8445,
+      "chunk_agreement": 0.7671,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.9378
+    }
+  }
+}

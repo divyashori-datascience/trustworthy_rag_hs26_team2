@@ -1,0 +1,227 @@
+{
+  "qid": "1",
+  "query": "who was president of eth in 2003?",
+  "profile": {
+    "lang": "en",
+    "query_type": "entity",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth",
+      "president",
+      "2003"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1960,
+      "lang": "en",
+      "query_type": "entity",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth",
+        "president",
+        "2003"
+      ],
+      "initial_mode": "bm25"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1986,
+      "mode": "bm25",
+      "query": "who was president of eth in 2003?",
+      "n_chunks": 8,
+      "top_ids": [
+        "cee43fc1dc12c4b8506d9d888d3c005da5b059bf_fixed_0",
+        "034797e33877c0ddcea8c29b910c632e4f297be6_fixed_0",
+        "d7a1a08fe1896fc1611adb95cb960ab0d7d44d7e_fixed_0",
+        "5dafd5c54138b4bff6826d9e803a236d0817e861_fixed_3",
+        "add82cd39c8a8ca675ce03297b1d5b88035062a0_fixed_7"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 4817,
+      "signals": {
+        "sufficiency": 0.605,
+        "chunk_agreement": 0.5756,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 4817,
+      "action": "generate",
+      "reason": "sufficiency 0.60 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 7207,
+      "draft_answer": "The provided chunks do not state who was president of ETH Zurich in 2003.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 7207,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 8313,
+      "rewritten_query": "ETH Zurich president 2003 OR rector ETH 2003 OR \"Eidgenössische Technische Hochschule\" president 2003",
+      "old_mode": "bm25",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 12147,
+      "mode": "voting",
+      "query": "ETH Zurich president 2003 OR rector ETH 2003 OR \"Eidgenössische Technische Hochschule\" president 2003",
+      "n_chunks": 8,
+      "top_ids": [
+        "ede695ab03381bf8b9aa35f708143fc2376aa78d_fixed_6",
+        "2c22249b0e5841c8a303077929f3aeecac7695dd_fixed_0",
+        "e38adeeda690093e8f33e7ae48608dacb8107ac8_fixed_0",
+        "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1",
+        "dd8c42834ce64098d636dff50543adb2b093d487_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 12303,
+      "signals": {
+        "sufficiency": 0.8297,
+        "chunk_agreement": 0.7361,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 12303,
+      "action": "generate",
+      "reason": "sufficiency 0.83 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 16350,
+      "draft_answer": "The provided chunks do not identify who was president or rector of ETH Zurich in 2003. They mention later appointments (e.g., Hugo Bretscher as Secretary General in 2006, Günther Dissertori as rector in a more recent vote, and Joël Mesot) but contain no information about the 2003 ETH Zurich president or rector.",
+      "citations": [
+        "e38adeeda690093e8f33e7ae48608dacb8107ac8_fixed_0",
+        "b7471c1deec222c6c0529cfaf9285b9c075c5096_fixed_1"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 16350,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 17420,
+      "rewritten_query": "president of eth zurich 2003 OR \"ETH Zürich\" president 2003 OR swiss federal polytechnic president 2003",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 17457,
+      "mode": "graphrag",
+      "query": "president of eth zurich 2003 OR \"ETH Zürich\" president 2003 OR swiss federal polytechnic president 2003",
+      "n_chunks": 8,
+      "top_ids": [
+        "e38adeeda690093e8f33e7ae48608dacb8107ac8_fixed_0",
+        "59da9dd630d2d35054c59cef7425c94424637f72_fixed_0",
+        "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_2",
+        "44b952fdee9be9bcd573f8131a26f3004bb7abb0_fixed_1",
+        "5a806b668caec4cf851a5ab15a0459c429e3fe1b_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 17608,
+      "signals": {
+        "sufficiency": 0.7394,
+        "chunk_agreement": 0.7391,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 17608,
+      "action": "generate",
+      "reason": "sufficiency 0.74 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 23090,
+      "draft_answer": "The provided chunks do not state who was president of ETH Zurich in 2003. They mention Heinrich Ursprung as a former ETH president (and president of the Swiss School Board 1987–1990), Sarah Springman as rector, and Hugo Bretscher as secretary general from 2006, but none identify the ETH Zurich president in 2003.",
+      "citations": [
+        "44b952fdee9be9bcd573f8131a26f3004bb7abb0_fixed_1",
+        "e38adeeda690093e8f33e7ae48608dacb8107ac8_fixed_0",
+        "cf8d96d8ad72fa05a74b1e40bea2e718c5d9f105_fixed_2"
+      ],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 23090,
+      "action": "abstain",
+      "reason": "generator found no supporting evidence → abstain",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 23090,
+      "action": "abstain",
+      "answer": null,
+      "abstain_reason": "generator found no supporting evidence → abstain",
+      "confidence": 0.0,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.7394,
+        "chunk_agreement": 0.7391,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    }
+  ],
+  "final": {
+    "action": "abstain",
+    "answer": null,
+    "abstain_reason": "generator found no supporting evidence → abstain",
+    "confidence": 0.0,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.7394,
+      "chunk_agreement": 0.7391,
+      "grounding": 0.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.0
+    }
+  }
+}

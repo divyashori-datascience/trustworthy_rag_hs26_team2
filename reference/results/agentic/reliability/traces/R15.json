@@ -1,0 +1,148 @@
+{
+  "qid": "R15",
+  "query": "Welche research macht die ETH zu climate change?",
+  "profile": {
+    "lang": "de",
+    "query_type": "list",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "eth zurich",
+      "climate change",
+      "research"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1364,
+      "lang": "de",
+      "query_type": "list",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "eth zurich",
+        "climate change",
+        "research"
+      ],
+      "initial_mode": "voting"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 11455,
+      "mode": "voting",
+      "query": "Welche research macht die ETH zu climate change?",
+      "n_chunks": 8,
+      "top_ids": [
+        "0f59214983c3517a8136903d533b461bdf875d48_fixed_0",
+        "f19edeea6200eb161a01c5afc05d0cf38eae5fa1_fixed_5",
+        "82f3d4a5733bee143a23ac13f049d31581fb17a4_fixed_5",
+        "3b2536f48af5566b32931aa476ca9364948a54f4_fixed_0",
+        "934c82775662e46a4d2118c27e3fab69c063876c_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 11804,
+      "signals": {
+        "sufficiency": 0.571,
+        "chunk_agreement": 0.6414,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 11804,
+      "action": "generate",
+      "reason": "sufficiency 0.57 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 22107,
+      "draft_answer": "Aus den vorliegenden Chunks ergibt sich nur ein partielles Bild der Klimaforschung der ETH:\n\n- **EXCLAIM**: Ein ETH-Projekt zu hochaufgelösten Modellen, die Klima und Wetter zusammenführen.\n- **EVE (Earth Virtualization Engines)**: Wird als externes Projekt im Zusammenhang mit Klima-/Wettermodellen erwähnt.\n- **Forschung zu Meeren im Extremzustand** (z. B. marine Hitzewellen, publiziert in Nature).\n- **Modellierung des Hagelrisikos für die Schweiz unter veränderten Klimabedingungen**: David Bresch arbeitet transdisziplinär mit Klimaphysikerinnen, Agronomen, Meteorologen und Ökonominnen zusammen, um die sozioökonomischen Dimensionen von Naturkatastrophen unter Klimawandel zu untersuchen.\n- **ETH for Development (ETH4D)**: Fördert u. a. kollaborative Forschungsprojekte, die globalen Herausforderungen begegnen sollen (allgemeiner Rahmen, nicht spezifisch climate change).\n\nDie Chunks geben keinen vollständigen Überblick über alle Klimaforschungsaktivitäten der ETH; weitere Bereiche (z. B. Energie, Gletscher, Kohlenstoffkreislauf etc.) werden hier nicht abgedeckt.",
+      "citations": [
+        "f19edeea6200eb161a01c5afc05d0cf38eae5fa1_fixed_5",
+        "82f3d4a5733bee143a23ac13f049d31581fb17a4_fixed_5",
+        "0f59214983c3517a8136903d533b461bdf875d48_fixed_0"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 22107,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 26722,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All claims in the draft are supported by the evidence chunks: EXCLAIM and EVE are mentioned in the climate/weather modeling context, the marine extremes research is referenced with the Nature DOI, Bresch's transdisciplinary hail risk modeling is described, and ETH4D's collaborative research funding is mentioned. The draft also appropriately notes the limitations of the chunks.",
+      "signals": {
+        "sufficiency": 0.571,
+        "chunk_agreement": 0.6414,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8284
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 26722,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 26723,
+      "action": "answer",
+      "answer": "Aus den vorliegenden Chunks ergibt sich nur ein partielles Bild der Klimaforschung der ETH:\n\n- **EXCLAIM**: Ein ETH-Projekt zu hochaufgelösten Modellen, die Klima und Wetter zusammenführen.\n- **EVE (Earth Virtualization Engines)**: Wird als externes Projekt im Zusammenhang mit Klima-/Wettermodellen erwähnt.\n- **Forschung zu Meeren im Extremzustand** (z. B. marine Hitzewellen, publiziert in Nature).\n- **Modellierung des Hagelrisikos für die Schweiz unter veränderten Klimabedingungen**: David Bresch arbeitet transdisziplinär mit Klimaphysikerinnen, Agronomen, Meteorologen und Ökonominnen zusammen, um die sozioökonomischen Dimensionen von Naturkatastrophen unter Klimawandel zu untersuchen.\n- **ETH for Development (ETH4D)**: Fördert u. a. kollaborative Forschungsprojekte, die globalen Herausforderungen begegnen sollen (allgemeiner Rahmen, nicht spezifisch climate change).\n\nDie Chunks geben keinen vollständigen Überblick über alle Klimaforschungsaktivitäten der ETH; weitere Bereiche (z. B. Energie, Gletscher, Kohlenstoffkreislauf etc.) werden hier nicht abgedeckt.",
+      "citations": [
+        "f19edeea6200eb161a01c5afc05d0cf38eae5fa1_fixed_5",
+        "82f3d4a5733bee143a23ac13f049d31581fb17a4_fixed_5",
+        "0f59214983c3517a8136903d533b461bdf875d48_fixed_0"
+      ],
+      "confidence": 0.8284,
+      "conflict_flag": false,
+      "mode_used": "voting",
+      "signals": {
+        "sufficiency": 0.571,
+        "chunk_agreement": 0.6414,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.8284
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "Aus den vorliegenden Chunks ergibt sich nur ein partielles Bild der Klimaforschung der ETH:\n\n- **EXCLAIM**: Ein ETH-Projekt zu hochaufgelösten Modellen, die Klima und Wetter zusammenführen.\n- **EVE (Earth Virtualization Engines)**: Wird als externes Projekt im Zusammenhang mit Klima-/Wettermodellen erwähnt.\n- **Forschung zu Meeren im Extremzustand** (z. B. marine Hitzewellen, publiziert in Nature).\n- **Modellierung des Hagelrisikos für die Schweiz unter veränderten Klimabedingungen**: David Bresch arbeitet transdisziplinär mit Klimaphysikerinnen, Agronomen, Meteorologen und Ökonominnen zusammen, um die sozioökonomischen Dimensionen von Naturkatastrophen unter Klimawandel zu untersuchen.\n- **ETH for Development (ETH4D)**: Fördert u. a. kollaborative Forschungsprojekte, die globalen Herausforderungen begegnen sollen (allgemeiner Rahmen, nicht spezifisch climate change).\n\nDie Chunks geben keinen vollständigen Überblick über alle Klimaforschungsaktivitäten der ETH; weitere Bereiche (z. B. Energie, Gletscher, Kohlenstoffkreislauf etc.) werden hier nicht abgedeckt.",
+    "citations": [
+      "f19edeea6200eb161a01c5afc05d0cf38eae5fa1_fixed_5",
+      "82f3d4a5733bee143a23ac13f049d31581fb17a4_fixed_5",
+      "0f59214983c3517a8136903d533b461bdf875d48_fixed_0"
+    ],
+    "confidence": 0.8284,
+    "conflict_flag": false,
+    "mode_used": "voting",
+    "signals": {
+      "sufficiency": 0.571,
+      "chunk_agreement": 0.6414,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.8284
+    }
+  }
+}

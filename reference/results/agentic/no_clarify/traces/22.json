@@ -1,0 +1,151 @@
+{
+  "qid": "22",
+  "query": "who inveszgated the catastrophic events in tibet in 2016, and what was found?",
+  "profile": {
+    "lang": "en",
+    "query_type": "multihop",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "tibet",
+      "2016",
+      "catastrophic events"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1449,
+      "lang": "en",
+      "query_type": "multihop",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "tibet",
+        "2016",
+        "catastrophic events"
+      ],
+      "initial_mode": "graphrag"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1467,
+      "mode": "graphrag",
+      "query": "who inveszgated the catastrophic events in tibet in 2016, and what was found?",
+      "n_chunks": 8,
+      "top_ids": [
+        "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_4",
+        "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_2",
+        "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_0",
+        "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_3",
+        "1cb915a13ba633f943231ed9c81495cd368466eb_fixed_1"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1672,
+      "signals": {
+        "sufficiency": 0.7124,
+        "chunk_agreement": 0.7823,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1672,
+      "action": "generate",
+      "reason": "sufficiency 0.71 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 10642,
+      "draft_answer": "The catastrophic double glacier collapse in Tibet in 2016 was investigated by an international team of researchers from ETH Zurich (the Earth Observation and Remote Sensing Group and the Laboratory of Hydraulics, Hydrology and Glaciology – VAW), the WSL Institute for Snow and Avalanche Research SLF, and the GAPHAZ commission (Glacier and Permafrost Hazards in Mountains). They analyzed numerous satellite images and used the SLF-developed simulation software RAMMS (Rapid Mass Movements) to reproduce the ice avalanche. They discovered that the breakaway line of the first collapsed glacier (the 'northern twin') was nearly identical to a line forming on the neighboring glacier, indicating an imminent second collapse. Based on this, Yves Bühler and colleagues (with Daniel Farinotti, VAW/WSL) modeled the risk and produced a hazard map, which was forwarded via GAPHAZ to Chinese scientists and local Tibetan authorities. Just hours later, on 22 September 2016, the second collapse occurred as predicted. The researchers concluded that the double event was likely caused by a combination of geological and topographical factors, meteorological conditions, and most probably recent climate change. The rapid satellite-based analysis marked a milestone in the development of early-warning systems.",
+      "citations": [
+        "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_0",
+        "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_2",
+        "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_3",
+        "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_4"
+      ],
+      "evidence_found": true
+    },
+    {
+      "step": "decide",
+      "t_ms": 10642,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 2
+    },
+    {
+      "step": "verify",
+      "t_ms": 15366,
+      "grounded": true,
+      "grounding_score": 0.95,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "All major claims in the draft are supported by the evidence chunks, including the investigating teams (ETH Zurich's Earth Observation group and VAW, WSL/SLF, GAPHAZ), the use of RAMMS simulation software, satellite image analysis, the identification of the second collapse risk, the hazard map forwarded via GAPHAZ, the September 22 2016 second collapse, and the conclusion about geological, topographical, meteorological and climate factors.",
+      "signals": {
+        "sufficiency": 0.7124,
+        "chunk_agreement": 0.7823,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.865
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 15366,
+      "action": "answer",
+      "reason": "grounded (score 0.95) → answer",
+      "retries_left": 2
+    },
+    {
+      "step": "final",
+      "t_ms": 15366,
+      "action": "answer",
+      "answer": "The catastrophic double glacier collapse in Tibet in 2016 was investigated by an international team of researchers from ETH Zurich (the Earth Observation and Remote Sensing Group and the Laboratory of Hydraulics, Hydrology and Glaciology – VAW), the WSL Institute for Snow and Avalanche Research SLF, and the GAPHAZ commission (Glacier and Permafrost Hazards in Mountains). They analyzed numerous satellite images and used the SLF-developed simulation software RAMMS (Rapid Mass Movements) to reproduce the ice avalanche. They discovered that the breakaway line of the first collapsed glacier (the 'northern twin') was nearly identical to a line forming on the neighboring glacier, indicating an imminent second collapse. Based on this, Yves Bühler and colleagues (with Daniel Farinotti, VAW/WSL) modeled the risk and produced a hazard map, which was forwarded via GAPHAZ to Chinese scientists and local Tibetan authorities. Just hours later, on 22 September 2016, the second collapse occurred as predicted. The researchers concluded that the double event was likely caused by a combination of geological and topographical factors, meteorological conditions, and most probably recent climate change. The rapid satellite-based analysis marked a milestone in the development of early-warning systems.",
+      "citations": [
+        "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_0",
+        "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_2",
+        "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_3",
+        "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_4"
+      ],
+      "confidence": 0.865,
+      "conflict_flag": false,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.7124,
+        "chunk_agreement": 0.7823,
+        "grounding": 0.95,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.865
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The catastrophic double glacier collapse in Tibet in 2016 was investigated by an international team of researchers from ETH Zurich (the Earth Observation and Remote Sensing Group and the Laboratory of Hydraulics, Hydrology and Glaciology – VAW), the WSL Institute for Snow and Avalanche Research SLF, and the GAPHAZ commission (Glacier and Permafrost Hazards in Mountains). They analyzed numerous satellite images and used the SLF-developed simulation software RAMMS (Rapid Mass Movements) to reproduce the ice avalanche. They discovered that the breakaway line of the first collapsed glacier (the 'northern twin') was nearly identical to a line forming on the neighboring glacier, indicating an imminent second collapse. Based on this, Yves Bühler and colleagues (with Daniel Farinotti, VAW/WSL) modeled the risk and produced a hazard map, which was forwarded via GAPHAZ to Chinese scientists and local Tibetan authorities. Just hours later, on 22 September 2016, the second collapse occurred as predicted. The researchers concluded that the double event was likely caused by a combination of geological and topographical factors, meteorological conditions, and most probably recent climate change. The rapid satellite-based analysis marked a milestone in the development of early-warning systems.",
+    "citations": [
+      "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_0",
+      "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_2",
+      "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_3",
+      "427f8138ce59336a36ac17d17dc8c8a9b4c26043_fixed_4"
+    ],
+    "confidence": 0.865,
+    "conflict_flag": false,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.7124,
+      "chunk_agreement": 0.7823,
+      "grounding": 0.95,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.865
+    }
+  }
+}

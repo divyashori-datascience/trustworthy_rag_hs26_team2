@@ -1,0 +1,242 @@
+{
+  "qid": "6",
+  "query": "what is e-sling?",
+  "profile": {
+    "lang": "en",
+    "query_type": "definition",
+    "ambiguity_flag": false,
+    "ambiguity_reason": null,
+    "entities": [
+      "e-sling"
+    ]
+  },
+  "timeline": [
+    {
+      "step": "profile",
+      "t_ms": 1139,
+      "lang": "en",
+      "query_type": "definition",
+      "ambiguity_flag": false,
+      "ambiguity_reason": null,
+      "entities": [
+        "e-sling"
+      ],
+      "initial_mode": "dense"
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 1328,
+      "mode": "dense",
+      "query": "what is e-sling?",
+      "n_chunks": 8,
+      "top_ids": [
+        "38d7f75ae71c0dbbc3df13f370d03aca0e60c967_fixed_1",
+        "29f4d4ff016915bc6b73fd90fd1598afc7577545_fixed_2",
+        "fb0fd7784854091f072037b1352feb30034722d8_fixed_1",
+        "fb0fd7784854091f072037b1352feb30034722d8_fixed_0",
+        "ddc62119b68f50256edef1caa6237c2d4476a1a9_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 1468,
+      "signals": {
+        "sufficiency": 0.4512,
+        "chunk_agreement": 0.7039,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 1468,
+      "action": "generate",
+      "reason": "sufficiency 0.45 ≥ 0.40 → generate",
+      "retries_left": 2
+    },
+    {
+      "step": "generate",
+      "t_ms": 4500,
+      "draft_answer": "The provided chunks do not contain any information about \"e-sling.\" They discuss e-bikes at ETH Zurich, wearable muscles (Myosuit), and other topics, but nothing about e-sling.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 4500,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 2
+    },
+    {
+      "step": "recover",
+      "t_ms": 5397,
+      "rewritten_query": "what is e-sling electronic sling suspension system",
+      "old_mode": "dense",
+      "new_mode": "voting",
+      "retries_left": 1
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 8539,
+      "mode": "voting",
+      "query": "what is e-sling electronic sling suspension system",
+      "n_chunks": 8,
+      "top_ids": [
+        "ddc62119b68f50256edef1caa6237c2d4476a1a9_fixed_0",
+        "33aa172b5df320a2a517b716354b16cf89158c44_fixed_1",
+        "eec013aa16ad388162e7b49d5b195dd0f28baf8a_fixed_0",
+        "eec013aa16ad388162e7b49d5b195dd0f28baf8a_fixed_1",
+        "0218c66d1a878bcacd05d5bf54b2d5466904c23c_fixed_3"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 8683,
+      "signals": {
+        "sufficiency": 0.4561,
+        "chunk_agreement": 0.6793,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 8683,
+      "action": "generate",
+      "reason": "sufficiency 0.46 ≥ 0.40 → generate",
+      "retries_left": 1
+    },
+    {
+      "step": "generate",
+      "t_ms": 18017,
+      "draft_answer": "The provided chunks do not contain information about an 'e-sling' electronic sling suspension system. They discuss other ETH Zurich projects such as the Myosuit (wearable muscles), high-speed motors for satellites, and electrohydraulic artificial muscles, but nothing about e-sling.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 18017,
+      "action": "switch_mode_and_retrieve",
+      "reason": "generator reports evidence does not contain the answer; recovering",
+      "retries_left": 1
+    },
+    {
+      "step": "recover",
+      "t_ms": 18827,
+      "rewritten_query": "what is e-sling electronic sling lifting device cable system",
+      "old_mode": "voting",
+      "new_mode": "graphrag",
+      "retries_left": 0
+    },
+    {
+      "step": "retrieve",
+      "t_ms": 18982,
+      "mode": "graphrag",
+      "query": "what is e-sling electronic sling lifting device cable system",
+      "n_chunks": 8,
+      "top_ids": [
+        "ddc62119b68f50256edef1caa6237c2d4476a1a9_fixed_0",
+        "33aa172b5df320a2a517b716354b16cf89158c44_fixed_0",
+        "080c78bc9f2d2a95f48efa16ab7dc6b169fe08bd_fixed_7",
+        "2d4c3aa68648074c57034e6aa4501b21099020af_fixed_2",
+        "0a2b1c2c7a26ee69a026270a5a757ebe8aedb2c3_fixed_0"
+      ]
+    },
+    {
+      "step": "analyze",
+      "t_ms": 19125,
+      "signals": {
+        "sufficiency": 0.4664,
+        "chunk_agreement": 0.6801,
+        "grounding": 0.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.0
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 19125,
+      "action": "generate",
+      "reason": "sufficiency 0.47 ≥ 0.40 → generate",
+      "retries_left": 0
+    },
+    {
+      "step": "generate",
+      "t_ms": 22827,
+      "draft_answer": "The provided chunks do not contain information about an 'e-sling' electronic sling lifting device cable system. The chunks discuss other ETH Zurich projects such as the Myosuit, MyoShirt (wearable exomuscles using cables as artificial tendons), nanoleq cables, prosthetic legs, and smart sportswear, but none mention e-sling.",
+      "citations": [],
+      "evidence_found": false
+    },
+    {
+      "step": "decide",
+      "t_ms": 22827,
+      "action": "verify",
+      "reason": "draft produced → verify groundedness",
+      "retries_left": 0
+    },
+    {
+      "step": "verify",
+      "t_ms": 26490,
+      "grounded": true,
+      "grounding_score": 1.0,
+      "contradiction_score": 0.0,
+      "unsupported_claims": [],
+      "reason": "The draft correctly states that the evidence does not mention e-sling, and accurately characterizes the other projects (Myosuit, MyoShirt, nanoleq, prosthetic legs, smart sportswear) that appear in the chunks.",
+      "signals": {
+        "sufficiency": 0.4664,
+        "chunk_agreement": 0.6801,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.7866
+      }
+    },
+    {
+      "step": "decide",
+      "t_ms": 26490,
+      "action": "answer",
+      "reason": "grounded (score 1.00) → answer",
+      "retries_left": 0
+    },
+    {
+      "step": "final",
+      "t_ms": 26490,
+      "action": "answer",
+      "answer": "The provided chunks do not contain information about an 'e-sling' electronic sling lifting device cable system. The chunks discuss other ETH Zurich projects such as the Myosuit, MyoShirt (wearable exomuscles using cables as artificial tendons), nanoleq cables, prosthetic legs, and smart sportswear, but none mention e-sling.",
+      "citations": [],
+      "confidence": 0.7866,
+      "conflict_flag": false,
+      "mode_used": "graphrag",
+      "signals": {
+        "sufficiency": 0.4664,
+        "chunk_agreement": 0.6801,
+        "grounding": 1.0,
+        "contradiction": 0.0,
+        "ambiguity": 0,
+        "confidence": 0.7866
+      }
+    }
+  ],
+  "final": {
+    "action": "answer",
+    "answer": "The provided chunks do not contain information about an 'e-sling' electronic sling lifting device cable system. The chunks discuss other ETH Zurich projects such as the Myosuit, MyoShirt (wearable exomuscles using cables as artificial tendons), nanoleq cables, prosthetic legs, and smart sportswear, but none mention e-sling.",
+    "citations": [],
+    "confidence": 0.7866,
+    "conflict_flag": false,
+    "mode_used": "graphrag",
+    "signals": {
+      "sufficiency": 0.4664,
+      "chunk_agreement": 0.6801,
+      "grounding": 1.0,
+      "contradiction": 0.0,
+      "ambiguity": 0,
+      "confidence": 0.7866
+    }
+  }
+}
