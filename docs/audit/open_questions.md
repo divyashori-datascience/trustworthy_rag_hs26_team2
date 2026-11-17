@@ -8,3 +8,7 @@
 6. **German questions.** Should the shared evaluation also run the `question_de` versions?
 7. **Qrels.** The gold-chunk labels are gpt-4o-mini relevance scores cut off at 0.5. Are they the official ground truth for retrieval metrics, given cases like Q1 where they missed the evidence?
 8. **Index coverage.** 37% of pages are not in the shared index, and the opening paragraph is missing on 92% of indexed pages (`index_coverage.md`). Should benchmark answers be judged against the indexed chunks? And is re-chunking in scope for improvements?
+
+## Answered (17 Nov)
+
+- **Questions 1 and 8 (ground truth and index coverage):** benchmark answers must be verified against the indexed chunks; abstentions must be justified by the indexed corpus; facts only in the raw HTML are documented separately as coverage gaps. The shared artifacts stay unchanged (no re-chunking). Coverage limits should be discussed in the final report.

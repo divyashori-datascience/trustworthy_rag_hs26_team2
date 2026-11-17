@@ -15,10 +15,11 @@
 
 ## Diagnosis
 
-1. **Sufficient evidence?** Not in the retrieved chunks. 13 raw pages mention Hong Kong, but only **4 indexed chunks** do (`fill_chunk_ids.py --find "Hong Kong"`). The useful ones:
+1. **Sufficient evidence?** Not in the retrieved chunks. 13 raw pages mention Hong Kong, but only **6 indexed chunks** do (4 spelled "Hong Kong", 2 German chunks spelled "Hongkong"; `fill_chunk_ids.py --find "Hong Kong"` and `--find "Hongkong"`). The useful ones:
     - Manu Kapur appointed professor at ETH from the Hong Kong Institute of Education (`ede695ab…_fixed_2`)
     - Works from an internship described in an ETH News article were shown in Pors & Rao's presentation at Art Basel Hong Kong 2018 (`77b9fa3b…_fixed_1`)
-    - The Bi-City Biennale and Fixposition's Hong Kong tour are in the raw corpus but **not in the index**.
+    - Two ETH architects co-curated the biennale in Shenzhen and Hong Kong (2015 annual review, German only: `edc6ab28…_fixed_14`)
+    - Fixposition's tour including Hong Kong is in the raw corpus but **not in the index** (a coverage gap)
 2. **Grounded?** n/a.
 3. **Correct?** The gold answer (CUHK and HKUST agreements) can't be reached from this corpus.
 4. **Right action?** ANSWER with the corpus-supported connections, stating that formal partnerships are not covered. Abstaining throws away real evidence.

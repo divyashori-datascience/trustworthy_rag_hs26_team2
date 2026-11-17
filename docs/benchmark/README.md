@@ -11,7 +11,7 @@
 | 3 | Gene variant E756del and malaria | Difficult retrieval | ANSWER | `084aa327…_fixed_0` |
 | 4 | When tuition fees were last adjusted before 2017 (2004) | Temporal | ANSWER | `6df21a18…_fixed_0` |
 | 5 | ETH President in mid-2013 vs 2016 | Temporal | ANSWER | `dd06ade4…_fixed_0`, `e38adeed…_fixed_0` |
-| 6 | QS rank: 12th (2013) vs 7th (QS 2024) | Conflicting evidence | ANSWER (flag conflict) | `add82cd3…_fixed_7`, `a39f97e3…_fixed_1` |
+| 6 | QS rank: 12th (2013) vs 7th (2018, QS 2024) | Conflicting evidence | ANSWER (flag conflict) | `add82cd3…_fixed_7`, `2685b452…_fixed_0`, `a39f97e3…_fixed_1` |
 | 7 | Acceptance rate, MSc Data Science 2023 | Insufficient evidence | ABSTAIN | none (search log) |
 | 8 | International tuition fees from autumn 2025 | Insufficient evidence | ABSTAIN | none (search log) |
 | 9 | "Why did Fixposition focus on driverless cars first?" (it chose drones) | Adversarial / false premise | ANSWER (correct the premise) | `953665ea…_fixed_0` |
@@ -22,6 +22,15 @@
 | 14 | "Who won the Rossler Prize in 2013?" (umlaut missing) | Recovery-triggering | RECOVER → ANSWER | `dd06ade4…_fixed_0` |
 
 All 9 categories are covered (the minimum is 4), with 2 standard factual cases (the minimum is 2).
+
+## Course guidelines (17 Nov) and how we meet them
+
+| Guideline | Our cases |
+|---|---|
+| Answerable questions: evidence must exist in the shared indexed chunks | Every answerable case cites chunk IDs that contain the answer (checked with `fill_chunk_ids.py --verify`) |
+| Difficult retrieval: evidence in the index but hard to retrieve | G02-003: the answer is a side detail in an indexed chunk |
+| Insufficient evidence: abstention justified by the indexed corpus, not a failed retrieval | G02-007, G02-008, G02-010: searched all 7,531 chunks (and the raw HTML); search logs in the workbook |
+| Facts only in the original HTML: document separately, not in the 10 | Listed in [`coverage_gaps.md`](coverage_gaps.md) (7 gaps) |
 
 ## Design choices
 
