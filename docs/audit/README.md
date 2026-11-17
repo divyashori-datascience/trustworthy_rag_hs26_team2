@@ -4,7 +4,7 @@
 
 | File | Step 1 deliverable | Status |
 |---|---|---|
-| [`reproduction_note.md`](reproduction_note.md) | Short reproduction note | To fill after the Colab run |
+| [`reproduction_note.md`](reproduction_note.md) | Short reproduction note | Done: ran in Colab, 0 issues, 4/4 actions reproduced |
 | [`trace_audit.md`](trace_audit.md) | Diagnostic analysis of all 25 traces | Draft |
 | [`case_Q4.md`](case_Q4.md) | Trace-based example: success after recovery | Draft |
 | [`case_Q1.md`](case_Q1.md) | Trace-based example: false abstention + wrong label | Draft |
