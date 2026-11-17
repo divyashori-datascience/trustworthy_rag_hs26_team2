@@ -1,16 +1,17 @@
-"""Fill the 'Evidence chunk ID' column of our benchmark workbook from the indexed chunks.
+"""Look up and verify evidence chunks in the shared index (docs_fixed_norm.pkl).
 
-For each case, looks up every chunk in ``docs_fixed_norm.pkl`` (the exact chunks the
-reference system retrieves from) that contains the case's key phrase, and writes the
-matching chunk IDs into column J. Also prints the chunk text so a human can confirm it.
+The reference system can only answer from the indexed chunks, not from the raw HTML pages,
+and the index does not contain every page or every paragraph (see docs/audit/index_coverage.md).
+So benchmark evidence must be checked against the chunks.
 
 Usage (from the repo root; needs langchain-core to unpickle the Documents):
-    python -m src.ours.benchmark.fill_chunk_ids \
-        --pkl /path/to/docs_fixed_norm.pkl \
-        --xlsx benchmark/G02_benchmark_draft.xlsx
 
-    # just look up phrases, no workbook changes:
-    python -m src.ours.benchmark.fill_chunk_ids --pkl ... --find "Olaf Kübler" "e-Sling"
+    # find chunks containing all given phrases (case-, accent- and punctuation-insensitive)
+    python -m src.ours.benchmark.fill_chunk_ids --pkl <path>/docs_fixed_norm.pkl --find "Olaf Kübler"
+    python -m src.ours.benchmark.fill_chunk_ids --pkl <path>/docs_fixed_norm.pkl --find "QS" "Platz sieben"
+
+    # verify every chunk ID listed in the benchmark workbook exists, and print its text for a human check
+    python -m src.ours.benchmark.fill_chunk_ids --pkl <path>/docs_fixed_norm.pkl --verify benchmark/G02_benchmark_draft.xlsx
 """
 from __future__ import annotations
 
@@ -18,72 +19,70 @@ import argparse
 import pickle
 import re
 
-# Key phrase per case: short, distinctive text copied from the evidence passage.
-KEY_PHRASES = {
-    "G02-001": ["around 350 talented young chemists"],
-    "G02-002": ["molecular force sensor in the tendon cells"],
-    "G02-003": ["variant called E756del", "tropical disease malaria"],
-    "G02-004": ["With 1160 Swiss francs per year", "CHF 250 for the autumn semester 2020/2021"],
-    "G02-005": ["Ralph Eichler, President of ETH Zurich", "under ETH President Lino Guzzella"],
-    "G02-006": ["21 Nobel Laureates", "22 Nobel Prize laureates"],
-    "G02-009": ["dass dies der falsche Weg wäre"],
-    "G02-011": ["142 private und kommunale Bauten", "1. Januar 2025"],
-    "G02-012": ["Founded in August 2017, the start-up Fixposition", "Lukas Meier und Zhenzhong Su"],
-    "G02-013": ["engaged critically with the ever-increasing pace", "has been ETH President since 1 January 2019"],
-    "G02-014": ["founding of the Swiss Data Science Center in February"],
-}
+
+def norm(text: str) -> str:
+    """Lower-case, transliterate German umlauts (the index stores ä as ae), strip punctuation."""
+    text = text.lower()
+    for a, b in (("ä", "ae"), ("ö", "oe"), ("ü", "ue"), ("ß", "ss"), ("é", "e"), ("è", "e")):
+        text = text.replace(a, b)
+    return re.sub(r"[^a-z0-9]+", " ", text).strip()
 
 
-def load_chunks(pkl_path: str) -> dict[str, str]:
+def load_chunks(pkl_path: str) -> dict[str, dict]:
     with open(pkl_path, "rb") as fh:
         docs = pickle.load(fh)
     out = {}
     for d in docs:
-        text = d.metadata.get("original_text") or d.page_content
-        out[d.metadata["chunk_id"]] = re.sub(r"\s+", " ", text)
+        m = d.metadata
+        text = m.get("original_text") or d.page_content
+        out[m["chunk_id"]] = {"text": text, "norm": norm(text), "file": m.get("filename"),
+                              "date": f"{m.get('year')}-{m.get('month'):02d}" if m.get("month") else str(m.get("year")),
+                              "lang": m.get("language")}
     return out
 
 
-def find(chunks: dict[str, str], phrase: str) -> list[str]:
-    p = re.compile(re.escape(phrase), re.I)
-    return [cid for cid, text in chunks.items() if p.search(text)]
+def find(chunks: dict[str, dict], phrases: list[str], show: int = 10) -> list[str]:
+    keys = [norm(p) for p in phrases]
+    hits = [cid for cid, c in chunks.items() if all(k in c["norm"] for k in keys)]
+    print(f"\n{phrases}: {len(hits)} chunk(s)")
+    for cid in hits[:show]:
+        c = chunks[cid]
+        i = c["norm"].find(keys[0])
+        print(f"  {cid} | {c['date']} {c['lang']} {c['file']}\n    …{c['norm'][max(0, i - 160): i + 160]}…")
+    return hits
+
+
+def verify(chunks: dict[str, dict], xlsx: str) -> None:
+    import openpyxl
+    ws = openpyxl.load_workbook(xlsx)["Cases"]
+    for row in range(2, ws.max_row + 1):
+        case_id, cell = ws.cell(row, 1).value, ws.cell(row, 10).value
+        if not case_id:
+            continue
+        ids = [x.strip() for x in str(cell or "").split(";") if x.strip() and x.strip().lower() != "n/a"]
+        if not ids:
+            print(f"\n{case_id}: no chunk (abstention case: check the search log instead)")
+            continue
+        for cid in ids:
+            c = chunks.get(cid)
+            if c is None:
+                print(f"\n{case_id}: {cid} NOT IN INDEX")
+                continue
+            print(f"\n{case_id}: {cid} | {c['date']} {c['lang']} {c['file']}\n  {c['text'][:700]}…")
 
 
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--pkl", required=True)
-    ap.add_argument("--xlsx", default=None)
-    ap.add_argument("--find", nargs="*", default=None, help="ad-hoc phrases to look up")
+    ap.add_argument("--find", nargs="*", default=None, help="phrases that must all appear in a chunk")
+    ap.add_argument("--verify", default=None, help="benchmark workbook to verify")
     args = ap.parse_args()
-
     chunks = load_chunks(args.pkl)
     print(f"{len(chunks)} chunks loaded")
-
     if args.find:
-        for ph in args.find:
-            ids = find(chunks, ph)
-            print(f"\n'{ph}': {len(ids)} chunk(s)")
-            for cid in ids[:10]:
-                t = chunks[cid]
-                i = t.lower().find(ph.lower())
-                print(f"  {cid}: …{t[max(0, i - 150): i + 150]}…")
-        return
-
-    import openpyxl
-    wb = openpyxl.load_workbook(args.xlsx)
-    ws = wb["Cases"]
-    for row in range(2, ws.max_row + 1):
-        case_id = ws.cell(row, 1).value
-        if case_id not in KEY_PHRASES:
-            continue
-        found = []
-        for ph in KEY_PHRASES[case_id]:
-            ids = find(chunks, ph)
-            print(f"{case_id} '{ph}': {ids or 'NOT FOUND'}")
-            found += [i for i in ids if i not in found]
-        ws.cell(row, 10).value = " ; ".join(found) if found else "NOT FOUND in indexed chunks: check"
-    wb.save(args.xlsx)
-    print(f"\nupdated {args.xlsx}. Open the chunks above and confirm each one by eye.")
+        find(chunks, args.find)
+    if args.verify:
+        verify(chunks, args.verify)
 
 
 if __name__ == "__main__":

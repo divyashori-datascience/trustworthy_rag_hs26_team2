@@ -20,7 +20,7 @@
 
 ## Diagnosis
 
-1. **Sufficient evidence?** The retrieved chunks were not enough, but the corpus contains the answer. `en_news_events/2021/07/lord-of-the-flies-data-and-seven-bycicles.html` says ETH was looking for a successor to Olaf Kübler, "due to step down as ETH President at the end of 2004", and that Ernst Hafen took office on 1 January 2005. Check with `search_corpus.py "Kübler"`.
+1. **Sufficient evidence?** The retrieved chunks were not enough, but the corpus contains the answer. `en_news_events/2021/07/lord-of-the-flies-data-and-seven-bycicles.html` says ETH was looking for a successor to Olaf Kübler, "due to step down as ETH President at the end of 2004", and that Ernst Hafen took office on 1 January 2005. The sentence is in the **indexed** chunk `8a6b1a87620aeaf61ffe85717e3aa380c6c66cfc_fixed_1`, so the system could have retrieved it. Check with `fill_chunk_ids.py --find "Olaf Kübler"`.
 2. **Grounded?** n/a (no answer).
 3. **Correct?** No. The gold answer is Olaf Kübler.
 4. **Right action?** ANSWER, with a short note that it is inferred from the date he stepped down.
