@@ -31,4 +31,4 @@ Examples checked by eye:
 1. **Some "false abstentions" are really indexing failures.** The answer exists in the corpus but not in any chunk, so no retriever or agent change can find it.
 2. **Gold labels must be defined against the chunks.** Q6 (e-Sling) and Q17 (bird song learning) have no supporting chunk (and no supporting raw page), so their abstentions are *correct*. Q1 (Olaf Kübler) does have a supporting chunk (`8a6b1a87620aeaf61ffe85717e3aa380c6c66cfc_fixed_1`), so its abstention is a genuine false abstention.
 3. **Our benchmark cases cite chunk IDs** and were checked against the chunks, not only the raw pages.
-4. **Possible improvement direction** (not chosen yet): re-chunk with the lead included. This would change the shared artifacts, so we'd need to check with Guang whether it's in scope.
+4. **Possible improvement direction** (not chosen yet): re-chunk with the lead included. This would change the shared artifacts, so we'd need to check with the course instructor whether it's in scope.

@@ -5,7 +5,7 @@ Counts are from the reference team's 25 traces; a question can show more than on
 | Failure mode | Questions | Count | How we know | Points to track |
 |---|---|---|---|---|
 | False abstention (evidence is in the index, system declines) | 1, 18 | 2 | `evidence_found=false` × 3; supporting chunks exist (Q1: `8a6b1a87…_fixed_1`; Q18: 4 Hong Kong chunks) | B, F |
-| Indexing loses content (answer in raw page, not in any chunk) | e.g. Olympiad, tuition amounts, QS 7th (EN) | 37% of pages not indexed; lead missing on 92% of indexed pages | `index_coverage.py` | Out of agent scope; ask Guang |
+| Indexing loses content (answer in raw page, not in any chunk) | e.g. Olympiad, tuition amounts, QS 7th (EN) | 37% of pages not indexed; lead missing on 92% of indexed pages | `index_coverage.py` | Out of agent scope; ask the course instructor |
 | Ranking / retrieval failure | 1, 4, 18 + most partials | 3+ | Step 1 report: gold usually in top 100, not top 5 | F, B |
 | Non-answer ("evidence is silent") counted as ANSWER | 10, 12, 20 | 3 | Draft says the evidence doesn't cover it; gold shows it does | B, A |
 | Incomplete / partial answer | 2, 3, 7, 8, 9, 13, 15, 16, 21, 23, 25 | 11 | LLM judge: partially correct | F |

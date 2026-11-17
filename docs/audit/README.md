@@ -11,7 +11,7 @@
 | [`case_Q18.md`](case_Q18.md) | Trace-based example: gold answer not in the corpus | Draft |
 | [`index_coverage.md`](index_coverage.md) | Finding: what the shared index is missing | Draft |
 | [`failure_taxonomy.md`](failure_taxonomy.md) | Initial failure taxonomy + motivation for the improvement focus | Draft |
-| [`open_questions.md`](open_questions.md) | Questions for Guang | Draft |
+| [`open_questions.md`](open_questions.md) | Questions for the course instructor | Draft |
 | [`case_template.md`](case_template.md) | Template for further cases | — |
 
 ## Reproducing the numbers

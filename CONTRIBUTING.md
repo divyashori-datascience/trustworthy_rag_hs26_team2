@@ -5,7 +5,7 @@
 ## Branches
 Name branches `<name>/<task>`, one branch per task:
 
-Examples: `divya/colab-setup`, `farah/diagnostic-cases`, `hanieh/benchmark-cases`.
+Examples: `divya/colab-setup`, `faranak/diagnostic-cases`, `hanieh/benchmark-cases`.
 
 ## Workflow
 1. **Start from the latest main:** `git checkout main && git pull`, then `git checkout -b <name>/<task>`.

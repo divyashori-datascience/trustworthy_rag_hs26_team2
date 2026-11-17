@@ -1,4 +1,4 @@
-# Open questions for Guang (DRAFT, Q&A 1)
+# Open questions for the course instructor (DRAFT, Q&A 1)
 
 1. **Q1 label.** The corpus implies Olaf Kübler (he stepped down at the end of 2004), so Q1 is answerable, not out-of-corpus. Should the shared benchmark be corrected?
 2. **Q6 and Q17 gold answers.** No indexed chunk (and no raw page) mentions e-Sling or bird song learning, so the system was right to abstain. Should these labels be changed to ABSTAIN?
