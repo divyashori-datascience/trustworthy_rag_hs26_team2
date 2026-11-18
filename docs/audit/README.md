@@ -1,10 +1,10 @@
 # Step 1: Reference system audit (DRAFT)
 
-> **Status: draft for Q&A 1 (Thu 19 Nov 2026).** The findings are based on the reference team's committed run (`reference/results/agentic/`). They still have to be re-checked against our own live run on the shared `full_corpus` artifacts, and the team should agree on and rewrite them before final submission.
+> **Status: draft for Q&A 1 (Thu 19 Nov 2026).** The findings are based on the reference team's committed run (`reference/results/agentic/`). We re-checked them with our own live run on the shared `full_corpus` artifacts (17 Nov: 21 of 25 actions identical). The team still has to agree on and rewrite them before final submission.
 
 | File | Step 1 deliverable | Status |
 |---|---|---|
-| [`reproduction_note.md`](reproduction_note.md) | Short reproduction note | Done: ran in Colab, 0 issues, 4/4 actions reproduced |
+| [`reproduction_note.md`](reproduction_note.md) | Short reproduction note | Done: ran in Colab, 0 issues, full 25-question run, 21/25 actions reproduced |
 | [`trace_audit.md`](trace_audit.md) | Diagnostic analysis of all 25 traces | Draft |
 | [`case_Q4.md`](case_Q4.md) | Trace-based example: success after recovery | Draft |
 | [`case_Q1.md`](case_Q1.md) | Trace-based example: false abstention + wrong label | Draft |

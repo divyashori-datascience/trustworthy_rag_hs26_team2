@@ -1,7 +1,7 @@
 # Diagnostic case: Q4 "When did the InSight get to Mars?" (DRAFT)
 
 **Expected behaviour:** ANSWER. Gold: 26 November 2018.
-**Trace:** `reference/results/agentic/traces/4.json` (re-check: `results/<our_run>/traces/4.json`)
+**Trace:** `reference/results/agentic/traces/4.json` (our run: `My Drive/AdvGenAI/runs/20261117_1540/traces/4.json`)
 
 ## What the system did
 
@@ -30,3 +30,7 @@
 ## Takeaway
 
 This is recovery working as designed. It also shows that sufficiency 0.52 was not a reliable sign the answer was present, and that evidence just outside the top 5 is common, which is an argument for reranking a larger candidate pool.
+
+## Reproduced in our run (17 Nov 2026)
+
+Same action (ANSWER) and same answer ("landed on the Martian surface in November 2018"), confidence 0.94, 27.9 s. Again BM25 first, then recovery to voting. See [`reproduction_note.md`](reproduction_note.md).

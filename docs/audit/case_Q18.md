@@ -1,7 +1,7 @@
 # Diagnostic case: Q18 "What connections does ETH have to Hong Kong?" (DRAFT)
 
 **Expected behaviour:** a partial ANSWER that states its limits (our view). The benchmark gold lists institutional agreements (CUHK, HKUST) that do not appear in the corpus.
-**Trace:** `reference/results/agentic/traces/18.json` (re-check: `results/<our_run>/traces/18.json`)
+**Trace:** `reference/results/agentic/traces/18.json` (our run: `My Drive/AdvGenAI/runs/20261117_1540/traces/18.json`)
 
 ## What the system did
 
@@ -29,3 +29,7 @@
 ## Takeaway
 
 The benchmark itself needs auditing. For our Step 2 contribution, every expected answer must cite a passage that actually exists in the corpus.
+
+## Reproduced in our run (17 Nov 2026)
+
+Same action (ABSTAIN) after voting → GraphRAG → confidence, 31.0 s; the stored query still contains the typo "conneczons". See [`reproduction_note.md`](reproduction_note.md).

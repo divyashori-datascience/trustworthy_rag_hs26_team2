@@ -1,7 +1,7 @@
 # Diagnostic case: Q1 "Who was president of ETH in 2003?" (DRAFT)
 
 **Expected behaviour:** ANSWER (Olaf Kübler). The reference labels say ABSTAIN; we think that label is wrong.
-**Trace:** `reference/results/agentic/traces/1.json` (re-check: `results/<our_run>/traces/1.json`)
+**Trace:** `reference/results/agentic/traces/1.json` (our run: `My Drive/AdvGenAI/runs/20261117_1540/traces/1.json`)
 
 ## What the system did
 
@@ -34,3 +34,7 @@
 ## Takeaway
 
 Abstentions must be checked against the corpus, not against what retrieval or the qrels found. This affects both the evaluation (Step 4) and how we build our benchmark (Step 2).
+
+## Reproduced in our run (17 Nov 2026)
+
+Same action (ABSTAIN) after BM25 → voting → GraphRAG, 63.3 s (the earlier 252 s spike did not recur). The German version ("Wer war 2003 Präsident der ETH Zürich?") also abstains (11.3 s). The false abstention is therefore stable, not run-to-run noise. See [`reproduction_note.md`](reproduction_note.md).

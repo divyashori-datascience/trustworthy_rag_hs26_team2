@@ -1,6 +1,6 @@
 # Initial failure taxonomy (DRAFT)
 
-Counts are from the reference team's 25 traces; a question can show more than one failure mode. To be updated with our own run.
+Counts are from the reference team's 25 traces; a question can show more than one failure mode. Our own full run (17 Nov) confirmed the same modes and added one: unstable decisions between runs (see [`reproduction_note.md`](reproduction_note.md)).
 
 Each failure is tagged with the **stage** where it originates, so that the final report can separate data-preparation issues from retrieval, generation and decision failures (as requested by the course instructor, 17 Nov):
 
@@ -21,6 +21,7 @@ Each failure is tagged with the **stage** where it originates, so that the final
 | Decision policy | Weak confidence calibration | all answered | 20 | Mean confidence 0.89 vs mean correctness 0.42; ECE 0.47 | A |
 | Decision policy | Missed clarification | 3, 7, 23 | 3 | Labelled clarify; system answered | E |
 | Decision policy | Unnecessary clarification | 5 | 1 | Answer exists; asked "which Schubert?" | E |
+| Decision policy | Unstable action between runs | 5, 10, 12, 20 | 4 | Our rerun flipped 4 of 25 actions (Q10, Q20 → unnecessary clarify; Q12 → abstain; Q5 → correct answer) | E, A, evaluation design |
 | Decision policy | Contradiction never detected | — | 0 | No conflicting chunks surfaced together | D |
 | Decision policy | High latency in recovery | 1, 12 | 2 | 252 s and 41 s vs 29 s average | I |
 | Benchmark | Text corruption in stored questions | 10, 12, 15, 18, 22 | 5 | "ti" → "z" (PDF extraction) | Step 2 |
@@ -33,6 +34,6 @@ The shared retrieval artifacts stay unchanged for all groups, so re-chunking is 
 
 - **Track A, confidence calibration.** The clearest measurable gap: ECE 0.47, and confidence drives no decision. Idea: make confidence predict correctness (retrieval and rerank scores, agreement across modes, an answer-completeness check), then use it for the answer/abstain threshold.
 - **Track B / F, false abstention and retrieval.** The biggest correctness gap. Idea: cross-encoder rerank of a larger candidate pool (top 50–100) before generation, plus a check before final abstention.
-- **Track E, clarification.** Only 4 cases, so a measurable improvement is hard to show on this benchmark alone.
+- **Track E, clarification.** The unstable flips (4 of 25) all involve clarify or abstain, so the profiler's ambiguity flag is a weak point. Still only a few labelled cases, so a measurable improvement is hard to show on this benchmark alone.
 
-All tracks depend on a clean benchmark, so our Step 2 cases avoid the label problems above.
+Whatever we choose, we will evaluate each configuration over at least 3 runs, because single runs are not stable. All tracks depend on a clean benchmark, so our Step 2 cases avoid the label problems above.
