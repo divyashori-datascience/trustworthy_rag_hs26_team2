@@ -48,8 +48,15 @@ Indexes, API keys and large files are **not** in git. Indexes come from the shar
 
 ## Milestones
 - [x] **Thu 19 Nov · Q&A 1:** reference system running; ≥3 trace-based cases; initial failure modes
-- [ ] **Mon 23 Nov 09:00:** benchmark Excel (10 validated cases, ≥4 categories, ≥2 standard factual)
+- [ ] **Mon 23 Nov 09:00:** benchmark Excel by email (10 validated cases, ≥4 categories, ≥2 standard factual)
 - [ ] **Wed 26 Nov · Q&A 3:** metrics aligned, improvement track chosen
+- [ ] **Wed 23 Dec · Final submission (ILIAS):** final report + link to this repo (shared with the course instructor's GitHub account)
+
+## Submission requirements (course instructor, Nov 2026)
+- One notebook per step (1–5) is fine, plus a **separate concise final report** (analyses, results, limitations, reflections).
+- Benchmark Excel: **by email** to the course instructor by 23 Nov, 09:00.
+- Final submission on **ILIAS** with the report and a link to this repo (code, notebooks, benchmark, supporting artifacts).
+- Must include **decision traces**, **individual contributions** (see Owners) and **AI-tool-use statements** (`docs/ai_use_log.md`).
 
 ## How we work
 Branch → pull request → review by a teammate → merge to `main`. See [CONTRIBUTING.md](CONTRIBUTING.md).
