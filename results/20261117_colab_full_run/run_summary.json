@@ -1,0 +1,9 @@
+{
+ "ablation": "full",
+ "n_questions": 25,
+ "action_counts": {"abstain": 5, "answer": 18, "clarify": 2},
+ "latency_avg_s": 12.16,
+ "latency_max_s": 20.67,
+ "models": {"generation": "claude-opus-4-7", "verifier": "claude-opus-4-7", "utility": "claude-haiku-4-5"},
+ "llm_usage": {"calls": 99, "input_tokens": 127839, "output_tokens": 14171, "est_cost_usd": 0.8704}
+}
