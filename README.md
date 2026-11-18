@@ -22,6 +22,7 @@ Indexes, API keys and large files are **not** in git. Indexes come from the shar
 | Step | Status | Start here |
 |---|---|---|
 | 1 · Reference system audit | Done (draft for team review) | [`docs/reports/G02_Step1_report.pdf`](docs/reports/G02_Step1_report.pdf), [`docs/audit/`](docs/audit/README.md) |
+| 1 · Failure demo (Q&A 1) | Ready: replay + index check + live run for 5 cases | [`notebooks/01_failure_demo.ipynb`](notebooks/01_failure_demo.ipynb) |
 | 1 · Reproduction run | Done: 25 questions, 21/25 actions match | [`docs/audit/reproduction_note.md`](docs/audit/reproduction_note.md), [`results/20261117_colab_full_run/`](results/20261117_colab_full_run/README.md) |
 | 2 · Benchmark | 14 candidate cases, team validation in progress | [`benchmark/G02_benchmark_draft.xlsx`](benchmark/G02_benchmark_draft.xlsx), [`docs/benchmark/`](docs/benchmark/README.md) |
 | 2 · Coverage gaps | Documented separately | [`docs/benchmark/coverage_gaps.md`](docs/benchmark/coverage_gaps.md) |
