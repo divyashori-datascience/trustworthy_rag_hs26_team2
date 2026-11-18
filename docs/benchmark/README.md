@@ -1,5 +1,7 @@
 # Step 2: Benchmark contribution, group G02 (DRAFT)
 
+**Benchmark draft and coverage gaps:** Divya Shori · **Validation:** Hanieh Jebeli (G02-006 to G02-014), Faranak Rahimi (G02-001 to G02-005)
+
 > **Status: draft.** 14 candidate cases are in [`benchmark/G02_benchmark_draft.xlsx`](../../benchmark/G02_benchmark_draft.xlsx); we submit **10**. Every case is marked *Draft* and must be checked by a second group member before it can be marked *Self-validated*. **Deadline: Mon 23 Nov 2026, 09:00** (one Excel per group). Confirm our group ID; `G02` is assumed from the repo name.
 
 ## Coverage

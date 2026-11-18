@@ -34,7 +34,17 @@ Indexes, API keys and large files are **not** in git. Indexes come from the shar
 4. Open `notebooks/00_setup_reference_system.ipynb` and run all the cells.
 
 ## Owners
-To be agreed within the team.
+
+| Work | Owner | Status |
+|---|---|---|
+| Repository setup, structure and contribution workflow | Divya Shori | Done |
+| Colab setup notebook and reproduction of the reference system (test queries + full 25-question run) | Divya Shori | Done |
+| Step 1 audit: trace audit, diagnostic cases (Q4, Q1, Q18), failure taxonomy, index coverage analysis | Divya Shori | Done, team review pending |
+| Step 1 report (`docs/reports/G02_Step1_report.pdf`) | Divya Shori | Done |
+| Step 2 benchmark draft (14 cases with chunk IDs) and coverage gaps | Divya Shori | Done, validation pending |
+| Validation of benchmark cases G02-006 to G02-014 | Hanieh Jebeli | Open |
+| Validation of benchmark cases G02-001 to G02-005 | Faranak Rahimi | Open |
+| Improvement track one-pager (Track A vs B) for Q&A 3 | Hanieh Jebeli | Open |
 
 ## Milestones
 - [x] **Thu 19 Nov · Q&A 1:** reference system running; ≥3 trace-based cases; initial failure modes

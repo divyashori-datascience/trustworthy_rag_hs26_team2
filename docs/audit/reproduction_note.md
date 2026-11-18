@@ -1,5 +1,7 @@
 # Reproduction note (17 Nov 2026)
 
+**Run by:** Divya Shori
+
 **Result:** the reference system loaded and ran in Colab on the shared `full_corpus` artifacts with **no setup or compatibility issues**. All 4 test queries reproduced the reference team's final actions. In the full 25-question run, **21 of 25 actions matched** the reference run; the 4 that changed all sit at the clarify/abstain decision boundary.
 
 **Notebook:** `notebooks/00_setup_reference_system.ipynb` (opened in Colab from this repo)

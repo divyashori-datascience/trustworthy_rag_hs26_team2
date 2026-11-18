@@ -1,5 +1,7 @@
 # Colab full run, 17 Nov 2026
 
+**Run by:** Divya Shori
+
 Full 25-question run of the reference system (`run_benchmark(rag, qa, out_dir, 'full')`) on the shared `full_corpus` artifacts, from `notebooks/00_setup_reference_system.ipynb`.
 
 | File | Content |

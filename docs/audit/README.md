@@ -1,5 +1,7 @@
 # Step 1: Reference system audit (DRAFT)
 
+**Author:** Divya Shori
+
 > **Status: draft for Q&A 1 (Thu 19 Nov 2026).** The findings are based on the reference team's committed run (`reference/results/agentic/`). We re-checked them with our own live run on the shared `full_corpus` artifacts (17 Nov: 21 of 25 actions identical). The team still has to agree on and rewrite them before final submission.
 
 | File | Step 1 deliverable | Status |
