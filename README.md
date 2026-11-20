@@ -24,7 +24,7 @@ Indexes, API keys and large files are **not** in git. Indexes come from the shar
 | 1 · Reference system audit | Done (draft for team review) | [`docs/reports/G02_Step1_report.pdf`](docs/reports/G02_Step1_report.pdf), [`docs/audit/`](docs/audit/README.md) |
 | 1 · Failure demo (Q&A 1) | Ready: replay + index check + live run for 5 cases | [`notebooks/01_failure_demo.ipynb`](notebooks/01_failure_demo.ipynb) |
 | 1 · Reproduction run | Done: 25 questions, 21/25 actions match | [`docs/audit/reproduction_note.md`](docs/audit/reproduction_note.md), [`results/20261117_colab_full_run/`](results/20261117_colab_full_run/README.md) |
-| 2 · Benchmark | 14 candidate cases, team validation in progress | [`benchmark/G02_benchmark_draft.xlsx`](benchmark/G02_benchmark_draft.xlsx), [`docs/benchmark/`](docs/benchmark/README.md) |
+| 2 · Benchmark | Final: 10 self-validated cases, emailed to the instructor by Mon 23 Nov | [`benchmark/G02_benchmark.xlsx`](benchmark/G02_benchmark.xlsx), [`docs/benchmark/`](docs/benchmark/README.md) |
 | 2 · Coverage gaps | Documented separately | [`docs/benchmark/coverage_gaps.md`](docs/benchmark/coverage_gaps.md) |
 | 3 · Improvement | Track to choose at Q&A 3 | [`docs/audit/failure_taxonomy.md`](docs/audit/failure_taxonomy.md) |
 
@@ -42,9 +42,9 @@ Indexes, API keys and large files are **not** in git. Indexes come from the shar
 | Colab setup notebook and reproduction of the reference system (test queries + full 25-question run) | Divya Shori | Done |
 | Step 1 audit: trace audit, diagnostic cases (Q4, Q1, Q18), failure taxonomy, index coverage analysis | Divya Shori | Done, team review pending |
 | Step 1 report (`docs/reports/G02_Step1_report.pdf`) | Divya Shori | Done |
-| Step 2 benchmark draft (14 cases with chunk IDs) and coverage gaps | Divya Shori | Done, validation pending |
-| Validation of benchmark cases G02-006 to G02-014 | Hanieh Jebeli | Open |
-| Validation of benchmark cases G02-001 to G02-005 | Faranak Rahimi | Open |
+| Step 2 benchmark draft (14 cases with chunk IDs) and coverage gaps | Divya Shori | Done |
+| Validation of benchmark cases (draft 006–014) | Hanieh Jebeli | Done |
+| Validation of benchmark cases (draft 001–005), final selection of 10 | Divya Shori | Done |
 | Improvement track one-pager (Track A vs B) for Q&A 3 | Hanieh Jebeli | Open |
 
 ## Milestones
