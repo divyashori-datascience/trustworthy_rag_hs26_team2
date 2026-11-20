@@ -36,4 +36,10 @@ The shared retrieval artifacts stay unchanged for all groups, so re-chunking is 
 - **Track B / F, false abstention and retrieval.** The biggest correctness gap. Idea: cross-encoder rerank of a larger candidate pool (top 50–100) before generation, plus a check before final abstention.
 - **Track E, clarification.** The unstable flips (4 of 25) all involve clarify or abstain, so the profiler's ambiguity flag is a weak point. Still only a few labelled cases, so a measurable improvement is hard to show on this benchmark alone.
 
-Whatever we choose, we will evaluate each configuration over at least 3 runs, because single runs are not stable. All tracks depend on a clean benchmark, so our Step 2 cases avoid the label problems above.
+Whatever we choose, we will evaluate each configuration over at least 3 runs, because single runs are not stable.
+
+**Evaluation uses the original labels (instructor decision, 19 Nov).** Results on the 25 questions are computed against the labels as they are, including the wrong ones. This matters for the track choice:
+- A Track B fix that makes Q1 answer correctly (Olaf Kübler) will **score worse** on the original labels, which expect ABSTAIN. Q6 and Q17 likewise expect answers the corpus can't support. Track B gains would have to be shown mainly on our own Step 2 cases and argued in the report.
+- Track A (calibration) is measured per question against the same verdicts for baseline and improved system, so the label errors affect both sides equally and ECE / coverage–risk comparisons stay fair.
+
+Our Step 2 cases cite the chunk that holds each answer, so they avoid these label problems.
