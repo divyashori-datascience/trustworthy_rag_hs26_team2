@@ -12,3 +12,8 @@
 ## Answered (17 Nov)
 
 - **Questions 1 and 8 (ground truth and index coverage):** benchmark answers must be verified against the indexed chunks; abstentions must be justified by the indexed corpus; facts only in the raw HTML are documented separately as coverage gaps. The shared artifacts stay unchanged (no re-chunking). Coverage limits should be discussed in the final report.
+
+## Answered (19 Nov, Q&A 1)
+
+- **Questions 1, 2 and 3 (labels of the original 25 questions):** do **not** change the labels. All baseline vs. improved numbers on the 25 questions use the original labels as they are, wrong ones included. Q1 therefore stays "correct" when the system abstains. The label problems (Q1, Q6, Q17, Q18; see `failure_taxonomy.md`) are described in the final report, not fixed.
+- **Improvement track:** the instructor pointed to the track list in the project description and mentioned calibration, but did not pick a track for us.

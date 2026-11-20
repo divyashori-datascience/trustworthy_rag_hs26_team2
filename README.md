@@ -57,6 +57,7 @@ Indexes, API keys and large files are **not** in git. Indexes come from the shar
 - One notebook per step (1–5) is fine, plus a **separate concise final report** (analyses, results, limitations, reflections).
 - Benchmark Excel: **by email** to the course instructor by 23 Nov, 09:00.
 - Final submission on **ILIAS** with the report and a link to this repo (code, notebooks, benchmark, supporting artifacts).
+- Evaluate the 25 original questions on their **original labels**, wrong ones included; describe the label problems in the report, don't fix them (Q&A 1, 19 Nov).
 - Must include **decision traces**, **individual contributions** (see Owners) and **AI-tool-use statements** (`docs/ai_use_log.md`).
 
 ## How we work
