@@ -45,7 +45,7 @@ Indexes, API keys and large files are **not** in git. Indexes come from the shar
 | Step 2 benchmark draft (14 cases with chunk IDs) and coverage gaps | Divya Shori | Done |
 | Validation of benchmark cases (draft 006–014) | Hanieh Jebeli | Done |
 | Validation of benchmark cases (draft 001–005), final selection of 10 | Divya Shori | Done |
-| Improvement track one-pager (Track A vs B) for Q&A 3 | Hanieh Jebeli | Open |
+| Improvement track one-pager (Track A vs B) for Q&A 3 | Hanieh Jebeli | Hanieh Jebeli | Done,review pending |
 
 ## Milestones
 - [x] **Thu 19 Nov · Q&A 1:** reference system running; ≥3 trace-based cases; initial failure modes
