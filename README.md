@@ -49,7 +49,7 @@ Indexes, API keys and large files are **not** in git. Indexes come from the shar
 
 ## Milestones
 - [x] **Thu 19 Nov · Q&A 1:** reference system running; ≥3 trace-based cases; initial failure modes
-- [ ] **Mon 23 Nov 09:00:** benchmark Excel by email (10 validated cases, ≥4 categories, ≥2 standard factual)
+- [x] **Mon 23 Nov 09:00:** benchmark Excel by email (10 validated cases, ≥4 categories, ≥2 standard factual)
 - [ ] **Wed 26 Nov · Q&A 3:** metrics aligned, improvement track chosen
 - [ ] **Wed 23 Dec · Final submission (ILIAS):** final report + link to this repo (shared with the course instructor's GitHub account)
 
