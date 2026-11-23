@@ -26,7 +26,7 @@ Indexes, API keys and large files are **not** in git. Indexes come from the shar
 | 1 · Reproduction run | Done: 25 questions, 21/25 actions match | [`docs/audit/reproduction_note.md`](docs/audit/reproduction_note.md), [`results/20261117_colab_full_run/`](results/20261117_colab_full_run/README.md) |
 | 2 · Benchmark | Final: 10 self-validated cases, emailed to the instructor by Mon 23 Nov | [`benchmark/G02_benchmark.xlsx`](benchmark/G02_benchmark.xlsx), [`docs/benchmark/`](docs/benchmark/README.md) |
 | 2 · Coverage gaps | Documented separately | [`docs/benchmark/coverage_gaps.md`](docs/benchmark/coverage_gaps.md) |
-| 3 · Improvement | Track to choose at Q&A 3 | [`docs/audit/failure_taxonomy.md`](docs/audit/failure_taxonomy.md) |
+| 3 · Improvement | Proposed: Track A (confidence calibration), to confirm at Q&A 3 | [`docs/reports/G02_Step3_track_onepager.pdf`](docs/reports/G02_Step3_track_onepager.pdf), [`docs/audit/failure_taxonomy.md`](docs/audit/failure_taxonomy.md) |
 
 ## Getting started (Colab)
 1. In Drive, add a shortcut to `RAG_Project_Artifact` in **My Drive**.
@@ -45,7 +45,7 @@ Indexes, API keys and large files are **not** in git. Indexes come from the shar
 | Step 2 benchmark draft (14 cases with chunk IDs) and coverage gaps | Divya Shori | Done |
 | Validation of benchmark cases (draft 006–014) | Hanieh Jebeli | Done |
 | Validation of benchmark cases (draft 001–005), final selection of 10 | Divya Shori | Done |
-| Improvement track one-pager (Track A vs B) for Q&A 3 | Hanieh Jebeli | Done, Review Pending |
+| Improvement track one-pager (Track A vs B) for Q&A 3 | Hanieh Jebeli | Done (Track A: confidence calibration, `docs/reports/G02_Step3_track_onepager.pdf`) |
 
 
 ## Milestones
