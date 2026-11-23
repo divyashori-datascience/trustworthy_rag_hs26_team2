@@ -1,0 +1,84 @@
+\documentclass[9pt,a4paper]{extarticle}
+\usepackage[margin=1.35cm,top=1.25cm,bottom=1.2cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs,tabularx,array}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\definecolor{navy}{HTML}{17324B}
+\definecolor{muted}{HTML}{536475}
+\definecolor{rule}{HTML}{CED7DF}
+\titleformat{\section}{\normalsize\bfseries\color{navy}}{}{0pt}{}
+\titlespacing*{\section}{0pt}{8pt}{3pt}
+\setlist[itemize]{leftmargin=1.2em,topsep=2pt,itemsep=1pt,parsep=0pt}
+\setlist[enumerate]{leftmargin=1.4em,topsep=2pt,itemsep=1pt,parsep=0pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\renewcommand{\arraystretch}{1.13}
+\pagestyle{empty}
+\begin{document}
+
+{\color{navy}\fontsize{17}{19}\selectfont\bfseries Confidence calibration for G02}\\[-1pt]
+{\color{muted}\small Improvement proposal \textbar\ Track A}\\[5pt]
+{\footnotesize Advanced Generative AI, HS26 \quad\textbullet\quad Group 2: Divya Shori, Faranak Rahimi, Hanieh Jebeli \hfill 23 November 2026}
+\vspace{5pt}\par\color{rule}\hrule height 0.6pt\color{black}\vspace{5pt}
+
+\textbf{Our proposal.} Make the reported confidence score reflect how likely an answer is to be correct, then use that score when deciding whether to answer or abstain. The aim is not to make the model sound more certain, but to make its uncertainty useful.
+
+\section*{What is going wrong?}
+The current score is high for both good and bad answers. On the 20 answered questions, mean confidence is \textbf{0.89} while mean correctness is only \textbf{0.42} (partial credit = 0.5), giving an expected calibration error (ECE) of \textbf{0.47}. Correct and incorrect answers have almost identical average confidence: \textbf{0.90 vs. 0.87}.
+
+The implementation helps explain why. Confidence is calculated as
+\[
+\text{confidence}=0.4\,\text{sufficiency}+0.4\,\text{grounding}+0.2\,(1-\text{contradiction}).
+\]
+Grounding is close to 1.0 for nearly every answer (mean 0.985), and the policy never uses the final confidence score. It makes its decision from sufficiency, ambiguity and grounding instead. For example, Q20 says the evidence contains no projections, yet is classified as \texttt{ANSWER} with confidence 0.91.
+
+\section*{Why we chose Track A}
+Track A offers a clearer, measurable improvement on the benchmark we are required to use. Track B targets false abstentions, but only two cases stand out (Q1 and Q18): Q1 is labelled \emph{abstain} in the original set, and Q18's gold answer does not appear in any indexed chunk. The lecturer confirmed that the original 25 labels will remain unchanged for evaluation; label issues can only be reported.
+
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.3cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+ & \textbf{Track A: confidence calibration} & \textbf{Track B: fewer false abstentions} \\
+\midrule
+\textbf{Scope} & 20 answered questions & Two identified cases (Q1, Q18) \\
+\textbf{Evaluation} & ECE, reliability and threshold trade-offs & Difficult to demonstrate fairly with fixed labels \\
+\textbf{Main work} & Better signals, calibrator and decision threshold & Retrieval expansion and reranking \\
+\bottomrule
+\end{tabularx}
+
+\section*{What we would change}
+\begin{enumerate}
+\item \textbf{Collect more informative signals} from existing traces: top-chunk retrieval and rerank scores, agreement between retrieval modes, recovery attempts, the generator's \texttt{evidence\_found} flag, and whether the draft actually answers the question.
+\item \textbf{Train a small calibrator} on judged outcomes from saved runs. We would start with logistic regression and compare it with Platt or isotonic scaling, treating the output as an estimate of $P(\text{correct})$.
+\item \textbf{Connect confidence to the policy.} After verification, answer above a chosen threshold; below it, abstain or mark the result as uncertain, subject to the course requirements.
+\end{enumerate}
+The shared index and retrievers would stay as they are. Changes are limited to the confidence signals and decision logic.
+
+\section*{How we would evaluate it}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{2.7cm}@{}}
+\toprule
+\textbf{Measure} & \textbf{Current baseline} & \textbf{What we want to see} \\
+\midrule
+Expected calibration error & 0.47 & Substantially lower \\
+Mean confidence gap (correct $-$ incorrect) & 0.03 & Wider separation \\
+Unsupported / incorrect answers given & 6 of 20 & Fewer \\
+Correct abstentions & 1 of 4 & More \\
+Coverage of answerable questions & 17 of 21 & Monitor for a drop \\
+Mean latency & 28.7 s & Little change \\
+\bottomrule
+\end{tabularx}
+
+We would compare (i) the baseline formula, (ii) a calibrator using only existing signals, (iii) the same calibrator with new signal groups added incrementally, and (iv) calibrated confidence without an abstention threshold. A coverage-versus-accuracy curve will show the cost of a stricter threshold. Each setting will run at least three times because 4 of the 25 actions changed across prior runs. Evaluation will use the original 25 questions and our 10 additional benchmark cases.
+
+\section*{Limits and questions for Q\&A 3}
+\textbf{Limits.} The sample is small, so ECE may be unstable; we plan to pool three runs and our own cases, using leave-one-question-out validation. LLM-judged correctness may be noisy, so we will manually check a sample. Better calibration alone does not improve the underlying answers.
+
+\textbf{Questions.} Is Track A available for our group? Can we fit the calibrator on separate development runs while keeping evaluation runs held out? If confidence falls below the threshold, must the policy return \texttt{ABSTAIN}, or may it flag the answer as uncertain?
+
+\end{document}
