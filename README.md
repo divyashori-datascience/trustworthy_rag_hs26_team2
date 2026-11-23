@@ -40,7 +40,7 @@ Indexes, API keys and large files are **not** in git. Indexes come from the shar
 |---|---|---|
 | Repository setup, structure and contribution workflow | Divya Shori | Done |
 | Colab setup notebook and reproduction of the reference system (test queries + full 25-question run) | Divya Shori | Done |
-| Step 1 audit: trace audit, diagnostic cases (Q4, Q1, Q18), failure taxonomy, index coverage analysis | Divya Shori | Done, team review pending |
+| Step 1 audit: trace audit, diagnostic cases (Q4, Q1, Q18), failure taxonomy, index coverage analysis | Divya Shori | Done |
 | Step 1 report (`docs/reports/G02_Step1_report.pdf`) | Divya Shori | Done |
 | Step 2 benchmark draft (14 cases with chunk IDs) and coverage gaps | Divya Shori | Done |
 | Validation of benchmark cases (draft 006–014) | Hanieh Jebeli | Done |
