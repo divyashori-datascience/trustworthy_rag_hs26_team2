@@ -17,7 +17,10 @@ A **post-hoc calibrator** on top of the unchanged reference system (same index, 
    | G0 | the reference confidence |
    | G1 | existing signals: sufficiency, chunk agreement, grounding, contradiction, number of unsupported claims |
    | G2 | process: retrieval rounds, recoveries, mode changes, generator "no evidence" rounds, sufficiency first and gain, ambiguity flag, language, latency |
-   | G3 | answer text: hedge / non-answer phrases, answer length, number of citations |
+   | G3 | answer text: hand-written hedge / non-answer phrases, answer length, number of citations |
+   | G4 | **LLM self-check**: one Haiku call per answer, *"does this answer actually answer the question?"* (yes / partly / no). It sees only the question and the answer, never a gold answer, so it is a legitimate part of the mechanism at answer time |
+
+   G2 also includes retrieval stability (overlap of the retrieved chunks between the first and last round) and the share of the final chunks the answer cites.
 
 2. **Calibrator** ([`calibrate.py`](../../src/ours/improvement/calibrate.py)): logistic regression on standardised features. It predicts *P(the answer is acceptable and correct)*, trained on graded outcomes (correct 1, partial 0.5, incorrect 0). An answer the benchmark does not accept at all, e.g. one given to an abstain or clarify case, counts as 0. Simple baselines for comparison: Platt and isotonic on the reference confidence alone.
 
@@ -56,25 +59,28 @@ The system only receives the question text, with no labels or notes. 5 of the 80
 | A2 | Platt / isotonic on the reference confidence | is re-scaling enough? |
 | A3 | LR on G0+G1 | do the existing signals carry more? |
 | A4 | + G2 process signals | does *how* the system got there help? |
-| A5 | + G3 answer-text signals (full) | does detecting non-answers help? |
-| A6 | full calibrator, no gate | calibration benefit without changing actions |
+| A5 | + G3 answer-text signals (hand-written hedge list) | does detecting non-answers help? |
+| A6 | + G4 LLM self-check (full mechanism) | does a learned "is this an answer?" check add to that? |
+| A7 | full mechanism **without** the hand-written hedge list | does the result depend on phrases we picked after seeing Step 1? |
+
+Calibration metrics (ECE, AUROC, AURC) of A2–A7 are the calibrator *without* the gate; the reliability score and unsafe answers show the effect *with* the gate. All numbers carry **95% bootstrap intervals over questions**, with all runs of a question resampled together. A6 is compared **pairwise** with A1 (same gate, reference confidence) and with A0 (system as is); an interval that excludes 0 counts as a clear effect. On the dev set we also break results down **by category**, to show where the gate helps (false premise, insufficient evidence) and what it costs (good answers withheld).
 
 Each configuration is evaluated over 3 runs.
 
 ## 6. Progress (27 Nov)
 
-- **Done:** feature extraction, calibrators, leave-one-question-out evaluation with in-fold τ, all metrics and plots, development-benchmark loader, and a resume-safe Colab notebook for 3 × (80 + 25) runs plus grading. The pipeline was tested end to end, and with a mock system for the dev path.
+- **Done:** feature extraction (G0–G4), calibrators, leave-one-question-out evaluation with in-fold τ, all metrics with bootstrap intervals, paired comparisons and the per-category breakdown, development-benchmark loader, LLM self-check, and a resume-safe Colab notebook for 3 × (80 + 25) runs plus self-check and grading. The pipeline was tested end to end on the reference run, and with a mock system for the dev path.
 - **Preliminary result** (reference team's single judged run, 20 answers, original labels; [`results/step3_preliminary/`](../../results/step3_preliminary/step3_results.md)):
 
-  | Method | ECE | Brier | AUROC | AURC |
-  |---|---|---|---|---|
-  | reference confidence | 0.54 | 0.415 | 0.53 | 0.59 |
-  | LR on existing signals (G0+G1) | 0.19 | 0.163 | 0.45 | 0.68 |
-  | full calibrator (G0–G3) | **0.12** | **0.086** | **0.96** | **0.46** |
+  | Method | ECE [95% CI] | AUROC [95% CI] | AURC [95% CI] |
+  |---|---|---|---|
+  | reference confidence | 0.54 [0.39, 0.68] | 0.53 [0.17, 1.0] | 0.59 [0.40, 0.80] |
+  | LR on existing signals (G0+G1) | 0.19 [0.09, 0.34] | 0.45 [0.15, 0.78] | 0.68 [0.50, 0.84] |
+  | + process + answer text (G0–G3) | **0.13 [0.07, 0.26]** | **0.94 [0.81, 1.0]** | **0.51 [0.25, 0.75]** |
 
-  In this run all 3 fully correct answers contain no hedge phrase, and every incorrect one has at least two.
-- **Caveat:** these are 20 answers, and the hedge list was written after seeing the Step 1 failures. The dev runs are the real test.
-- **Next:** 3 runs on dev + original in Colab (about $11, about 70 min), then the results and ablation table.
+  In this run all 3 fully correct answers contain no hedge phrase, and every incorrect one has at least two. The drop in ECE is clear (paired interval −0.56 to −0.19). The AUROC gain is not yet: its paired interval still includes 0 with only 20 answers. The self-check (G4) needs the new runs.
+- **Caveat:** these are 20 answers, and the hedge list was written after seeing the Step 1 failures. This is why we added A7 (without the hedge list). The dev runs are the real test.
+- **Next:** 3 runs on dev + original in Colab (about $11 plus well under $1 for the self-check, about 70 min), then the results and ablation table.
 
 ## 7. Trade-offs and risks
 
@@ -82,5 +88,6 @@ Each configuration is evaluated over 3 runs.
 - **Original labels:** on the original 25 questions any extra abstention scores as wrong. We report them separately and don't tune for them.
 - **Small data:** about 80 questions × 3 runs, and runs of the same question are not independent, hence grouped folds. We keep the model small: logistic regression, about 19 features.
 - **Judge noise:** correctness comes from the reference LLM judge prompt. We hand-check a sample of verdicts.
-- **Hedge features can be gamed:** an answer can be wrong without hedging. That is why G3 is one group in the ablation, not the whole mechanism.
+- **Hedge features can be gamed, and are tuned to what we saw:** an answer can be wrong without hedging. That is why G3 is one rung of the ablation, and A7 tests the mechanism without it.
+- **Self-check cost and latency:** one extra Haiku call per answer, roughly $0.001 and about 1 s. We report it in the efficiency numbers.
 - **The gate abstains; it does not repair:** answer quality itself doesn't improve.

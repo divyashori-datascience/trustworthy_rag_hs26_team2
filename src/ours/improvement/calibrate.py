@@ -10,7 +10,9 @@ Methods (the ablation ladder):
     isotonic   isotonic regression on the baseline confidence only
     lr_G1      logistic regression on G0+G1 (existing signals)
     lr_G2      + G2 (process signals)
-    lr_G3      + G3 (answer-text signals)  <- full mechanism
+    lr_G3      + G3 (answer-text signals, hand-written hedge list)
+    lr_G4      + G4 (LLM self-check)                      <- full mechanism
+    lr_noHedge G0+G1+G2+G4, i.e. full mechanism WITHOUT the hand-written hedge list
 """
 from __future__ import annotations
 
@@ -22,7 +24,7 @@ from sklearn.preprocessing import StandardScaler
 
 from .features import columns
 
-METHODS = ["baseline", "platt", "isotonic", "lr_G1", "lr_G2", "lr_G3"]
+METHODS = ["baseline", "platt", "isotonic", "lr_G1", "lr_G2", "lr_G3", "lr_G4", "lr_noHedge"]
 TAU_GRID = np.round(np.linspace(0.0, 1.0, 41), 3)
 
 
@@ -38,7 +40,7 @@ def _fit_predict(method, train, test):
         iso = IsotonicRegression(y_min=0.0, y_max=1.0, out_of_bounds="clip")
         iso.fit([r["feats"]["base_conf"] for r in train], ytr)
         return iso.predict([r["feats"]["base_conf"] for r in test])
-    cols = ["base_conf"] if method == "platt" else columns(method.split("_")[1])
+    cols = ["base_conf"] if method == "platt" else columns(method.split("_", 1)[1])
     Xtr = _X(train, cols)
     # graded labels: each row becomes a positive (weight y) and a negative (weight 1-y)
     X2 = np.vstack([Xtr, Xtr])

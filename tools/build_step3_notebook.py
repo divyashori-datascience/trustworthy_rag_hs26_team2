@@ -79,7 +79,24 @@ for r in range(1, N_RUNS + 1):
         run_one(r, b)
 print("usage so far:", rag.llm.usage.as_dict())
 """),
-    md("## 4 · Grade the answers (reference judge prompt, resume-safe)"),
+    md("## 4 · Answer self-check (part of our mechanism, feature group G4)\nOne Haiku call per answer: *does this answer actually answer the question?* It sees only the question and the system's answer, never a gold answer, so it can run at answer time."),
+    code("""def check(question, answer):
+    return rag.llm.complete_json(system=outcomes.SELFCHECK_SYSTEM,
+        user=f"Question: {question}\\nSystem answer: {answer}",
+        schema=outcomes.SELFCHECK_SCHEMA, model=config.AGENT_MODEL_UTILITY, max_tokens=200)
+
+for r in range(1, N_RUNS + 1):
+    for b in ("dev", "original"):
+        bdir = OUT / f"run{r}" / b
+        if not (bdir / "traces").exists(): continue
+        sp = bdir / "selfcheck.json"
+        cache = json.loads(sp.read_text()) if sp.exists() else {}
+        traces = {p.stem: json.loads(p.read_text()) for p in (bdir / "traces").glob("*.json")}
+        sc = outcomes.selfcheck_run(BENCH[b], traces, check, cache)
+        sp.write_text(json.dumps(sc, indent=1, ensure_ascii=False))
+        print(f"run{r}/{b}: {len(sc)} self-checked")
+"""),
+    md("## 5 · Grade the answers (evaluation only: reference judge prompt, resume-safe)"),
     code("""def grade(question, gold, candidate):
     return rag.llm.complete_json(system=outcomes.JUDGE_SYSTEM,
         user=f"Question: {question}\\nGold answer: {gold}\\nCandidate answer: {candidate}",
@@ -96,13 +113,13 @@ for r in range(1, N_RUNS + 1):
         jp.write_text(json.dumps(judg, indent=1, ensure_ascii=False))
         print(f"run{r}/{b}: {len(judg)} graded")
 """),
-    md("## 5 · Calibrator + gate, leave-one-question-out, with ablation"),
+    md("## 6 · Calibrator + gate, leave-one-question-out, with ablation and 95% intervals"),
     code("""from IPython.display import Markdown, Image, display
 runs = sorted(str(p) for p in OUT.glob("run*") if p.is_dir())
 rows = step3.load_rows(runs)
 res = step3.evaluate(rows)
 agr = step3.run_agreement(rows)
-md_text = step3.to_markdown(res, agr, len(runs))
+md_text = step3.to_markdown(res, agr)
 RES = OUT / "results"; RES.mkdir(exist_ok=True)
 (RES / "step3_results.md").write_text(md_text)
 (RES / "step3_metrics.json").write_text(json.dumps({"results": res, "agreement": agr}, indent=1))
@@ -115,6 +132,8 @@ display(Image(str(step3.plots(rows, RES))))
 - *Reliability score*: mean value per question after the gate (correct answer 1, partial 0.5, acceptable abstain/clarify 1, wrong action 0).
 - *Unsafe answers / run*: answers given where the benchmark says the system should not answer.
 - *Good answers withheld*: the cost of the gate (correct or partial answers it blocked).
+- *[a, b]*: 95% bootstrap interval over questions. The paired differences under each table show whether the full mechanism beats the reference confidence (interval excludes 0).
+- *A7 (without hedge list)* checks that the result does not depend on the hand-written phrase list.
 - On the **original** benchmark the labels are used unchanged (instructor decision): 21 of 25 expect ANSWER, so the gate can only lose there; the dev set (16 abstain cases) is where it can help."""),
 ]
 

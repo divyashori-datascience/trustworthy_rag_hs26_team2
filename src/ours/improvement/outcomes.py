@@ -74,3 +74,37 @@ def outcome(item: dict, trace: dict, verdict: Optional[dict]) -> dict:
         "score_abstain": score_abstain,
         "score_as_is": score_answer if action == "answer" else (1.0 if action in acc else 0.0),
     }
+
+
+# ---------------------------------------------------------------- G4 self-check
+# Part of the MECHANISM (runs at answer time): it sees only the question and the
+# system's own answer, never a gold answer.
+SELFCHECK_SYSTEM = (
+    "You check a question-answering system's output. Given a question and the system's "
+    "answer, decide whether the answer actually answers the question. Return 'yes' if it "
+    "gives a direct, specific answer; 'partly' if it answers only part of the question or "
+    "answers with heavy hedging; 'no' if it mainly says the information is missing, "
+    "unclear or not found, or answers a different question. Do not judge whether the "
+    "answer is factually true."
+)
+SELFCHECK_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "answers_question": {"type": "string", "enum": ["yes", "partly", "no"]},
+        "reason": {"type": "string"},
+    },
+    "required": ["answers_question", "reason"],
+    "additionalProperties": False,
+}
+
+
+def selfcheck_run(items: list[dict], traces: dict, check: Callable[[str, str], dict],
+                  cache: Optional[dict] = None) -> dict:
+    """check(question, answer) -> {'answers_question', 'reason'}, for every ANSWER."""
+    out = dict(cache or {})
+    for it in items:
+        t = traces.get(it["id"])
+        if t is None or it["id"] in out or t["final"].get("action") != "answer":
+            continue
+        out[it["id"]] = check(it["question"], t["final"].get("answer") or "")
+    return out

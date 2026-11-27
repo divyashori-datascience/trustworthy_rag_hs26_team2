@@ -8,10 +8,16 @@ Feature groups (used for the ablation; each group adds to the previous ones):
   G2  process       how the system got there: retrieval rounds, recoveries, mode changes,
                     generator 'no evidence' rounds, sufficiency trajectory, ambiguity flag,
                     question language, latency
-  G3  answer text   does the answer actually answer? hedge / non-answer phrases,
-                    answer length, number of citations
+  G3  answer text   does the answer actually answer? hand-written hedge / non-answer
+                    phrases, answer length, number of citations
+  G4  self-check    one cheap LLM call per answer (no gold answer): "does this answer
+                    actually answer the question?" yes / partly / no
 
-Everything is read from the saved trace: no extra model or API calls.
+G0-G3 are read from the saved trace (no extra calls). G4 needs selfcheck.json from the
+run notebook; without it the feature is neutral (0.5).
+
+The hedge list in G3 was written after looking at the Step 1 failures, so the ablation
+also reports a ladder WITHOUT it (G0+G1+G2+G4) to show the result does not depend on it.
 """
 from __future__ import annotations
 
@@ -36,14 +42,24 @@ GROUPS = {
     "G2": ["n_retrieve", "n_recover", "mode_changed", "n_no_evidence", "suff_first",
            "suff_gain", "ambiguous", "lang_de", "latency_s"],
     "G3": ["n_hedges", "has_hedge", "answer_len_log", "n_citations"],
+    "G4": ["selfcheck"],
 }
+G2 = GROUPS["G2"] + ["ret_jaccard", "cite_share"]
+GROUPS["G2"] = G2
+
+SELFCHECK_SCORE = {"yes": 1.0, "partly": 0.5, "no": 0.0}
 
 
 def _steps(trace, name):
     return [s for s in trace.get("timeline", []) if s.get("step") == name]
 
 
-def features(trace: dict) -> dict:
+def _jaccard(a, b):
+    a, b = set(a or []), set(b or [])
+    return len(a & b) / len(a | b) if (a or b) else 1.0
+
+
+def features(trace: dict, selfcheck: dict | None = None) -> dict:
     fin = trace.get("final", {}) or {}
     sig = fin.get("signals") or {}
     analyses = [s.get("signals", {}) for s in _steps(trace, "analyze")]
@@ -78,14 +94,25 @@ def features(trace: dict) -> dict:
         "has_hedge": float(hedges > 0),
         "answer_len_log": math.log1p(len(ans.split())),
         "n_citations": float(len(fin.get("citations") or [])),
+        "ret_jaccard": _jaccard(rets[0].get("top_ids"), rets[-1].get("top_ids")) if rets else 1.0,
+        "cite_share": (len(set(fin.get("citations") or []) & set(rets[-1].get("top_ids") or []))
+                       / max(1, len(rets[-1].get("top_ids") or []))) if rets else 0.0,
+        "selfcheck": SELFCHECK_SCORE.get((selfcheck or {}).get("answers_question"), 0.5),
     }
 
 
-def columns(upto: str) -> list[str]:
-    """All feature names of the groups up to and including `upto` (e.g. 'G2')."""
+LADDERS = {
+    "G1": ["G0", "G1"],
+    "G2": ["G0", "G1", "G2"],
+    "G3": ["G0", "G1", "G2", "G3"],
+    "G4": ["G0", "G1", "G2", "G3", "G4"],
+    "noHedge": ["G0", "G1", "G2", "G4"],      # without the hand-written hedge list
+}
+
+
+def columns(ladder: str) -> list[str]:
+    """Feature names for one rung of the ablation ladder (see LADDERS)."""
     out = []
-    for g in ["G0", "G1", "G2", "G3"]:
-        out += GROUPS[g]
-        if g == upto:
-            break
+    for g in LADDERS[ladder]:
+        out += [c for c in GROUPS[g] if not (ladder == "noHedge" and c in ("n_hedges", "has_hedge"))]
     return out
