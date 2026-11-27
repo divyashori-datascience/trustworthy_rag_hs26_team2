@@ -1,0 +1,124 @@
+{
+ "results": {
+  "baseline": {
+   "original": {
+    "n": 20,
+    "mean_conf": 0.89,
+    "mean_correct": 0.35,
+    "ece": 0.54,
+    "brier": 0.415,
+    "auroc": 0.529,
+    "aurc": 0.593,
+    "rows": 25,
+    "reliability_score": 0.32,
+    "action_accuracy": 0.72,
+    "answered_share": 0.8,
+    "unsafe_answers_per_run": 3.0,
+    "gated": 0,
+    "gated_good_answers": 0
+   }
+  },
+  "platt": {
+   "original": {
+    "n": 20,
+    "mean_conf": 0.353,
+    "mean_correct": 0.35,
+    "ece": 0.153,
+    "brier": 0.144,
+    "auroc": 0.196,
+    "aurc": 0.73,
+    "rows": 25,
+    "reliability_score": 0.32,
+    "action_accuracy": 0.72,
+    "answered_share": 0.8,
+    "unsafe_answers_per_run": 3.0,
+    "gated": 0,
+    "gated_good_answers": 0
+   }
+  },
+  "isotonic": {
+   "original": {
+    "n": 20,
+    "mean_conf": 0.361,
+    "mean_correct": 0.35,
+    "ece": 0.224,
+    "brier": 0.144,
+    "auroc": 0.402,
+    "aurc": 0.655,
+    "rows": 25,
+    "reliability_score": 0.32,
+    "action_accuracy": 0.72,
+    "answered_share": 0.8,
+    "unsafe_answers_per_run": 3.0,
+    "gated": 0,
+    "gated_good_answers": 0
+   }
+  },
+  "lr_G1": {
+   "original": {
+    "n": 20,
+    "mean_conf": 0.357,
+    "mean_correct": 0.35,
+    "ece": 0.193,
+    "brier": 0.163,
+    "auroc": 0.451,
+    "aurc": 0.684,
+    "rows": 25,
+    "reliability_score": 0.32,
+    "action_accuracy": 0.72,
+    "answered_share": 0.8,
+    "unsafe_answers_per_run": 3.0,
+    "gated": 0,
+    "gated_good_answers": 0
+   }
+  },
+  "lr_G2": {
+   "original": {
+    "n": 20,
+    "mean_conf": 0.352,
+    "mean_correct": 0.35,
+    "ece": 0.229,
+    "brier": 0.168,
+    "auroc": 0.451,
+    "aurc": 0.646,
+    "rows": 25,
+    "reliability_score": 0.32,
+    "action_accuracy": 0.72,
+    "answered_share": 0.8,
+    "unsafe_answers_per_run": 3.0,
+    "gated": 0,
+    "gated_good_answers": 0
+   }
+  },
+  "lr_G3": {
+   "original": {
+    "n": 20,
+    "mean_conf": 0.332,
+    "mean_correct": 0.35,
+    "ece": 0.117,
+    "brier": 0.086,
+    "auroc": 0.961,
+    "aurc": 0.459,
+    "rows": 25,
+    "reliability_score": 0.32,
+    "action_accuracy": 0.72,
+    "answered_share": 0.8,
+    "unsafe_answers_per_run": 3.0,
+    "gated": 0,
+    "gated_good_answers": 0
+   }
+  },
+  "as_is": {
+   "original": {
+    "rows": 25,
+    "reliability_score": 0.32,
+    "action_accuracy": 0.72,
+    "answered_share": 0.8,
+    "unsafe_answers_per_run": 3.0
+   }
+  }
+ },
+ "agreement": {
+  "original": 1.0
+ }
+}

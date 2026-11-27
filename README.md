@@ -26,7 +26,7 @@ Indexes, API keys and large files are **not** in git. Indexes come from the shar
 | 1 · Reproduction run | Done: 25 questions, 21/25 actions match | [`docs/audit/reproduction_note.md`](docs/audit/reproduction_note.md), [`results/20261117_colab_full_run/`](results/20261117_colab_full_run/README.md) |
 | 2 · Benchmark | Final: 10 self-validated cases, emailed to the instructor by Mon 23 Nov | [`benchmark/G02_benchmark.xlsx`](benchmark/G02_benchmark.xlsx), [`docs/benchmark/`](docs/benchmark/README.md) |
 | 2 · Coverage gaps | Documented separately | [`docs/benchmark/coverage_gaps.md`](docs/benchmark/coverage_gaps.md) |
-| 3 · Improvement | Proposed: Track A (confidence calibration), to confirm at Q&A 3 | [`docs/reports/G02_Step3_track_onepager.pdf`](docs/reports/G02_Step3_track_onepager.pdf), [`docs/audit/failure_taxonomy.md`](docs/audit/failure_taxonomy.md) |
+| 3 · Improvement | Track A (confidence calibration): mechanism built and tested; dev-benchmark runs next | [`docs/step3/design.md`](docs/step3/design.md), [`notebooks/02_step3_runs.ipynb`](notebooks/02_step3_runs.ipynb), [`benchmark/dev/`](benchmark/dev/) |
 
 ## Getting started (Colab)
 1. In Drive, add a shortcut to `RAG_Project_Artifact` in **My Drive**.
@@ -46,12 +46,14 @@ Indexes, API keys and large files are **not** in git. Indexes come from the shar
 | Validation of benchmark cases (draft 006–014) | Hanieh Jebeli | Done |
 | Validation of benchmark cases (draft 001–005), final selection of 10 | Divya Shori | Done |
 | Improvement track one-pager (Track A vs B) for Q&A 3 | Hanieh Jebeli | Done (Track A: confidence calibration, `docs/reports/G02_Step3_track_onepager.pdf`) |
+| Step 3 mechanism: calibrator, abstention gate, evaluation code, run notebook, design doc | Divya Shori | Built and tested; dev runs pending |
 
 
 ## Milestones
 - [x] **Thu 19 Nov · Q&A 1:** reference system running; ≥3 trace-based cases; initial failure modes
 - [x] **Mon 23 Nov 09:00:** benchmark Excel by email (10 validated cases, ≥4 categories, ≥2 standard factual)
-- [ ] **Wed 26 Nov · Q&A 3:** metrics aligned, improvement track chosen
+- [x] **Wed 26 Nov · Q&A 3:** metrics aligned, improvement track chosen
+- [ ] **Wed 3 Dec · Q&A:** mechanism design, implementation progress, target metrics, trade-offs, ablation plan
 - [ ] **Wed 23 Dec · Final submission (ILIAS):** final report + link to this repo (shared with the course instructor's GitHub account)
 
 ## Submission requirements (course instructor, Nov 2026)
